@@ -4,6 +4,18 @@ import { Grid } from "@material-ui/core"
 import theme from "../../theme"
 import CustomButton from "../../components/custom-button/custom-button.component"
 
+export const RowGrid = styled(Grid)`
+  ${({ contained }) =>
+    contained &&
+    `
+    padding: 5em 8em;
+    `}
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 0;
+  }
+`
+
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
   background-color: white;

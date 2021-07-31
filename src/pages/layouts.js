@@ -13,6 +13,11 @@ const Layouts = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      windows: file(relativePath: { eq: "windows.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
   const buttonObj = {
@@ -34,6 +39,20 @@ const Layouts = () => {
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
         reverse
+      />
+
+      <ImageTextRow
+        image={staticQuery.windows}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        contained
+      />
+      <ImageTextRow
+        image={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        reverse
+        contained
       />
     </Layout>
   )
