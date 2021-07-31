@@ -4,8 +4,8 @@ const theme = createTheme({
   navHeight: 74,
   sectionPadding: "padding-top: 1.5em; padding-bottom: 1.5em;",
   fonts: {
-    primary: "Raleway, sans-serif",
-    secondary: "Raleway, sans-serif",
+    primary: "Inter, sans-serif",
+    secondary: "Inter, sans-serif",
   },
   layout: {
     contentWidth: 1236,
@@ -13,27 +13,27 @@ const theme = createTheme({
   palette: {
     primary: {
       // contrastText: "rgba(0, 0, 0, 0.87)",
-      main: "#2E6EFE",
-      light: "#1A2933",
-      dark: "#091118",
+      main: "#1593CD",
+      light: "#FFFFFF",
+      dark: "#0D5C80",
     },
     secondary: {
       // contrastText: "rgba(0, 0, 0, 0.87)",
-      main: "#1F1D2F",
-      light: "#1F1D2F",
-      dark: "#1F1D2F",
+      main: "#F0F5F7" /*gray*/,
+      light: "#0D2E4D" /*text gray*/,
+      dark: "#00447B" /*text dark*/,
     },
     tertiary: {
-      main: "#2C9ED0",
+      main: "#F89928",
     },
     text: {
-      primary: "#1B1B1F",
-      secondary: "#0F1923",
-      content: "#797979",
-      tertiary: "#1A2933",
+      primary: "#FAFAFA",
+      secondary: "#0D5C80" /*green*/,
+      content: "#1D3845",
+      tertiary: "#1593CD",
       disabled: "#10355A",
       hint: "#10355A",
-      light: "#EEEEEE",
+      light: "#FFFFFF",
     },
     alternate: {
       main: "rgb(247, 249, 250)",
@@ -41,7 +41,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: `"Raleway", "Open Sans", "Arial", sans-serif`,
+    fontFamily: `"Inter", "Open Sans", "Arial", sans-serif`,
   },
 })
 export default theme
