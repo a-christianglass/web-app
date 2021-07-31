@@ -18,11 +18,13 @@ export const CustomGrid = styled(Grid)`
   align-items: center;
   justify-content: center;
   background-color: white;
+  order: 2;
 `
 
 export const RightText = styled.div`
   max-width: 380px;
   margin: auto;
+
   p {
     color: ${({ theme }) => theme.palette.text.content};
     font-size: 1rem;
@@ -30,13 +32,16 @@ export const RightText = styled.div`
     line-height: 25px;
     margin: 0;
   }
+
   h2 {
     margin-bottom: 1.5rem;
     color: ${({ theme }) => theme.palette.text.secondary};
     letter-spacing: 0;
   }
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 3em 0;
+
     h2 {
       font-size: 2rem;
       line-height: 40px;

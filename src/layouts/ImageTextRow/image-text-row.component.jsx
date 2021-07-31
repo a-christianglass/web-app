@@ -6,12 +6,16 @@ import parse from "html-react-parser"
 import Container from "@material-ui/core/Container"
 
 const ImageTextRow = ({ ...props }) => {
-  const { image, content, button } = { ...props }
+  const { image, content, button, reverse } = { ...props }
   return (
     <S.Wrapper>
-      <Grid container>
+      <Grid container direction={reverse && "row-reverse"}>
         <Grid item xs={12} sm={6}>
-          <CustomImage img={image} alt={"Text"} className={"LeftImage"} />
+          <CustomImage
+            img={image}
+            alt={image.altText}
+            className={"LeftImage"}
+          />
         </Grid>
         <S.CustomGrid item xs={12} sm={6}>
           <Container>
