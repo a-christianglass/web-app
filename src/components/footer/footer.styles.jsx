@@ -170,6 +170,7 @@ export const LocationWrapper = styled.div`
   justify-content: flex-end;
   margin-bottom: 1em;
   p {
+    text-align: right;
     padding-left: 0.5em;
     margin: 0;
   }

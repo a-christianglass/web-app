@@ -12,6 +12,7 @@ import YelpIcon from "../../assets/icons/yelp.svg"
 import Rectangle from "../../assets/icons/Rectangle.svg"
 import Separator from "../../assets/icons/separator.svg"
 import Container from "@material-ui/core/Container"
+import parse from "html-react-parser"
 
 const Footer = ({ className }) => {
   return (
@@ -77,7 +78,9 @@ const Footer = ({ className }) => {
               </S.ContactWrapper>
               <S.LocationWrapper>
                 <LocationIcon />
-                <p>925 S. Congress AvenueDelray Beach, FL 33445</p>
+                {parse(
+                  `<p>925 S. Congress Avenue<br>Delray Beach, FL 33445</p>`
+                )}
               </S.LocationWrapper>
               <S.MailWrapper>
                 <MailIcon />
