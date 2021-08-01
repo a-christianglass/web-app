@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import MiscContent from "../layouts/MiscContent"
 import { LayoutTitle } from "../styles/app.styles"
 import ImageTextRow from "../layouts/ImageTextRow"
+import BlueFeaturesSection from "../layouts/BlueFeaturesSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -54,6 +55,7 @@ const Layouts = () => {
         reverse
         contained
       />
+      <BlueFeaturesSection />
     </Layout>
   )
 }

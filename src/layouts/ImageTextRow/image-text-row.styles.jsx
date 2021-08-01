@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import { Grid } from "@material-ui/core"
-import theme from "../../theme"
 import CustomButton from "../../components/custom-button/custom-button.component"
 
 export const RowGrid = styled(Grid)`
