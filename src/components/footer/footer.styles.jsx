@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Grid } from "@material-ui/core"
+import Container from "@material-ui/core/Container"
 
 export const Wrapper = styled.footer`
   color: white;
@@ -17,10 +18,25 @@ export const Wrapper = styled.footer`
     }
   }
 `
+export const LeftContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-left: 4em;
+    margin-top: 2em;
+    max-width: 150px;
+  }
+`
 
 export const LogoWrapper = styled(Grid)`
   display: flex;
   justify-content: center;
+  margin-top: 8em;
+  margin-bottom: 2em;
+  img {
+    max-width: 200px;
+  }
 `
 
 export const LinksWrapper = styled.div`
