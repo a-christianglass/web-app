@@ -6,6 +6,7 @@ import { LayoutTitle } from "../styles/app.styles"
 import ImageTextRow from "../layouts/ImageTextRow"
 import LogosGrid from "../layouts/LogosGrid"
 import AppointmentBanner from "../layouts/AppointmentBanner"
+import CallUsBanner from "../layouts/CallUsBanner"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -21,6 +22,16 @@ const Layouts = () => {
         }
       }
       logo: file(relativePath: { eq: "windoor.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      phone: file(relativePath: { eq: "phone-woman-cta.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      openDoor: file(relativePath: { eq: "open-door.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -47,7 +58,6 @@ const Layouts = () => {
         button={buttonObj}
         reverse
       />
-
       <ImageTextRow
         image={staticQuery.windows}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
@@ -121,6 +131,19 @@ const Layouts = () => {
         content={`top quality products and services for our customers and the
           community`}
         color="grayWhite"
+      />
+      <LayoutTitle>CallUsBanner</LayoutTitle>
+      <CallUsBanner
+        title={`Do you need a quick response from our team?`}
+        image={staticQuery.phone}
+        number={`(561) 278-3385`}
+        content={`Our expert staff will answer any questions and can schedule a free
+              consultation.`}
+      />{" "}
+      <CallUsBanner
+        title={`Do you need a quick response from our team?`}
+        image={staticQuery.openDoor}
+        number={`(561) 278-3385`}
       />
     </Layout>
   )
