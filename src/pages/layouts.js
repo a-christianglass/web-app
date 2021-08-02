@@ -5,6 +5,7 @@ import MiscContent from "../layouts/MiscContent"
 import { LayoutTitle } from "../styles/app.styles"
 import ImageTextRow from "../layouts/ImageTextRow"
 import LogosGrid from "../layouts/LogosGrid"
+import AppointmentBanner from "../layouts/AppointmentBanner"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -95,6 +96,31 @@ const Layouts = () => {
           },
         ]}
         title="Partnering with the Best"
+      />
+      <LayoutTitle>AppointmentBanner</LayoutTitle>
+      <AppointmentBanner
+        button={buttonObj}
+        content={`top quality products and services for our customers and the
+          community`}
+        color="white"
+      />
+      <AppointmentBanner
+        button={buttonObj}
+        content={`top quality products and services for our customers and the
+          community`}
+        color="gray"
+      />
+      <AppointmentBanner
+        button={buttonObj}
+        content={`top quality products and services for our customers and the
+          community`}
+        color="whiteGray"
+      />
+      <AppointmentBanner
+        button={buttonObj}
+        content={`top quality products and services for our customers and the
+          community`}
+        color="grayWhite"
       />
     </Layout>
   )
