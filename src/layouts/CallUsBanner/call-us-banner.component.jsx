@@ -5,7 +5,7 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 
 const CallUsBanner = ({ ...props }) => {
   const { image, title, number, content } = { ...props }
-  // No content == more padding in TextWrapper
+  // No content == more padding in TextWrapper and text align: left on Content Wrapper
   const morePadding = content === undefined
   return (
     <S.Wrapper>
