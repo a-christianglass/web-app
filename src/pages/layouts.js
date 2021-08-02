@@ -94,7 +94,7 @@ const Layouts = () => {
             logo: staticQuery.logo,
           },
         ]}
-        title="Award-Winning Excellence"
+        title="Partnering with the Best"
       />
     </Layout>
   )
