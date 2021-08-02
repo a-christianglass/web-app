@@ -1,7 +1,5 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
-import CustomImage from "../../components/custom-image/custom-image.component"
-import Grid from "@material-ui/core/Grid"
 
 export const Wrapper = styled(SectionWrapper)`
   background: white;
