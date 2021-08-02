@@ -64,12 +64,7 @@ const Footer = ({ className }) => {
                 <a href="#">Projects</a>
               </S.LinksContainer>
             </S.ProductsWrapper>{" "}
-            <img
-              src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/BBB-seal-footer.png"
-              alt="BBC Logo"
-            />
           </S.LeftContainer>
-
           <Container>
             <S.InfoWrapper>
               <S.ContactWrapper>
@@ -111,16 +106,25 @@ const Footer = ({ className }) => {
                   </S.Logo>
                 </S.IconRow>
               </S.SocialIconsWrapper>
-              <S.FaqWrapper>
-                <a href="#">FAQ</a>
-                <Rectangle />
-                <a href="#">Privacy Policy</a>
-                <Rectangle />
-                <a href="#">EQUE</a>
-              </S.FaqWrapper>
             </S.InfoWrapper>
           </Container>
         </S.LinksWrapper>
+        <S.SeparatorWrapper>
+          <Separator />
+        </S.SeparatorWrapper>
+        <S.FaqGrid>
+          <img
+            src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/BBB-seal-footer.png"
+            alt="BBC Logo"
+          />
+          <S.FaqWrapper>
+            <a href="#">FAQ</a>
+            <Rectangle />
+            <a href="#">Privacy Policy</a>
+            <Rectangle />
+            <a href="#">EQE</a>
+          </S.FaqWrapper>
+        </S.FaqGrid>
       </S.FooterContainer>
     </S.Wrapper>
   )

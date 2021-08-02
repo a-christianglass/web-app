@@ -9,6 +9,7 @@ export const GrayContainer = styled.div`
 `
 export const ExperienceWrapper = styled.div`
   min-height: 500px;
+  box-shadow: none;
   background: linear-gradient(
     to bottom,
     #f0f5f7 0%,
@@ -34,6 +35,7 @@ export const ExperienceTextWrapper = styled.div`
   justify-content: flex-end;
   background-image: url("https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/install-.win@1.5x.png");
   background-size: cover;
+  background-color: transparent;
 `
 
 export const ExperienceContent = styled.div`
@@ -107,7 +109,6 @@ export const LogoWrapper = styled(Grid)`
 export const LinksWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 6em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     flex-direction: column;
     padding: 0;
@@ -198,6 +199,7 @@ export const SocialIconsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-top: 2em;
 
   h3 {
     font-size: 24px;
@@ -235,11 +237,30 @@ export const Logo = styled.div`
   }
 `
 
+export const FaqGrid = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 5em;
+  img {
+    margin-left: 0.5em;
+  }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    img {
+      max-width: 100px;
+    }
+  }
+`
+
 export const FaqWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 1em 0;
+  margin: 1em 2.8em;
   a {
     text-decoration: none;
     color: ${({ theme }) => theme.palette.text.light};
