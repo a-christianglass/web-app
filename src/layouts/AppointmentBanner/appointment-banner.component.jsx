@@ -5,8 +5,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 
-const AppointmentBanner = ({ ...props }) => {
-  const { color, content, button } = { ...props }
+const AppointmentBanner = ({ color, content, button }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
       banner: file(relativePath: { eq: "banner.png" }) {
@@ -21,10 +20,8 @@ const AppointmentBanner = ({ ...props }) => {
       <Grid xs={12}>
         <CustomBgImage img={staticQuery.banner}>
           <S.ContentWrapper>
-            <h2>{content}</h2>
-            <S.Button href={button && button.url}>
-              {button && button.title}
-            </S.Button>
+            {content && <h2>{parse(content)}</h2>}
+            {button && <S.Button href={button?.url}>{button?.title}</S.Button>}
           </S.ContentWrapper>
         </CustomBgImage>
       </Grid>
