@@ -9,6 +9,7 @@ import AppointmentBanner from "../layouts/AppointmentBanner"
 import CallUsBanner from "../layouts/CallUsBanner"
 import HomeHero from "../layouts/home-hero"
 import CommonHeroBanner from "../layouts/CommonHeroBanner"
+import BlueFeaturesSection from "../layouts/BlueFeaturesSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -44,6 +45,11 @@ const Layouts = () => {
         }
       }
       commonHero: file(relativePath: { eq: "common-hero.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      features: file(relativePath: { eq: "features.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -171,6 +177,11 @@ const Layouts = () => {
         title={`Do you need a quick response from our team?`}
         image={staticQuery.openDoor}
         number={`(561) 278-3385`}
+      />
+      <LayoutTitle>BlueFeaturesSection</LayoutTitle>
+      <BlueFeaturesSection
+        image={staticQuery.features}
+        title={`<h2>With A-Christian Glass<br>you Protect your Home from</h2>`}
       />
     </Layout>
   )
