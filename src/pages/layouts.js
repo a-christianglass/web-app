@@ -7,6 +7,7 @@ import ImageTextRow from "../layouts/ImageTextRow"
 import LogosGrid from "../layouts/LogosGrid"
 import AppointmentBanner from "../layouts/AppointmentBanner"
 import CallUsBanner from "../layouts/CallUsBanner"
+import HomeHero from "../layouts/home-hero"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -36,6 +37,11 @@ const Layouts = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      homeHero: file(relativePath: { eq: "home-hero.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
   const buttonObj = {
@@ -44,6 +50,13 @@ const Layouts = () => {
   }
   return (
     <Layout seo={{ title: "Layouts - ONLY FOR DEV" }}>
+      <LayoutTitle>HomeHero</LayoutTitle>
+      <HomeHero
+        image={staticQuery.homeHero}
+        title={"Best Impact Windows and Doors in South Florida"}
+        subtitle={"30 years in the business"}
+        button={buttonObj}
+      />
       <LayoutTitle>MiscContent</LayoutTitle>
       <MiscContent content={`<p>Some content Here</p>`} />
       <LayoutTitle>ImageTextRow</LayoutTitle>
