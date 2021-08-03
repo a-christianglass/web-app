@@ -8,6 +8,7 @@ import LogosGrid from "../layouts/LogosGrid"
 import AppointmentBanner from "../layouts/AppointmentBanner"
 import CallUsBanner from "../layouts/CallUsBanner"
 import HomeHero from "../layouts/home-hero"
+import CommonHeroBanner from "../layouts/CommonHeroBanner"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -42,6 +43,11 @@ const Layouts = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      commonHero: file(relativePath: { eq: "common-hero.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
   const buttonObj = {
@@ -56,6 +62,14 @@ const Layouts = () => {
         title={"Best Impact Windows and Doors in South Florida"}
         subtitle={"30 years in the business"}
         button={buttonObj}
+      />
+      <LayoutTitle>CommonHero</LayoutTitle>
+      <CommonHeroBanner
+        image={staticQuery.commonHero}
+        title={"About"}
+        content={
+          "We are a family owned and a full service glass company for all your projects; from a glass replacement to major high-rise and commercial storefronts developments."
+        }
       />
       <LayoutTitle>MiscContent</LayoutTitle>
       <MiscContent content={`<p>Some content Here</p>`} />
