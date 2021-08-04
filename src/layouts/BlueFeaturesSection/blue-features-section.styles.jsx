@@ -54,4 +54,13 @@ export const FeaturedTextWrapper = styled.div`
 
 export const Icon = styled(CustomImage)`
   margin-right: 1em;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+
+  img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain !important;
+  }
 `
