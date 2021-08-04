@@ -11,6 +11,7 @@ import HomeHero from "../layouts/home-hero"
 import CommonHeroBanner from "../layouts/CommonHeroBanner"
 import BlueFeaturesSection from "../layouts/BlueFeaturesSection"
 import TornadoIcon from "../images/tornado.svg"
+import ServicesHome from "../layouts/ServicesHome"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -212,6 +213,18 @@ const Layouts = () => {
         image={staticQuery.features}
         title={`<h2>With A-Christian Glass<br>you Protect your Home from</h2>`}
         cards={featuredCards}
+      />
+      <LayoutTitle>ServicesHome</LayoutTitle>
+      <ServicesHome
+        leftTag="Our Services to Industries "
+        leftTitle="A-Christian Glass is a Full Service Interior Glass Gompany"
+        leftContent="We work directly with business owners, construction managers and general contractors from the beginning of the project until the job is complete."
+        centerTitle="Residential"
+        centerContent="A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality."
+        centerLink={{ title: "Know More", url: "/" }}
+        rightTitle="Commercial"
+        rightContent="A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality."
+        rightLink={{ title: "Know More", url: "/" }}
       />
     </Layout>
   )
