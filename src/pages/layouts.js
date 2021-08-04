@@ -10,6 +10,7 @@ import CallUsBanner from "../layouts/CallUsBanner"
 import HomeHero from "../layouts/home-hero"
 import CommonHeroBanner from "../layouts/CommonHeroBanner"
 import BlueFeaturesSection from "../layouts/BlueFeaturesSection"
+import TornadoIcon from "../images/tornado.svg"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -60,6 +61,34 @@ const Layouts = () => {
     url: "/",
     title: "See More",
   }
+  const featuredCards = [
+    {
+      icon: TornadoIcon,
+      title: "Hurricanes",
+      content:
+        "Impact windows protect your family and home from severe weather, burglary, and damage caused by the south Florida sun.",
+    },
+    {
+      icon: TornadoIcon,
+      title: "Hurricanes",
+      content:
+        "Impact windows protect your family and home from severe weather, burglary, and damage caused by the south Florida sun.",
+    },
+    ,
+    {
+      icon: TornadoIcon,
+      title: "Hurricanes",
+      content:
+        "Impact windows protect your family and home from severe weather, burglary, and damage caused by the south Florida sun.",
+    },
+    ,
+    {
+      icon: TornadoIcon,
+      title: "Hurricanes",
+      content:
+        "Impact windows protect your family and home from severe weather, burglary, and damage caused by the south Florida sun.",
+    },
+  ]
   return (
     <Layout seo={{ title: "Layouts - ONLY FOR DEV" }}>
       <LayoutTitle>HomeHero</LayoutTitle>
@@ -182,6 +211,7 @@ const Layouts = () => {
       <BlueFeaturesSection
         image={staticQuery.features}
         title={`<h2>With A-Christian Glass<br>you Protect your Home from</h2>`}
+        cards={featuredCards}
       />
     </Layout>
   )
