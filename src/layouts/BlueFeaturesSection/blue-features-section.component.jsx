@@ -3,7 +3,6 @@ import * as S from "./blue-features-section.styles"
 import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
-import CustomImage from "../../components/custom-image/custom-image.component"
 const BlueFeaturesSection = ({ image, title, cards }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
@@ -18,19 +17,19 @@ const BlueFeaturesSection = ({ image, title, cards }) => {
   return (
     <S.Wrapper>
       <Grid xs={4}>
-        <S.LeftImage img={image} />
+        {image && <S.LeftImage img={image} alt={image.altText} />}
       </Grid>
       <Grid xs={8}>
         <S.ImageWrapper img={staticQuery.blueBg}>
           <S.ContentWrapper>
-            <h2>{parse(title)}</h2>
+            {title && <h2>{parse(title)}</h2>}
             <S.CardsGrid container sm={12} spacing={2}>
               {cards.map(({ icon, title, content }, index) => (
                 <S.FeatureCard item sm={6} key={`icon-grid-${index}`}>
-                  <S.Icon img={icon} />
+                  {icon && <S.Icon img={icon} />}
                   <S.FeaturedTextWrapper>
-                    <h3>{title}</h3>
-                    <h4>{content}</h4>
+                    {title && <h3>{title}</h3>}
+                    {content && <h4>{content}</h4>}
                   </S.FeaturedTextWrapper>
                 </S.FeatureCard>
               ))}
