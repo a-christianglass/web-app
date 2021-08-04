@@ -8,6 +8,11 @@ export const Wrapper = styled(SectionWrapper)`
   padding: 0;
   display: flex;
 `
+
+export const LeftImage = styled(CustomImage)`
+  height: 100%;
+  width: 100%;
+`
 export const ImageWrapper = styled(CustomBgImage)`
   height: 100%;
   width: 100%;

@@ -18,7 +18,7 @@ const BlueFeaturesSection = ({ image, title, cards }) => {
   return (
     <S.Wrapper>
       <Grid xs={4}>
-        <CustomImage img={image} />
+        <S.LeftImage img={image} />
       </Grid>
       <Grid xs={8}>
         <S.ImageWrapper img={staticQuery.blueBg}>
