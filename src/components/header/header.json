@@ -1,0 +1,199 @@
+{
+  "mainItems": [
+    {
+      "title": "Products",
+      "url": "/products",
+      "items": [
+        {
+          "title": "Windows",
+          "url": "/windows",
+          "subtitle": "hightest quality impact resistant windows avaialble",
+          "subItems": [
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Single - Double Hung",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Casements",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Horizontal Rollers",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Fixed Glass Windows",
+              "url": "/windows"
+            }
+          ]
+
+        },
+        {
+          "title": "Doors",
+          "url": "/windows",
+          "subtitle": "hightest quality impact resistant windows avaialble",
+          "subItems": [
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Single - Double Hung",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Casements",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Horizontal Rollers",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Fixed Glass Windows",
+              "url": "/windows"
+            }
+          ]
+
+        },
+        {
+          "title": "Showers",
+          "url": "/windows",
+          "subtitle": "hightest quality impact resistant windows avaialble",
+          "subItems": [
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Single - Double Hung",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Casements",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Horizontal Rollers",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Fixed Glass Windows",
+              "url": "/windows"
+            }
+          ]
+
+        },
+        {
+          "title": "Glass Railings",
+          "url": "/windows",
+          "subtitle": "hightest quality impact resistant windows avaialble",
+          "subItems": [
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Single - Double Hung",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Casements",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Horizontal Rollers",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Fixed Glass Windows",
+              "url": "/windows"
+            }
+          ]
+
+        },
+        {
+          "title": "Others",
+          "url": "/windows",
+          "subtitle": "hightest quality impact resistant windows avaialble",
+          "subItems": [
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Single - Double Hung",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Casements",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Horizontal Rollers",
+              "url": "/windows"
+            },
+            {
+              "image": "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/windows.jpg",
+              "title": "Fixed Glass Windows",
+              "url": "/windows"
+            }
+          ]
+
+        },
+        {
+          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
+          "title": "Voice & Collaboration",
+          "url": "/technology_services/voice_and_collaboration"
+        },
+        {
+          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
+          "title": "Managed Services",
+          "url": "/technology_services/managed_it_services"
+        },
+        {
+          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
+          "title": "Information Security",
+          "url": "/technology_services/information_security_services"
+        },
+        {
+          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
+          "title": "Connectivity",
+          "url": "/technology_services/sd_wan_provider"
+        },
+        {
+          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
+          "title": "Network Engineering",
+          "url": "/technology_services/network_engineering_services"
+        }
+      ]
+    },
+    {
+      "title": "About Us",
+      "url": "/about-us",
+      "items": [
+        {
+          "title": "Projects and Portfolio",
+          "url": "/projects"
+        }
+      ]
+    },
+    {
+      "title": "Industries",
+      "url": "/industries",
+      "items": [
+        {
+          "title": "Residential",
+          "url": "/residential"
+        },
+        {
+          "title": "Commercial",
+          "url": "/commercial"
+        }
+      ]
+    }
+  ]
+}
