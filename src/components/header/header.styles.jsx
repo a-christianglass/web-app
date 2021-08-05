@@ -4,7 +4,9 @@ import CustomLink from "../custom-link/custom-link.component"
 import LogoSVG from "../../assets/icons/logo.svg"
 import CustomButton from "../custom-button/custom-button.component"
 
-export const CustomAppBar = styled(AppBar)``
+export const CustomAppBar = styled(AppBar)`
+  position: fixed;
+`
 
 export const MainNav = styled.div`
   background-color: transparent;
@@ -146,3 +148,9 @@ export const Button = styled(CustomButton)`
   padding-top: 0.1em;
   padding-bottom: 0.1em;
 `
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+`
+
+export const NavWrapper = styled.div``

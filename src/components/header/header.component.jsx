@@ -12,8 +12,8 @@ const Header = () => {
   const scrollTrigger = useScrollTrigger()
 
   return (
-    <div>
-      <S.CustomAppBar position="fixed" elevation={scrollTrigger ? 4 : 0}>
+    <S.NavWrapper>
+      <S.CustomAppBar elevation={scrollTrigger ? 4 : 0}>
         <S.TopNav>
           <Container>
             <S.InnerTopContainer>
@@ -58,17 +58,17 @@ const Header = () => {
                     )}
                   </div>
                 </Hidden>
-                <div style={{ display: "flex" }}>
+                <S.ButtonWrapper>
                   <S.Button to="/demo">
                     {parse("Schedule an <br>Appointment")}
                   </S.Button>
-                </div>
+                </S.ButtonWrapper>
               </S.InnerMainContainer>
             </S.MainNavContainer>
           </Container>
         </S.MainNav>
       </S.CustomAppBar>
-    </div>
+    </S.NavWrapper>
   )
 }
 export default Header
