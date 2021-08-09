@@ -28,7 +28,13 @@ export const CustomArrow = styled.div`
     left: -0.5em;
   }
   &.right {
-    right: -0.5em;
+    ${({ onlyRight }) =>
+      !onlyRight
+        ? `
+    right: 3.5em;
+  `
+        : `right: -0.5em;
+      `}
   }
   @media (max-width: 1340px) {
     display: none;

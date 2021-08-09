@@ -13,6 +13,7 @@ import BlueFeaturesSection from "../layouts/BlueFeaturesSection"
 import TornadoIcon from "../images/tornado.svg"
 import ServicesHome from "../layouts/ServicesHome"
 import GallerySlider from "../layouts/GallerySlider"
+import TestimonialSlider from "../layouts/TestimonialSlider"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -74,6 +75,14 @@ const Layouts = () => {
       }
     }
   `)
+
+  const reviewObj = {
+    review:
+      "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+      "Thank you for everything. I would highly recommend A Christian Glass.",
+    author: "Ramon C.",
+    location: "Tamarac, FL",
+  }
   const buttonObj = {
     url: "/",
     title: "See More",
@@ -310,6 +319,30 @@ const Layouts = () => {
           },
           {
             image: { sourceUrl: staticQuery.slide2 },
+          },
+        ]}
+      />
+      <LayoutTitle>TestimonialSlider</LayoutTitle>
+      <TestimonialSlider
+        leftContent={{
+          title: "Testimonials & Reviews",
+          subtitle:
+            "People are saying great things about A-Christian Glass every day.",
+          description:
+            "Read what homeowners think about their new impact resistant windows and doors.",
+        }}
+        slides={[
+          {
+            slide: reviewObj,
+          },
+          {
+            slide: reviewObj,
+          },
+          {
+            slide: reviewObj,
+          },
+          {
+            slide: reviewObj,
           },
         ]}
       />
