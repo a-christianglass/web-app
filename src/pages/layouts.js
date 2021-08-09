@@ -244,6 +244,42 @@ const Layouts = () => {
       />
       <LayoutTitle>GallerySlider</LayoutTitle>
       <GallerySlider
+        bgColor={"gray"}
+        images={[
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+        ]}
+      />
+      <GallerySlider
+        bgColor={"white"}
         images={[
           {
             image: { sourceUrl: staticQuery.slide2 },

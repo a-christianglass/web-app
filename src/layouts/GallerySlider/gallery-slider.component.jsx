@@ -6,12 +6,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery"
 import { useTheme } from "@material-ui/core"
 import { SwiperSlide } from "swiper/react"
 
-const GallerySlider = ({ images }) => {
+const GallerySlider = ({ images, bgColor }) => {
   const theme = useTheme()
   const isMD = useMediaQuery(theme.breakpoints.down("md"))
   if (!images) return null
   return (
-    <S.Wrapper>
+    <S.Wrapper bgColor={bgColor}>
       <Container>
         <CustomSlider
           autoHeight={false}

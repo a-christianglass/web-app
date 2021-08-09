@@ -4,7 +4,13 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
-  background-color: #f0f5f7;
+  ${({ bgColor }) =>
+    bgColor === "white"
+      ? `
+    background-color:#ffffff;
+  `
+      : `background-color:#F0F5F7;
+      `}
   .swiper-container {
     width: 100%;
     height: 100%;
