@@ -161,39 +161,43 @@ const Layouts = () => {
       />
       <LayoutTitle>LogosGrid</LayoutTitle>
       <LogosGrid
+        title="Partnering with the Best"
         logos={[
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
+
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
+
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
+
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
+
           {
-            logo: staticQuery.logo,
+            image: { sourceUrl: staticQuery.logo },
           },
         ]}
-        title="Partnering with the Best"
       />
       <LayoutTitle>AppointmentBanner</LayoutTitle>
       <AppointmentBanner

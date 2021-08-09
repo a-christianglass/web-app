@@ -1,20 +1,39 @@
 import React from "react"
 import * as S from "./logos-grid.styles"
-import Grid from "@material-ui/core/Grid"
-import CustomImage from "../../components/custom-image/custom-image.component"
+import Container from "@material-ui/core/Container"
+import IconSlider from "../../components/icon-grid/icon-grid.component"
+import { SwiperSlide } from "swiper/react"
 
-const LogosGrid = ({ title, logos }) => {
+const LogosGrid = ({ logos, title }) => {
   if (!logos) return null
   return (
-    <S.Wrapper contained maxWidth="md">
-      {title && <S.Title>{title}</S.Title>}
-      <Grid container spacing={4}>
-        {logos.map(({ logo }, index) => (
-          <Grid item xs={6} sm={3} key={`logo-${index}`}>
-            <CustomImage img={logo} alt={"logo"} />
-          </Grid>
-        ))}
-      </Grid>
+    <S.Wrapper>
+      <Container>
+        <S.Title>{title}</S.Title>
+        <IconSlider
+          autoHeight={false}
+          slidesToShow={2}
+          spacingBetween={30}
+          slidesPerColumn={2}
+          loop={false}
+          breakpoints={{
+            600: {
+              slidesPerView: 3,
+              slidesPerColumn: 2,
+            },
+            1200: {
+              slidesPerView: 5,
+              slidesPerColumn: 2,
+            },
+          }}
+        >
+          {logos.map(({ title, image }, index) => (
+            <SwiperSlide key={`icon-slide-${index}`}>
+              {image && <S.CustomLogo img={image.sourceUrl} />}
+            </SwiperSlide>
+          ))}
+        </IconSlider>
+      </Container>
     </S.Wrapper>
   )
 }
