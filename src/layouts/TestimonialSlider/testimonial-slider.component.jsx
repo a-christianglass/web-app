@@ -3,6 +3,7 @@ import * as S from "./testimonial-slider.styles"
 import { Grid } from "@material-ui/core"
 import CustomSlider from "../../components/custom-slider/custom-slider.component"
 import { SwiperSlide } from "swiper/react"
+import parse from "html-react-parser"
 
 const TestimonialSlider = ({ leftContent, slides }) => {
   return (
@@ -33,7 +34,7 @@ const TestimonialSlider = ({ leftContent, slides }) => {
             {slides.map(({ slide }, index) => (
               <SwiperSlide key={`testimonial-slide-${index}`}>
                 <S.CardWrapper>
-                  {slide && <p>{slide?.review}</p>}
+                  {slide && <p>{parse(slide?.review)}</p>}
                   {slide && <h4>{slide?.author}</h4>}
                   {slide && <h5>{slide?.location}</h5>}
                 </S.CardWrapper>

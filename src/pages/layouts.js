@@ -79,7 +79,7 @@ const Layouts = () => {
   const reviewObj = {
     review:
       "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
-      "Thank you for everything. I would highly recommend A Christian Glass.",
+      "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
     author: "Ramon C.",
     location: "Tamarac, FL",
   }
