@@ -12,6 +12,7 @@ import CommonHeroBanner from "../layouts/CommonHeroBanner"
 import BlueFeaturesSection from "../layouts/BlueFeaturesSection"
 import TornadoIcon from "../images/tornado.svg"
 import ServicesHome from "../layouts/ServicesHome"
+import GallerySlider from "../layouts/GallerySlider"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -52,6 +53,21 @@ const Layouts = () => {
         }
       }
       features: file(relativePath: { eq: "features.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slide1: file(relativePath: { eq: "slide1.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slide2: file(relativePath: { eq: "slide2.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      slide3: file(relativePath: { eq: "slide3.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -225,6 +241,41 @@ const Layouts = () => {
         rightTitle="Commercial"
         rightContent="A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality."
         rightLink={{ title: "Know More", url: "/" }}
+      />
+      <LayoutTitle>GallerySlider</LayoutTitle>
+      <GallerySlider
+        images={[
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+          {
+            image: { sourceUrl: staticQuery.slide2 },
+          },
+        ]}
       />
     </Layout>
   )
