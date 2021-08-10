@@ -14,6 +14,7 @@ import TornadoIcon from "../images/tornado.svg"
 import ServicesHome from "../layouts/ServicesHome"
 import GallerySlider from "../layouts/GallerySlider"
 import TestimonialSlider from "../layouts/TestimonialSlider"
+import ProjectSlider from "../layouts/ProjectSlider"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -76,6 +77,13 @@ const Layouts = () => {
     }
   `)
 
+  const projectObj = {
+    image: staticQuery.home,
+    link: {
+      title: "project name 1",
+      url: "/",
+    },
+  }
   const reviewObj = {
     review:
       "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
@@ -348,6 +356,21 @@ const Layouts = () => {
           {
             slide: reviewObj,
           },
+        ]}
+      />
+      <LayoutTitle>ProjectSlider</LayoutTitle>
+      <ProjectSlider
+        leftContent={{
+          title: "Projects & Gallery",
+          subtitle: "A-Christian Glass on Charge",
+          content:
+            "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
+          button: buttonObj,
+        }}
+        projects={[
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
         ]}
       />
     </Layout>
