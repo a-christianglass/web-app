@@ -5,20 +5,9 @@ import CustomSlider from "../../components/custom-slider/custom-slider.component
 import { SwiperSlide } from "swiper/react"
 import CustomImage from "../../components/custom-image/custom-image.component"
 import { CustomLink } from "../../components/custom-link/custom-link.styles"
-import { graphql, useStaticQuery } from "gatsby"
 import Arrow from "../../assets/icons/arrow.svg"
 
 const ProjectSlider = ({ leftContent, projects }) => {
-  const staticQuery = useStaticQuery(graphql`
-    query {
-      windows: file(relativePath: { eq: "doors.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-        }
-      }
-    }
-  `)
-
   return (
     <S.Wrapper>
       <Grid container>
