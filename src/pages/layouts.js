@@ -16,6 +16,7 @@ import GallerySlider from "../layouts/GallerySlider"
 import TestimonialSlider from "../layouts/TestimonialSlider"
 import ProjectSlider from "../layouts/ProjectSlider"
 import FormBanner from "../layouts/FormBanner"
+import VideoRow from "../layouts/VideoRow"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -76,6 +77,16 @@ const Layouts = () => {
         }
       }
       bgForm: file(relativePath: { eq: "form-section.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      acgLogo: file(relativePath: { eq: "acg-logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      youtubeBg: file(relativePath: { eq: "bgYoutube.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -380,7 +391,20 @@ const Layouts = () => {
         ]}
       />
       <LayoutTitle>FormBanner</LayoutTitle>
-      <FormBanner image={useStaticQuery.bgForm} />
+      <FormBanner />
+      <LayoutTitle>VideoRow</LayoutTitle>
+      <VideoRow
+        videoBg={staticQuery.youtubeBg}
+        logo={staticQuery.acgLogo}
+        title={"34 Years of Experience"}
+        content={
+          "   A-Christian Glass is a full-service company for installing and\n" +
+          "              replacement of interior and exterior glass doors and impact proof\n" +
+          "              window in Delray Beach, Florida. From 1988, we have offered top\n" +
+          "              quality products and services for our customers and the community,\n" +
+          "              even before and after several hurricanes and other weather systems"
+        }
+      />
     </Layout>
   )
 }
