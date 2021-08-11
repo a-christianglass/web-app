@@ -21,6 +21,7 @@ import FeaturesRow from "../layouts/features-row"
 import ChoicesSection from "../layouts/ChoicesSection"
 import TitleTextRow from "../layouts/TitleTextRow"
 import ProjectsGrid from "../layouts/ProjectsGrid"
+import DistributorSection from "../layouts/DistributorSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -96,6 +97,11 @@ const Layouts = () => {
         }
       }
       hurricanes: file(relativePath: { eq: "hurricanes.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      pgtLogo: file(relativePath: { eq: "pgt-logo.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -532,6 +538,15 @@ const Layouts = () => {
           { project: projectObj },
           { project: projectObj },
         ]}
+      />
+      <LayoutTitle>DistributorSection</LayoutTitle>
+      <DistributorSection
+        logo={staticQuery.pgtLogo}
+        title={"authorized distributor"}
+        subtitle={"PGT Impact Resistant Windows"}
+        content={
+          "A-Christian Glass is an authorized distributor and installation contractor for PGT windows and doors. We provide high quality impact resistant PGT products for both residential and commercial clients. PGT is one of the most trusted names in the impact resistant window and door industry and we are proud to offer you their products. PGT is known for providing the highest level of hurricane protection and energy efficiency available."
+        }
       />
     </Layout>
   )
