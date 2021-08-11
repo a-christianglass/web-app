@@ -20,6 +20,7 @@ import VideoRow from "../layouts/VideoRow"
 import FeaturesRow from "../layouts/features-row"
 import ChoicesSection from "../layouts/ChoicesSection"
 import TitleTextRow from "../layouts/TitleTextRow"
+import ProjectsGrid from "../layouts/ProjectsGrid"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -452,6 +453,24 @@ const Layouts = () => {
         content={
           "For 34 years, A-Christian Glass and Mirror opened its doors and in the decades and one thing remains the same: Customer service remains the foundation of the company's success."
         }
+      />
+      <LayoutTitle>ProjectGrid</LayoutTitle>
+      <ProjectsGrid
+        title={"Custom Houses"}
+        content={
+          "Omnis excepturi totam saepe. Blanditiis aspernatur odit ratione quos. Necessitatibus aspernatur error. Voluptatum amet debitis magnam occaecati ut."
+        }
+        projects={[
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+          { project: projectObj },
+        ]}
       />
     </Layout>
   )
