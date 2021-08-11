@@ -15,6 +15,7 @@ import ServicesHome from "../layouts/ServicesHome"
 import GallerySlider from "../layouts/GallerySlider"
 import TestimonialSlider from "../layouts/TestimonialSlider"
 import ProjectSlider from "../layouts/ProjectSlider"
+import FormBanner from "../layouts/FormBanner"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -70,6 +71,11 @@ const Layouts = () => {
         }
       }
       slide3: file(relativePath: { eq: "slide3.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      bgForm: file(relativePath: { eq: "form-section.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -373,6 +379,8 @@ const Layouts = () => {
           { project: projectObj },
         ]}
       />
+      <LayoutTitle>FormBanner</LayoutTitle>
+      <FormBanner image={useStaticQuery.bgForm} />
     </Layout>
   )
 }
