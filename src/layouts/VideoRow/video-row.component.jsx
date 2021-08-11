@@ -8,16 +8,18 @@ const VideoRow = ({ logo, title, content, videoBg, videoId }) => {
     <S.Wrapper>
       <Grid container>
         <S.LeftGrid item xs={12} md={6}>
-          <S.Logo img={logo} />
+          {logo && <S.Logo img={logo} />}
           <S.LeftWrapper>
-            <h2>{parse(title)}</h2>
-            <Typography>{parse(content)}</Typography>
+            {title && <h2>{parse(title)}</h2>}
+            {content && <Typography>{parse(content)}</Typography>}
           </S.LeftWrapper>
         </S.LeftGrid>
         <S.VideoGrid item xs={12} md={6}>
-          <S.VideoImage img={videoBg}>
-            <YoutubeIcon />
-          </S.VideoImage>
+          {videoBg && (
+            <S.VideoImage img={videoBg}>
+              <YoutubeIcon />
+            </S.VideoImage>
+          )}
         </S.VideoGrid>
       </Grid>
     </S.Wrapper>
