@@ -435,6 +435,39 @@ const Layouts = () => {
           ],
         }}
       />
+      <FeaturesRow
+        reverse={true}
+        image={staticQuery.hurricanes}
+        content={{
+          title: "Hurricane<br>Windows and Doors",
+          features: [
+            {
+              feature:
+                "Our residential window and door department serves homeowners, architects, and designers, offering customized glass solutions: from interior showers and mirrors, glass railings and stairs, to the windows and sliding glass doors of your home.",
+            },
+            {
+              feature:
+                "Our shower and mirror department will help you develop and create all ofyour visions and dreams. We can tap into your imagination to find what you desire, and then give you all the necessary professional guidance needed for the project to realize that dream within.",
+            },
+            {
+              feature:
+                "Our commercial department will accommodate all types of projects, from a large multiple high-rise structure to a local shopping center or storefront.",
+            },
+            {
+              feature:
+                "Our commercial department will accommodate all types of projects, from a large multiple high-rise structure to a local shopping center or storefront.",
+            },
+            {
+              feature:
+                "Our commercial department will accommodate all types of projects, from a large multiple high-rise structure to a local shopping center or storefront.",
+            },
+            {
+              feature:
+                "Our commercial department will accommodate all types of projects, from a large multiple high-rise structure to a local shopping center or storefront.",
+            },
+          ],
+        }}
+      />
       <LayoutTitle>ChoicesSection</LayoutTitle>
       <ChoicesSection
         leftContent={{

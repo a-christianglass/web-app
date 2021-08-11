@@ -3,10 +3,10 @@ import { Grid } from "@material-ui/core"
 import * as S from "./features-row.styles"
 import parse from "html-react-parser"
 
-const FeaturesRow = ({ image, content }) => {
+const FeaturesRow = ({ image, content, reverse }) => {
   return (
     <S.Wrapper>
-      <Grid container>
+      <Grid container direction={reverse && "row-reverse"}>
         <S.LeftGrid item xs={12} md={6}>
           <S.Image img={image} />
         </S.LeftGrid>

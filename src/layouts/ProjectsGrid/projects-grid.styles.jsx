@@ -8,7 +8,7 @@ export const Wrapper = styled(SectionWrapper)`
   background-color: #ffffff;
 `
 export const TopGrid = styled(Grid)`
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 `
 export const LeftGrid = styled(Grid)`
   display: flex;
