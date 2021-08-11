@@ -19,6 +19,7 @@ import FormBanner from "../layouts/FormBanner"
 import VideoRow from "../layouts/VideoRow"
 import FeaturesRow from "../layouts/features-row"
 import ChoicesSection from "../layouts/ChoicesSection"
+import TitleTextRow from "../layouts/TitleTextRow"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -443,6 +444,13 @@ const Layouts = () => {
         rightContent={
           'The better the composition, the better the glass will deflect heat and cool the home," says Dable. "It\'s great to know that a $400 electric bill can be cut in half by upgrading your windows. \n' +
           "They're a definite money-saver, and they also reduce outside noise.\""
+        }
+      />
+      <LayoutTitle>TitleTextRow</LayoutTitle>
+      <TitleTextRow
+        title={"Superior Service\n"}
+        content={
+          "For 34 years, A-Christian Glass and Mirror opened its doors and in the decades and one thing remains the same: Customer service remains the foundation of the company's success."
         }
       />
     </Layout>
