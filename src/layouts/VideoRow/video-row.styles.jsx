@@ -19,7 +19,7 @@ export const LeftGrid = styled(Grid)`
 export const LeftWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 445px;
+  max-width: 526px;
   h2 {
     color: #0d5c80;
     font-size: 36px;
