@@ -18,6 +18,7 @@ import ProjectSlider from "../layouts/ProjectSlider"
 import FormBanner from "../layouts/FormBanner"
 import VideoRow from "../layouts/VideoRow"
 import FeaturesRow from "../layouts/features-row"
+import ChoicesSection from "../layouts/ChoicesSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -431,6 +432,18 @@ const Layouts = () => {
             },
           ],
         }}
+      />
+      <LayoutTitle>ChoicesSection</LayoutTitle>
+      <ChoicesSection
+        leftContent={{
+          title: "We Provide Choices for Every Style and Budget",
+          content:
+            "A-Christian Glass in Delray Beach knows that not all windows are created equal, and today there are more options than ever. Purchasing the right glass is an important decision since there are a variety of composition levels for windows. Educating customers is an important company initiative.<br><br>A-Christian Glass is a complete glass service facility. Behind the scenes, glazers cut, buff and prep hundreds of panes of glass for delivery to multiple destinations from Sunrise to Lake Worth.",
+        }}
+        rightContent={
+          'The better the composition, the better the glass will deflect heat and cool the home," says Dable. "It\'s great to know that a $400 electric bill can be cut in half by upgrading your windows. \n' +
+          "They're a definite money-saver, and they also reduce outside noise.\""
+        }
       />
     </Layout>
   )

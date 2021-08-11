@@ -47,7 +47,7 @@ export const FeatureWrapper = styled.div`
   }
 `
 export const ContentText = styled(Typography)`
-  margin-left: 36px;
+  margin-left: 50px;
   padding-top: 2px;
   font-size: ${({ theme }) => theme.typography.pxToRem(16)};
   position: relative;
@@ -56,7 +56,7 @@ export const ContentText = styled(Typography)`
   &:before {
     content: "";
     position: absolute;
-    left: -36px;
+    left: -50px;
     top: 4px;
     width: 32px;
     height: 32px;
