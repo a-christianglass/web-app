@@ -5,7 +5,7 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 0;
+  padding: 4em 0;
 `
 
 export const LeftGrid = styled(Grid)`
@@ -25,6 +25,7 @@ export const LeftWrapper = styled.div`
     font-size: 36px;
     font-style: normal;
     font-weight: bold;
+    margin: 0.5em 0;
   }
 `
 export const Content = styled(Typography)`
@@ -33,11 +34,7 @@ export const Content = styled(Typography)`
   font-weight: normal;
   color: rgba(29, 56, 69, 0.75);
 `
-export const LogoWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+
 export const Logo = styled(CustomImage)`
   max-width: 146px;
   width: 100%;
