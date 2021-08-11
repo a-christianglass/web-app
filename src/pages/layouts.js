@@ -172,6 +172,34 @@ const Layouts = () => {
       <ImageTextRow
         image={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        haveAButton={true}
+        button={buttonObj}
+      />
+      <ImageTextRow
+        image={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        haveAButton={true}
+        button={buttonObj}
+        reverse
+      />
+      <ImageTextRow
+        image={staticQuery.windows}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        haveAButton={true}
+        button={buttonObj}
+        contained
+      />
+      <ImageTextRow
+        image={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        haveAButton={true}
+        button={buttonObj}
+        reverse
+        contained
+      />
+      <ImageTextRow
+        image={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
       />
       <ImageTextRow

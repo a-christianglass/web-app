@@ -5,7 +5,14 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import parse from "html-react-parser"
 import Container from "@material-ui/core/Container"
 
-const ImageTextRow = ({ image, content, button, reverse, contained }) => {
+const ImageTextRow = ({
+  image,
+  content,
+  button,
+  reverse,
+  contained,
+  haveAButton,
+}) => {
   return (
     <S.Wrapper>
       <S.RowGrid
@@ -21,7 +28,8 @@ const ImageTextRow = ({ image, content, button, reverse, contained }) => {
             {content && (
               <S.RightText>
                 {parse(content)}
-                {button && (
+
+                {haveAButton && (
                   <S.Button href={button?.url}>{button?.title}</S.Button>
                 )}
               </S.RightText>
