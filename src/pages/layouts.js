@@ -24,6 +24,7 @@ import ProjectsGrid from "../layouts/ProjectsGrid"
 import DistributorSection from "../layouts/DistributorSection"
 import ReasonsSection from "../layouts/ReasonsSection"
 import WorksSection from "../layouts/WorksSection"
+import IndustriesServices from "../layouts/IndustriesServices"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -627,6 +628,32 @@ const Layouts = () => {
               "A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems",
           },
         ]}
+      />
+      <LayoutTitle>IndustriesServices</LayoutTitle>
+      <IndustriesServices
+        title="Residential Services"
+        image={staticQuery.slide1}
+        description={{
+          title: "Custom Houses",
+          content:
+            "At A-Christian Glass, we do it all. We keep a watchful eye on the process and direct each project to keep everything exactly as planned. No job is too large or too small for us.\n" +
+            "<br><br>We pride ourselves in working with business owners, construction managers and contractors from start to finish. Our philosophy has always been about relationships and commitment to our clients. We believe integrity and loyalty are the grounds for ultimate success.",
+        }}
+        haveAButton
+        button={buttonObj}
+      />{" "}
+      <IndustriesServices
+        title="Residential Services"
+        image={staticQuery.slide1}
+        description={{
+          title: "Custom Houses",
+          content:
+            "At A-Christian Glass, we do it all. We keep a watchful eye on the process and direct each project to keep everything exactly as planned. No job is too large or too small for us.\n" +
+            "<br><br>We pride ourselves in working with business owners, construction managers and contractors from start to finish. Our philosophy has always been about relationships and commitment to our clients. We believe integrity and loyalty are the grounds for ultimate success.",
+        }}
+        haveAButton
+        reverse
+        button={buttonObj}
       />
     </Layout>
   )
