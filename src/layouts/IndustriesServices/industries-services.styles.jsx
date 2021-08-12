@@ -28,7 +28,6 @@ export const ServiceWrapper = styled.div`
 
 export const RightGrid = styled(Grid)`
   display: flex;
-  justify-content: center;
   align-items: center;
 `
 
@@ -43,8 +42,22 @@ export const ContentWrapper = styled.div`
 export const ContentText = styled(Typography)`
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 23px;
   color: rgba(29, 56, 69, 0.75);
   margin-bottom: 2em;
+  strong {
+    font-weight: bold;
+    rgba(29, 56, 69, 0.75);
+
+  }
+  
+  a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 29px;
+    font-size: 24px;
+    color: #0D5C80;
+  }
 `
