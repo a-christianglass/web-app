@@ -19,7 +19,7 @@ const IndustriesServices = ({
           <Grid item xs={12} md={6}>
             <S.Image img={image} />
           </Grid>
-          <S.RightGrid item xs={12} md={6}>
+          <S.RightGrid item xs={12} md={6} shouldCenter={reverse}>
             <S.ContentWrapper>
               {description.title && <h2>{description.title}</h2>}
               {description.content && (
