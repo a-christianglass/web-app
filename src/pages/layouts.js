@@ -25,6 +25,7 @@ import DistributorSection from "../layouts/DistributorSection"
 import ReasonsSection from "../layouts/ReasonsSection"
 import WorksSection from "../layouts/WorksSection"
 import IndustriesServices from "../layouts/IndustriesServices"
+import MiscHero from "../layouts/MiscHero"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -125,6 +126,11 @@ const Layouts = () => {
         }
       }
       windIcon: file(relativePath: { eq: "windIcon.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      miscHero: file(relativePath: { eq: "misc-hero.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -663,6 +669,8 @@ const Layouts = () => {
             "Our commercial products vary from hurricane storefronts to curtain-wall systems; we work on both single-story buildings and 20 - 30 story highrises. We do new construction and retro-fit projects, historical preservation projects, hotels, strip malls and individual storefronts.<br><br>Whether you're a startup business or a long-standing company that needs renovation, we can accommodate your needs.<br><br><strong>Call A-Christian Glass at<br></strong><a href='/'>(561) 278-3385</a><br><strong>and we will work with you to achieve your goals on your project.\n</strong>",
         }}
       />
+      <LayoutTitle>MiscHero</LayoutTitle>
+      <MiscHero image={staticQuery.miscHero} title="Privacy Policy" />
     </Layout>
   )
 }
