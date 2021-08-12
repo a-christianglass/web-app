@@ -39,4 +39,8 @@ export const TextWrapper = styled.div`
   }
 `
 
-export const ContentText = styled(Typography)``
+export const ContentText = styled(Typography)`
+  strong {
+    font-weight: 700;
+  }
+`

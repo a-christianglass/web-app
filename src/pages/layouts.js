@@ -545,7 +545,7 @@ const Layouts = () => {
         title={"authorized distributor"}
         subtitle={"PGT Impact Resistant Windows"}
         content={
-          "A-Christian Glass is an authorized distributor and installation contractor for PGT windows and doors. We provide high quality impact resistant PGT products for both residential and commercial clients. PGT is one of the most trusted names in the impact resistant window and door industry and we are proud to offer you their products. PGT is known for providing the highest level of hurricane protection and energy efficiency available."
+          "<strong>A-Christian Glass is an authorized distributor and installation contractor for PGT windows and doors.</strong> We provide high quality impact resistant PGT products for both residential and commercial clients. PGT is one of the most trusted names in the impact resistant window and door industry and we are proud to offer you their products. PGT is known for providing the highest level of hurricane protection and energy efficiency available."
         }
       />
     </Layout>
