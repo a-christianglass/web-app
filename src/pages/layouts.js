@@ -23,6 +23,7 @@ import TitleTextRow from "../layouts/TitleTextRow"
 import ProjectsGrid from "../layouts/ProjectsGrid"
 import DistributorSection from "../layouts/DistributorSection"
 import ReasonsSection from "../layouts/ReasonsSection"
+import WorksSection from "../layouts/WorksSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -103,6 +104,26 @@ const Layouts = () => {
         }
       }
       pgtLogo: file(relativePath: { eq: "pgt-logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      shieldIcon: file(relativePath: { eq: "shieldIcon.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      tornadoIcon: file(relativePath: { eq: "tornadoIcon.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      uvIcon: file(relativePath: { eq: "uvIcon.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      windIcon: file(relativePath: { eq: "windIcon.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -576,6 +597,34 @@ const Layouts = () => {
               content:
                 "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
             },
+          },
+        ]}
+      />
+      <LayoutTitle>WorksSection</LayoutTitle>
+      <WorksSection
+        title="Working with the Best of the Field"
+        description="A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems"
+        works={[
+          {
+            logo: staticQuery.tornadoIcon,
+            description:
+              "A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems",
+          },
+          {
+            logo: staticQuery.shieldIcon,
+            description:
+              "A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems",
+          },
+          {
+            logo: staticQuery.uvIcon,
+            description:
+              "A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems",
+          },
+          ,
+          {
+            logo: staticQuery.windIcon,
+            description:
+              "A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems",
           },
         ]}
       />
