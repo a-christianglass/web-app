@@ -26,6 +26,16 @@ export const ServiceWrapper = styled.div`
   }
 `
 
+export const LeftGrid = styled(Grid)`
+  display: flex;
+  align-items: center;
+  ${({ shouldCenter }) =>
+    shouldCenter &&
+    `
+   justify-content: center;
+  `}
+`
+
 export const RightGrid = styled(Grid)`
   display: flex;
   align-items: center;

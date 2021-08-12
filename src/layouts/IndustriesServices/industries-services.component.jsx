@@ -15,7 +15,7 @@ const IndustriesServices = ({
     <S.Wrapper>
       <S.ServiceWrapper>
         {title && <h2>{title}</h2>}
-        <Grid container direction={reverse && "row-reverse"}>
+        <S.LeftGrid container direction={reverse && "row-reverse"}>
           <Grid item xs={12} md={6}>
             <S.Image img={image} />
           </Grid>
@@ -30,7 +30,7 @@ const IndustriesServices = ({
               )}
             </S.ContentWrapper>
           </S.RightGrid>
-        </Grid>
+        </S.LeftGrid>
       </S.ServiceWrapper>
     </S.Wrapper>
   )
