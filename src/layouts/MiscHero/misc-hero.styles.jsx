@@ -8,7 +8,7 @@ export const Wrapper = styled(SectionWrapper)`
 export const BgImage = styled(CustomBgImage)``
 
 export const TitleWrapper = styled.div`
-  padding: 6em 10em;
+  padding: 4em 10em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
