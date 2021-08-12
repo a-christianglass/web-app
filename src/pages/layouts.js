@@ -22,6 +22,7 @@ import ChoicesSection from "../layouts/ChoicesSection"
 import TitleTextRow from "../layouts/TitleTextRow"
 import ProjectsGrid from "../layouts/ProjectsGrid"
 import DistributorSection from "../layouts/DistributorSection"
+import ReasonsSection from "../layouts/ReasonsSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -547,6 +548,36 @@ const Layouts = () => {
         content={
           "<strong>A-Christian Glass is an authorized distributor and installation contractor for PGT windows and doors.</strong> We provide high quality impact resistant PGT products for both residential and commercial clients. PGT is one of the most trusted names in the impact resistant window and door industry and we are proud to offer you their products. PGT is known for providing the highest level of hurricane protection and energy efficiency available."
         }
+      />
+      <LayoutTitle>ReasonsSection</LayoutTitle>
+      <ReasonsSection
+        title={"Why You Should Hire A-Christian Glass"}
+        description={
+          'A-Christian Glass is one of the most trusted hurricane impact resistant window companies in South Florida. So, what gives us the edge on our competitors? Why should you choose us? If you are still struggling with the question of "how to find a reputable company that offers window replacement near me", then here are more reasons A-Christian Glass is the answer you are looking for.'
+        }
+        reasons={[
+          {
+            reason: {
+              title: "We Provide the Windows and the Installation",
+              content:
+                "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
+            },
+          },
+          {
+            reason: {
+              title: "We Provide the Windows and the Installation",
+              content:
+                "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
+            },
+          },
+          {
+            reason: {
+              title: "We Provide the Windows and the Installation",
+              content:
+                "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
+            },
+          },
+        ]}
       />
     </Layout>
   )
