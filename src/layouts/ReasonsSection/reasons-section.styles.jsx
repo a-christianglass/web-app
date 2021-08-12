@@ -31,11 +31,11 @@ export const RightGrid = styled(Grid)`
 `
 
 export const ContentText = styled(Typography)`
-  font-size: 1rem;
-  color: rgba(29, 56, 69, 0.75);
+  font-weight: 500;
   line-height: 26px;
   font-style: normal;
-  font-weight: normal;
+  color: rgba(29, 56, 69, 0.75);
+  font-size: 1rem;
 `
 
 export const LeftTextWrapper = styled.div`
@@ -86,4 +86,8 @@ export const ReasonTitle = styled(Typography)`
 `
 export const ReasonContent = styled(Typography)`
   margin-left: 30px;
+  font-weight: 500;
+  line-height: 26px;
+  font-style: normal;
+  color: rgba(29, 56, 69, 0.75);
 `
