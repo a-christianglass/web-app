@@ -202,7 +202,11 @@ const Layouts = () => {
         }
       />
       <LayoutTitle>MiscContent</LayoutTitle>
-      <MiscContent content={`<p>Some content Here</p>`} />
+      <MiscContent
+        content={`<h2>Privacy Policy Last Updated:<br>May 29, 2019
+</h2><br><p>A-Christian Glass («us», «we», or «our») operates https://www.a-christianglass.com (the «Site»). This page informs you of our policies regarding the collection, use and disclosure of personal information we receive from users of the Site.
+<br><br>We use your personal information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.</p><br><br><h3>Contact Us</h3><p>If you have any questions about this Privacy Policy, please contact us by filling out this form, or by calling us at <a href="/">(561) 278-3385.</a></p>`}
+      />
       <LayoutTitle>ImageTextRow</LayoutTitle>
       <ImageTextRow
         image={staticQuery.home}

@@ -6,7 +6,7 @@ const MiscContent = ({ containerMaxWidth, content }) => {
   if (!content) return null
   return (
     <S.Wrapper maxWidth={containerMaxWidth ? containerMaxWidth : false}>
-      {parse(content)}
+      <S.TextWrapper>{parse(content)}</S.TextWrapper>
     </S.Wrapper>
   )
 }
