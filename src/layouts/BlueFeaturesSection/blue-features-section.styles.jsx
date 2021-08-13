@@ -57,11 +57,12 @@ export const TitleWrapper = styled.div`
 export const Icon = styled(CustomImage)`
   width: 44px;
   height: 44px;
+  margin-right: 20px;
   object-fit: contain !important;
 `
 
 export const ContentText = styled(Typography)`
-  margin-left: 44px;
+  margin-left: 64px;
   color: white;
   font-size: 1rem;
   line-height: 26px;
