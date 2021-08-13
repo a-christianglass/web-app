@@ -3,6 +3,7 @@ import * as S from "./blue-features-section.styles"
 import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
+
 const BlueFeaturesSection = ({ image, title, cards }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
@@ -13,29 +14,34 @@ const BlueFeaturesSection = ({ image, title, cards }) => {
       }
     }
   `)
-
   return (
     <S.Wrapper>
-      <Grid xs={4}>
-        {image && <S.LeftImage img={image} alt={image.altText} />}
-      </Grid>
-      <Grid xs={8}>
-        <S.ImageWrapper img={staticQuery.blueBg}>
-          <S.ContentWrapper>
-            {title && <h2>{parse(title)}</h2>}
-            <S.CardsGrid container sm={12} spacing={2}>
-              {cards.map(({ icon, title, content }, index) => (
-                <S.FeatureCard item sm={6} key={`icon-grid-${index}`}>
-                  {icon && <S.Icon img={icon} />}
-                  <S.FeaturedTextWrapper>
-                    {title && <h3>{title}</h3>}
-                    {content && <h4>{content}</h4>}
-                  </S.FeaturedTextWrapper>
-                </S.FeatureCard>
-              ))}
-            </S.CardsGrid>
-          </S.ContentWrapper>
-        </S.ImageWrapper>
+      <Grid container>
+        <Grid item xs={12} md={4}>
+          <S.Image img={image} />
+        </Grid>
+        <S.RightGrid item xs={12} md={8}>
+          <S.BgImage img={staticQuery.blueBg}>
+            <S.RightWrapper>
+              {title && <h2>{parse(title)}</h2>}
+              <Grid container>
+                {cards.map(({ icon, title, content }, index) => (
+                  <S.Card item sm={12} md={6} key={`icon-grid-${index}`}>
+                    <S.ContentWrapper>
+                      <S.TitleWrapper>
+                        {icon && <S.Icon img={icon} />}
+                        {title && <h3>{title}</h3>}
+                      </S.TitleWrapper>
+                      {content && (
+                        <S.ContentText>{parse(content)}</S.ContentText>
+                      )}
+                    </S.ContentWrapper>
+                  </S.Card>
+                ))}
+              </Grid>
+            </S.RightWrapper>
+          </S.BgImage>
+        </S.RightGrid>
       </Grid>
     </S.Wrapper>
   )

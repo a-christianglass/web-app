@@ -1,66 +1,69 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
-import { Grid } from "@material-ui/core"
 import CustomImage from "../../components/custom-image/custom-image.component"
+import { Grid, Typography } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
-  display: flex;
 `
 
-export const LeftImage = styled(CustomImage)`
-  height: 100%;
+export const Image = styled(CustomImage)`
   width: 100%;
 `
-export const ImageWrapper = styled(CustomBgImage)`
-  height: 100%;
+
+export const BgImage = styled(CustomBgImage)`
   width: 100%;
+  height: 100%;
+  padding: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+export const Card = styled(Grid)`
+  margin-bottom: 2em;
+`
+
+export const CardContent = styled.div`
+  max-width: 400px;
+`
+
+export const RightWrapper = styled.div`
+  h2 {
+    margin-bottom: 2em;
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+  }
+`
+
+export const RightGrid = styled(Grid)`
   margin-left: -1px;
 `
 export const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 10em;
-  h2 {
-    font-size: 2.25rem;
-    max-width: 512px;
-  }
+  max-width: 400px;
 `
-
-export const CardsGrid = styled(Grid)`
+export const TitleWrapper = styled.div`
   display: flex;
-  margin-top: 2em;
-`
-
-export const FeatureCard = styled(Grid)`
-  display: flex;
-  margin-top: 4em;
-  margin-bottom: 4em;
-`
-export const FeaturedTextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 322px;
+  align-items: center;
   h3 {
-    font-weight: 700;
-    font-size: 24px;
-  }
-
-  h4 {
-    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    color: white;
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
   }
 `
 
 export const Icon = styled(CustomImage)`
-  margin-right: 1em;
   width: 44px;
   height: 44px;
-  object-fit: contain;
+  object-fit: contain !important;
+`
 
-  img {
-    width: 44px;
-    height: 44px;
-    object-fit: contain !important;
-  }
+export const ContentText = styled(Typography)`
+  margin-left: 44px;
+  color: white;
+  font-size: 1rem;
+  line-height: 26px;
+  font-weight: 500;
 `
