@@ -1,283 +1,155 @@
 import styled from "styled-components"
+import SectionWrapper from "../section-wrapper/section-wrapper.component"
 import { Grid } from "@material-ui/core"
-import Container from "@material-ui/core/Container"
-import CustomButton from "../custom-button/custom-button.component"
+import CustomImage from "../custom-image/custom-image.component"
+import Rectangle from "../../assets/icons/Rectangle.svg"
 
-export const GrayContainer = styled.div`
-  min-height: 500px;
-  background-color: #f0f5f7;
-`
-export const ExperienceWrapper = styled.div`
-  min-height: 500px;
-  box-shadow: none;
-  background: linear-gradient(
-    to bottom,
-    #f0f5f7 0%,
-    #f0f5f7 75%,
-    radial-gradient(56.04% 163.52% at 66.32% 139.24%, #4fbff3 0%, #1593cd 100%)
-      50%,
-    radial-gradient(56.04% 163.52% at 66.32% 139.24%, #4fbff3 0%, #1593cd 100%)
-      50%,
-    100%
-  );
-`
-export const Button = styled(CustomButton)`
-  margin-top: 2em;
-  padding: 0.5em 1em;
-  background-color: ${({ theme }) => theme.palette.tertiary.main};
-  text-transform: capitalize;
-`
-
-export const ExperienceTextWrapper = styled.div`
-  min-height: 465px;
-  margin: -25em 6em 0 6em;
-  display: flex;
-  justify-content: flex-end;
-  background-image: url("https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/install-.win@1.5x.png");
-  background-size: cover;
-  background-color: transparent;
-`
-
-export const ExperienceContent = styled.div`
-  padding: 2em;
-  margin: auto 150px;
-  max-width: 445px;
-  max-height: 465px;
-  color: black;
-  h3 {
-    color: rgba(29, 56, 69, 0.75);
-    opacity: 0.5;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 1em;
-  }
-  h4 {
-    color: ${({ theme }) => theme.palette.text.secondary};
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0.5em;
-  }
-  p {
-    margin: 0;
-    color: rgba(29, 56, 69, 0.75);
-    font-size: 1rem;
-  }
-`
-
-export const FooterContainer = styled(Container)`
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: -8em;
-`
-export const Wrapper = styled.footer`
-  color: white;
-  position: relative;
+export const Wrapper = styled(SectionWrapper)`
+  padding: 0;
   background: radial-gradient(
     56.04% 163.52% at 66.32% 139.24%,
     #4fbff3 0%,
     #1593cd 100%
   );
-
+`
+export const FooterWrapper = styled.div`
+  padding: 6em 10em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    .MuiContainer-root {
-      padding-right: 2.5em;
-      padding-left: 2.5em;
-    }
-  }
-`
-export const LeftContainer = styled(Container)`
-  display: flex;
-  flex-direction: column;
-
-  img {
-    margin-left: 4em;
-    margin-top: 2em;
-    max-width: 150px;
+    padding: 2em;
   }
 `
 
-export const LogoWrapper = styled(Grid)`
+export const LogoWrapper = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 8em;
-  margin-bottom: 2em;
+  padding-bottom: 4em;
   img {
-    max-width: 200px;
+    max-width: 228px;
   }
 `
-
-export const LinksWrapper = styled.div`
+export const BottomGrid = styled(Grid)`
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: space-between;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    flex-direction: column;
-    padding: 0;
-  }
+  align-items: baseline;
+  padding: 2em 0;
 `
-export const InfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 6em;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 0;
-  }
-`
-export const LinksContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 2em;
 
+export const LeftGrid = styled(Grid)``
+
+export const RightGrid = styled(Grid)`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   a {
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 29px;
+    color: white;
     text-decoration: none;
-    color: ${({ theme }) => theme.palette.text.light};
-    padding: 0.5em 0;
-    font-size: 14px;
-    line-height: 21px;
+    margin-bottom: 1em;
   }
   h3 {
-    font-size: 16px;
-    margin-bottom: 0.5em;
-  }
-`
-export const ProductsWrapper = styled.div`
-  display: flex;
-  padding: 0 2em;
-  margin-bottom: 1em;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 29px;
+    color: white;
+    margin: 1em 0;
   }
 `
 
-export const ContactWrapper = styled.div`
+export const ColumnGrid = styled(Grid)`
   display: flex;
-  justify-content: flex-end;
-  font-size: 24px;
-  margin-bottom: 1em;
+  flex-direction: column;
   span {
-    padding: 0 1em;
+    font-style: normal;
     font-weight: bold;
+    font-size: 1rem;
+    line-height: 23px;
+    color: white;
   }
+
   a {
-    color: ${({ theme }) => theme.palette.text.light};
     text-decoration: none;
-  }
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    line-height: 21px;
+    color: white;
+    padding: 0.3em 0;
   }
 `
 
 export const LocationWrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
+  align-items: baseline;
   margin-bottom: 1em;
-  p {
-    text-align: right;
-    padding-left: 0.5em;
-    margin: 0;
+  svg {
+    margin-right: 0.5em;
   }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
+  p {
+    margin: 0;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
   }
 `
 export const MailWrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 1em;
+  justify-content: center;
+  align-items: first baseline;
+  svg {
+    margin-right: 0.5em;
+  }
+
+  a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+  }
+`
+
+export const IconWrapper = styled.div`
+  display: flex;
   a {
     padding-left: 0.5em;
-    color: ${({ theme }) => theme.palette.text.light};
-    text-decoration: none;
   }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
-  }
-`
-
-export const SocialIconsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 2em;
-
-  h3 {
-    font-size: 24px;
-    text-align: right;
-  }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
-    h3 {
-      text-align: center;
-    }
+  svg {
+    width: 24px;
+    height: 24px;
+    object-fit: contain !important;
   }
 `
-
-export const IconRow = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 0.5em;
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
-  }
+export const LastGrid = styled(Grid)`
+  padding: 2em 0;
 `
 
-export const Logo = styled.div`
-  text-align: center;
-  a {
-    display: inline-flex;
-
-    svg {
-      max-width: 21px;
-      width: 100%;
-      margin-left: 1em;
-    }
-  }
-`
-
-export const FaqGrid = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 2em 5em;
+export const BBBGrid = styled(Grid)`
   img {
-    margin-left: 0.5em;
-  }
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-    img {
-      max-width: 100px;
-    }
+    max-width: 150px;
   }
 `
 
-export const FaqWrapper = styled.div`
+export const FaqGrid = styled(Grid)`
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  margin: 1em 2.8em;
+  align-items: flex-start;
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.palette.text.light};
-    padding: 0 1em;
-    :last-child {
-      padding-right: 0;
-    }
-  }
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    justify-content: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 160%;
+    color: white;
   }
 `
-
-export const SeparatorWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em 0;
+export const Line = styled(Rectangle)`
+  margin: 0 1em;
 `
