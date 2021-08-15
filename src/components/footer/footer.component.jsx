@@ -9,15 +9,46 @@ import YouTubeIcon from "../../assets/icons/youtube.svg"
 import MailIcon from "../../assets/icons/mail.svg"
 import LocationIcon from "../../assets/icons/location.svg"
 import YelpIcon from "../../assets/icons/yelp.svg"
-import Rectangle from "../../assets/icons/Rectangle.svg"
-import Separator from "../../assets/icons/separator.svg"
-import Container from "@material-ui/core/Container"
 import parse from "html-react-parser"
 import { Grid } from "@material-ui/core"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Footer = ({ className }) => {
+  const staticQuery = useStaticQuery(graphql`
+    query {
+      footerBg: file(relativePath: { eq: "footer-bg.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
+  `)
+
   return (
     <S.Wrapper>
+      <S.BannerWrapper>
+        <S.BgImageWrapper>
+          <S.BgImage img={staticQuery.footerBg}>
+            <Grid container>
+              <Grid item xs={12} md={6} />
+              <S.ContentGrid item xs={12} md={6}>
+                <S.ContentWrapper>
+                  <h2>A-Christian Glass</h2>
+                  <h3>Experience Matters</h3>
+                  <p>
+                    Our experienced installation team takes precise measurements
+                    so your new windows and doors are a perfect fit. We are
+                    meticulous to ensure you are 100% satisfied with your new
+                    impact resistant windows and doors.
+                  </p>
+                  <S.Button href="/">Schedule an Appointment</S.Button>
+                </S.ContentWrapper>
+              </S.ContentGrid>
+            </Grid>
+          </S.BgImage>
+        </S.BgImageWrapper>
+      </S.BannerWrapper>
+
       <S.FooterWrapper>
         <Grid container>
           <Grid xs={12} md={12} justifyContent="center" alignItems="center">

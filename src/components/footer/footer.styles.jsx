@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import SectionWrapper from "../section-wrapper/section-wrapper.component"
 import { Grid } from "@material-ui/core"
-import CustomImage from "../custom-image/custom-image.component"
 import Rectangle from "../../assets/icons/Rectangle.svg"
+import CustomBgImage from "../custom-bg-image/custom-bg-image.component"
+import CustomButton from "../custom-button/custom-button.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
@@ -152,4 +153,62 @@ export const FaqGrid = styled(Grid)`
 `
 export const Line = styled(Rectangle)`
   margin: 0 1em;
+`
+
+export const BannerWrapper = styled.div`
+  background: linear-gradient(
+    to bottom,
+    #f0f5f7 0%,
+    #f0f5f7 70%,
+    transparent 70%,
+    transparent 100%
+  );
+`
+export const BgImageWrapper = styled.div``
+
+export const BgImage = styled(CustomBgImage)`
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+`
+
+export const ContentGrid = styled(Grid)`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+`
+
+export const ContentWrapper = styled.div`
+  padding: 6em 4em;
+  max-width: 500px;
+  h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(29, 56, 69, 0.75);
+    opacity: 0.5;
+  }
+  h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+    line-height: 47px;
+    color: #0d5c80;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(29, 56, 69, 0.75);
+  }
+`
+
+export const Button = styled(CustomButton)`
+  text-transform: none;
+  background-color: ${({ theme }) => theme.palette.tertiary.main};
 `
