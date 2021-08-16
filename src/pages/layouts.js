@@ -537,7 +537,7 @@ const Layouts = () => {
       <FeaturesRow
         reverse={true}
         image={staticQuery.hurricanes}
-        content={{
+        contentFeaturesRow={{
           title: "Hurricane<br>Windows and Doors",
           features: [
             {
