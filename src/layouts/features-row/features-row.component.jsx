@@ -3,18 +3,18 @@ import { Grid } from "@material-ui/core"
 import * as S from "./features-row.styles"
 import parse from "html-react-parser"
 
-const FeaturesRow = ({ image, content, reverse }) => {
+const FeaturesRow = ({ imageFeaturesRow, contentFeaturesRow, reverse }) => {
   return (
     <S.Wrapper>
       <Grid container direction={reverse && "row-reverse"}>
         <S.LeftGrid item xs={12} md={6}>
-          <S.Image img={image} />
+          <S.Image img={imageFeaturesRow} />
         </S.LeftGrid>
         <S.RightGrid item xs={12} md={6}>
           <S.ContentWrapper>
-            {content.title && <h2>{parse(content.title)}</h2>}
-            {content.features &&
-              content.features.map(({ feature }, index) => (
+            {contentFeaturesRow.title && <h2>{parse(contentFeaturesRow.title)}</h2>}
+            {contentFeaturesRow.features &&
+            contentFeaturesRow.features.map(({ feature }, index) => (
                 <S.FeatureWrapper key={`feature-${index}`}>
                   <S.ContentText>{parse(feature)}</S.ContentText>
                 </S.FeatureWrapper>

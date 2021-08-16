@@ -11,6 +11,12 @@ import ProjectSlider from "./layouts/ProjectSlider"
 import AppointmentBanner from "./layouts/AppointmentBanner"
 import GallerySlider from "./layouts/GallerySlider"
 import TestimonialSlider from "./layouts/TestimonialSlider"
+import CommonHeroBanner from "./layouts/CommonHeroBanner"
+import VideoRow from "./layouts/VideoRow"
+import FeaturesRow from "./layouts/features-row"
+import ChoicesSection from "./layouts/ChoicesSection"
+import TitleTextRow from "./layouts/TitleTextRow"
+import IndustriesServices from "./layouts/IndustriesServices"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -40,5 +46,17 @@ export const getPageLayout = layout => {
       return <GallerySlider {...layout} />
     case "TestimonialSlider":
       return <TestimonialSlider {...layout} />
+    case "CommonHeroBanner":
+      return <CommonHeroBanner {...layout} />
+    case "VideoRow":
+      return <VideoRow {...layout} />
+    case "FeaturesRow":
+      return <FeaturesRow {...layout} />
+    case "ChoicesSection":
+      return <ChoicesSection {...layout} />
+    case "TitleTextRow":
+      return <TitleTextRow {...layout} />
+    case "IndustriesServices":
+      return <IndustriesServices {...layout} />
   }
 }

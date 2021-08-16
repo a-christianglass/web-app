@@ -81,6 +81,24 @@ export const query = graphql`
             ... on WpPage_Pagebuilder_Layouts_TestimonialSlider {
                 ...TestimonialSlider
             }
+            ... on WpPage_Pagebuilder_Layouts_CommonHeroBanner {
+                ...CommonHeroBanner
+            }
+            ... on WpPage_Pagebuilder_Layouts_VideoRow {
+                ...VideoRow
+            }
+            ... on WpPage_Pagebuilder_Layouts_FeaturesRow {
+                ...FeaturesRow
+            }
+            ... on WpPage_Pagebuilder_Layouts_ChoicesSection {
+                ...ChoicesSection
+            }
+            ... on WpPage_Pagebuilder_Layouts_TitleTextRow {
+                ...TitleTextRow
+            }
+            ... on WpPage_Pagebuilder_Layouts_IndustriesServices {
+                ...IndustriesServices
+            }
         }
         pageConfiguration {
           hideFooter
