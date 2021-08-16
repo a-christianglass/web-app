@@ -5,9 +5,9 @@ export const query = graphql`
     color
     content
     button {
-      target
-      url
       title
+      url
     }
+    fieldGroupName
   }
 `

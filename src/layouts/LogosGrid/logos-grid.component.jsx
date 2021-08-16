@@ -27,7 +27,7 @@ const LogosGrid = ({ logos, title }) => {
             },
           }}
         >
-          {logos.map(({ title, image }, index) => (
+          {logos.map(({ image }, index) => (
             <SwiperSlide key={`icon-slide-${index}`}>
               {image && <S.CustomLogo img={image.sourceUrl} />}
             </SwiperSlide>

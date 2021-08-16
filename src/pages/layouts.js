@@ -191,14 +191,14 @@ const Layouts = () => {
     <Layout seo={{ title: "Layouts - ONLY FOR DEV" }}>
       <LayoutTitle>HomeHero</LayoutTitle>
       <HomeHero
-        image={staticQuery.homeHero}
+        imageHome={staticQuery.homeHero}
         title={"Best Impact Windows and Doors in South Florida"}
         subtitle={"30 years in the business"}
         button={buttonObj}
       />
       <LayoutTitle>CommonHero</LayoutTitle>
       <CommonHeroBanner
-        image={staticQuery.commonHero}
+        imageCommonHero={staticQuery.commonHero}
         title={"About"}
         content={
           "We are a family owned and a full service glass company for all your projects; from a glass replacement to major high-rise and commercial storefronts developments."
@@ -212,55 +212,51 @@ const Layouts = () => {
       />
       <LayoutTitle>ImageTextRow</LayoutTitle>
       <ImageTextRow
-        image={staticQuery.home}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-      />
-      <ImageTextRow
-        image={staticQuery.home}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-        reverse
-      />
-      <ImageTextRow
-        image={staticQuery.windows}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-        contained
-      />
-      <ImageTextRow
-        image={staticQuery.home}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-        reverse
-        contained
-      />
-      <ImageTextRow
-        image={staticQuery.home}
+        imageTextRow={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
       />
       <ImageTextRow
-        image={staticQuery.home}
+        imageTextRow={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
-        reverse
+        rightImage
       />
       <ImageTextRow
-        image={staticQuery.windows}
+        imageTextRow={staticQuery.windows}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
         contained
       />
       <ImageTextRow
-        image={staticQuery.home}
+        imageTextRow={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
-        reverse
+        rightImage
+        contained
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        rightImage
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.windows}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        contained
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        rightImage
         contained
       />
       <LayoutTitle>LogosGrid</LayoutTitle>
@@ -338,12 +334,12 @@ const Layouts = () => {
       />{" "}
       <CallUsBanner
         title={`Do you need a quick response from our team?`}
-        image={staticQuery.openDoor}
+        imageCallBanner={staticQuery.openDoor}
         number={`(561) 278-3385`}
       />
       <LayoutTitle>BlueFeaturesSection</LayoutTitle>
       <BlueFeaturesSection
-        image={staticQuery.features}
+        imageFeatures={staticQuery.features}
         title={`<h2>With A-Christian Glass<br>you Protect your Home from</h2>`}
         cards={featuredCards}
       />
@@ -432,7 +428,7 @@ const Layouts = () => {
       />
       <LayoutTitle>TestimonialSlider</LayoutTitle>
       <TestimonialSlider
-        leftContent={{
+        leftContentTestimonialSlider={{
           title: "Testimonials & Reviews",
           subtitle:
             "People are saying great things about A-Christian Glass every day.",
@@ -441,22 +437,38 @@ const Layouts = () => {
         }}
         slides={[
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
         ]}
       />
       <LayoutTitle>ProjectSlider</LayoutTitle>
       <ProjectSlider
-        leftContent={{
+        leftContentProjectSlider={{
           title: "Projects & Gallery",
           subtitle: "A-Christian Glass on Charge",
           content:
@@ -464,9 +476,27 @@ const Layouts = () => {
           button: buttonObj,
         }}
         projects={[
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
+          {
+            image: staticQuery.home,
+            link: {
+              title: "project name",
+              url: "/",
+            },
+          },
+          {
+            image: staticQuery.home,
+            link: {
+              title: "project name",
+              url: "/",
+            },
+          },
+          {
+            image: staticQuery.home,
+            link: {
+              title: "project name",
+              url: "/",
+            },
+          },
         ]}
       />
       <LayoutTitle>FormBanner</LayoutTitle>
@@ -476,7 +506,7 @@ const Layouts = () => {
         videoBg={staticQuery.youtubeBg}
         logo={staticQuery.acgLogo}
         title={"34 Years of Experience"}
-        content={
+        contentVideoRow={
           "   A-Christian Glass is a full-service company for installing and\n" +
           "              replacement of interior and exterior glass doors and impact proof\n" +
           "              window in Delray Beach, Florida. From 1988, we have offered top\n" +
@@ -486,8 +516,8 @@ const Layouts = () => {
       />
       <LayoutTitle>FeaturesRow</LayoutTitle>
       <FeaturesRow
-        image={staticQuery.hurricanes}
-        content={{
+        imageFeaturesRow={staticQuery.hurricanes}
+        contentFeaturesRow={{
           title: "Hurricane<br>Windows and Doors",
           features: [
             {
@@ -540,12 +570,12 @@ const Layouts = () => {
       />
       <LayoutTitle>ChoicesSection</LayoutTitle>
       <ChoicesSection
-        leftContent={{
+        leftContentChoicesSection={{
           title: "We Provide Choices for Every Style and Budget",
           content:
             "A-Christian Glass in Delray Beach knows that not all windows are created equal, and today there are more options than ever. Purchasing the right glass is an important decision since there are a variety of composition levels for windows. Educating customers is an important company initiative.<br><br>A-Christian Glass is a complete glass service facility. Behind the scenes, glazers cut, buff and prep hundreds of panes of glass for delivery to multiple destinations from Sunrise to Lake Worth.",
         }}
-        rightContent={
+        rightContentChoicesSection={
           'The better the composition, the better the glass will deflect heat and cool the home," says Dable. "It\'s great to know that a $400 electric bill can be cut in half by upgrading your windows. \n' +
           "They're a definite money-saver, and they also reduce outside noise.\""
         }
@@ -553,7 +583,7 @@ const Layouts = () => {
       <LayoutTitle>TitleTextRow</LayoutTitle>
       <TitleTextRow
         title={"Superior Service\n"}
-        content={
+        contentTitleTextRow={
           "For 34 years, A-Christian Glass and Mirror opened its doors and in the decades and one thing remains the same: Customer service remains the foundation of the company's success."
         }
       />
@@ -645,31 +675,29 @@ const Layouts = () => {
       <LayoutTitle>IndustriesServices</LayoutTitle>
       <IndustriesServices
         title="Residential Services"
-        image={staticQuery.slide1}
+        imageIndustriesServices={staticQuery.slide1}
         description={{
           title: "Custom Houses",
           content:
             "At A-Christian Glass, we do it all. We keep a watchful eye on the process and direct each project to keep everything exactly as planned. No job is too large or too small for us.\n" +
             "<br><br>We pride ourselves in working with business owners, construction managers and contractors from start to finish. Our philosophy has always been about relationships and commitment to our clients. We believe integrity and loyalty are the grounds for ultimate success.",
         }}
-        haveAButton
         button={buttonObj}
       />
       <IndustriesServices
         title="Residential Services"
-        image={staticQuery.slide1}
+        imageIndustriesServices={staticQuery.slide1}
         description={{
           title: "Custom Houses",
           content:
             "At A-Christian Glass, we do it all. We keep a watchful eye on the process and direct each project to keep everything exactly as planned. No job is too large or too small for us.\n" +
             "<br><br>We pride ourselves in working with business owners, construction managers and contractors from start to finish. Our philosophy has always been about relationships and commitment to our clients. We believe integrity and loyalty are the grounds for ultimate success.",
         }}
-        haveAButton
         reverse
         button={buttonObj}
       />
       <IndustriesServices
-        image={staticQuery.slide1}
+        imageIndustriesServices={staticQuery.slide1}
         description={{
           title: "A-Christian Glass Can Help Your Business",
           content:

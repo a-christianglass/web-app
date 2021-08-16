@@ -5,6 +5,7 @@ import { Typography } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 2em;
+  background-color: white;
   .swiper-container {
     padding-bottom: 2em;
     padding-top: 2em;

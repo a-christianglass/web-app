@@ -4,12 +4,12 @@ import PhoneIcon from "../../assets/icons/phone.svg"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import parse from "html-react-parser"
 
-const CallUsBanner = ({ image, title, number, content }) => {
+const CallUsBanner = ({ imageCallBanner, title, number, content }) => {
   // No content == more padding in TextWrapper and text align: left on Content Wrapper
   const morePadding = content === undefined
   return (
     <S.Wrapper>
-      <CustomBgImage img={image}>
+      <CustomBgImage img={imageCallBanner}>
         <S.TextWrapper morePadding={morePadding}>
           <S.ContentWrapper textAlign={morePadding}>
             {title && <h2>{title}</h2>}

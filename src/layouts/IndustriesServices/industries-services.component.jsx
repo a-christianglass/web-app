@@ -5,9 +5,8 @@ import parse from "html-react-parser"
 
 const IndustriesServices = ({
   title,
-  image,
+  imageIndustriesServices,
   description,
-  haveAButton,
   button,
   reverse,
 }) => {
@@ -17,7 +16,7 @@ const IndustriesServices = ({
         {title && <h2>{title}</h2>}
         <S.LeftGrid container direction={reverse && "row-reverse"}>
           <Grid item xs={12} md={6}>
-            <S.Image img={image} />
+            <S.Image img={imageIndustriesServices} />
           </Grid>
           <S.RightGrid item xs={12} md={6} shouldCenter={reverse}>
             <S.ContentWrapper>
@@ -25,7 +24,7 @@ const IndustriesServices = ({
               {description.content && (
                 <S.ContentText>{parse(description.content)}</S.ContentText>
               )}
-              {haveAButton && (
+              {button && button.title && (
                 <S.Button href={button?.url}>{button?.title}</S.Button>
               )}
             </S.ContentWrapper>

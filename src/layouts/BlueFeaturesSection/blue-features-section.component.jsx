@@ -4,7 +4,7 @@ import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
 
-const BlueFeaturesSection = ({ image, title, cards }) => {
+const BlueFeaturesSection = ({ imageFeatures, title, cards }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
       blueBg: file(relativePath: { eq: "blue-big.png" }) {
@@ -18,7 +18,7 @@ const BlueFeaturesSection = ({ image, title, cards }) => {
     <S.Wrapper>
       <Grid container>
         <Grid item xs={12} md={4}>
-          <S.Image img={image} />
+          <S.Image img={imageFeatures} />
         </Grid>
         <S.RightGrid item xs={12} md={8}>
           <S.BgImage img={staticQuery.blueBg}>

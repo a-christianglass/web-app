@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import { Grid, Typography } from "@material-ui/core"
+import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 2em;
@@ -15,6 +16,7 @@ export const LeftGrid = styled(Grid)`
 
 export const LeftWrapper = styled.div`
   max-width: 454px;
+
   h2 {
     color: #0d5c80;
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
@@ -42,9 +44,22 @@ export const RightWrapper = styled.div`
 `
 
 export const RightContentText = styled(Typography)`
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(18)};
+    line-height: 29px;
+    color: #0d5c80;
+  }
+`
+
+export const QuoteWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+export const QuoteImage = styled(CustomImage)`
+  max-width: 62px;
+  height: auto;
   text-align: center;
-  font-weight: bold;
-  font-size: ${({ theme }) => theme.typography.pxToRem(18)};
-  line-height: 29px;
-  color: #0d5c80;
 `

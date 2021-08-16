@@ -3,7 +3,7 @@ import * as S from "./title-text-row.styles"
 import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
 
-const TitleTextRow = ({ title, content }) => {
+const TitleTextRow = ({ title, contentTitleTextRow }) => {
   return (
     <S.Wrapper>
       <Grid container>
@@ -12,7 +12,7 @@ const TitleTextRow = ({ title, content }) => {
         </S.LeftGrid>
         <S.RightGrid item xs={12} md={6}>
           <S.RightTextWrapper>
-            {content && <S.ContentText>{parse(content)}</S.ContentText>}
+            {contentTitleTextRow && <S.ContentText>{parse(contentTitleTextRow)}</S.ContentText>}
           </S.RightTextWrapper>
         </S.RightGrid>
       </Grid>

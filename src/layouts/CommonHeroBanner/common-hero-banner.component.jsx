@@ -3,7 +3,7 @@ import * as S from "./common-hero-banner.styles"
 import parse from "html-react-parser"
 import { Grid } from "@material-ui/core"
 
-const CommonHeroBanner = ({ image, title, content }) => {
+const CommonHeroBanner = ({ imageCommonHero, title, content }) => {
   return (
     <S.Wrapper>
       <Grid container>
@@ -16,7 +16,7 @@ const CommonHeroBanner = ({ image, title, content }) => {
           </Grid>
         </S.TopWrapper>
       </Grid>
-      {image && <S.BottomWrapper img={image} />}
+      {imageCommonHero && <S.BottomWrapper img={imageCommonHero} />}
     </S.Wrapper>
   )
 }
