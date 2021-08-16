@@ -43,7 +43,7 @@ export const LeftGrid = styled(Grid)``
 export const RightGrid = styled(Grid)`
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   a {
     font-style: normal;
     font-weight: bold;
