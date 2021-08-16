@@ -28,6 +28,7 @@ import IndustriesServices from "../layouts/IndustriesServices"
 import MiscHero from "../layouts/MiscHero"
 import FormSection from "../layouts/form-section"
 import ContactInfo from "../layouts/ContactInfo"
+import TellUsSection from "../layouts/TellUsSection"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -714,6 +715,8 @@ const Layouts = () => {
       />
       <LayoutTitle>ContactInfo</LayoutTitle>
       <ContactInfo />
+      <LayoutTitle>TellUsSection</LayoutTitle>
+      <TellUsSection />
     </Layout>
   )
 }
