@@ -14,7 +14,7 @@ export const TitleWrapper = styled.div`
   }
   height: 324px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 
   h1 {
     font-weight: bold;
