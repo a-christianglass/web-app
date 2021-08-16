@@ -26,6 +26,7 @@ import ReasonsSection from "../layouts/ReasonsSection"
 import WorksSection from "../layouts/WorksSection"
 import IndustriesServices from "../layouts/IndustriesServices"
 import MiscHero from "../layouts/MiscHero"
+import FormSection from "../layouts/form-section"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -675,6 +676,13 @@ const Layouts = () => {
       />
       <LayoutTitle>MiscHero</LayoutTitle>
       <MiscHero image={staticQuery.miscHero} title="Privacy Policy" />
+      <LayoutTitle>FormSection</LayoutTitle>
+      <FormSection
+        content="Schedule a free, no-obligation estimate to have hurricane impact resistant windows installed in your home.
+"
+        callText="Or call us at"
+        number="(561) 278-3385 "
+      />
     </Layout>
   )
 }
