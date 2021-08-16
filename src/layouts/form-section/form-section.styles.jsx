@@ -12,7 +12,7 @@ export const ContentWrapper = styled.div`
 `
 export const LeftGrid = styled(Grid)`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 `
 
