@@ -52,6 +52,7 @@ export const NumberWrapper = styled.div`
 export const RightGrid = styled(Grid)``
 
 export const FormWrapper = styled.div`
+  margin: auto;
   max-width: 400px;
   background: #fafafa;
   box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.16);

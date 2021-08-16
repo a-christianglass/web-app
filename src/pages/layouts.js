@@ -27,6 +27,7 @@ import WorksSection from "../layouts/WorksSection"
 import IndustriesServices from "../layouts/IndustriesServices"
 import MiscHero from "../layouts/MiscHero"
 import FormSection from "../layouts/form-section"
+import ContactInfo from "../layouts/ContactInfo"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -713,6 +714,8 @@ const Layouts = () => {
         callText="Or call us at"
         number="(561) 278-3385 "
       />
+      <LayoutTitle>ContactInfo</LayoutTitle>
+      <ContactInfo />
     </Layout>
   )
 }
