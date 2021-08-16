@@ -7,19 +7,27 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import { CustomLink } from "../../components/custom-link/custom-link.styles"
 import Arrow from "../../assets/icons/arrow.svg"
 
-const ProjectSlider = ({ leftContent, projects }) => {
+const ProjectSlider = ({ leftContentProjectSlider, projects }) => {
   return (
     <S.Wrapper>
       <Grid container>
         <S.LeftGrid item xs={6} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>
-            {leftContent.title && <h3>{leftContent.title}</h3>}
-            {leftContent.subtitle && <h2>{leftContent.subtitle}</h2>}
-            {leftContent.content && <p>{leftContent.content}</p>}
-            {leftContent.description && <h4>{leftContent.description}</h4>}
-            {leftContent.button && (
-              <S.Button href={leftContent.button.url}>
-                {leftContent.button.title}
+            {leftContentProjectSlider.title && (
+              <h3>{leftContentProjectSlider.title}</h3>
+            )}
+            {leftContentProjectSlider.subtitle && (
+              <h2>{leftContentProjectSlider.subtitle}</h2>
+            )}
+            {leftContentProjectSlider.content && (
+              <p>{leftContentProjectSlider.content}</p>
+            )}
+            {leftContentProjectSlider.description && (
+              <h4>{leftContentProjectSlider.description}</h4>
+            )}
+            {leftContentProjectSlider.button && (
+              <S.Button href={leftContentProjectSlider.button.url}>
+                {leftContentProjectSlider.button.title}
               </S.Button>
             )}
           </S.TextWrapper>
@@ -39,16 +47,16 @@ const ProjectSlider = ({ leftContent, projects }) => {
               },
             }}
           >
-            {projects.map(({ project }, index) => (
+            {projects.map(({ image, link }, index) => (
               <SwiperSlide key={`project-slide-${index}`}>
                 <S.CardWrapper>
-                  {project.link && (
-                    <CustomLink to={project.link.url}>
+                  {link && (
+                    <CustomLink to={link.url}>
                       <S.Card>
-                        <CustomImage img={project.image} />
+                        <CustomImage img={image} />
                         <S.LinkWrapper>
                           <S.TitleWrapper>
-                            <span>{project.link.title}</span>
+                            <span>{link.title}</span>
                           </S.TitleWrapper>
                           <S.ArrowWrapper>
                             <Arrow />

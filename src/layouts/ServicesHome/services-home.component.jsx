@@ -24,7 +24,7 @@ const ServicesHome = ({
   rightLink,
 }) => {
   return (
-    <SectionWrapper>
+    <S.Wrapper>
       <Container>
         <Grid container spacing={2}>
           <S.GridCard item xs={12} md={4}>
@@ -75,7 +75,7 @@ const ServicesHome = ({
           </S.GridCard>
         </Grid>
       </Container>
-    </SectionWrapper>
+    </S.Wrapper>
   )
 }
 export default ServicesHome

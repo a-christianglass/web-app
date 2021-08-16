@@ -48,6 +48,39 @@ export const query = graphql`
           ... on WpPage_Pagebuilder_Layouts_MiscContent {
             ...MiscContent
           }
+          ... on WpPage_Pagebuilder_Layouts_HomeHero {
+            ...HomeHero
+          }
+          ... on WpPage_Pagebuilder_Layouts_FormBanner {
+            ...FormBanner
+          }
+          ... on WpPage_Pagebuilder_Layouts_ImageTextRow {
+            ...ImageTextRow
+          }
+          ... on WpPage_Pagebuilder_Layouts_BlueFeaturesSection {
+            ...BlueFeaturesSection
+          }
+          ... on WpPage_Pagebuilder_Layouts_CallUsBanner {
+            ...CallUsBanner
+          }
+          ... on WpPage_Pagebuilder_Layouts_ServicesHome {
+            ...ServicesHome
+          }
+          ... on WpPage_Pagebuilder_Layouts_LogosGrid {
+            ...LogosGrid
+          }
+          ... on WpPage_Pagebuilder_Layouts_ProjectSlider {
+            ...ProjectSlider
+          }
+            ... on WpPage_Pagebuilder_Layouts_AppointmentBanner {
+                ...AppointmentBanner
+            }
+            ... on WpPage_Pagebuilder_Layouts_GallerySlider {
+                ...GallerySlider
+            }
+            ... on WpPage_Pagebuilder_Layouts_TestimonialSlider {
+                ...TestimonialSlider
+            }
         }
         pageConfiguration {
           hideFooter

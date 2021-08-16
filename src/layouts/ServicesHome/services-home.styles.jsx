@@ -2,6 +2,11 @@ import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import Grid from "@material-ui/core/Grid"
 
+
+export const Wrapper =  styled(SectionWrapper)`
+  background-color: white;
+`
+
 export const TagText = styled.p`
   font-weight: bold;
   font-size: 14px;

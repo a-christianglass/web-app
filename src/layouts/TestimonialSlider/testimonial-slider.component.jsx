@@ -5,15 +5,15 @@ import CustomSlider from "../../components/custom-slider/custom-slider.component
 import { SwiperSlide } from "swiper/react"
 import parse from "html-react-parser"
 
-const TestimonialSlider = ({ leftContent, slides }) => {
+const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
   return (
     <S.Wrapper>
       <Grid container>
         <S.LeftGrid item xs={6} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>
-            <h3>{leftContent?.title}</h3>
-            <h2>{leftContent?.subtitle}</h2>
-            <h4>{leftContent?.description}</h4>
+            <h3>{leftContentTestimonialSlider?.title}</h3>
+            <h2>{leftContentTestimonialSlider?.subtitle}</h2>
+            <h4>{leftContentTestimonialSlider?.description}</h4>
           </S.TextWrapper>
         </S.LeftGrid>
         <Grid item xs={6}>
@@ -31,12 +31,12 @@ const TestimonialSlider = ({ leftContent, slides }) => {
               },
             }}
           >
-            {slides.map(({ slide }, index) => (
+            {slides.map(({ review, author, location }, index) => (
               <SwiperSlide key={`testimonial-slide-${index}`}>
                 <S.CardWrapper>
-                  {slide && <p>{parse(slide?.review)}</p>}
-                  {slide && <h4>{slide?.author}</h4>}
-                  {slide && <h5>{slide?.location}</h5>}
+                  {review && <p>{parse(review)}</p>}
+                  {author && <h4>{author}</h4>}
+                  {location && <h5>{location}</h5>}
                 </S.CardWrapper>
               </SwiperSlide>
             ))}

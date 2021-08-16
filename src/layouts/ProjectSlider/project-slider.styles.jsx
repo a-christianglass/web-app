@@ -6,7 +6,8 @@ import CustomButton from "../../components/custom-button/custom-button.component
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
-  background-color: #f0f5f7;
+  //background-color: #f0f5f7;
+  background-color: white;
 
   .swiper-container {
     width: 100%;

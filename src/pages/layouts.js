@@ -189,7 +189,7 @@ const Layouts = () => {
     <Layout seo={{ title: "Layouts - ONLY FOR DEV" }}>
       <LayoutTitle>HomeHero</LayoutTitle>
       <HomeHero
-        image={staticQuery.homeHero}
+        imageHome={staticQuery.homeHero}
         title={"Best Impact Windows and Doors in South Florida"}
         subtitle={"30 years in the business"}
         button={buttonObj}
@@ -210,55 +210,51 @@ const Layouts = () => {
       />
       <LayoutTitle>ImageTextRow</LayoutTitle>
       <ImageTextRow
-        image={staticQuery.home}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-      />
-      <ImageTextRow
-        image={staticQuery.home}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-        reverse
-      />
-      <ImageTextRow
-        image={staticQuery.windows}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-        contained
-      />
-      <ImageTextRow
-        image={staticQuery.home}
-        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
-        haveAButton={true}
-        button={buttonObj}
-        reverse
-        contained
-      />
-      <ImageTextRow
-        image={staticQuery.home}
+        imageTextRow={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
       />
       <ImageTextRow
-        image={staticQuery.home}
+        imageTextRow={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
-        reverse
+        rightImage
       />
       <ImageTextRow
-        image={staticQuery.windows}
+        imageTextRow={staticQuery.windows}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
         contained
       />
       <ImageTextRow
-        image={staticQuery.home}
+        imageTextRow={staticQuery.home}
         content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
         button={buttonObj}
-        reverse
+        rightImage
+        contained
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        rightImage
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.windows}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        contained
+      />
+      <ImageTextRow
+        imageTextRow={staticQuery.home}
+        content={`<h2>Impact Resistant Doors</h2><p>Selecting the right impact resistant doors for your south Florida home can be a daunting task, and that's why A-Christian Glass works with you to select the ideal door to suit your style, budget and needs.</p>`}
+        button={buttonObj}
+        rightImage
         contained
       />
       <LayoutTitle>LogosGrid</LayoutTitle>
@@ -336,12 +332,12 @@ const Layouts = () => {
       />{" "}
       <CallUsBanner
         title={`Do you need a quick response from our team?`}
-        image={staticQuery.openDoor}
+        imageCallBanner={staticQuery.openDoor}
         number={`(561) 278-3385`}
       />
       <LayoutTitle>BlueFeaturesSection</LayoutTitle>
       <BlueFeaturesSection
-        image={staticQuery.features}
+        imageFeatures={staticQuery.features}
         title={`<h2>With A-Christian Glass<br>you Protect your Home from</h2>`}
         cards={featuredCards}
       />
@@ -430,7 +426,7 @@ const Layouts = () => {
       />
       <LayoutTitle>TestimonialSlider</LayoutTitle>
       <TestimonialSlider
-        leftContent={{
+        leftContentTestimonialSlider={{
           title: "Testimonials & Reviews",
           subtitle:
             "People are saying great things about A-Christian Glass every day.",
@@ -439,22 +435,38 @@ const Layouts = () => {
         }}
         slides={[
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
           {
-            slide: reviewObj,
+            review:
+              "The experience was stress free and every one was so helpful and professional. I contacted quite a few vendors but A Christian Glass had the best prices and the whole process was so smooth.\n" +
+              "<br><br>Thank you for everything. I would highly recommend A Christian Glass.",
+            author: "Ramon C.",
+            location: "Tamarac, FL",
           },
         ]}
       />
       <LayoutTitle>ProjectSlider</LayoutTitle>
       <ProjectSlider
-        leftContent={{
+        leftContentProjectSlider={{
           title: "Projects & Gallery",
           subtitle: "A-Christian Glass on Charge",
           content:
@@ -462,9 +474,27 @@ const Layouts = () => {
           button: buttonObj,
         }}
         projects={[
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
+          {
+            image: staticQuery.home,
+            link: {
+              title: "project name",
+              url: "/",
+            },
+          },
+          {
+            image: staticQuery.home,
+            link: {
+              title: "project name",
+              url: "/",
+            },
+          },
+          {
+            image: staticQuery.home,
+            link: {
+              title: "project name",
+              url: "/",
+            },
+          },
         ]}
       />
       <LayoutTitle>FormBanner</LayoutTitle>
