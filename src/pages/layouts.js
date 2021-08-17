@@ -32,6 +32,7 @@ import TellUsSection from "../layouts/TellUsSection"
 import HomeTabs from "../layouts/HomeTabs"
 import FaqTabs from "../layouts/FaqTabs"
 import RailingsTabs from "../layouts/RailingsTabs"
+import GalleryGrid from "../layouts/GalleryGrid"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -1053,6 +1054,48 @@ const Layouts = () => {
                 },
               ],
             },
+          },
+        ]}
+      />
+      <LayoutTitle>GalleryGrid</LayoutTitle>
+      <GalleryGrid
+        title="Frameless Shower Doors"
+        cards={[
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
+          },
+          {
+            image: staticQuery.home,
+            title: "project name 1",
           },
         ]}
       />
