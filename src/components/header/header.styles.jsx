@@ -5,11 +5,22 @@ import LogoSVG from "../../assets/icons/logo.svg"
 import CustomButton from "../custom-button/custom-button.component"
 
 export const CustomAppBar = styled(AppBar)`
-  position: fixed;
+ //position: fixed;
 `
 
 export const MainNav = styled.div`
+  transition: padding-top 0.3s ease, padding-bottom 0.3s ease,
+  background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   background-color: transparent;
+
+  ${({ theme, isdark }) =>
+          isdark
+                  ? `
+    background-color: ${theme.palette.primary.main};
+   `
+                  : `
+    background-color: transparent;
+   `};
   ${({ theme }) => theme.breakpoints.down("sm")} {
     min-height: 61px;
   }
@@ -153,4 +164,9 @@ export const ButtonWrapper = styled.div`
   display: flex;
 `
 
-export const NavWrapper = styled.div``
+export const NavWrapper = styled.div`
+  .MuiAppBar-colorPrimary {
+    background-color: transparent;
+  }
+  
+`

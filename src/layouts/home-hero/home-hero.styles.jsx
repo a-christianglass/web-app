@@ -18,7 +18,6 @@ export const ImageWrapper = styled(CustomBgImage)`
 
 export const TextWrapper = styled.div`
   padding: 18em 0;
-  margin-left: 5em;
   max-width: 550px;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {

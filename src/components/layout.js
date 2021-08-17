@@ -13,12 +13,12 @@ import Header from "../components/header/header.component"
 import { AppContainer } from "../styles/app.styles"
 import Footer from "./footer/footer.component"
 
-const Layout = ({ seo, children }) => {
+const Layout = ({ seo, children, isTransparent }) => {
   return (
     <>
       {seo && <SEO data={seo} />}
-      <Header />
-      <AppContainer>{children}</AppContainer>
+      <Header isTransparent={isTransparent}/>
+      <AppContainer isTransparent={isTransparent}>{children}</AppContainer>
       <Footer />
     </>
   )

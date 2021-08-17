@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import * as S from "./header.styles.jsx"
 import { Hidden, useScrollTrigger } from "@material-ui/core"
 import Container from "@material-ui/core/Container"
@@ -8,12 +8,24 @@ import MailIcon from "../../assets/icons/blue-mail.svg"
 import PhoneIcon from "../../assets/icons/phone-blue.svg"
 import parse from "html-react-parser"
 
-const Header = () => {
-  const scrollTrigger = useScrollTrigger()
+const Header = ({ isTransparent }) => {
+
+  const [threshold, setTreshold] = useState(100)
+  const scrollTrigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold,
+  })
+  const isDark = scrollTrigger || isTransparent
+
+  console.log("isDark", isDark)
 
   return (
-    <S.NavWrapper>
-      <S.CustomAppBar elevation={scrollTrigger ? 4 : 0}>
+    <S.NavWrapper isTransparent={isTransparent}>
+      <S.CustomAppBar
+        id="mainNav"
+        position="fixed"
+        elevation={scrollTrigger ? 4 : 0}
+      >
         <S.TopNav>
           <Container>
             <S.InnerTopContainer>
@@ -32,7 +44,7 @@ const Header = () => {
             </S.InnerTopContainer>
           </Container>
         </S.TopNav>
-        <S.MainNav>
+        <S.MainNav isdark={isDark}>
           <Container>
             <S.MainNavContainer>
               <S.MainItem url="/" className="logo">

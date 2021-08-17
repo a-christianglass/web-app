@@ -13,6 +13,7 @@ export const query = graphql`
       uri
       slug
       parentId
+
       seo {
         canonical
         title
@@ -72,64 +73,65 @@ export const query = graphql`
           ... on WpPage_Pagebuilder_Layouts_ProjectSlider {
             ...ProjectSlider
           }
-            ... on WpPage_Pagebuilder_Layouts_AppointmentBanner {
-                ...AppointmentBanner
-            }
-            ... on WpPage_Pagebuilder_Layouts_GallerySlider {
-                ...GallerySlider
-            }
-            ... on WpPage_Pagebuilder_Layouts_TestimonialSlider {
-                ...TestimonialSlider
-            }
-            ... on WpPage_Pagebuilder_Layouts_CommonHeroBanner {
-                ...CommonHeroBanner
-            }
-            ... on WpPage_Pagebuilder_Layouts_VideoRow {
-                ...VideoRow
-            }
-            ... on WpPage_Pagebuilder_Layouts_FeaturesRow {
-                ...FeaturesRow
-            }
-            ... on WpPage_Pagebuilder_Layouts_ChoicesSection {
-                ...ChoicesSection
-            }
-            ... on WpPage_Pagebuilder_Layouts_TitleTextRow {
-                ...TitleTextRow
-            }
-            ... on WpPage_Pagebuilder_Layouts_IndustriesServices {
-                ...IndustriesServices
-            }
-            ... on WpPage_Pagebuilder_Layouts_ProjectsGrid {
-                ...ProjectsGrid
-            }
-            ... on WpPage_Pagebuilder_Layouts_FormSection {
-                ...FormSection
-            }
-            ... on WpPage_Pagebuilder_Layouts_ReasonsSection {
-                ...ReasonsSection
-            }
-            ... on WpPage_Pagebuilder_Layouts_WorksSection {
-                ...WorksSection
-            }
-            ... on WpPage_Pagebuilder_Layouts_FaqTabs {
-                ...FaqTabs
-            }
-            ... on WpPage_Pagebuilder_Layouts_HomeTabs {
-                ...HomeTabs
-            }
-            ... on WpPage_Pagebuilder_Layouts_MiscHero {
-                ...MiscHero
-            }
-            ... on WpPage_Pagebuilder_Layouts_RailingsTabs {
-                ...RailingsTabs
-            }
-            ... on WpPage_Pagebuilder_Layouts_GalleryGrid {
-                ...GalleryGrid
-            }
+          ... on WpPage_Pagebuilder_Layouts_AppointmentBanner {
+            ...AppointmentBanner
+          }
+          ... on WpPage_Pagebuilder_Layouts_GallerySlider {
+            ...GallerySlider
+          }
+          ... on WpPage_Pagebuilder_Layouts_TestimonialSlider {
+            ...TestimonialSlider
+          }
+          ... on WpPage_Pagebuilder_Layouts_CommonHeroBanner {
+            ...CommonHeroBanner
+          }
+          ... on WpPage_Pagebuilder_Layouts_VideoRow {
+            ...VideoRow
+          }
+          ... on WpPage_Pagebuilder_Layouts_FeaturesRow {
+            ...FeaturesRow
+          }
+          ... on WpPage_Pagebuilder_Layouts_ChoicesSection {
+            ...ChoicesSection
+          }
+          ... on WpPage_Pagebuilder_Layouts_TitleTextRow {
+            ...TitleTextRow
+          }
+          ... on WpPage_Pagebuilder_Layouts_IndustriesServices {
+            ...IndustriesServices
+          }
+          ... on WpPage_Pagebuilder_Layouts_ProjectsGrid {
+            ...ProjectsGrid
+          }
+          ... on WpPage_Pagebuilder_Layouts_FormSection {
+            ...FormSection
+          }
+          ... on WpPage_Pagebuilder_Layouts_ReasonsSection {
+            ...ReasonsSection
+          }
+          ... on WpPage_Pagebuilder_Layouts_WorksSection {
+            ...WorksSection
+          }
+          ... on WpPage_Pagebuilder_Layouts_FaqTabs {
+            ...FaqTabs
+          }
+          ... on WpPage_Pagebuilder_Layouts_HomeTabs {
+            ...HomeTabs
+          }
+          ... on WpPage_Pagebuilder_Layouts_MiscHero {
+            ...MiscHero
+          }
+          ... on WpPage_Pagebuilder_Layouts_RailingsTabs {
+            ...RailingsTabs
+          }
+          ... on WpPage_Pagebuilder_Layouts_GalleryGrid {
+            ...GalleryGrid
+          }
         }
         pageConfiguration {
           hideFooter
           hideHeaderItems
+          isTransparent
         }
       }
     }
