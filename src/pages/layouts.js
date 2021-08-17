@@ -761,7 +761,6 @@ const Layouts = () => {
                 "34 Years of Experience Installing Impact Windows and Doors",
               content:
                 "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
-              haveAButton: true,
               button: {
                 url: "/",
                 title: "About Us",
@@ -776,7 +775,6 @@ const Layouts = () => {
                 "34 Years of Experience Installing Impact Windows and Doors",
               content:
                 "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
-              haveAButton: true,
               button: {
                 url: "/",
                 title: "About Us",
@@ -791,7 +789,6 @@ const Layouts = () => {
                 "34 Years of Experience Installing Impact Windows and Doors",
               content:
                 "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
-              haveAButton: true,
               button: {
                 url: "/",
                 title: "About Us",
@@ -806,7 +803,6 @@ const Layouts = () => {
                 "34 Years of Experience Installing Impact Windows and Doors",
               content:
                 "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
-              haveAButton: true,
               button: {
                 url: "/",
                 title: "About Us",

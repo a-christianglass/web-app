@@ -21,6 +21,9 @@ import ProjectsGrid from "./layouts/ProjectsGrid"
 import FormSection from "./layouts/form-section"
 import ReasonsSection from "./layouts/ReasonsSection"
 import WorksSection from "./layouts/WorksSection"
+import FaqTabs from "./layouts/FaqTabs"
+import HomeTabs from "./layouts/HomeTabs"
+import MiscHero from "./layouts/MiscHero"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -70,5 +73,11 @@ export const getPageLayout = layout => {
       return <ReasonsSection {...layout} />
     case "WorksSection":
       return <WorksSection {...layout} />
+    case "FaqTabs":
+      return <FaqTabs {...layout} />
+    case "HomeTabs":
+      return <HomeTabs {...layout} />
+    case "MiscHero":
+      return <MiscHero {...layout} />
   }
 }

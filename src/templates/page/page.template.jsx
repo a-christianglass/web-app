@@ -111,6 +111,15 @@ export const query = graphql`
             ... on WpPage_Pagebuilder_Layouts_WorksSection {
                 ...WorksSection
             }
+            ... on WpPage_Pagebuilder_Layouts_FaqTabs {
+                ...FaqTabs
+            }
+            ... on WpPage_Pagebuilder_Layouts_HomeTabs {
+                ...HomeTabs
+            }
+            ... on WpPage_Pagebuilder_Layouts_MiscHero {
+                ...MiscHero
+            }
         }
         pageConfiguration {
           hideFooter

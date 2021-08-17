@@ -32,7 +32,7 @@ const HomeTabs = ({ tabs }) => {
                   {tab.tab.content && (
                     <S.TabContent>{tab.tab.content}</S.TabContent>
                   )}
-                  {tab.tab.haveAButton && (
+                  {tab.tab.button && tab.tab.button.title && (
                     <S.Button href={tab.tab.button.url}>
                       {tab.tab.button.title}
                     </S.Button>
