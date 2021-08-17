@@ -994,8 +994,8 @@ const Layouts = () => {
       <LayoutTitle>RailingsTabs</LayoutTitle>
       <RailingsTabs
         title="Railings System We Offer"
-        description="Here at A-Christian Glass we have our very own Glass Railing department that specializes in a wide variety of options to assist you in either the interior or exterior of your home. We offer systems that are sleek and sophisticated for any of your needs."
-        tabs={[
+        descriptionRaillings="Here at A-Christian Glass we have our very own Glass Railing department that specializes in a wide variety of options to assist you in either the interior or exterior of your home. We offer systems that are sleek and sophisticated for any of your needs."
+        tabsRaillings={[
           {
             tab: {
               title: "INTERIOR RAILING SYSTEM",

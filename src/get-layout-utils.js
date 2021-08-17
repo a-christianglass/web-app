@@ -24,6 +24,7 @@ import WorksSection from "./layouts/WorksSection"
 import FaqTabs from "./layouts/FaqTabs"
 import HomeTabs from "./layouts/HomeTabs"
 import MiscHero from "./layouts/MiscHero"
+import RailingsTabs from "./layouts/RailingsTabs"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -79,5 +80,7 @@ export const getPageLayout = layout => {
       return <HomeTabs {...layout} />
     case "MiscHero":
       return <MiscHero {...layout} />
+    case "RailingsTabs":
+      return <RailingsTabs {...layout} />
   }
 }
