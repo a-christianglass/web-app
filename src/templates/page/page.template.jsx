@@ -120,6 +120,9 @@ export const query = graphql`
             ... on WpPage_Pagebuilder_Layouts_MiscHero {
                 ...MiscHero
             }
+            ... on WpPage_Pagebuilder_Layouts_RailingsTabs {
+                ...RailingsTabs
+            }
         }
         pageConfiguration {
           hideFooter

@@ -3,12 +3,12 @@ import * as S from "./railings-tabs.styles"
 import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
 import Container from "@material-ui/core/Container"
-const RailingsTabs = ({ title, description, tabs }) => {
+const RailingsTabs = ({ title, descriptionRaillings, tabsRaillings }) => {
   const [value, setValue] = useState(0)
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
-  if (!tabs) return null
+  if (!tabsRaillings) return null
 
   return (
     <S.Wrapper>
@@ -18,7 +18,7 @@ const RailingsTabs = ({ title, description, tabs }) => {
             <S.TitleWrapper>{title && <h1>{title}</h1>}</S.TitleWrapper>
           </Grid>
           <Grid item xs={12} md={6}>
-            {description && <S.RightText>{parse(description)}</S.RightText>}
+            {descriptionRaillings && <S.RightText>{parse(descriptionRaillings)}</S.RightText>}
           </Grid>
         </S.TopGrid>
         <S.CustomTabs
@@ -27,11 +27,11 @@ const RailingsTabs = ({ title, description, tabs }) => {
           indicatorColor="primary"
           variant="fullWidth"
         >
-          {tabs.map(tab => (
+          {tabsRaillings.map(tab => (
             <S.CustomTab label={tab.tab.title} />
           ))}
         </S.CustomTabs>
-        {tabs.map((tab, index) => (
+        {tabsRaillings.map((tab, index) => (
           <S.CustomTabPanel hidden={value !== index}>
             <Grid container>
               {tab.tab.features.map((feature, index) => (
