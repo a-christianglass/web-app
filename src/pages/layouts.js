@@ -29,6 +29,7 @@ import MiscHero from "../layouts/MiscHero"
 import FormSection from "../layouts/form-section"
 import ContactInfo from "../layouts/ContactInfo"
 import TellUsSection from "../layouts/TellUsSection"
+import HomeTabs from "../layouts/HomeTabs"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -134,6 +135,11 @@ const Layouts = () => {
         }
       }
       miscHero: file(relativePath: { eq: "misc-hero.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      homeTabs: file(relativePath: { eq: "34-years.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -717,6 +723,71 @@ const Layouts = () => {
       <ContactInfo />
       <LayoutTitle>TellUsSection</LayoutTitle>
       <TellUsSection />
+      <LayoutTitle>HomeTabs</LayoutTitle>
+      <HomeTabs
+        tabs={[
+          {
+            tab: {
+              title: "34 years of experience",
+              subtitle:
+                "34 Years of Experience Installing Impact Windows and Doors",
+              content:
+                "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
+              haveAButton: true,
+              button: {
+                url: "/",
+                title: "About Us",
+              },
+              image: staticQuery.homeTabs,
+            },
+          },
+          {
+            tab: {
+              title: "Tab 2",
+              subtitle:
+                "34 Years of Experience Installing Impact Windows and Doors",
+              content:
+                "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
+              haveAButton: true,
+              button: {
+                url: "/",
+                title: "About Us",
+              },
+              image: staticQuery.homeTabs,
+            },
+          },
+          {
+            tab: {
+              title: "Tab 3",
+              subtitle:
+                "34 Years of Experience Installing Impact Windows and Doors",
+              content:
+                "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
+              haveAButton: true,
+              button: {
+                url: "/",
+                title: "About Us",
+              },
+              image: staticQuery.homeTabs,
+            },
+          },
+          {
+            tab: {
+              title: "Tab 4",
+              subtitle:
+                "34 Years of Experience Installing Impact Windows and Doors",
+              content:
+                "Our goal is to provide the most aesthetically pleasing home protection solutions possible. With our hurricane windows and doors, you can protect your home from hurricanes, theft, sun damage, and high insurance premiums. Do hurricane windows lower insurance premiums? How low can premiums go with hurricane windows and doors?",
+              haveAButton: true,
+              button: {
+                url: "/",
+                title: "About Us",
+              },
+              image: staticQuery.homeTabs,
+            },
+          },
+        ]}
+      />
     </Layout>
   )
 }
