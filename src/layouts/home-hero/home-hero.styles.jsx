@@ -1,11 +1,20 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
+import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
+
+const sectionHeight = css`
+  height: calc(100vh - ${({ theme }) => theme.navHeight}px);
+`
 
 export const HeroWrapper = styled(SectionWrapper)`
   padding: 0;
 `
 export const ContentWrapper = styled.div``
+
+export const ImageWrapper = styled(CustomBgImage)`
+  // ${sectionHeight};
+`
 
 export const TextWrapper = styled.div`
   padding: 18em 0;
