@@ -7,7 +7,7 @@ import CircleCheckIcon from "../../images/check-circle.svg"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 2em 0 5em 0;
-  background-color: #F0F5F7;
+  background-color: #f0f5f7;
   .Mui-selected {
     color: ${({ theme }) => theme.palette.primary.main};
   }
@@ -38,6 +38,7 @@ export const CustomTabs = styled(Tabs)`
 
       button {
         padding-bottom: 1.5em;
+        font-size: 14px;
         border-bottom: 7px solid #f0f5f7;
       }
     }
