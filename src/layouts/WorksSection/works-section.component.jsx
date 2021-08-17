@@ -4,7 +4,7 @@ import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
 import { graphql, useStaticQuery } from "gatsby"
 
-const WorksSection = ({ title, description, works }) => {
+const WorksSection = ({ title, descriptionWorksSection, works }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
       residentialBg: file(relativePath: { eq: "residential-bg.png" }) {
@@ -25,8 +25,8 @@ const WorksSection = ({ title, description, works }) => {
             </S.LeftGrid>
             <Grid item xs={12} md={6}>
               <S.RightWrapper>
-                {description && (
-                  <S.DescriptionText>{parse(description)}</S.DescriptionText>
+                {descriptionWorksSection && (
+                  <S.DescriptionText>{parse(descriptionWorksSection)}</S.DescriptionText>
                 )}
               </S.RightWrapper>
             </Grid>

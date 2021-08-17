@@ -3,7 +3,7 @@ import * as S from "./distributor-section.styles"
 import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
 
-const DistributorSection = ({ logo, title, subtitle, content }) => {
+const DistributorSection = ({ logo, title, subtitle, contentDistributorSection }) => {
   return (
     <S.Wrapper>
       <Grid container>
@@ -14,7 +14,7 @@ const DistributorSection = ({ logo, title, subtitle, content }) => {
           <S.TextWrapper>
             {title && <h2>{title}</h2>}
             {subtitle && <h3>{subtitle}</h3>}
-            {content && <S.ContentText>{parse(content)}</S.ContentText>}
+            {contentDistributorSection && <S.ContentText>{parse(contentDistributorSection)}</S.ContentText>}
           </S.TextWrapper>
         </S.RightGrid>
       </Grid>

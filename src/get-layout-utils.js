@@ -17,6 +17,10 @@ import FeaturesRow from "./layouts/features-row"
 import ChoicesSection from "./layouts/ChoicesSection"
 import TitleTextRow from "./layouts/TitleTextRow"
 import IndustriesServices from "./layouts/IndustriesServices"
+import ProjectsGrid from "./layouts/ProjectsGrid"
+import FormSection from "./layouts/form-section"
+import ReasonsSection from "./layouts/ReasonsSection"
+import WorksSection from "./layouts/WorksSection"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -58,5 +62,13 @@ export const getPageLayout = layout => {
       return <TitleTextRow {...layout} />
     case "IndustriesServices":
       return <IndustriesServices {...layout} />
+    case "ProjectsGrid":
+      return <ProjectsGrid {...layout} />
+    case "FormSection":
+      return <FormSection {...layout} />
+    case "ReasonsSection":
+      return <ReasonsSection {...layout} />
+    case "WorksSection":
+      return <WorksSection {...layout} />
   }
 }
