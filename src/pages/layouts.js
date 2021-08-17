@@ -30,6 +30,7 @@ import FormSection from "../layouts/form-section"
 import ContactInfo from "../layouts/ContactInfo"
 import TellUsSection from "../layouts/TellUsSection"
 import HomeTabs from "../layouts/HomeTabs"
+import FaqTabs from "../layouts/FaqTabs"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -784,6 +785,183 @@ const Layouts = () => {
                 title: "About Us",
               },
               image: staticQuery.homeTabs,
+            },
+          },
+        ]}
+      />
+      <LayoutTitle>FaqTabs</LayoutTitle>
+      <FaqTabs
+        faqTitle="Frequenly Asked Questions"
+        faqTabs={[
+          {
+            tab: {
+              title: "GENERAL QUESTIONS",
+              faqs: [
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              title: "BUSINESS",
+              faqs: [
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              title: "DOORS",
+              faqs: [
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              title: "WINDOWS",
+              faqs: [
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              title: "OTHERS",
+              faqs: [
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+                {
+                  faq: {
+                    title:
+                      "How do I choose the best window contractor for my house?",
+                    content:
+                      "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+              ],
             },
           },
         ]}
