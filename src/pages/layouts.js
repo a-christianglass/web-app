@@ -31,6 +31,7 @@ import ContactInfo from "../layouts/ContactInfo"
 import TellUsSection from "../layouts/TellUsSection"
 import HomeTabs from "../layouts/HomeTabs"
 import FaqTabs from "../layouts/FaqTabs"
+import RailingsTabs from "../layouts/RailingsTabs"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -982,6 +983,72 @@ const Layouts = () => {
                       "How do I choose the best window contractor for my house?",
                     content:
                       "Choosing a good window contractor may be complex, but there are several key factors to look for starting any impact resistant window installation.",
+                  },
+                },
+              ],
+            },
+          },
+        ]}
+      />
+      <LayoutTitle>RailingsTabs</LayoutTitle>
+      <RailingsTabs
+        title="Railings System We Offer"
+        description="Here at A-Christian Glass we have our very own Glass Railing department that specializes in a wide variety of options to assist you in either the interior or exterior of your home. We offer systems that are sleek and sophisticated for any of your needs."
+        tabs={[
+          {
+            tab: {
+              title: "INTERIOR RAILING SYSTEM",
+              features: [
+                {
+                  feature: {
+                    title: "Standoff Systems",
+                    content:
+                      'Standoff Railings are an option we give to our clients for a compact design with minimal obstruction with glass ranging from 1/2" thickness to 27/32".',
+                  },
+                },
+                {
+                  feature: {
+                    title: "Standoff Systems",
+                    content:
+                      'Standoff Railings are an option we give to our clients for a compact design with minimal obstruction with glass ranging from 1/2" thickness to 27/32".',
+                  },
+                },
+                {
+                  feature: {
+                    title: "Standoff Systems",
+                    content:
+                      'Standoff Railings are an option we give to our clients for a compact design with minimal obstruction with glass ranging from 1/2" thickness to 27/32".',
+                  },
+                },
+                {
+                  feature: {
+                    title: "Standoff Systems",
+                    content:
+                      'Standoff Railings are an option we give to our clients for a compact design with minimal obstruction with glass ranging from 1/2" thickness to 27/32".',
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              title: "EXTERIOR RAILING SYSTEM",
+              features: [
+                {
+                  feature: {
+                    title: "Standoff Systems",
+                    content:
+                      'Exterior Base shoes which are similar to our interior base shoe systems consist of glass ranging from 1/2" thickness to 1 1/16" are installed with TAPER-LOC systems which supports all mounting methods with one compact installation/removal tool which eliminates the use of messy cement. \n' +
+                      "<br><br>Base shoes systems have the option for cap rail and hand rail installation, also with drain blocks to provide drainage for water run-off. This is especially important for balconies or decks where water could dam up unless proper drainage available. \n" +
+                      "<br><br>Base shoes are installed with the option of cladding to match the cap rails finishes available in brushed stainless, polished stainless, polished brass, satin brass satin anodized, dark bronze anodized and powder coating to match any other finishes the client desires.",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Standoff Systems",
+                    content:
+                      "This option is great for pool fencing, balcony, and deck applications. This look provides a break from the wind using an almost invisible frameless glass look which is also known as spigots. \n" +
+                      "<br><br>There are different option models to choose from, core, side and new surface. All models are available in brushed stainless and some in polished. There is an option for a U-channel cap that can be added to the top of the glass for added support or for visual preference.",
                   },
                 },
               ],
