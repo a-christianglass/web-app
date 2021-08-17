@@ -123,6 +123,9 @@ export const query = graphql`
             ... on WpPage_Pagebuilder_Layouts_RailingsTabs {
                 ...RailingsTabs
             }
+            ... on WpPage_Pagebuilder_Layouts_GalleryGrid {
+                ...GalleryGrid
+            }
         }
         pageConfiguration {
           hideFooter
