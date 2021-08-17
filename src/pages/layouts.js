@@ -33,6 +33,7 @@ import HomeTabs from "../layouts/HomeTabs"
 import FaqTabs from "../layouts/FaqTabs"
 import RailingsTabs from "../layouts/RailingsTabs"
 import GalleryGrid from "../layouts/GalleryGrid"
+import WindowsTabs from "../layouts/WindowsTabs"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -143,6 +144,11 @@ const Layouts = () => {
         }
       }
       homeTabs: file(relativePath: { eq: "34-years.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      windowsTabs: file(relativePath: { eq: "windowsTabs.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -1096,6 +1102,62 @@ const Layouts = () => {
           {
             image: staticQuery.home,
             title: "project name 1",
+          },
+        ]}
+      />
+      <LayoutTitle>WindowsTabs</LayoutTitle>
+      <WindowsTabs
+        titleWindows="Types of Impact Resistant Windows We Offer"
+        tabsWindows={[
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "SINGLE OR DOUBLE-HUNG WINDOWS",
+              subtitle: "Single or Double-Hung Windows",
+              features: [
+                {
+                  feature: {
+                    title: "Single Hung",
+                    content:
+                      "The single hung window is more of the classic style design which contains a stationary top panel and a bottom panel that opens and closes vertically. The single hung style provides convenience for cleaning by having the ability to tilt inward, which allows exterior cleaning.",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Double Hung",
+                    content:
+                      "Double hung windows can be raised from the bottom and lowered from the top to maximize ventilation in almost any room.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "CASEMENTS",
+              subtitle: "Casements",
+              content:
+                "Commonly used in bathrooms and kitchens, casement windows are hinged at the side to open outward, letting air flow freely throughout your home while providing an unobstructed view. Casement picture and architectural windows provide the perfect complement, creating a cohesive look with our casement windows.",
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "HORIZONTAL ROLLER WINDOWS",
+              subtitle: "Horizontal Roller \n" + "Windows",
+              content:
+                "The horizontal roller contains two or three sashes side by side and is designed to open and close horizontally. Most options provide easy cleaning with the ability to remove operating panels. With the horizontal roller, you are able to experience a clear vertical view for an optimal visual.",
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "FIXED GLASS WINDOWS",
+              subtitle: "Fixed Glass Windows",
+              content:
+                "Creating a stunning centerpiece for living rooms and other gathering spaces, picture windows are fixed windows that offer an abundance of natural light while framing the outdoors.",
+            },
           },
         ]}
       />

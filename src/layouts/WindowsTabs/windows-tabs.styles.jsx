@@ -7,7 +7,7 @@ import CircleCheckIcon from "../../images/check-circle.svg"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 2em 0 5em 0;
-  background-color: #f0f5f7;
+  background-color: #f5f8fa;
   .Mui-selected {
     color: ${({ theme }) => theme.palette.primary.main};
   }
@@ -124,8 +124,8 @@ export const RightImage = styled(CustomImage)`
 `
 
 export const TitleWrapper = styled.div`
-  max-width: 331px;
-  h1 {
+  max-width: 508px;
+  h2 {
     font-style: normal;
     font-weight: bold;
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
@@ -166,10 +166,45 @@ export const ContentWrapper = styled.div`
   }
 `
 
-export const FeatureText = styled(Typography)`
-  margin-left: 30px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 26px;
-  color: rgba(29, 56, 69, 0.75);
+export const TabSubtitle = styled.h3`
+  text-transform: capitalize;
+  padding: 1em 0;
+`
+
+export const TabText = styled(Typography)``
+
+export const RightGrid = styled(Grid)`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`
+
+export const ImageWrapper = styled.div`
+  max-width: 414px;
+`
+
+export const FeatureWrapper = styled.div`
+  h4 {
+    margin-left: 30px;
+    padding-top: 5px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #0d5c80;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 4px;
+      width: 24px;
+      height: 24px;
+      background: url(${CircleCheckIcon}) no-repeat center center;
+      background-size: cover;
+    }
+  }
+  p {
+    margin-left: 30px;
+  }
 `

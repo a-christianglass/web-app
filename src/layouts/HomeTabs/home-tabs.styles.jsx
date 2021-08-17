@@ -33,6 +33,7 @@ export const CustomTabs = styled(Tabs)`
 
       button {
         padding-bottom: 1.5em;
+        font-size: 14px;
         border-bottom: 7px solid #f0f5f7;
       }
     }
