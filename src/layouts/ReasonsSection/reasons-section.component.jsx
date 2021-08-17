@@ -12,13 +12,15 @@ const ReasonsSection = ({ title, descriptionReasons, reasons }) => {
         </S.LeftGrid>
         <S.RightGrid item xs={12} md={6}>
           <S.RightTextWrapper>
-            {descriptionReasons && <S.ContentText>{parse(descriptionReasons)}</S.ContentText>}
+            {descriptionReasons && (
+              <S.ContentText>{parse(descriptionReasons)}</S.ContentText>
+            )}
           </S.RightTextWrapper>
         </S.RightGrid>
       </S.TopGrid>
       <Grid container>
         {reasons &&
-          reasons.map(({ reason }, index) => (
+          reasons.map(({ title, content }, index) => (
             <S.ReasonGrid
               item
               xs={12}
@@ -27,8 +29,8 @@ const ReasonsSection = ({ title, descriptionReasons, reasons }) => {
               shouldCenter={index % 2 === 0}
             >
               <S.ReasonWrapper>
-                {reason.title && <S.ReasonTitle>{reason.title}</S.ReasonTitle>}
-                <S.ReasonContent>{reason?.content}</S.ReasonContent>
+                {title && <S.ReasonTitle>{title}</S.ReasonTitle>}
+                {content && <S.ReasonContent>{content}</S.ReasonContent>}
               </S.ReasonWrapper>
             </S.ReasonGrid>
           ))}

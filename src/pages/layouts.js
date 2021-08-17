@@ -601,36 +601,48 @@ const Layouts = () => {
           "Omnis excepturi totam saepe. Blanditiis aspernatur odit ratione quos. Necessitatibus aspernatur error. Voluptatum amet debitis magnam occaecati ut."
         }
         projects={[
-          { image: staticQuery.home,
-          link: {
-            url: "/",
-            title: "project name 1"
-          }},
-          { image: staticQuery.home,
+          {
+            image: staticQuery.home,
             link: {
               url: "/",
-              title: "project name 1"
-            }},
-          { image: staticQuery.home,
+              title: "project name 1",
+            },
+          },
+          {
+            image: staticQuery.home,
             link: {
               url: "/",
-              title: "project name 1"
-            }},
-          { image: staticQuery.home,
+              title: "project name 1",
+            },
+          },
+          {
+            image: staticQuery.home,
             link: {
               url: "/",
-              title: "project name 1"
-            }},
-          { image: staticQuery.home,
+              title: "project name 1",
+            },
+          },
+          {
+            image: staticQuery.home,
             link: {
               url: "/",
-              title: "project name 1"
-            }},
-          { image: staticQuery.home,
+              title: "project name 1",
+            },
+          },
+          {
+            image: staticQuery.home,
             link: {
               url: "/",
-              title: "project name 1"
-            }},
+              title: "project name 1",
+            },
+          },
+          {
+            image: staticQuery.home,
+            link: {
+              url: "/",
+              title: "project name 1",
+            },
+          },
         ]}
       />
       <LayoutTitle>DistributorSection</LayoutTitle>
@@ -650,25 +662,19 @@ const Layouts = () => {
         }
         reasons={[
           {
-            reason: {
-              title: "We Provide the Windows and the Installation",
-              content:
-                "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
-            },
+            title: "We Provide the Windows and the Installation",
+            content:
+              "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
           },
           {
-            reason: {
-              title: "We Provide the Windows and the Installation",
-              content:
-                "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
-            },
+            title: "We Provide the Windows and the Installation",
+            content:
+              "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
           },
           {
-            reason: {
-              title: "We Provide the Windows and the Installation",
-              content:
-                "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
-            },
+            title: "We Provide the Windows and the Installation",
+            content:
+              "The hassle of finding impact windows and installation services from more than one company may prove overwhelming for someone who has other things to do. A-Christian Glass lets you get everything you need for your project by just making a single phone call. And just so you know, getting project supplies and installation services from the same company is significantly more economical.",
           },
         ]}
       />
