@@ -15,7 +15,7 @@ import {
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import parse from "html-react-parser"
 import { graphql, useStaticQuery } from "gatsby"
-const FormSection = ({ content, callText, number }) => {
+const FormSection = ({ contentFormSection, callText, number }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
       formBg: file(relativePath: { eq: "form-bg.jpg" }) {
@@ -40,7 +40,7 @@ const FormSection = ({ content, callText, number }) => {
             <Grid container>
               <S.LeftGrid xs={12} md={6}>
                 <S.LeftWrapper>
-                  {content && <h2>{parse(content)}</h2>}
+                  {contentFormSection && <h2>{parse(contentFormSection)}</h2>}
                   <S.NumberWrapper>
                     {callText && <span>{callText}</span>}
                     {number && <a href="/">{number}</a>}

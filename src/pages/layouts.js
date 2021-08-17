@@ -536,8 +536,8 @@ const Layouts = () => {
         }}
       />
       <FeaturesRow
-        reverse={true}
-        image={staticQuery.hurricanes}
+        reverseFeatures={true}
+        imageFeaturesRow={staticQuery.hurricanes}
         contentFeaturesRow={{
           title: "Hurricane<br>Windows and Doors",
           features: [
@@ -587,22 +587,43 @@ const Layouts = () => {
           "For 34 years, A-Christian Glass and Mirror opened its doors and in the decades and one thing remains the same: Customer service remains the foundation of the company's success."
         }
       />
-      <LayoutTitle>ProjectGrid</LayoutTitle>
+      <LayoutTitle>ProjectsGrid</LayoutTitle>
       <ProjectsGrid
         title={"Custom Houses"}
         content={
           "Omnis excepturi totam saepe. Blanditiis aspernatur odit ratione quos. Necessitatibus aspernatur error. Voluptatum amet debitis magnam occaecati ut."
         }
         projects={[
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
-          { project: projectObj },
+          { image: staticQuery.home,
+          link: {
+            url: "/",
+            title: "project name 1"
+          }},
+          { image: staticQuery.home,
+            link: {
+              url: "/",
+              title: "project name 1"
+            }},
+          { image: staticQuery.home,
+            link: {
+              url: "/",
+              title: "project name 1"
+            }},
+          { image: staticQuery.home,
+            link: {
+              url: "/",
+              title: "project name 1"
+            }},
+          { image: staticQuery.home,
+            link: {
+              url: "/",
+              title: "project name 1"
+            }},
+          { image: staticQuery.home,
+            link: {
+              url: "/",
+              title: "project name 1"
+            }},
         ]}
       />
       <LayoutTitle>DistributorSection</LayoutTitle>
@@ -610,14 +631,14 @@ const Layouts = () => {
         logo={staticQuery.pgtLogo}
         title={"authorized distributor"}
         subtitle={"PGT Impact Resistant Windows"}
-        content={
+        contentDistributorSection={
           "<strong>A-Christian Glass is an authorized distributor and installation contractor for PGT windows and doors.</strong> We provide high quality impact resistant PGT products for both residential and commercial clients. PGT is one of the most trusted names in the impact resistant window and door industry and we are proud to offer you their products. PGT is known for providing the highest level of hurricane protection and energy efficiency available."
         }
       />
       <LayoutTitle>ReasonsSection</LayoutTitle>
       <ReasonsSection
         title={"Why You Should Hire A-Christian Glass"}
-        description={
+        descriptionReasons={
           'A-Christian Glass is one of the most trusted hurricane impact resistant window companies in South Florida. So, what gives us the edge on our competitors? Why should you choose us? If you are still struggling with the question of "how to find a reputable company that offers window replacement near me", then here are more reasons A-Christian Glass is the answer you are looking for.'
         }
         reasons={[
@@ -647,7 +668,7 @@ const Layouts = () => {
       <LayoutTitle>WorksSection</LayoutTitle>
       <WorksSection
         title="Working with the Best of the Field"
-        description="A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems"
+        descriptionWorksSection="A-Christian Glass is a full-service company for installing and replacement of interior and exterior glass doors and impact proof window in Delray Beach, Florida. From 1988, we have offered top quality products and services for our customers and the community, even before and after several hurricanes and other weather systems"
         works={[
           {
             logo: staticQuery.tornadoIcon,
@@ -708,7 +729,7 @@ const Layouts = () => {
       <MiscHero image={staticQuery.miscHero} title="Privacy Policy" />
       <LayoutTitle>FormSection</LayoutTitle>
       <FormSection
-        content="Schedule a free, no-obligation estimate to have hurricane impact resistant windows installed in your home.
+        contentFormSection="Schedule a free, no-obligation estimate to have hurricane impact resistant windows installed in your home.
 "
         callText="Or call us at"
         number="(561) 278-3385 "

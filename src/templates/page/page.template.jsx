@@ -99,6 +99,18 @@ export const query = graphql`
             ... on WpPage_Pagebuilder_Layouts_IndustriesServices {
                 ...IndustriesServices
             }
+            ... on WpPage_Pagebuilder_Layouts_ProjectsGrid {
+                ...ProjectsGrid
+            }
+            ... on WpPage_Pagebuilder_Layouts_FormSection {
+                ...FormSection
+            }
+            ... on WpPage_Pagebuilder_Layouts_ReasonsSection {
+                ...ReasonsSection
+            }
+            ... on WpPage_Pagebuilder_Layouts_WorksSection {
+                ...WorksSection
+            }
         }
         pageConfiguration {
           hideFooter

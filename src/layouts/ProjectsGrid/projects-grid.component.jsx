@@ -20,16 +20,16 @@ const ProjectsGrid = ({ title, content, projects }) => {
         </S.RightGrid>
       </S.TopGrid>
       <Grid container>
-        {projects.map(({ project }, index) => (
+        {projects.map(({ image, link }, index) => (
           <S.BottomGrid item xs={12} md={4} key={`project-card-${index}`}>
             <S.CardContainer>
-              {project.link && (
-                <CustomLink to={project.link.url}>
+              {link && (
+                <CustomLink to={link.url}>
                   <S.Card>
-                    <CustomImage img={project.image} />
+                    <CustomImage img={image} />
                     <S.LinkWrapper>
                       <S.TitleWrapper>
-                        <span>{project.link.title}</span>
+                        <span>{link.title}</span>
                       </S.TitleWrapper>
                       <S.ArrowWrapper>
                         <Arrow />

@@ -3,7 +3,7 @@ import * as S from "./reasons-section.styles"
 import parse from "html-react-parser"
 import { Grid } from "@material-ui/core"
 
-const ReasonsSection = ({ title, description, reasons }) => {
+const ReasonsSection = ({ title, descriptionReasons, reasons }) => {
   return (
     <S.Wrapper>
       <S.TopGrid container>
@@ -12,7 +12,7 @@ const ReasonsSection = ({ title, description, reasons }) => {
         </S.LeftGrid>
         <S.RightGrid item xs={12} md={6}>
           <S.RightTextWrapper>
-            {description && <S.ContentText>{parse(description)}</S.ContentText>}
+            {descriptionReasons && <S.ContentText>{parse(descriptionReasons)}</S.ContentText>}
           </S.RightTextWrapper>
         </S.RightGrid>
       </S.TopGrid>
