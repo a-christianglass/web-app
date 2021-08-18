@@ -92,6 +92,13 @@ export const MainItem = styled(CustomLink)`
   display: inline-block;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   box-shadow: inset 0px -2px 0 0 transparent;
+  
+  img {
+    width: 128px;
+    height: auto;
+    display: block;
+    padding: .5em 0;
+  }
 
   &.logo {
     padding: 0;
