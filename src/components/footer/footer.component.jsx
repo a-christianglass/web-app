@@ -14,7 +14,7 @@ import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import Container from "@material-ui/core/Container"
 
-const Footer = ({ className }) => {
+const Footer = ({ className, hideFooterBanner }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
       footerBg: file(relativePath: { eq: "footerBg.png" }) {
@@ -27,30 +27,32 @@ const Footer = ({ className }) => {
 
   return (
     <S.Wrapper>
-      <S.BannerWrapper>
-        <Container>
-          <S.BgImageWrapper>
-            <S.BgImage img={staticQuery.footerBg}>
-              <Grid container>
-                <Grid item xs={12} md={6} />
-                <S.ContentGrid item xs={12} md={6}>
-                  <S.ContentWrapper>
-                    <h2>A-Christian Glass</h2>
-                    <h3>Experience Matters</h3>
-                    <p>
-                      Our experienced installation team takes precise
-                      measurements so your new windows and doors are a perfect
-                      fit. We are meticulous to ensure you are 100% satisfied
-                      with your new impact resistant windows and doors.
-                    </p>
-                    <S.Button href="/">Schedule an Appointment</S.Button>
-                  </S.ContentWrapper>
-                </S.ContentGrid>
-              </Grid>
-            </S.BgImage>
-          </S.BgImageWrapper>
-        </Container>
-      </S.BannerWrapper>
+      {!hideFooterBanner && (
+        <S.BannerWrapper>
+          <Container>
+            <S.BgImageWrapper>
+              <S.BgImage img={staticQuery.footerBg}>
+                <Grid container>
+                  <Grid item xs={12} md={6} />
+                  <S.ContentGrid item xs={12} md={6}>
+                    <S.ContentWrapper>
+                      <h2>A-Christian Glass</h2>
+                      <h3>Experience Matters</h3>
+                      <p>
+                        Our experienced installation team takes precise
+                        measurements so your new windows and doors are a perfect
+                        fit. We are meticulous to ensure you are 100% satisfied
+                        with your new impact resistant windows and doors.
+                      </p>
+                      <S.Button href="/">Schedule an Appointment</S.Button>
+                    </S.ContentWrapper>
+                  </S.ContentGrid>
+                </Grid>
+              </S.BgImage>
+            </S.BgImageWrapper>
+          </Container>
+        </S.BannerWrapper>
+      )}
 
       <S.FooterWrapper>
         <Grid container>
