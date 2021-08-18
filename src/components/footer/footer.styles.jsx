@@ -4,6 +4,7 @@ import { Grid } from "@material-ui/core"
 import Rectangle from "../../assets/icons/Rectangle.svg"
 import CustomBgImage from "../custom-bg-image/custom-bg-image.component"
 import CustomButton from "../custom-button/custom-button.component"
+import CustomLink from "../custom-link/custom-link.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
@@ -211,4 +212,13 @@ export const ContentWrapper = styled.div`
 export const Button = styled(CustomButton)`
   text-transform: none;
   background-color: ${({ theme }) => theme.palette.tertiary.main};
+`
+
+export const LinkItem = styled(CustomLink)`
+  font-style: normal;
+  font-weight: bold;
+  font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+  line-height: 29px;
+  color: white;
+  text-decoration: none;
 `

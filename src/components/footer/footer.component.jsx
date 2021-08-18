@@ -64,20 +64,20 @@ const Footer = ({ className }) => {
               <Grid container>
                 <S.ColumnGrid xs={4}>
                   <span>Products</span>
-                  <a href="/windows/">Windows</a>
-                  <a href="/doors/">Doors</a>
-                  <a href="/showers/">Showers</a>
-                  <a href="/">Railway</a>
+                  <S.LinkItem url="/windows/">Windows</S.LinkItem>
+                  <S.LinkItem url="/doors/">Doors</S.LinkItem>
+                  <S.LinkItem url="/showers/">Showers</S.LinkItem>
+                  <S.LinkItem url="/">Railway</S.LinkItem>
                 </S.ColumnGrid>
                 <S.ColumnGrid xs={4}>
                   <span>Industries</span>
-                  <a href="/residential/">Residential</a>
-                  <a href="/commercial/">Commercial</a>
+                  <S.LinkItem url="/residential/">Residential</S.LinkItem>
+                  <S.LinkItem url="/commercial/">Commercial</S.LinkItem>
                 </S.ColumnGrid>
                 <S.ColumnGrid xs={4}>
                   <span>About</span>
-                  <a href="/">News</a>
-                  <a href="/">Projects</a>
+                  <S.LinkItem href="/">News</S.LinkItem>
+                  <S.LinkItem href="/">Projects</S.LinkItem>
                 </S.ColumnGrid>
               </Grid>
             </S.LeftGrid>
@@ -125,11 +125,11 @@ const Footer = ({ className }) => {
               />
             </S.BBBGrid>
             <S.FaqGrid xs={12} md={6}>
-              <a href="#">FAQ</a>
+              <S.LinkItem url="/faq/">FAQ</S.LinkItem>
               <S.Line />
-              <a href="#">Privacy Policy</a>
+              <S.LinkItem url="#">Privacy Policy</S.LinkItem>
               <S.Line />
-              <a href="#">EQE</a>
+              <S.LinkItem url="#">EQE</S.LinkItem>
             </S.FaqGrid>
           </S.LastGrid>
         </Grid>
