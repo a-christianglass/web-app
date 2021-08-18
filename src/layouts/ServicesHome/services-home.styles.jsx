@@ -2,8 +2,7 @@ import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import Grid from "@material-ui/core/Grid"
 
-
-export const Wrapper =  styled(SectionWrapper)`
+export const Wrapper = styled(SectionWrapper)`
   background-color: white;
 `
 
@@ -38,11 +37,33 @@ export const GridCard = styled(Grid)`
   }
 `
 
-export const CardLink = styled(Grid)`
+export const CardLink = styled.div`
   font-weight: bold;
   font-size: 16px;
   line-height: 146%;
   letter-spacing: 0.02em;
+
+  .lightLink {
+    color: white;
+  }
+
+  .darkLink {
+    color: rgb(13, 92, 128);
+  }
+
+  .arrow {
+    transition: all 0.3s ease;
+    top: 7px;
+    position: relative;
+    margin-left: .3em;
+  }
+
+  :hover {
+    .arrow {
+      transform: translateX(7px);
+    }
+
+
 `
 
 export const ContentWrapper = styled.div`
