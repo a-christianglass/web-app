@@ -15,7 +15,7 @@ export const Wrapper = styled(SectionWrapper)`
   );
 `
 export const FooterWrapper = styled.div`
-  padding: 6em 10em;
+  padding: 6em 5em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
@@ -157,13 +157,26 @@ export const Line = styled(Rectangle)`
 `
 
 export const BannerWrapper = styled.div`
-  background: linear-gradient(
+  ${({ whiteFooterBanner }) =>
+    whiteFooterBanner
+      ? `
+       background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 70%,
+    transparent 70%,
+    transparent 100%
+  );
+   `
+      : `
+      background: linear-gradient(
     to bottom,
     #f0f5f7 0%,
     #f0f5f7 70%,
     transparent 70%,
     transparent 100%
   );
+   `};
 `
 export const BgImageWrapper = styled.div`
   box-shadow: 0px 44px 62px rgba(0, 0, 0, 0.12);

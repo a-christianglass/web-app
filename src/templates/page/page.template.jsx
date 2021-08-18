@@ -146,6 +146,7 @@ export const query = graphql`
           isTransparent
           isWhite
           hideFooterBanner
+          whiteFooterBanner
         }
       }
     }

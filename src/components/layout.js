@@ -19,6 +19,7 @@ const Layout = ({
   isTransparent,
   isWhite,
   hideFooterBanner,
+  whiteFooterBanner,
 }) => {
   return (
     <>
@@ -27,7 +28,10 @@ const Layout = ({
       <AppContainer isTransparent={isTransparent} isWhite={isWhite}>
         {children}
       </AppContainer>
-      <Footer hideFooterBanner={hideFooterBanner} />
+      <Footer
+        hideFooterBanner={hideFooterBanner}
+        whiteFooterBanner={whiteFooterBanner}
+      />
     </>
   )
 }
