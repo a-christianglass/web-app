@@ -11,6 +11,19 @@ export const Wrapper = styled(SectionWrapper)`
   .Mui-selected {
     color: ${({ theme }) => theme.palette.primary.main};
   }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 473px;
+    height: 360px;
+  }
+
+  .gatsby-image-wrapper img {
+    object-fit: contain !important;
+  }
 `
 
 export const TopGrid = styled(Grid)`

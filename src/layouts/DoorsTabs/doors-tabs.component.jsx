@@ -3,6 +3,16 @@ import * as S from "./doors-tabs.styles"
 import Container from "@material-ui/core/Container"
 import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
+import { Swiper, SwiperSlide } from "swiper/react"
+// Import Swiper styles
+import "swiper/swiper.min.css"
+import "swiper/components/pagination/pagination.min.css"
+// import Swiper core and required modules
+import SwiperCore, { Pagination } from "swiper/core"
+import CustomImage from "../../components/custom-image/custom-image.component"
+
+// install Swiper modules
+SwiperCore.use([Pagination])
 
 const DoorsTabs = ({ titleDoors, descriptionDoors, tabsDoors }) => {
   const [value, setValue] = useState(0)
@@ -39,7 +49,15 @@ const DoorsTabs = ({ titleDoors, descriptionDoors, tabsDoors }) => {
           <S.CustomTabPanel hidden={value !== index}>
             <Grid container>
               {/*Slider Grid*/}
-              <Grid item xs={12} md={6}></Grid>
+              <Grid item xs={12} md={6}>
+                <Swiper pagination={true} slidesPerView="1" loop={true}>
+                  {tab.tab.images.map(({ image }, index) => (
+                    <SwiperSlide key={`windows-slide-${index}`}>
+                      {image && <CustomImage img={image} />}
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </Grid>
               <S.RightGrid item xs={12} md={6}>
                 {tab.tab.subtitle && (
                   <S.TabSubtitle>{tab.tab.subtitle}</S.TabSubtitle>

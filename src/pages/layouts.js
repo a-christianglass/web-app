@@ -1173,7 +1173,11 @@ const Layouts = () => {
         tabsDoors={[
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "ENTRY<br>DOORS",
               subtitle: "Entry Doors",
               features: [
@@ -1196,7 +1200,11 @@ const Layouts = () => {
           },
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "FOLDING<br>DOORS",
               subtitle: "Folding Doors",
               content:
@@ -1214,7 +1222,11 @@ const Layouts = () => {
           },
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "FRENCH<br>DOORS",
               subtitle: "French Doors",
               features: [
@@ -1237,7 +1249,11 @@ const Layouts = () => {
           },
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "PATIO<br>DOORS",
               subtitle: "Patio Doors",
               content:
@@ -1268,7 +1284,11 @@ const Layouts = () => {
           },
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "PIVOT<br>DOORS",
               subtitle: "Pivot Doors",
               content:
@@ -1277,7 +1297,11 @@ const Layouts = () => {
           },
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "SLIDING<br>GLASS DOORS",
               subtitle: "Sliding Glass Doors",
               content:
@@ -1287,7 +1311,11 @@ const Layouts = () => {
 
           {
             tab: {
-              image: staticQuery.windowsTabs,
+              images: [
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+                { image: staticQuery.doorsSlider },
+              ],
               title: "STOREFRONT<br>DOORS",
               subtitle: "Sliding Glass Doors",
               content:
