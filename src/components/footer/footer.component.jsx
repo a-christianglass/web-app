@@ -12,6 +12,7 @@ import YelpIcon from "../../assets/icons/yelp.svg"
 import parse from "html-react-parser"
 import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
+import Container from "@material-ui/core/Container"
 
 const Footer = ({ className }) => {
   const staticQuery = useStaticQuery(graphql`
@@ -27,26 +28,28 @@ const Footer = ({ className }) => {
   return (
     <S.Wrapper>
       <S.BannerWrapper>
-        <S.BgImageWrapper>
-          <S.BgImage img={staticQuery.footerBg}>
-            <Grid container>
-              <Grid item xs={12} md={6} />
-              <S.ContentGrid item xs={12} md={6}>
-                <S.ContentWrapper>
-                  <h2>A-Christian Glass</h2>
-                  <h3>Experience Matters</h3>
-                  <p>
-                    Our experienced installation team takes precise measurements
-                    so your new windows and doors are a perfect fit. We are
-                    meticulous to ensure you are 100% satisfied with your new
-                    impact resistant windows and doors.
-                  </p>
-                  <S.Button href="/">Schedule an Appointment</S.Button>
-                </S.ContentWrapper>
-              </S.ContentGrid>
-            </Grid>
-          </S.BgImage>
-        </S.BgImageWrapper>
+        <Container>
+          <S.BgImageWrapper>
+            <S.BgImage img={staticQuery.footerBg}>
+              <Grid container>
+                <Grid item xs={12} md={6} />
+                <S.ContentGrid item xs={12} md={6}>
+                  <S.ContentWrapper>
+                    <h2>A-Christian Glass</h2>
+                    <h3>Experience Matters</h3>
+                    <p>
+                      Our experienced installation team takes precise
+                      measurements so your new windows and doors are a perfect
+                      fit. We are meticulous to ensure you are 100% satisfied
+                      with your new impact resistant windows and doors.
+                    </p>
+                    <S.Button href="/">Schedule an Appointment</S.Button>
+                  </S.ContentWrapper>
+                </S.ContentGrid>
+              </Grid>
+            </S.BgImage>
+          </S.BgImageWrapper>
+        </Container>
       </S.BannerWrapper>
 
       <S.FooterWrapper>
@@ -83,7 +86,7 @@ const Footer = ({ className }) => {
             </S.LeftGrid>
 
             <S.RightGrid item xs={12} md={6}>
-              <a href="/">Call Us: (561) 278-3385</a>
+              <a href="tel:+5612783385">Call Us: (561) 278-3385</a>
               <S.LocationWrapper>
                 <LocationIcon />
                 <p>
@@ -92,7 +95,9 @@ const Footer = ({ className }) => {
               </S.LocationWrapper>
               <S.MailWrapper>
                 <MailIcon />
-                <a href="/">info@a-christianglass.com</a>
+                <a href="mailto:info@a-christianglass.com">
+                  info@a-christianglass.com
+                </a>
               </S.MailWrapper>
               <h3>FollowUs</h3>
               <S.IconWrapper>
