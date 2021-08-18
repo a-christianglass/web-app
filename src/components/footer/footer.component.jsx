@@ -64,15 +64,15 @@ const Footer = ({ className }) => {
               <Grid container>
                 <S.ColumnGrid xs={4}>
                   <span>Products</span>
-                  <a href="/">Windows</a>
-                  <a href="/">Doors</a>
-                  <a href="/">Showers</a>
+                  <a href="/windows/">Windows</a>
+                  <a href="/doors/">Doors</a>
+                  <a href="/showers/">Showers</a>
                   <a href="/">Railway</a>
                 </S.ColumnGrid>
                 <S.ColumnGrid xs={4}>
                   <span>Industries</span>
-                  <a href="/">Windows</a>
-                  <a href="/">Doors</a>
+                  <a href="/residential/">Residential</a>
+                  <a href="/commercial/">Commercial</a>
                 </S.ColumnGrid>
                 <S.ColumnGrid xs={4}>
                   <span>About</span>
