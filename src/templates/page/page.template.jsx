@@ -144,6 +144,7 @@ export const query = graphql`
           hideFooter
           hideHeaderItems
           isTransparent
+          isWhite
         }
       }
     }

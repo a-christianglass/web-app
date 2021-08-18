@@ -10,24 +10,27 @@ import parse from "html-react-parser"
 import CustomImage from "../custom-image/custom-image.component"
 import { graphql, useStaticQuery } from "gatsby"
 
-const Header = ({ isTransparent }) => {
+const Header = ({ isTransparent, isWhite }) => {
   const [threshold, setTreshold] = useState(100)
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold
+    threshold,
   })
   const isDark = scrollTrigger || isTransparent
 
   const staticQuery = useStaticQuery(graphql`
-      query {
-          home: file(relativePath: { eq: "logo-white.png" }) {
-              childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-              }
-          }
+    query {
+      home: file(relativePath: { eq: "logo-white.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
       }
+    }
   `)
 
+  const logoUrl = isWhite
+    ? "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/blueLogo.png"
+    : "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White-1.png"
   return (
     <S.NavWrapper isTransparent={isTransparent}>
       <S.CustomAppBar
@@ -53,11 +56,11 @@ const Header = ({ isTransparent }) => {
             </S.InnerTopContainer>
           </Container>
         </S.TopNav>
-        <S.MainNav isdark={isDark}>
+        <S.MainNav isdark={isDark} isWhite={isWhite}>
           <Container>
             <S.MainNavContainer>
               <S.MainItem url="/" className="logo">
-                <img src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White-1.png" alt="logo" />
+                <img src={logoUrl} alt="logo" />
               </S.MainItem>
               <S.InnerMainContainer>
                 <Hidden smDown>
@@ -65,11 +68,15 @@ const Header = ({ isTransparent }) => {
                     {headerItems.mainItems.map(
                       ({ url, sectionTitle, items }, index) => (
                         <>
-                          <S.MainItem key={`title-${index}`} url={url}>
+                          <S.MainItem
+                            isWhite={isWhite}
+                            key={`title-${index}`}
+                            url={url}
+                          >
                             {sectionTitle}
                             {items && (
                               <>
-                                <S.Arrow className="arrow" />
+                                <S.Arrow isWhite={isWhite} className="arrow" />
                                 <MegaMenu
                                   sectionTitle={sectionTitle}
                                   items={items}

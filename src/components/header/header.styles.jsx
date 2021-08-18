@@ -5,22 +5,29 @@ import LogoSVG from "../../assets/icons/logo.svg"
 import CustomButton from "../custom-button/custom-button.component"
 
 export const CustomAppBar = styled(AppBar)`
- //position: fixed;
+  //position: fixed;
 `
 
 export const MainNav = styled.div`
   transition: padding-top 0.3s ease, padding-bottom 0.3s ease,
-  background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   background-color: transparent;
 
   ${({ theme, isdark }) =>
-          isdark
-                  ? `
+    isdark
+      ? `
     background-color: ${theme.palette.primary.main};
    `
-                  : `
+      : `
     background-color: transparent;
    `};
+
+  ${({ isWhite }) =>
+    isWhite &&
+    `
+    background-color: #FAFAFA;
+   `};
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     min-height: 61px;
   }
@@ -85,19 +92,26 @@ export const InnerMainContainer = styled.div`
 `
 
 export const MainItem = styled(CustomLink)`
-  color: ${({ theme }) => theme.palette.text.primary};
+  ${({ theme, isWhite }) =>
+    isWhite
+      ? `
+    color: ${theme.palette.text.secondary};
+   `
+      : `
+    color: ${theme.palette.text.primary};
+   `};
   padding: 1.5em 2em;
   position: relative;
   font-weight: bold;
   display: inline-block;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   box-shadow: inset 0px -2px 0 0 transparent;
-  
+
   img {
     width: 128px;
     height: auto;
     display: block;
-    padding: .5em 0;
+    padding: 0.5em 0;
   }
 
   &.logo {
@@ -138,7 +152,14 @@ export const MainItem = styled(CustomLink)`
 `
 
 export const Arrow = styled.span`
-  border: solid white;
+  ${({ isWhite }) =>
+    isWhite
+      ? `
+    border: solid #0D5C80;
+   `
+      : `
+    border: solid white;
+   `};
   margin-left: 0.5em;
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -175,5 +196,4 @@ export const NavWrapper = styled.div`
   .MuiAppBar-colorPrimary {
     background-color: transparent;
   }
-  
 `
