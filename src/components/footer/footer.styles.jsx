@@ -165,7 +165,10 @@ export const BannerWrapper = styled.div`
     transparent 100%
   );
 `
-export const BgImageWrapper = styled.div``
+export const BgImageWrapper = styled.div`
+  box-shadow: 0px 44px 62px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+`
 
 export const BgImage = styled(CustomBgImage)`
   max-width: 100%;

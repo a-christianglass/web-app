@@ -17,7 +17,7 @@ import Container from "@material-ui/core/Container"
 const Footer = ({ className }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
-      footerBg: file(relativePath: { eq: "footer-bg.png" }) {
+      footerBg: file(relativePath: { eq: "footerBg.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -134,7 +134,7 @@ const Footer = ({ className }) => {
               <S.Line />
               <S.LinkItem url="#">Privacy Policy</S.LinkItem>
               <S.Line />
-              <S.LinkItem url="#">EQE</S.LinkItem>
+              <S.LinkItem url="#">EOE</S.LinkItem>
             </S.FaqGrid>
           </S.LastGrid>
         </Grid>
