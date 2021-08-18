@@ -9,7 +9,6 @@ import PhoneIcon from "../../assets/icons/phone-blue.svg"
 import parse from "html-react-parser"
 
 const Header = ({ isTransparent }) => {
-
   const [threshold, setTreshold] = useState(100)
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
@@ -54,14 +53,17 @@ const Header = ({ isTransparent }) => {
                 <Hidden smDown>
                   <div>
                     {headerItems.mainItems.map(
-                      ({ url, title, items }, index) => (
+                      ({ url, sectionTitle, items }, index) => (
                         <>
                           <S.MainItem key={`title-${index}`} url={url}>
-                            {title}
+                            {sectionTitle}
                             {items && (
                               <>
                                 <S.Arrow className="arrow" />
-                                <MegaMenu title={title} items={items} />
+                                <MegaMenu
+                                  sectionTitle={sectionTitle}
+                                  items={items}
+                                />
                               </>
                             )}
                           </S.MainItem>

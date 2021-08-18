@@ -3,13 +3,14 @@ import { Typography } from "@material-ui/core"
 import Grid from "@material-ui/core/Grid"
 import Container from "@material-ui/core/Container"
 
-export const Wrapper = styled(Container)`
+export const ProductsWrapper = styled(Container)`
   display: none;
   position: absolute;
   background-color: ${({ theme }) => theme.palette.primary.main};
   top: 62px;
   color: white;
   left: 0;
+  z-index: 6;
   padding: 0;
   min-width: 500px;
   width: auto;
@@ -18,6 +19,38 @@ export const Wrapper = styled(Container)`
     text-decoration: none;
     font-size: 1rem;
     display: block;
+  }
+`
+
+export const SingleWrapper = styled(Container)`
+  display: none;
+  position: absolute;
+  border-radius: 4px;
+  background-color: ${({ theme }) => theme.palette.text.primary};
+  top: 62px;
+  color: black;
+  left: 0;
+  z-index: 5;
+  padding: 0;
+  min-width: 220px;
+  width: auto;
+  filter: drop-shadow(0px 4px 16px rgba(13, 92, 128, 0.24));
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    padding: 1em;
+    :hover {
+      span {
+        border-bottom: 4px solid #0d5c80;
+      }
+    }
+  }
+  span {
+    color: #0d5c80;
+    border-bottom: 4px solid transparent;
   }
 `
 

@@ -1,8 +1,7 @@
 {
   "mainItems": [
     {
-      "title": "Products",
-      "url": "/products",
+      "sectionTitle": "Products",
       "items": [
         {
           "title": "Windows",
@@ -142,48 +141,24 @@
               "url": "/windows"
             }
           ]
-
-        },
-        {
-          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
-          "title": "Voice & Collaboration",
-          "url": "/technology_services/voice_and_collaboration"
-        },
-        {
-          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
-          "title": "Managed Services",
-          "url": "/technology_services/managed_it_services"
-        },
-        {
-          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
-          "title": "Information Security",
-          "url": "/technology_services/information_security_services"
-        },
-        {
-          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
-          "title": "Connectivity",
-          "url": "/technology_services/sd_wan_provider"
-        },
-        {
-          "image": "https://admin-c3.weareshellshock.com/wp-content/uploads/2021/06/menu-placeholder.jpg",
-          "title": "Network Engineering",
-          "url": "/technology_services/network_engineering_services"
         }
       ]
     },
     {
-      "title": "About Us",
-      "url": "/about-us",
+      "sectionTitle": "About Us",
       "items": [
         {
           "title": "Projects and Portfolio",
           "url": "/projects"
+        },
+        {
+          "title": "About 2",
+          "url": "/about2"
         }
       ]
     },
     {
-      "title": "Industries",
-      "url": "/industries",
+      "sectionTitle": "Industries",
       "items": [
         {
           "title": "Residential",
