@@ -1,14 +1,13 @@
 import React from "react"
 import * as S from "./services-home.styles"
 import parse from "html-react-parser"
-import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import Container from "@material-ui/core/Container"
 import Grid from "@material-ui/core/Grid"
 import { Typography } from "@material-ui/core"
 import Building from "../../assets/icons/building.svg"
 import Home from "../../assets/icons/home.svg"
 import CustomLink from "../../components/custom-link/custom-link.component"
-import { GridCard } from "./services-home.styles"
+import { ArrowForward } from "@material-ui/icons"
 
 const ServicesHome = ({
   leftTag,
@@ -46,8 +45,9 @@ const ServicesHome = ({
                 </Typography>
               )}
               {centerLink && (
-                <S.CardLink style={{ color: "#0D5C80" }}>
-                  {centerLink.title}
+                <S.CardLink>
+                  <CustomLink className="darkLink" url="/"> {centerLink.title}</CustomLink>
+                  <ArrowForward style={{color: "#0D5C80"}} className="arrow" />
                 </S.CardLink>
               )}
             </S.ContentWrapper>
@@ -67,8 +67,9 @@ const ServicesHome = ({
                 </Typography>
               )}
               {rightLink && (
-                <S.CardLink style={{ color: "white" }}>
-                  {rightLink.title}
+                <S.CardLink>
+                  <CustomLink className="lightLink" url="/">{centerLink.title}</CustomLink>
+                  <ArrowForward style={{color: "white"}} className="arrow" />
                 </S.CardLink>
               )}
             </S.ContentWrapper>
