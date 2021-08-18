@@ -51,14 +51,36 @@ const WindowsTabs = ({ titleWindows, descriptionWindows, tabsWindows }) => {
                 {tab.tab.content && <S.TabText>{tab.tab.content}</S.TabText>}
                 {tab.tab.features && (
                   <Grid container>
-                    {tab.tab.features.map((feature, index) => (
-                      <Grid item xs={12}>
-                        <S.FeatureWrapper>
-                          <h4>{feature.feature.title}</h4>
-                          <p>{feature.feature.content}</p>
-                        </S.FeatureWrapper>
-                      </Grid>
-                    ))}
+                    {tab.tab.features.map((feature, index) => {
+                      if (
+                        feature &&
+                        feature.feature.title &&
+                        feature.feature.content
+                      ) {
+                        return (
+                          <Grid item xs={12}>
+                            <S.FeatureWrapper>
+                              {feature.feature.title && (
+                                <h4>{feature.feature.title}</h4>
+                              )}
+                              {feature.feature.content && (
+                                <p>{feature.feature.content}</p>
+                              )}
+                            </S.FeatureWrapper>
+                          </Grid>
+                        )
+                      } else {
+                        return (
+                          <Grid item xs={12}>
+                            <S.FeatureWrapper>
+                              {feature.feature.title && (
+                                <h4>{feature.feature.title}</h4>
+                              )}
+                            </S.FeatureWrapper>
+                          </Grid>
+                        )
+                      }
+                    })}
                   </Grid>
                 )}
               </S.RightGrid>

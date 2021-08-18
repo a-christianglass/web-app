@@ -34,6 +34,7 @@ import FaqTabs from "../layouts/FaqTabs"
 import RailingsTabs from "../layouts/RailingsTabs"
 import GalleryGrid from "../layouts/GalleryGrid"
 import WindowsTabs from "../layouts/WindowsTabs"
+import DoorsTabs from "../layouts/DoorsTabs/doors-tabs.component"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -149,6 +150,11 @@ const Layouts = () => {
         }
       }
       windowsTabs: file(relativePath: { eq: "windowsTabs.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      doorsSlider: file(relativePath: { eq: "doorsSlider.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -1155,6 +1161,139 @@ const Layouts = () => {
               image: staticQuery.windowsTabs,
               title: "FIXED GLASS WINDOWS",
               subtitle: "Fixed Glass Windows",
+              content:
+                "Creating a stunning centerpiece for living rooms and other gathering spaces, picture windows are fixed windows that offer an abundance of natural light while framing the outdoors.",
+            },
+          },
+        ]}
+      />
+      <LayoutTitle>DoorTabs</LayoutTitle>
+      <DoorsTabs
+        titleDoors="Types of Doors We Offer"
+        tabsDoors={[
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "ENTRY<br>DOORS",
+              subtitle: "Entry Doors",
+              features: [
+                {
+                  feature: {
+                    title: "A wide selection",
+                    content:
+                      "We offer a wide selection of stylish impact resistant entry doors that will enhance your home's design while providing the strongest hurricane protection available<br><ul><li>Glass Doors</li><li>Fiberglass Doors</li><li>Metal Doors</li></ul>",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Showcase Your Style",
+                    content:
+                      "Your front door shows a lot about your personal style and sets the tone for the entire house. Choosing an entry door that enhances the style of the property is incredibly important and can greatly improve your home's curb appeal.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "FOLDING<br>DOORS",
+              subtitle: "Folding Doors",
+              content:
+                "Commonly used in bathrooms and kitchens, casement windows are hinged at the side to open outward, letting air flow freely throughout your home while providing an unobstructed view. Casement picture and architectural windows provide the perfect complement, creating a cohesive look with our casement windows.",
+              features: [
+                {
+                  feature: {
+                    title: "A Multitude of Design Options",
+                    content:
+                      "Do not overlook your choices for locks, handles, and hinges. You can include the following accessories, along with color finishes for each item:<br><ul><li>The classic Euro Series Lever Lock Set comes in stainless steel or bronze finishes</li><li>The classic Euro Series Lever Lock Set comes in stainless steel or bronze finishes</li><li>The classic Euro Series Lever Lock Set comes in stainless steel or bronze finishes</li><li>The classic Euro Series Lever Lock Set comes in stainless steel or bronze finishes</li></ul>",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "FRENCH<br>DOORS",
+              subtitle: "French Doors",
+              features: [
+                {
+                  feature: {
+                    title: "A wide selection",
+                    content:
+                      "We offer a wide selection of stylish impact resistant entry doors that will enhance your home's design while providing the strongest hurricane protection available<br><ul><li>Glass Doors</li><li>Fiberglass Doors</li><li>Metal Doors</li></ul>",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Showcase Your Style",
+                    content:
+                      "Your front door shows a lot about your personal style and sets the tone for the entire house. Choosing an entry door that enhances the style of the property is incredibly important and can greatly improve your home's curb appeal.",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "PATIO<br>DOORS",
+              subtitle: "Patio Doors",
+              content:
+                "Creating a stunning centerpiece for living rooms and other gathering spaces, picture windows are fixed windows that offer an abundance of natural light while framing the outdoors.",
+              features: [
+                {
+                  feature: {
+                    title: "Largest Impact Rated Panel Sizes",
+                    content: "",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Florida Approved",
+                    content: "",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Robust and Safe",
+                    content: "",
+                  },
+                },
+                {
+                  feature: {
+                    title: "Drainage System",
+                    content: "",
+                  },
+                },
+              ],
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "PIVOT<br>DOORS",
+              subtitle: "Pivot Doors",
+              content:
+                "Creating a stunning centerpiece for living rooms and other gathering spaces, picture windows are fixed windows that offer an abundance of natural light while framing the outdoors.",
+            },
+          },
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "SLIDING<br>GLASS DOORS",
+              subtitle: "Sliding Glass Doors",
+              content:
+                "Creating a stunning centerpiece for living rooms and other gathering spaces, picture windows are fixed windows that offer an abundance of natural light while framing the outdoors.",
+            },
+          },
+
+          {
+            tab: {
+              image: staticQuery.windowsTabs,
+              title: "STOREFRONT<br>DOORS",
+              subtitle: "Sliding Glass Doors",
               content:
                 "Creating a stunning centerpiece for living rooms and other gathering spaces, picture windows are fixed windows that offer an abundance of natural light while framing the outdoors.",
             },
