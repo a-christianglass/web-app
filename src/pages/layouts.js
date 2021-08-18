@@ -1246,25 +1246,21 @@ const Layouts = () => {
                 {
                   feature: {
                     title: "Largest Impact Rated Panel Sizes",
-                    content: "",
                   },
                 },
                 {
                   feature: {
                     title: "Florida Approved",
-                    content: "",
                   },
                 },
                 {
                   feature: {
                     title: "Robust and Safe",
-                    content: "",
                   },
                 },
                 {
                   feature: {
                     title: "Drainage System",
-                    content: "",
                   },
                 },
               ],
