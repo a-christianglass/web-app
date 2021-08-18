@@ -29,6 +29,7 @@ import GalleryGrid from "./layouts/GalleryGrid"
 import ContactInfo from "./layouts/ContactInfo"
 import TellUsSection from "./layouts/TellUsSection"
 import WindowsTabs from "./layouts/WindowsTabs"
+import DoorsTabs from "./layouts/DoorsTabs/doors-tabs.component"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -94,5 +95,7 @@ export const getPageLayout = layout => {
       return <TellUsSection {...layout} />
     case "WindowsTabs":
       return <WindowsTabs {...layout} />
+    case "DoorsTabs":
+      return <DoorsTabs {...layout} />
   }
 }

@@ -228,7 +228,7 @@ export const FeatureWrapper = styled.div`
     }
   }
   p {
-    margin-left: 30px;
+    margin-left: 15px;
   }
 `
 
