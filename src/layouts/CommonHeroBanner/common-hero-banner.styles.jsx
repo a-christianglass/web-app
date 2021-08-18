@@ -9,6 +9,7 @@ export const Wrapper = styled(SectionWrapper)`
 export const TopWrapper = styled.div`
   max-height: 488px;
   padding: 6em 10em;
+  width: 100%;
   background: radial-gradient(
     56.04% 163.52% at 66.32% 139.24%,
     #4fbff3 0%,
