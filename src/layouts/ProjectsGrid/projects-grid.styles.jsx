@@ -4,11 +4,11 @@ import { Box, Grid, Typography } from "@material-ui/core"
 import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 4em 2em;
+  padding: 5em 2em;
   background-color: #ffffff;
 `
 export const TopGrid = styled(Grid)`
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 `
 export const LeftGrid = styled(Grid)`
   display: flex;

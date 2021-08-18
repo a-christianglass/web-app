@@ -7,7 +7,11 @@ export const Wrapper = styled(SectionWrapper)`
 `
 
 export const TopWrapper = styled.div`
-  max-height: 488px;
+  min-height: 175px;
+  position: relative;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    min-height: 489px;
+  }
   padding: 6em 10em;
   width: 100%;
   background: radial-gradient(
@@ -17,9 +21,14 @@ export const TopWrapper = styled.div`
   );
 
   h1 {
-    font-size: 0.875rem;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 120.5%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    opacity: 0.75;
   }
 
   h2 {
@@ -32,6 +41,11 @@ export const TopWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
+`
+export const TextWrapper = styled.div`
+  max-width: 865px;
+  position: absolute;
+  bottom: 2em;
 `
 
 export const BottomWrapper = styled(CustomImage)`
