@@ -40,92 +40,90 @@ export const FormBanner = ({ image }) => {
   }
 
   return (
-    <S.Wrapper>
-      <CustomBgImage img={staticQuery.bgForm}>
-        <Grid container>
-          <Grid item xs={6} />
-          <S.RightGrid item xs={6}>
-            <CustomBgImage img={staticQuery.bgStep}>
-              <S.FormWrapper>
-                <h2>Tell us about your project</h2>
-                <S.StepLine>
-                  <S.StepProgressLine />
-                </S.StepLine>
-                <h3>I’m a...</h3>
-                <Grid container>
-                  <Grid item xs={6}>
-                    <S.QuestionWrapper>
-                      <S.CustomRadio
-                        checked={selectedValue === "a"}
-                        onChange={handleChange}
-                        value="a"
-                        name="radio-button-demo"
-                        inputProps={{ "aria-label": "A" }}
-                      />
-                      <span>Architect</span>
-                    </S.QuestionWrapper>
-                  </Grid>
-                  <Grid item xs={6} justifyContent={"flex-end"}>
+    <S.Wrapper img={staticQuery.bgForm}>
+      <Grid container>
+        <Grid item xs={12} md={6} />
+        <S.RightGrid item xs={12} md={6}>
+          <CustomBgImage img={staticQuery.bgStep}>
+            <S.FormWrapper>
+              <h2>Tell us about your project</h2>
+              <S.StepLine>
+                <S.StepProgressLine />
+              </S.StepLine>
+              <h3>I’m a...</h3>
+              <Grid container>
+                <Grid item xs={6}>
+                  <S.QuestionWrapper>
                     <S.CustomRadio
-                      checked={selectedValue === "b"}
+                      checked={selectedValue === "a"}
                       onChange={handleChange}
-                      value="b"
+                      value="a"
                       name="radio-button-demo"
-                      inputProps={{ "aria-label": "B" }}
+                      inputProps={{ "aria-label": "A" }}
                     />
-                    <span>Homeowner</span>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <S.CustomRadio
-                      checked={selectedValue === "c"}
-                      onChange={handleChange}
-                      value="c"
-                      name="radio-button-demo"
-                      inputProps={{ "aria-label": "C" }}
-                    />
-                    <span>Homeowner</span>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <S.CustomRadio
-                      checked={selectedValue === "d"}
-                      onChange={handleChange}
-                      value="d"
-                      name="radio-button-demo"
-                      inputProps={{ "aria-label": "D" }}
-                    />
-                    <span>Homeowner</span>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <S.CustomRadio
-                      checked={selectedValue === "e"}
-                      onChange={handleChange}
-                      value="e"
-                      name="radio-button-demo"
-                      inputProps={{ "aria-label": "E" }}
-                    />
-                    <span>Homeowner</span>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <S.CustomRadio
-                      checked={selectedValue === "f"}
-                      onChange={handleChange}
-                      value="f"
-                      name="radio-button-demo"
-                      inputProps={{ "aria-label": "F" }}
-                    />
-                    <span>Homeowner</span>
-                  </Grid>
+                    <span>Architect</span>
+                  </S.QuestionWrapper>
                 </Grid>
+                <Grid item xs={6} justifyContent={"flex-end"}>
+                  <S.CustomRadio
+                    checked={selectedValue === "b"}
+                    onChange={handleChange}
+                    value="b"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "B" }}
+                  />
+                  <span>Homeowner</span>
+                </Grid>
+                <Grid item xs={6}>
+                  <S.CustomRadio
+                    checked={selectedValue === "c"}
+                    onChange={handleChange}
+                    value="c"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "C" }}
+                  />
+                  <span>Homeowner</span>
+                </Grid>
+                <Grid item xs={6}>
+                  <S.CustomRadio
+                    checked={selectedValue === "d"}
+                    onChange={handleChange}
+                    value="d"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "D" }}
+                  />
+                  <span>Homeowner</span>
+                </Grid>
+                <Grid item xs={6}>
+                  <S.CustomRadio
+                    checked={selectedValue === "e"}
+                    onChange={handleChange}
+                    value="e"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "E" }}
+                  />
+                  <span>Homeowner</span>
+                </Grid>
+                <Grid item xs={6}>
+                  <S.CustomRadio
+                    checked={selectedValue === "f"}
+                    onChange={handleChange}
+                    value="f"
+                    name="radio-button-demo"
+                    inputProps={{ "aria-label": "F" }}
+                  />
+                  <span>Homeowner</span>
+                </Grid>
+              </Grid>
 
-                <S.StepWrapper>
-                  <h4>Step 1 out of ?</h4>
-                  <S.Button>Next</S.Button>
-                </S.StepWrapper>
-              </S.FormWrapper>
-            </CustomBgImage>
-          </S.RightGrid>
-        </Grid>
-      </CustomBgImage>
+              <S.StepWrapper>
+                <h4>Step 1 out of ?</h4>
+                <S.Button>Next</S.Button>
+              </S.StepWrapper>
+            </S.FormWrapper>
+          </CustomBgImage>
+        </S.RightGrid>
+      </Grid>
     </S.Wrapper>
   )
 }

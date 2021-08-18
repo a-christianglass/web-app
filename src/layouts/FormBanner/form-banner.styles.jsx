@@ -3,11 +3,13 @@ import SectionWrapper from "../../components/section-wrapper/section-wrapper.com
 import { Grid, Typography } from "@material-ui/core"
 import Radio from "@material-ui/core/Radio"
 import CustomButton from "../../components/custom-button/custom-button.component"
-export const Wrapper = styled(SectionWrapper)`
+import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
+export const Wrapper = styled(CustomBgImage)`
+  min-height: 615px;
   padding: 0;
 `
 export const RightGrid = styled(Grid)`
-  padding: 4em 0;
+  padding: 9em 0;
 `
 export const FormWrapper = styled.div`
   display: flex;

@@ -7,16 +7,26 @@ import MegaMenu from "./mega-menu/mega-menu.component"
 import MailIcon from "../../assets/icons/blue-mail.svg"
 import PhoneIcon from "../../assets/icons/phone-blue.svg"
 import parse from "html-react-parser"
+import CustomImage from "../custom-image/custom-image.component"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Header = ({ isTransparent }) => {
   const [threshold, setTreshold] = useState(100)
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold,
+    threshold
   })
   const isDark = scrollTrigger || isTransparent
 
-  console.log("isDark", isDark)
+  const staticQuery = useStaticQuery(graphql`
+      query {
+          home: file(relativePath: { eq: "logo-white.png" }) {
+              childImageSharp {
+                  gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+              }
+          }
+      }
+  `)
 
   return (
     <S.NavWrapper isTransparent={isTransparent}>
@@ -47,7 +57,7 @@ const Header = ({ isTransparent }) => {
           <Container>
             <S.MainNavContainer>
               <S.MainItem url="/" className="logo">
-                <S.Logo />
+                <img src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White-1.png" alt="logo" />
               </S.MainItem>
               <S.InnerMainContainer>
                 <Hidden smDown>

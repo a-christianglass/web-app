@@ -30,10 +30,12 @@ export const CardContent = styled.div`
 
 export const RightWrapper = styled.div`
   h2 {
-    margin-bottom: 2em;
     font-style: normal;
     font-weight: bold;
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+    max-width: 512px;
+    text-align: center;
+    margin: 0 auto 2em auto;
   }
 `
 

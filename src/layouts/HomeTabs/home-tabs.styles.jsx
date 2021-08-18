@@ -5,7 +5,7 @@ import CustomButton from "../../components/custom-button/custom-button.component
 import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 2em 0 5em 0;
+  padding: 6em 0;
   background-color: white;
   .Mui-selected {
     color: ${({ theme }) => theme.palette.primary.main};
