@@ -375,34 +375,34 @@ const Layouts = () => {
         bgColor={"gray"}
         images={[
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
         ]}
       />
@@ -410,34 +410,34 @@ const Layouts = () => {
         bgColor={"white"}
         images={[
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
           {
-            image: { sourceUrl: staticQuery.slide2 },
+            image: staticQuery.slide2,
           },
         ]}
       />

@@ -9,7 +9,7 @@ import {
 import CustomButton from "../../components/custom-button/custom-button.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 0;
+  padding: 5em 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +56,7 @@ export const FormWrapper = styled.div`
     text-align: center;
     letter-spacing: 0.02em;
     color: #0d5c80;
+    padding-bottom: 2em;
   }
 `
 
