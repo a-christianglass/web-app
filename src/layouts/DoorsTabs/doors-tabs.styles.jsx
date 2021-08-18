@@ -12,13 +12,19 @@ export const Wrapper = styled(SectionWrapper)`
     color: ${({ theme }) => theme.palette.primary.main};
   }
   .swiper-container {
+    width: 480px;
+    height: 400px;
+  }
+
+  .swiper-slide {
     width: 100%;
     height: 100%;
   }
 
-  .swiper-slide {
-    width: 473px;
-    height: 360px;
+  .swiper-pagination-bullet {
+    width: 114px;
+    height: 4px;
+    border-radius: unset !important;
   }
 
   .gatsby-image-wrapper img {
@@ -183,7 +189,7 @@ export const ContentWrapper = styled.div`
 
 export const TabSubtitle = styled.h3`
   text-transform: capitalize;
-  padding: 1em 0;
+  margin-bottom: 1em;
 `
 
 export const TabText = styled(Typography)`
@@ -224,4 +230,10 @@ export const FeatureWrapper = styled.div`
   p {
     margin-left: 30px;
   }
+`
+
+export const SliderGrid = styled(Grid)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

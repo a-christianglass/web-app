@@ -49,7 +49,7 @@ const DoorsTabs = ({ titleDoors, descriptionDoors, tabsDoors }) => {
           <S.CustomTabPanel hidden={value !== index}>
             <Grid container>
               {/*Slider Grid*/}
-              <Grid item xs={12} md={6}>
+              <S.SliderGrid item xs={12} md={6}>
                 <Swiper pagination={true} slidesPerView="1" loop={true}>
                   {tab.tab.images.map(({ image }, index) => (
                     <SwiperSlide key={`windows-slide-${index}`}>
@@ -57,7 +57,7 @@ const DoorsTabs = ({ titleDoors, descriptionDoors, tabsDoors }) => {
                     </SwiperSlide>
                   ))}
                 </Swiper>
-              </Grid>
+              </S.SliderGrid>
               <S.RightGrid item xs={12} md={6}>
                 {tab.tab.subtitle && (
                   <S.TabSubtitle>{tab.tab.subtitle}</S.TabSubtitle>
