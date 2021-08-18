@@ -127,6 +127,15 @@ export const query = graphql`
           ... on WpPage_Pagebuilder_Layouts_GalleryGrid {
             ...GalleryGrid
           }
+          ... on WpPage_Pagebuilder_Layouts_ContactInfo {
+            ...ContactInfo
+          }
+          ... on WpPage_Pagebuilder_Layouts_TellUsSection {
+            ...TellUsSection
+          }
+          ... on WpPage_Pagebuilder_Layouts_WindowsTabs {
+            ...WindowsTabs
+          }
         }
         pageConfiguration {
           hideFooter
