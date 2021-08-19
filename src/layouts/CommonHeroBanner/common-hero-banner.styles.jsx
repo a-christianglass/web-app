@@ -27,7 +27,7 @@ export const TopWrapper = styled.div`
     font-size: 14px;
     line-height: 120.5%;
     letter-spacing: 0.06em;
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.75;
   }
 
@@ -43,7 +43,7 @@ export const TopWrapper = styled.div`
   }
 `
 export const TextWrapper = styled.div`
-  max-width: 865px;
+  max-width: 1077px;
   position: absolute;
   bottom: 2em;
 `
