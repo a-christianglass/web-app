@@ -50,7 +50,13 @@ const DoorsTabs = ({ titleDoors, descriptionDoors, tabsDoors }) => {
             <Grid container>
               {/*Slider Grid*/}
               <S.SliderGrid item xs={12} md={6}>
-                <Swiper pagination={true} slidesPerView="1" loop={true}>
+                <Swiper
+                  pagination={{
+                    clickable: true,
+                  }}
+                  slidesPerView="1"
+                  loop={true}
+                >
                   {tab.tab.images.map(({ image }, index) => (
                     <SwiperSlide key={`windows-slide-${index}`}>
                       {image && <CustomImage img={image} />}
