@@ -5,7 +5,16 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 5em 2em;
-  background-color: #ffffff;
+  ${({ bgColor }) =>
+    bgColor === "white"
+      ? `
+        background-color: #ffffff;
+
+   `
+      : `
+          background-color:  #f0f5f7;
+
+   `};
 `
 export const TopGrid = styled(Grid)`
   margin-bottom: 5em;

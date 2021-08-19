@@ -6,9 +6,9 @@ import { CustomLink } from "../../components/custom-link/custom-link.styles"
 import CustomImage from "../../components/custom-image/custom-image.component"
 import Arrow from "../../assets/icons/arrow.svg"
 
-const ProjectsGrid = ({ title, content, projects }) => {
+const ProjectsGrid = ({ title, content, projects, color }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper bgColor={color}>
       <S.TopGrid container>
         <S.LeftGrid item xs={12} md={6}>
           <S.LeftTextWrapper>{title && <h2>{title}</h2>}</S.LeftTextWrapper>

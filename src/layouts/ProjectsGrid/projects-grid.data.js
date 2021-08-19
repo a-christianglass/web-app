@@ -4,6 +4,7 @@ export const query = graphql`
   fragment ProjectsGrid on WpPage_Pagebuilder_Layouts_ProjectsGrid {
     content
     fieldGroupName
+    color
     projects {
       image {
         altText
