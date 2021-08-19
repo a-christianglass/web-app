@@ -5,6 +5,12 @@ export const Wrapper = styled(SectionWrapper)`
   ${({ theme }) => theme.sectionPadding};
   background-color: ${({ theme }) => theme.palette.secondary.main};
   text-align: center;
+  ${({ noPadding }) =>
+    noPadding &&
+    `
+        padding:0;
+
+   `};
 
   p {
     margin-bottom: 2em;

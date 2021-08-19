@@ -7,14 +7,14 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import ArrowBack from "../../assets/icons/ArrowBack.svg"
 import ArrowForward from "../../assets/icons/ArrowForward.svg"
 
-const GallerySlider = ({ images, bgColor }) => {
+const GallerySlider = ({ images, bgColor, noPadding }) => {
   const theme = useTheme()
   const isMD = useMediaQuery(theme.breakpoints.down("md"))
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
   if (!images) return null
   return (
-    <S.Wrapper>
+    <S.Wrapper noPadding={noPadding}>
       <S.CustomArrow ref={navigationPrevRef} className="left">
         <ArrowBack />
       </S.CustomArrow>

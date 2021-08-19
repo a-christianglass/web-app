@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 export const query = graphql`
   fragment GallerySlider on WpPage_Pagebuilder_Layouts_GallerySlider {
     bgColor
+    noPadding
     fieldGroupName
     images {
       image {
