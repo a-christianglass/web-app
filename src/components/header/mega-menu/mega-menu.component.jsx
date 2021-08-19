@@ -43,14 +43,14 @@ const MegaMenu = ({ sectionTitle, items }) => {
                 </Grid>
                 <Grid item md={9}>
                   <S.DescGrid container>
-                    <S.ItemDescGrid md={4}>
+                    <S.ItemDescGrid md={5}>
                       <S.ItemContent>
                         {selectedItem.description && (
                           <p>{parse(selectedItem.description)}</p>
                         )}
                       </S.ItemContent>
                     </S.ItemDescGrid>
-                    <Grid md={8}>
+                    <Grid md={7}>
                       <S.NavImage img={selectedItem.image} />
                     </Grid>
                   </S.DescGrid>
