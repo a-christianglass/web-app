@@ -10,9 +10,9 @@ export const ProductsWrapper = styled(Container)`
   background-color: ${({ theme }) => theme.palette.primary.main};
   top: 62px;
   color: white;
-  left: 0;
+  left: -279px;
   z-index: 6;
-  min-width: 45vw;
+  min-width: 792px;
   width: auto;
   padding: 0;
   border-bottom: 5px solid#F89928;
@@ -127,7 +127,7 @@ export const ItemDescGrid = styled(Grid)`
   }
 
   ul {
-    padding-inline-start: 20px;
+    padding-inline-start: 34px
   }
 
   li {

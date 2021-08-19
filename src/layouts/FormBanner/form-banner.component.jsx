@@ -1,12 +1,13 @@
 import React, { useState } from "react"
 import * as S from "./form-banner.styles"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
-import { Grid } from "@material-ui/core"
+import { Grid, Typography } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import { withStyles } from "@material-ui/core/styles"
 import { green } from "@material-ui/core/colors"
 import Radio from "@material-ui/core/Radio"
 import CustomButton from "../../components/custom-button/custom-button.component"
+import ProgressBar from "../../components/progress-bar/progress-bar.component"
 
 const GreenRadio = withStyles({
   root: {
@@ -47,9 +48,7 @@ export const FormBanner = ({ image }) => {
           <CustomBgImage img={staticQuery.bgStep}>
             <S.FormWrapper>
               <h2>Tell us about your project</h2>
-              <S.StepLine>
-                <S.StepProgressLine />
-              </S.StepLine>
+              <ProgressBar/>
               <h3>I’m a...</h3>
               <Grid container>
                 <Grid item xs={6}>
