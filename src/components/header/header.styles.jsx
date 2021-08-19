@@ -82,7 +82,7 @@ export const InnerMainContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  margin-right: -2em;
+  //margin-right: -2em;
   ${({ theme }) => theme.breakpoints.up("lg")} {
     margin-left: -2em;
   }
