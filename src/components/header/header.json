@@ -48,12 +48,12 @@
       "sectionTitle": "About Us",
       "items": [
         {
-          "title": "Projects and Portfolio",
-          "url": "/projects"
+          "title": "About Us",
+          "url": "/about/"
         },
         {
-          "title": "About 2",
-          "url": "/about2"
+          "title": "Projects and Gallery",
+          "url": "/about/projects-and-gallery/"
         }
       ]
     },

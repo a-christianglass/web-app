@@ -18,11 +18,9 @@ export const Wrapper = styled(SectionWrapper)`
    `};
 `
 export const Image = styled(CustomImage)`
-  max-width: 507px;
-  margin-bottom: 2em;
+  padding: 4em 0;
 `
 export const ServiceWrapper = styled.div`
-  padding: 6em 10em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
