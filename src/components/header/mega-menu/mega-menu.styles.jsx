@@ -5,7 +5,7 @@ import Container from "@material-ui/core/Container"
 import CustomImage from "../../custom-image/custom-image.component"
 
 export const ProductsWrapper = styled(Container)`
-  display: block;
+  display: none;
   position: absolute;
   background-color: ${({ theme }) => theme.palette.primary.main};
   top: 62px;
