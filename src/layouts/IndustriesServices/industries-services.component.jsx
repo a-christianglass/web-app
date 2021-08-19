@@ -10,9 +10,10 @@ const IndustriesServices = ({
   description,
   button,
   reverse,
+  morePadding,
 }) => {
   return (
-    <S.Wrapper bgColor={color}>
+    <S.Wrapper bgColor={color} morePadding={morePadding}>
       <Container>
         <S.ServiceWrapper>
           {title && <h2>{title}</h2>}

@@ -5,6 +5,7 @@ export const query = graphql`
     fieldGroupName
     reverse
     color
+    morePadding
     description {
       content
       title

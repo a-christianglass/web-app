@@ -16,6 +16,11 @@ export const Wrapper = styled(SectionWrapper)`
           background-color:  #f0f5f7;
 
    `};
+  ${({ morePadding }) =>
+    morePadding &&
+    `
+        padding: 4em 0;
+   `};
 `
 export const Image = styled(CustomImage)`
   padding: 4em 0;
