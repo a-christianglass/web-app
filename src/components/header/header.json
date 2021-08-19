@@ -46,6 +46,7 @@
     },
     {
       "sectionTitle": "About Us",
+      "removeTopLine": true,
       "items": [
         {
           "title": "About Us",
@@ -59,6 +60,7 @@
     },
     {
       "sectionTitle": "Industries",
+      "removeTopLine": true,
       "items": [
         {
           "title": "Residential",

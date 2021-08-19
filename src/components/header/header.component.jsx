@@ -66,9 +66,10 @@ const Header = ({ isTransparent, isWhite }) => {
                 <Hidden smDown>
                   <div>
                     {headerItems.mainItems.map(
-                      ({ url, sectionTitle, items }, index) => (
+                      ({ url, sectionTitle, items, removeTopLine }, index) => (
                         <>
                           <S.MainItem
+                            removeTopLine={removeTopLine}
                             isWhite={isWhite}
                             key={`title-${index}`}
                             url={url}

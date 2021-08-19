@@ -34,24 +34,32 @@ export const SingleWrapper = styled(Container)`
   color: black;
   left: 0;
   z-index: 5;
-  padding: 0;
+  padding: 8px;
   width: auto;
   filter: drop-shadow(0px 4px 16px rgba(13, 92, 128, 0.24));
 
   a {
     text-decoration: none;
     text-align: center;
-    font-size: 1rem;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
     display: block;
     padding: 1em;
     :hover {
       span {
+        transition: all 0.3s ease-in-out;
         border-bottom: 4px solid #0d5c80;
       }
     }
   }
   span {
     color: #0d5c80;
+   
+    /* identical to box height, or 26px */
+
+    letter-spacing: 0.005em;
+
     border-bottom: 4px solid transparent;
   }
 `
@@ -89,6 +97,7 @@ export const Item = styled.div`
 
   &.active {
     span {
+      transition: all 0.1s ease-in-out;
       border-bottom: 4px solid white;
     }
   }

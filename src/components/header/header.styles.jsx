@@ -134,6 +134,7 @@ export const MainItem = styled(CustomLink)`
       justify-content: center;
     }
   }
+ 
 
   &.active:not(.logo):not(.contact) {
     box-shadow: inset 0px -2px 0 0 ${({ theme }) => theme.palette.secondary.main};
@@ -147,7 +148,14 @@ export const MainItem = styled(CustomLink)`
     > div {
       display: block;
     }
-    box-shadow: inset 0px -2px 0 0 ${({ theme }) => theme.palette.secondary.main};
+    ${({ theme, removeTopLine }) =>
+            removeTopLine
+                    ? `
+    box-shadow: none;
+   `
+                    : `
+   box-shadow: inset 0px -2px 0 0 ${theme.palette.secondary.main};
+   `};
   }
 `
 
