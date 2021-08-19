@@ -35,7 +35,6 @@ export const ServiceWrapper = styled.div`
     font-size: 36px;
     line-height: 47px;
     color: #0d5c80;
-    margin-bottom: 1em;
   }
 `
 
