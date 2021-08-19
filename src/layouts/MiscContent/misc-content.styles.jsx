@@ -30,4 +30,17 @@ export const TextWrapper = styled.div`
     text-decoration: none;
     color: #0d5c80;
   }
+  li {
+    font-size: 1rem;
+    line-height: 160%;
+    color: rgba(29, 56, 69, 0.75);
+  }
+  ul {
+    padding-inline-start: 25px;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 160%;
+    color: rgba(29, 56, 69, 0.75);
+  }
 `
