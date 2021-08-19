@@ -134,9 +134,9 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
               <S.FaqGrid xs={12} md={6}>
                 <S.LinkItem url="/faq/">FAQ</S.LinkItem>
                 <S.Line />
-                <S.LinkItem url="#">Privacy Policy</S.LinkItem>
+                <S.LinkItem url="/privacy-policy/">Privacy Policy</S.LinkItem>
                 <S.Line />
-                <S.LinkItem url="#">EOE</S.LinkItem>
+                <S.LinkItem url="/eoe/">EOE</S.LinkItem>
               </S.FaqGrid>
             </S.LastGrid>
           </Grid>
