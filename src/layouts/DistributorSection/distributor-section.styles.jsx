@@ -3,7 +3,18 @@ import SectionWrapper from "../../components/section-wrapper/section-wrapper.com
 import { Grid, Typography } from "@material-ui/core"
 import CustomImage from "../../components/custom-image/custom-image.component"
 
-export const Wrapper = styled(SectionWrapper)``
+export const Wrapper = styled(SectionWrapper)`
+  ${({ bgColor }) =>
+    bgColor === "white"
+      ? `
+        background-color: #ffffff;
+
+   `
+      : `
+          background-color:  #f0f5f7;
+
+   `};
+`
 
 export const LeftGrid = styled(Grid)`
   display: flex;

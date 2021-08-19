@@ -4,6 +4,7 @@ export const query = graphql`
   fragment DistributorSection on WpPage_Pagebuilder_Layouts_DistributorSection {
     contentDistributorSection
     fieldGroupName
+    color
     logo {
       altText
       sourceUrl
