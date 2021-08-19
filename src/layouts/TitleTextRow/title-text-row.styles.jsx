@@ -4,6 +4,7 @@ import { Grid, Typography } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
   padding-top: 4em;
+  padding-bottom: 0;
   background-color: white;
 `
 export const LeftGrid = styled(Grid)`
