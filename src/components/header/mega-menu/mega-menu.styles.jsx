@@ -2,11 +2,10 @@ import styled from "styled-components"
 import { Typography } from "@material-ui/core"
 import Grid from "@material-ui/core/Grid"
 import Container from "@material-ui/core/Container"
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward"
 import CustomImage from "../../custom-image/custom-image.component"
 
 export const ProductsWrapper = styled(Container)`
-  display: none;
+  display: block;
   position: absolute;
   background-color: ${({ theme }) => theme.palette.primary.main};
   top: 62px;
@@ -148,5 +147,5 @@ export const ItemContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 0.5em;
+  padding: 2em 0.5em;
 `
