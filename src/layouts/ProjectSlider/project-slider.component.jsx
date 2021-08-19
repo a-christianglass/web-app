@@ -7,9 +7,9 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import { CustomLink } from "../../components/custom-link/custom-link.styles"
 import Arrow from "../../assets/icons/arrow.svg"
 
-const ProjectSlider = ({ leftContentProjectSlider, projects }) => {
+const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper bgColor={color}>
       <Grid container>
         <S.LeftGrid item xs={6} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>

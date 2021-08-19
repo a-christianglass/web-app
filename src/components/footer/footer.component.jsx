@@ -28,7 +28,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
   return (
     <S.Wrapper>
       {!hideFooterBanner && (
-        <S.BannerWrapper whiteFooterBanner>
+        <S.BannerWrapper whiteFooterBanner={whiteFooterBanner}>
           <Container>
             <S.BgImageWrapper>
               <S.BgImage img={staticQuery.footerBg}>

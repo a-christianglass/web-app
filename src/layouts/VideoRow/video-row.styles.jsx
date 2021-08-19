@@ -6,6 +6,7 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 0;
+  background-color: white;
 `
 
 export const LeftGrid = styled(Grid)`

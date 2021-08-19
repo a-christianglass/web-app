@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 export const query = graphql`
   fragment ProjectSlider on WpPage_Pagebuilder_Layouts_ProjectSlider {
     fieldGroupName
+    color
     leftContentProjectSlider {
       button {
         title

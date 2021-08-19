@@ -6,6 +6,7 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 2em 0;
+  background-color: white;
 `
 export const LeftGrid = styled(Grid)`
   width: 100%;
