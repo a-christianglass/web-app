@@ -6,7 +6,7 @@ import ArrowForwardIcon from "@material-ui/icons/ArrowForward"
 import CustomImage from "../../custom-image/custom-image.component"
 
 export const ProductsWrapper = styled(Container)`
-  display: block;
+  display: none;
   position: absolute;
   background-color: ${({ theme }) => theme.palette.primary.main};
   top: 62px;
