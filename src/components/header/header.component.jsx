@@ -9,6 +9,7 @@ import PhoneIcon from "../../assets/icons/phone-blue.svg"
 import parse from "html-react-parser"
 import CustomImage from "../custom-image/custom-image.component"
 import { graphql, useStaticQuery } from "gatsby"
+import CustomLink from "../custom-link/custom-link.component"
 
 const Header = ({ isTransparent, isWhite }) => {
   const [threshold, setTreshold] = useState(100)
@@ -91,9 +92,11 @@ const Header = ({ isTransparent, isWhite }) => {
                   </div>
                 </Hidden>
                 <S.ButtonWrapper>
-                  <S.Button to="/demo">
+                  <CustomLink url="/contact">
+                  <S.Button>
                     {parse("Schedule an <br>Appointment")}
                   </S.Button>
+                  </CustomLink>
                 </S.ButtonWrapper>
               </S.InnerMainContainer>
             </S.MainNavContainer>

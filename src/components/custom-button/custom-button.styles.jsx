@@ -43,6 +43,7 @@ export const CustomButton = styled(Button)`
   }
 
   &:not(.light):not(.darkBorder):hover {
+    transition: all .3s ease;
     background-color: ${({ theme, color }) =>
       darken(
         theme.palette[color]
@@ -52,6 +53,7 @@ export const CustomButton = styled(Button)`
       )};
       //border: 1px solid ${({ theme }) =>
         darken(theme.palette.primary.main, 0.1)};
+    color: white;
   }
 
   &.Mui-disabled {
