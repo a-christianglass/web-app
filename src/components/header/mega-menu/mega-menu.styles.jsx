@@ -140,12 +140,12 @@ export const ItemDescGrid = styled(Grid)`
 `
 
 export const ListWrapper = styled.div`
-  padding: 2em;
+  padding: 1em 2em;
 `
 
 export const ItemContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em 0.5em;
+  padding: 2em 1.3em;
 `
