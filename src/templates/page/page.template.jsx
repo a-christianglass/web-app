@@ -139,6 +139,9 @@ export const query = graphql`
           ... on WpPage_Pagebuilder_Layouts_DoorsTabs {
             ...DoorsTabs
           }
+          ... on WpPage_Pagebuilder_Layouts_DistributorSection {
+            ...DistributorSection
+          }
         }
         pageConfiguration {
           hideFooter
