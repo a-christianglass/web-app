@@ -3,7 +3,7 @@ import SectionWrapper from "../../components/section-wrapper/section-wrapper.com
 import { Grid, Typography } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 2em;
+  padding-top: 4em;
   background-color: white;
 `
 export const LeftGrid = styled(Grid)`
