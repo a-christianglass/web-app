@@ -8,6 +8,7 @@ import Building from "../../assets/icons/building.svg"
 import Home from "../../assets/icons/home.svg"
 import CustomLink from "../../components/custom-link/custom-link.component"
 import { ArrowForward } from "@material-ui/icons"
+import { graphql, useStaticQuery } from "gatsby"
 
 const ServicesHome = ({
   leftTag,
@@ -22,17 +23,36 @@ const ServicesHome = ({
   rightContent,
   rightLink,
 }) => {
+  const staticQuery = useStaticQuery(graphql`
+    query {
+      blueCard: file(relativePath: { eq: "serviceCardBlue.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      whiteCard: file(relativePath: { eq: "serviceCardWhite.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
+  `)
   return (
     <S.Wrapper>
       <Container>
         <Grid container spacing={2}>
           <S.GridCard item xs={12} md={4}>
             {leftTag && <S.TagText>{leftTag}</S.TagText>}
-            {leftTitle && <h3 style={{ paddingBottom: "1em" }}>{leftTitle}</h3>}
+            {leftTitle && (
+              <h3 style={{ paddingBottom: "1em" }}>{parse(leftTitle)}</h3>
+            )}
             {leftContent && <Typography>{leftContent}</Typography>}
           </S.GridCard>
           <S.GridCard item xs={12} md={4}>
-            <S.ContentWrapper style={{ backgroundColor: "#EAF2F6" }}>
+            <S.ContentWrapper
+              img={staticQuery.whiteCard}
+              style={{ backgroundColor: "#EAF2F6" }}
+            >
               <Home />
               {centerTitle && (
                 <S.CardTitle style={{ color: "#0D5C80" }}>
@@ -46,15 +66,24 @@ const ServicesHome = ({
               )}
               {centerLink && (
                 <S.CardLink>
-                  <CustomLink className="darkLink" url="/"> {centerLink.title}</CustomLink>
-                  <ArrowForward style={{color: "#0D5C80"}} className="arrow" />
+                  <CustomLink className="darkLink" url="/">
+                    {" "}
+                    {centerLink.title}
+                  </CustomLink>
+                  <ArrowForward
+                    style={{ color: "#0D5C80" }}
+                    className="arrow"
+                  />
                 </S.CardLink>
               )}
             </S.ContentWrapper>
           </S.GridCard>
 
           <S.GridCard item xs={12} md={4}>
-            <S.ContentWrapper style={{ backgroundColor: "#1593CD" }}>
+            <S.ContentWrapper
+              img={staticQuery.blueCard}
+              style={{ backgroundColor: "#1593CD" }}
+            >
               <Building />
               {rightTitle && (
                 <S.CardTitle style={{ color: "white" }}>
@@ -68,8 +97,10 @@ const ServicesHome = ({
               )}
               {rightLink && (
                 <S.CardLink>
-                  <CustomLink className="lightLink" url="/">{centerLink.title}</CustomLink>
-                  <ArrowForward style={{color: "white"}} className="arrow" />
+                  <CustomLink className="lightLink" url="/">
+                    {centerLink.title}
+                  </CustomLink>
+                  <ArrowForward style={{ color: "white" }} className="arrow" />
                 </S.CardLink>
               )}
             </S.ContentWrapper>

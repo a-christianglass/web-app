@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import Grid from "@material-ui/core/Grid"
+import CustomImage from "../../components/custom-image/custom-image.component"
+import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   background-color: white;
@@ -66,7 +68,7 @@ export const CardLink = styled.div`
 
 `
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled(CustomBgImage)`
   min-height: 506px;
   border-radius: 4px;
   padding: 5em 2em;
