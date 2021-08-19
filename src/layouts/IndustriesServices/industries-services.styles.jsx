@@ -6,6 +6,16 @@ import CustomButton from "../../components/custom-button/custom-button.component
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
+  ${({ bgColor }) =>
+    bgColor === "white"
+      ? `
+        background-color: #ffffff;
+
+   `
+      : `
+          background-color:  #f0f5f7;
+
+   `};
 `
 export const Image = styled(CustomImage)`
   max-width: 507px;

@@ -4,6 +4,7 @@ export const query = graphql`
   fragment IndustriesServices on WpPage_Pagebuilder_Layouts_IndustriesServices {
     fieldGroupName
     reverse
+    color
     description {
       content
       title

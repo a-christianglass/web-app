@@ -4,6 +4,7 @@ import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
 
 const IndustriesServices = ({
+  color,
   title,
   imageIndustriesServices,
   description,
@@ -11,7 +12,7 @@ const IndustriesServices = ({
   reverse,
 }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper bgColor={color}>
       <S.ServiceWrapper>
         {title && <h2>{title}</h2>}
         <S.LeftGrid container direction={reverse && "row-reverse"}>
