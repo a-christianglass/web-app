@@ -2,11 +2,13 @@ import styled from "styled-components"
 import Container from "@material-ui/core/Container"
 
 export const Wrapper = styled(Container)`
-  padding: 4em 10em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
+  margin-left: unset;
+  padding: 6em 10em;
 `
+export const ContentWrapper = styled.div``
 
 export const TextWrapper = styled.div`
   max-width: 745px;
