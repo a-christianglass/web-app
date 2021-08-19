@@ -162,3 +162,5 @@ export const submitGravityForm = (data, formId) => {
       return response
     })
 }
+
+export const removeSpecialChar = string => string.replace(/&amp;/g, "&")
