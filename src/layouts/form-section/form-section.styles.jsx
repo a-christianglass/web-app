@@ -6,6 +6,9 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
+  .MuiTextField-root {
+    border: 1px solid red;
+  }
 `
 export const ContentWrapper = styled.div`
   padding: 4em;

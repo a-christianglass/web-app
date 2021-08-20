@@ -43,7 +43,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3em 1em;
+  padding: 4em 1em;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
@@ -55,7 +55,6 @@ export const ContentWrapper = styled.div`
     font-weight: 700;
     max-width: 710px;
     font-size: 2rem;
-    margin-bottom: 1em;
   }
 `
 
