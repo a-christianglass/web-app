@@ -72,7 +72,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                     <S.LinkItem url="/windows/">Windows</S.LinkItem>
                     <S.LinkItem url="/doors/">Doors</S.LinkItem>
                     <S.LinkItem url="/showers/">Showers</S.LinkItem>
-                    <S.LinkItem url="/">Railway</S.LinkItem>
+                    <S.LinkItem url="/railings">Railings</S.LinkItem>
                   </S.ColumnGrid>
                   <S.ColumnGrid xs={4}>
                     <span>Industries</span>
