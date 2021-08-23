@@ -119,6 +119,9 @@ const Header = ({ isTransparent, isWhite }) => {
           </Container>
         </S.MainNav>
       </S.CustomAppBar>
+      <Fade in={isActiveMenu} unmountOnExit mountOnEnter>
+        <HeaderMobile items={headerItems.mainItems} />
+      </Fade>
     </S.NavWrapper>
   )
 }

@@ -55,6 +55,9 @@ export const EmailWrapper = styled.div`
   svg {
     margin-right: 0.5em;
   }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    display: none;
+  }
 `
 
 export const PhoneWrapper = styled.div`
