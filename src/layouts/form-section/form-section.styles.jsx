@@ -6,9 +6,6 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
-  .MuiTextField-root {
-    border: 1px solid red;
-  }
 `
 export const ContentWrapper = styled.div`
   padding: 4em;
@@ -79,6 +76,9 @@ export const Field = styled(TextField)`
     color: #879fb3;
   }
   margin-bottom: 1em;
+  .MuiTextField-root {
+    border: 1px solid #879fb3;
+  }
 `
 
 export const CustomSelect = styled(Select)`

@@ -55,6 +55,9 @@ export const EmailWrapper = styled.div`
   svg {
     margin-right: 0.5em;
   }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    display: none;
+  }
 `
 
 export const PhoneWrapper = styled.div`
@@ -134,7 +137,6 @@ export const MainItem = styled(CustomLink)`
       justify-content: center;
     }
   }
- 
 
   &.active:not(.logo):not(.contact) {
     box-shadow: inset 0px -2px 0 0 ${({ theme }) => theme.palette.secondary.main};
@@ -149,11 +151,11 @@ export const MainItem = styled(CustomLink)`
       display: block;
     }
     ${({ theme, removeTopLine }) =>
-            removeTopLine
-                    ? `
+      removeTopLine
+        ? `
     box-shadow: none;
    `
-                    : `
+        : `
    box-shadow: inset 0px -2px 0 0 ${theme.palette.secondary.main};
    `};
   }
@@ -203,5 +205,12 @@ export const ButtonWrapper = styled.div`
 export const NavWrapper = styled.div`
   .MuiAppBar-colorPrimary {
     background-color: transparent;
+  }
+`
+export const MenuButton = styled(IconButton)`
+  padding-right: 0;
+  padding-left: 0;
+  svg {
+    fill: ${({ theme }) => theme.palette.text.primary};
   }
 `

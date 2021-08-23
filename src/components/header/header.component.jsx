@@ -7,17 +7,26 @@ import MegaMenu from "./mega-menu/mega-menu.component"
 import MailIcon from "../../assets/icons/blue-mail.svg"
 import PhoneIcon from "../../assets/icons/phone-blue.svg"
 import parse from "html-react-parser"
-import CustomImage from "../custom-image/custom-image.component"
 import { graphql, useStaticQuery } from "gatsby"
 import CustomLink from "../custom-link/custom-link.component"
+import HeaderMobile from "./header-mobile/header-mobile.component"
+import Fade from "@material-ui/core/Fade"
+import CloseIcon from "@material-ui/icons/Close"
+import MenuIcon from "@material-ui/icons/Menu"
 
 const Header = ({ isTransparent, isWhite }) => {
   const [threshold, setTreshold] = useState(100)
+  const [isActiveMenu, setIsActiveMenu] = useState(false)
+
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
     threshold,
   })
   const isDark = scrollTrigger || isTransparent
+
+  const handleToggleMenu = () => {
+    setIsActiveMenu(!isActiveMenu)
+  }
 
   const staticQuery = useStaticQuery(graphql`
     query {
@@ -91,18 +100,28 @@ const Header = ({ isTransparent, isWhite }) => {
                     )}
                   </div>
                 </Hidden>
-                <S.ButtonWrapper>
-                  <CustomLink url="/contact">
-                  <S.Button>
-                    {parse("Schedule an <br>Appointment")}
-                  </S.Button>
-                  </CustomLink>
-                </S.ButtonWrapper>
+                <div style={{ display: "flex" }}>
+                  <S.ButtonWrapper>
+                    <CustomLink url="/contact">
+                      <S.Button>
+                        {parse("Schedule an <br>Appointment")}
+                      </S.Button>
+                    </CustomLink>
+                    <Hidden mdUp>
+                      <S.MenuButton onClick={handleToggleMenu}>
+                        {isActiveMenu ? <CloseIcon /> : <MenuIcon />}
+                      </S.MenuButton>
+                    </Hidden>
+                  </S.ButtonWrapper>
+                </div>
               </S.InnerMainContainer>
             </S.MainNavContainer>
           </Container>
         </S.MainNav>
       </S.CustomAppBar>
+      <Fade in={isActiveMenu} unmountOnExit mountOnEnter>
+        <HeaderMobile items={headerItems.mainItems} />
+      </Fade>
     </S.NavWrapper>
   )
 }
