@@ -47,6 +47,9 @@ export const TopItem = styled.a`
   &:not(:last-child) {
     margin-right: 1em;
   }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    margin-left: 0;
+  }
 `
 
 export const EmailWrapper = styled.div`
@@ -72,6 +75,9 @@ export const InnerTopContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    justify-content: center;
+  }
 `
 
 export const Logo = styled(LogoSVG)`
