@@ -201,7 +201,11 @@ export const Button = styled(CustomButton)`
 export const ButtonWrapper = styled.div`
   display: flex;
 `
-
+export const Link = styled(CustomLink)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    display: none;
+  }
+`
 export const NavWrapper = styled.div`
   .MuiAppBar-colorPrimary {
     background-color: transparent;

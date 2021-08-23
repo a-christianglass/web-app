@@ -3,15 +3,16 @@ import IconButton from "@material-ui/core/IconButton"
 export const ItemsWrapper = styled.div`
   background-color: ${({ theme }) => theme.palette.primary.main};
   color: white;
-  padding: 1.5em;
+  padding: 6em 1.5em 1.5em;
   height: 100vh;
-  z-index: 3;
+  z-index: 6;
   width: 100%;
   position: fixed;
-  top: ${({ theme }) => theme.navHeight + `px`};
+  top: 31px;
   left: 0;
   right: 0;
   bottom: 0;
+
   .search {
     margin-bottom: 1em;
   }

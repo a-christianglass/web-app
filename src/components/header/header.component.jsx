@@ -102,11 +102,11 @@ const Header = ({ isTransparent, isWhite }) => {
                 </Hidden>
                 <div style={{ display: "flex" }}>
                   <S.ButtonWrapper>
-                    <CustomLink url="/contact">
+                    <S.Link url="/contact">
                       <S.Button>
                         {parse("Schedule an <br>Appointment")}
                       </S.Button>
-                    </CustomLink>
+                    </S.Link>
                     <Hidden mdUp>
                       <S.MenuButton onClick={handleToggleMenu}>
                         {isActiveMenu ? <CloseIcon /> : <MenuIcon />}
