@@ -16,6 +16,9 @@ export const BgImage = styled(CustomBgImage)`
   width: 100%;
   height: 100%;
   padding: 4em;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 4em 2em;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +39,10 @@ export const RightWrapper = styled.div`
     max-width: 512px;
     text-align: center;
     margin: 0 auto 2em auto;
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      text-align: left;
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
 `
 
@@ -53,6 +60,9 @@ export const TitleWrapper = styled.div`
     font-weight: bold;
     color: white;
     font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(18)};
+    }
   }
 `
 
@@ -61,6 +71,10 @@ export const Icon = styled(CustomImage)`
   height: 44px;
   margin-right: 20px;
   object-fit: contain !important;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    width: 32px;
+    height: 32px;
+  }
 `
 
 export const ContentText = styled(Typography)`
@@ -69,4 +83,7 @@ export const ContentText = styled(Typography)`
   font-size: 1rem;
   line-height: 26px;
   font-weight: 500;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  }
 `

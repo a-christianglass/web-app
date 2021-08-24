@@ -8,17 +8,9 @@ import CircleCheckIcon from "../../images/check-circle.svg"
 export const Wrapper = styled(SectionWrapper)`
   padding: 2em 0 5em 0;
   background-color: #f5f8fa;
+
   .Mui-selected {
     color: ${({ theme }) => theme.palette.primary.main};
-  }
-  .swiper-container {
-    width: 480px;
-    height: 400px;
-  }
-
-  .swiper-slide {
-    width: 100%;
-    height: 100%;
   }
 
   .swiper-pagination-bullet {
@@ -111,6 +103,7 @@ export const LeftGrid = styled(Grid)`
 
 export const LeftWrapper = styled.div`
   max-width: 425px;
+
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -129,6 +122,7 @@ export const TabContent = styled(Typography)`
   color: rgba(29, 56, 69, 0.75);
   letter-spacing: 0.005em;
   margin-bottom: 1em;
+
   li {
     color: red;
   }
@@ -167,6 +161,7 @@ export const RightText = styled(Typography)`
 export const ContentWrapper = styled.div`
   max-width: 420px;
   padding: 2em 0;
+
   h3 {
     margin-left: 30px;
     padding-top: 5px;
@@ -175,6 +170,7 @@ export const ContentWrapper = styled.div`
     font-weight: bold;
     margin-bottom: 1em;
     color: #0d5c80;
+
     &:before {
       content: "";
       position: absolute;
@@ -184,7 +180,7 @@ export const ContentWrapper = styled.div`
       height: 24px;
       background: url(${CircleCheckIcon}) no-repeat center center;
       background-size: cover;
-  }
+    }
 `
 
 export const TabSubtitle = styled.h3`
@@ -216,6 +212,7 @@ export const FeatureWrapper = styled.div`
     font-weight: bold;
     margin-bottom: 1em;
     color: #0d5c80;
+
     &:before {
       content: "";
       position: absolute;
@@ -227,13 +224,14 @@ export const FeatureWrapper = styled.div`
       background-size: cover;
     }
   }
+
   p {
     margin-left: 15px;
   }
 `
 
 export const SliderGrid = styled(Grid)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    padding: 3em;
+  }
 `
