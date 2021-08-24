@@ -3,8 +3,11 @@ import * as S from "./blue-features-section.styles"
 import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import theme from "../../theme"
 
-const BlueFeaturesSection = ({ imageFeatures, title, cards }) => {
+const BlueFeaturesSection = ({ imageFeatures, mobileImage, title, cards }) => {
+  const isMD = useMediaQuery(theme.breakpoints.down("md"))
   const staticQuery = useStaticQuery(graphql`
     query {
       blueBg: file(relativePath: { eq: "blue-big.png" }) {
@@ -18,7 +21,7 @@ const BlueFeaturesSection = ({ imageFeatures, title, cards }) => {
     <S.Wrapper>
       <Grid container>
         <Grid item xs={12} md={4}>
-          <S.Image img={imageFeatures} />
+          <S.Image img={isMD ? mobileImage : imageFeatures} />
         </Grid>
         <S.RightGrid item xs={12} md={8}>
           <S.BgImage img={staticQuery.blueBg}>
