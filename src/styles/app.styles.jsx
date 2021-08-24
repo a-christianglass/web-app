@@ -229,13 +229,16 @@ export const AppContainer = styled.main`
   flex: 1;
   flex-direction: column;
   //padding-top: ${({ theme }) => theme.navHeight}px;
-  ${({ theme, isTransparent }) =>
-          isTransparent
-                  ? `
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    ${({ theme, isTransparent }) =>
+            isTransparent
+                    ? `
     padding-top: ${theme.navHeight}px;
    `
-                  : `
+                    : `
     padding-top: 39px;
    `};
+  }
+  padding-top: 110px;
   background-color: #f8fdff;
 `

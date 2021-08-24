@@ -11,22 +11,26 @@ export const CustomAppBar = styled(AppBar)`
 export const MainNav = styled.div`
   transition: padding-top 0.3s ease, padding-bottom 0.3s ease,
     background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  background-color: transparent;
+  //background-color: transparent;
 
-  ${({ theme, isdark }) =>
-    isdark
-      ? `
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    ${({ theme, isdark }) =>
+            isdark
+                    ? `
     background-color: ${theme.palette.primary.main};
    `
-      : `
+                    : `
     background-color: transparent;
    `};
 
-  ${({ isWhite }) =>
-    isWhite &&
-    `
+    ${({ isWhite }) =>
+            isWhite &&
+            `
     background-color: #FAFAFA;
    `};
+  }
+  
+  background-color: #1593CD;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     min-height: 61px;
