@@ -17,7 +17,7 @@ export const Wrapper = styled(SectionWrapper)`
 export const FooterWrapper = styled.div`
   padding: 6em 5em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em;
+    padding: 1em;
   }
 `
 
@@ -29,6 +29,12 @@ export const LogoWrapper = styled.div`
   img {
     max-width: 228px;
   }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    img {
+      max-width: 145px;
+    }
+    padding-bottom: 1em;
+  }
 `
 export const BottomGrid = styled(Grid)`
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -39,12 +45,19 @@ export const BottomGrid = styled(Grid)`
   padding: 2em 0;
 `
 
-export const LeftGrid = styled(Grid)``
+export const LeftGrid = styled(Grid)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    display: none;
+  }
+`
 
 export const RightGrid = styled(Grid)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    align-items: flex-start;
+  }
   a {
     font-style: normal;
     font-weight: bold;
@@ -122,6 +135,11 @@ export const IconWrapper = styled.div`
   display: flex;
   a {
     padding-left: 0.5em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      padding-left: 0;
+      padding-right: 0.5em;
+      margin-bottom: 0;
+    }
   }
   svg {
     width: 24px;
@@ -131,11 +149,19 @@ export const IconWrapper = styled.div`
 `
 export const LastGrid = styled(Grid)`
   padding: 2em 0;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+  }
 `
 
 export const BBBGrid = styled(Grid)`
   img {
     max-width: 150px;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      max-width: 111px;
+      margin-top: 1em;
+    }
   }
 `
 
@@ -143,6 +169,9 @@ export const FaqGrid = styled(Grid)`
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    justify-content: space-between;
+  }
   a {
     text-decoration: none;
     font-style: normal;

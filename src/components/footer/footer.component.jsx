@@ -13,6 +13,7 @@ import parse from "html-react-parser"
 import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import Container from "@material-ui/core/Container"
+import theme from "../../theme";
 
 const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
   const staticQuery = useStaticQuery(graphql`
@@ -124,7 +125,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                 </S.IconWrapper>
               </S.RightGrid>
             </S.BottomGrid>
-            <S.LastGrid container>
+            <S.LastGrid container >
               <S.BBBGrid xs={12} md={6}>
                 <img
                   src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/BBB-seal-footer.png"

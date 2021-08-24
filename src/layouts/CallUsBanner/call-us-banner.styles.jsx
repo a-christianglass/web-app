@@ -2,24 +2,20 @@ import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 0;
+    padding: 0;
 `
 
 export const TextWrapper = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-
   ${({ morePadding }) =>
     morePadding
       ? `
-    padding: 10em 12em;
+    padding: 10em 0;
   `
-      : `padding: 6em 12em;
+      : `padding: 6em 0;
       `}
-  .left-image {
-    height: 100%;
-  }
 `
 export const ContentWrapper = styled.div`
   display: flex;

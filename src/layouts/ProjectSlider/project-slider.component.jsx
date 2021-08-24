@@ -11,7 +11,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
   return (
     <S.Wrapper bgColor={color}>
       <Grid container>
-        <S.LeftGrid item xs={6} alignItems={"center"} justifyContent={"center"}>
+        <S.LeftGrid item xs={12} md={6} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>
             {leftContentProjectSlider.title && (
               <h3>{leftContentProjectSlider.title}</h3>
@@ -32,7 +32,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
             )}
           </S.TextWrapper>
         </S.LeftGrid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <CustomSlider
             onlyRight={false}
             autoHeight={false}

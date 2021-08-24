@@ -2,6 +2,7 @@ import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import { Grid } from "@material-ui/core"
 import CustomButton from "../../components/custom-button/custom-button.component"
+import CustomImage from "../../components/custom-image/custom-image.component";
 
 export const RowGrid = styled(Grid)`
   ${({ contained }) =>
@@ -13,6 +14,17 @@ export const RowGrid = styled(Grid)`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 0;
   }
+`
+export const ImageGrid=styled(Grid)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    max-height: 178px;
+  }
+`
+
+export const Image = styled(CustomImage)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover!important;
 `
 
 export const Wrapper = styled(SectionWrapper)`
