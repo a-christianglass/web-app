@@ -19,6 +19,7 @@ const DoorTabSlider = ({ images }) => {
       }}
       slidesPerView="1"
       loop={true}
+      autoHeight={true}
     >
       {images.map(({ image }, index) => (
         <SwiperSlide key={`windows-slide-${index}`}>
