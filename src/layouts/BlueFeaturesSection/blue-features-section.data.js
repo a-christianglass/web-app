@@ -23,5 +23,15 @@ export const query = graphql`
         }
       }
     }
+    mobileImage {
+      altText
+      sourceUrl
+      title
+      localFile {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
   }
 `
