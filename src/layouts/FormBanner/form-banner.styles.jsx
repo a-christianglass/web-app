@@ -5,6 +5,9 @@ import Radio from "@material-ui/core/Radio"
 import CustomButton from "../../components/custom-button/custom-button.component"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 export const Wrapper = styled(CustomBgImage)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+   display: none;
+  }
   min-height: 615px;
   padding: 0;
 `
