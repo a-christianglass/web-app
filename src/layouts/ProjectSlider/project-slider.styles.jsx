@@ -5,7 +5,6 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 0;
   ${({ bgColor }) =>
     bgColor === "white"
       ? `
@@ -18,7 +17,20 @@ background-color: #f0f5f7;
   .swiper-container {
     width: 100%;
     height: 100%;
-    padding: 7em 0;
+    //padding: 7em 0;
+    overflow: unset;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(270deg, #FFFFFF 11.36%, rgba(255, 255, 255, 0) 59.47%);
   }
 
   .arrows > div:nth-child(1) {
@@ -63,7 +75,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  max-width: 400px;
+  //max-width: 400px;
   border: 0.5px solid rgba(188, 197, 204, 0.2);
   border-radius: 5px;
 `
@@ -124,4 +136,8 @@ export const Button = styled(CustomButton)`
   background-color: ${({ theme }) => theme.palette.primary.main};
   color: #ffffff;
   text-transform: capitalize;
+`
+
+export const RightGrid  = styled(Grid)`
+  clip-path: inset( -100vw -100vw -100vw 0 );
 `

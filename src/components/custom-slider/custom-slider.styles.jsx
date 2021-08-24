@@ -17,7 +17,7 @@ export const CustomArrow = styled.div`
   width: 62px;
   height: 62px;
   background-color: transparent;
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
   svg {
     width: 100%;
@@ -31,7 +31,7 @@ export const CustomArrow = styled.div`
     ${({ onlyRight }) =>
       !onlyRight
         ? `
-    right: 3.5em;
+    right: -150px;
   `
         : `right: -0.5em;
       `}

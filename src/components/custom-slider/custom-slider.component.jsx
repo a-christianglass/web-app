@@ -25,7 +25,7 @@ const CustomSlider = ({
   const navigationNextRef = useRef(null)
   const theme = useTheme()
   return (
-    <S.Container className={noArrows ? "" : "arrows"}>
+    <S.Container className={`custom-slider ${noArrows ? "" : "arrows"}`}>
       <S.CustomArrow ref={navigationPrevRef} className="left">
         <ArrowBack />
       </S.CustomArrow>

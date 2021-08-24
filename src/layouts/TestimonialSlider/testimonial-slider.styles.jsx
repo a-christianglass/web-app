@@ -4,13 +4,26 @@ import { Grid } from "@material-ui/core"
 import { SwiperSlide } from "swiper/react"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 0;
+  //padding: 0;
   background-color: #f0f5f7;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 337px;
+    height: 295px;
+    top: 70px;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(270deg, #FFFFFF 11.36%, rgba(255, 255, 255, 0) 59.47%);
+  }
 
   .swiper-container {
     width: 100%;
     height: 100%;
-    padding: 7em 0;
+    //padding: 7em 0;
+    overflow: unset;
   }
 
   .arrows > div:nth-child(1) {
@@ -81,4 +94,8 @@ export const CardWrapper = styled.div`
     padding: 0;
     margin: 0.2em 0 0 0;
   }
+`
+
+export const RightGrid  = styled(Grid)`
+  clip-path: inset( -100vw -100vw -100vw 0 );
 `
