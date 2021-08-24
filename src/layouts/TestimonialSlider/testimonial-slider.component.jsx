@@ -9,14 +9,14 @@ const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
   return (
     <S.Wrapper>
       <Grid container>
-        <S.LeftGrid item xs={6} alignItems={"center"} justifyContent={"center"}>
+        <S.LeftGrid item xs={12} md={6} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>
             <h3>{leftContentTestimonialSlider?.title}</h3>
             <h2>{leftContentTestimonialSlider?.subtitle}</h2>
             <h4>{leftContentTestimonialSlider?.description}</h4>
           </S.TextWrapper>
         </S.LeftGrid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <CustomSlider
             onlyRight={false}
             autoHeight={false}
