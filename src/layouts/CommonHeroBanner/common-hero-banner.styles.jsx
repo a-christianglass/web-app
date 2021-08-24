@@ -7,7 +7,11 @@ export const Wrapper = styled(SectionWrapper)`
 `
 
 export const TopWrapper = styled.div`
-  min-height: 175px;
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    min-height: 175px;
+  }
+  min-height: 230px;
   position: relative;
   ${({ theme }) => theme.breakpoints.up("md")} {
     min-height: 489px;
