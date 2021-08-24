@@ -19,9 +19,9 @@ const ImageTextRow = ({
         direction={rightImage && "row-reverse"}
         contained={contained}
       >
-        <Grid item xs={12} sm={6}>
-          <CustomImage img={imageTextRow} alt={"alt"} className={"LeftImage"} />
-        </Grid>
+        <S.ImageGrid item xs={12} sm={6}>
+            <S.Image img={imageTextRow} alt={"alt"} className={"LeftImage"} />
+        </S.ImageGrid>
         <S.CustomGrid item xs={12} sm={6}>
           <Container>
             {content && (
