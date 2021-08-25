@@ -39,14 +39,16 @@ const ServicesHome = ({
   `)
   return (
     <S.Wrapper>
-      <Container>
+      <S.CustomContainer>
         <Grid container spacing={2}>
           <S.GridCard item xs={12} md={4}>
-            {leftTag && <S.TagText>{leftTag}</S.TagText>}
-            {leftTitle && (
-              <h3 style={{ paddingBottom: "1em" }}>{parse(leftTitle)}</h3>
-            )}
-            {leftContent && <Typography>{leftContent}</Typography>}
+            <S.LeftContentWrapper>
+              {leftTag && <S.TagText>{leftTag}</S.TagText>}
+              {leftTitle && (
+                <h3 style={{ paddingBottom: "1em" }}>{parse(leftTitle)}</h3>
+              )}
+              {leftContent && <Typography>{leftContent}</Typography>}
+            </S.LeftContentWrapper>
           </S.GridCard>
           <S.GridCard item xs={12} md={4}>
             <S.ContentWrapper
@@ -106,7 +108,7 @@ const ServicesHome = ({
             </S.ContentWrapper>
           </S.GridCard>
         </Grid>
-      </Container>
+      </S.CustomContainer>
     </S.Wrapper>
   )
 }
