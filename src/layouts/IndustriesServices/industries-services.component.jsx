@@ -23,6 +23,7 @@ const IndustriesServices = ({
             </Grid>
             <S.RightGrid item xs={12} md={6} shouldCenter={reverse}>
               <S.ContentWrapper>
+                {description.tagText && <h3>{description.tagText}</h3>}
                 {description.title && <h2>{parse(description.title)}</h2>}
                 {description.content && (
                   <S.ContentText>{parse(description.content)}</S.ContentText>

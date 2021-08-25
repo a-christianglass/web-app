@@ -29,6 +29,7 @@ export const ServiceWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
+
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -64,6 +65,18 @@ export const Button = styled(CustomButton)`
 
 export const ContentWrapper = styled.div`
   max-width: 427px;
+
+  h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 120.5%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(29, 56, 69, 0.75);
+    opacity: 0.5;
+    padding-bottom: 1em;
+  }
 `
 
 export const ContentText = styled(Typography)`
@@ -73,13 +86,14 @@ export const ContentText = styled(Typography)`
   line-height: 23px;
   color: rgba(29, 56, 69, 0.75);
   margin-bottom: 2em;
+
   strong {
     font-weight: bold;
     rgba(29, 56, 69, 0.75);
 
   }
-  
-  a{
+
+  a {
     text-decoration: none;
     font-style: normal;
     font-weight: bold;

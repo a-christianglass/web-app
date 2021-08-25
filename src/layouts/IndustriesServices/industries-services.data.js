@@ -8,6 +8,7 @@ export const query = graphql`
     morePadding
     description {
       content
+      tagText
       title
     }
     button {
