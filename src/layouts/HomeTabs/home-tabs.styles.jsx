@@ -6,6 +6,9 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 6em 0;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 0;
+  }
   background-color: white;
   .Mui-selected {
     color: ${({ theme }) => theme.palette.primary.main};
@@ -90,10 +93,14 @@ export const LeftWrapper = styled.div`
   h2 {
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     line-height: 47px;
     color: #0d5c80;
     margin-bottom: 0.5em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
@@ -105,12 +112,19 @@ export const TabContent = styled(Typography)`
   color: rgba(29, 56, 69, 0.75);
   letter-spacing: 0.005em;
   margin-bottom: 1em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  }
 `
 
 export const Button = styled(CustomButton)`
   text-transform: none;
-  font-size: 16px;
+  font-size: 1re;
   padding: 0.5em 3em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    margin-bottom: 1em;
+  }
 `
 
 export const RightImage = styled(CustomImage)`
