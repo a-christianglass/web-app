@@ -153,6 +153,7 @@ export const query = graphql`
           isWhite
           hideFooterBanner
           whiteFooterBanner
+          isHomePage
         }
       }
     }

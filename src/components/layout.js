@@ -20,11 +20,12 @@ const Layout = ({
   isWhite,
   hideFooterBanner,
   whiteFooterBanner,
+  isHomePage,
 }) => {
   return (
     <>
       {seo && <SEO data={seo} />}
-      <Header isTransparent={isTransparent} isWhite={isWhite} />
+      <Header isHomePage={isHomePage} isTransparent={isTransparent} isWhite={isWhite} />
       <AppContainer isTransparent={isTransparent} isWhite={isWhite}>
         {children}
       </AppContainer>

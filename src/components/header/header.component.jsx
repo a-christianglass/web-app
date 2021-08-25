@@ -14,10 +14,11 @@ import Fade from "@material-ui/core/Fade"
 import CloseIcon from "@material-ui/icons/Close"
 import MenuIcon from "@material-ui/icons/Menu"
 
-const Header = ({ isTransparent, isWhite }) => {
+const Header = ({ isTransparent, isWhite, isHomePage }) => {
   const [threshold, setTreshold] = useState(100)
   const [isActiveMenu, setIsActiveMenu] = useState(false)
 
+  console.log("isHomePage", isHomePage)
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
     threshold,
@@ -103,7 +104,7 @@ const Header = ({ isTransparent, isWhite }) => {
                 <div style={{ display: "flex" }}>
                   <S.ButtonWrapper>
                     <S.Link url="/contact">
-                      <S.Button>
+                      <S.Button isdark={isDark} className="navButtom" isHomePage={isHomePage}>
                         {parse("Schedule an <br>Appointment")}
                       </S.Button>
                     </S.Link>

@@ -196,9 +196,8 @@ export const MainNavContainer = styled.div`
 `
 
 export const Button = styled(CustomButton)`
-  background-color: ${({ theme }) => theme.palette.tertiary.main};
+  //background-color: ${({ theme }) => theme.palette.tertiary.main};
   text-transform: none;
-  color: #1e150a;
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
@@ -206,6 +205,19 @@ export const Button = styled(CustomButton)`
   line-height: 120%;
   padding-top: 0.1em;
   padding-bottom: 0.1em;
+  ${({ theme, isHomePage, isdark }) =>
+          isHomePage && !isdark
+                  ? `
+    background-color: transparent;
+    border: 1px solid white;
+    color: white
+   `
+                  : `
+   background-color: #F89928;
+    color: #1e150a;
+   `};
+  
+  
 `
 
 export const ButtonWrapper = styled.div`

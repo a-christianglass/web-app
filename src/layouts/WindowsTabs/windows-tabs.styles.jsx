@@ -47,6 +47,15 @@ export const CustomTabs = styled(Tabs)`
       bottom: 11px;
     }
   }
+
+  .MuiTabs-scroller .MuiTabs-flexContainer button {
+    border-bottom: 7px solid #EAF1F6;
+  }
+  .MuiTabs-indicator {
+    background-color: #0D5C80;
+    height: 7px !important;
+  }
+  
 `
 export const CustomTab = styled(Tab)`
   color: #0d5c80;
