@@ -68,7 +68,7 @@ const ServicesHome = ({
               )}
               {centerLink && (
                 <S.CardLink>
-                  <CustomLink className="darkLink" url="/">
+                  <CustomLink className="darkLink" url={centerLink.url}>
                     {" "}
                     {centerLink.title}
                   </CustomLink>
@@ -99,7 +99,7 @@ const ServicesHome = ({
               )}
               {rightLink && (
                 <S.CardLink>
-                  <CustomLink className="lightLink" url="/">
+                  <CustomLink className="lightLink" url={rightLink.url}>
                     {centerLink.title}
                   </CustomLink>
                   <ArrowForward style={{ color: "white" }} className="arrow" />
