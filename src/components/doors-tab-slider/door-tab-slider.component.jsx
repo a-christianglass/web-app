@@ -7,7 +7,6 @@ import "swiper/swiper.min.css"
 import "swiper/components/pagination/pagination.min.css"
 import SwiperCore, { Pagination } from "swiper/core"
 import CustomImage from "../custom-image/custom-image.component"
-import { ArrowBack, ArrowForward } from "@material-ui/icons"
 
 // install Swiper modules
 SwiperCore.use([Pagination])
