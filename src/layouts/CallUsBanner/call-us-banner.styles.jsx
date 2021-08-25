@@ -98,7 +98,8 @@ export const MobileTextWrapper = styled.div`
   }
 `
 export const MobileContentWrapper = styled.div`
-  padding: 1em 1.5em;
+  padding: 1em 1.5em 3em;
+
   a {
     text-decoration: none;
     border-radius: 4px;
@@ -106,10 +107,12 @@ export const MobileContentWrapper = styled.div`
     box-shadow: 0 16px 32px rgba(6, 51, 72, 0.16);
     margin-bottom: 1.5em;
   }
+
   h3 {
     ${({ theme }) => theme.breakpoints.down("md")} {
       font-size: ${({ theme }) => theme.typography.pxToRem(14)};
     }
+
     text-align: center;
     color: #1593cd;
     font-weight: bold;
