@@ -4,10 +4,12 @@ import { Grid } from "@material-ui/core"
 import CustomSlider from "../../components/custom-slider/custom-slider.component"
 import { SwiperSlide } from "swiper/react"
 import parse from "html-react-parser"
+import Container from "@material-ui/core/Container"
 
 const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
   return (
     <S.Wrapper>
+      <Container>
       <Grid container>
         <S.LeftGrid item xs={12} md={6} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>
@@ -16,12 +18,12 @@ const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
             <h4>{leftContentTestimonialSlider?.description}</h4>
           </S.TextWrapper>
         </S.LeftGrid>
-        <Grid item xs={12} md={6}>
+        <S.RightGrid item xs={12} md={6}>
           <CustomSlider
             onlyRight={false}
             autoHeight={false}
-            spacingBetween={30}
-            loop={true}
+            spacingBetween={40}
+            // loop={true}
             breakpoints={{
               600: {
                 slidesPerView: 1,
@@ -41,8 +43,9 @@ const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
               </SwiperSlide>
             ))}
           </CustomSlider>
-        </Grid>
+        </S.RightGrid>
       </Grid>
+      </Container>
     </S.Wrapper>
   )
 }

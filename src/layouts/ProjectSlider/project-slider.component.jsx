@@ -9,9 +9,9 @@ import Arrow from "../../assets/icons/arrow.svg"
 
 const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
   return (
-    <S.Wrapper bgColor={color}>
+    <S.Wrapper bgColor={color} contained>
       <Grid container>
-        <S.LeftGrid item xs={12} md={6} alignItems={"center"} justifyContent={"center"}>
+        <S.LeftGrid item xs={12} md={7} alignItems={"center"} justifyContent={"center"}>
           <S.TextWrapper>
             {leftContentProjectSlider.title && (
               <h3>{leftContentProjectSlider.title}</h3>
@@ -32,7 +32,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
             )}
           </S.TextWrapper>
         </S.LeftGrid>
-        <Grid item xs={12} md={6}>
+        <S.RightGrid item xs={12} md={5}>
           <CustomSlider
             onlyRight={false}
             autoHeight={false}
@@ -69,7 +69,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
               </SwiperSlide>
             ))}
           </CustomSlider>
-        </Grid>
+        </S.RightGrid>
       </Grid>
     </S.Wrapper>
   )

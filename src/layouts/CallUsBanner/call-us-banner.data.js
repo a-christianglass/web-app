@@ -14,6 +14,16 @@ export const query = graphql`
         }
       }
     }
+    mobileImageCallBanner {
+      altText
+      sourceUrl
+      title
+      localFile {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
     title
     number
   }
