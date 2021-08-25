@@ -15,7 +15,9 @@ export const LeftGrid = styled(Grid)`
 `
 
 export const LeftWrapper = styled.div`
-  max-width: 454px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 
   h2 {
     color: #0d5c80;
@@ -56,10 +58,21 @@ export const RightContentText = styled(Typography)`
 export const QuoteWrapper = styled.div`
   display: flex;
   justify-content: center;
+  padding-top: 1em;
 `
 
 export const QuoteImage = styled(CustomImage)`
   max-width: 62px;
   height: auto;
   text-align: center;
+`
+
+export const ContentWrapper = styled.div`
+  max-width: 724px;
+  margin: auto;
+`
+export const QuoteTextWrapper = styled.div`
+  max-width: 585px;
+  margin: auto;
+  padding-bottom: 1em;
 `
