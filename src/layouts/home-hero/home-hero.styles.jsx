@@ -23,7 +23,6 @@ export const TextWrapper = styled.div`
   max-width: 550px;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em;
     margin: 0;
   }
 
