@@ -2,13 +2,15 @@ import styled, { css } from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
+import CustomImage from "../../components/custom-image/custom-image.component"
 
 const sectionHeight = css`
   height: calc(100vh - ${({ theme }) => theme.navHeight}px);
 `
 
-export const HeroWrapper = styled(SectionWrapper)`
+export const HeroWrapper = styled(CustomBgImage)`
   padding: 0;
+  background-color: ${({ theme }) => theme.palette.primary.main} !important;
 `
 export const ContentWrapper = styled.div``
 
@@ -27,15 +29,23 @@ export const TextWrapper = styled.div`
 
   h2 {
     text-transform: uppercase;
-    font-size: 14px;
-    line-height: 17px;
-    color: ${({ theme }) => theme.palette.text.primary};
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120.5%;
+    letter-spacing: 0.01em;
+    color: #FAFAFA;
     margin-bottom: 1em;
   }
 
   h1 {
-    font-size: 3.375rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 120%;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
     margin-bottom: 0.5em;
+
     ${({ theme }) => theme.breakpoints.down("sm")} {
       font-size: 2rem;
     }
@@ -46,4 +56,10 @@ export const Button = styled(CustomButton)`
   background-color: ${({ theme }) => theme.palette.text.primary};
   color: ${({ theme }) => theme.palette.text.secondary};
   text-transform: capitalize;
+`
+
+export const LogoImage = styled(CustomImage)`
+  max-width: 300px;
+  height: auto;
+  padding-bottom: 3em;
 `

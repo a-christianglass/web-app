@@ -10,6 +10,10 @@ export const query = graphql`
       content
       title
     }
+    button {
+      title
+      url
+    }
     imageIndustriesServices {
       altText
       sourceUrl
