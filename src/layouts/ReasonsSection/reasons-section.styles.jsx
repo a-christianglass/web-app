@@ -15,6 +15,7 @@ export const LeftGrid = styled(Grid)`
   display: flex;
   justify-content: center;
   align-items: center;
+
   h2 {
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     color: #0d5c80;
@@ -37,13 +38,22 @@ export const ContentText = styled(Typography)`
   color: rgba(29, 56, 69, 0.75);
   font-size: 1rem;
 `
-
-export const LeftTextWrapper = styled.div`
-  max-width: 400px;
+export const TopTextWrapper = styled.div`
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5em;
 `
 
-export const RightTextWrapper = styled.div`
-  max-width: 565px;
+export const LeftTextWrapper = styled.div`
+  h2 {
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+    color: #0d5c80;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 47px;
+    padding-bottom: 1.5em;
+  }
 `
 
 export const ReasonGrid = styled(Grid)`
@@ -61,6 +71,7 @@ export const ReasonWrapper = styled.div`
   max-width: 455px;
   padding-bottom: 2em;
   margin-left: 50px;
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin-left: unset;
   }
@@ -73,6 +84,7 @@ export const ReasonTitle = styled(Typography)`
   font-weight: bold;
   margin-bottom: 1em;
   color: #0d5c80;
+
   &:before {
     content: "";
     position: absolute;
