@@ -35,6 +35,7 @@ import RailingsTabs from "../layouts/RailingsTabs"
 import GalleryGrid from "../layouts/GalleryGrid"
 import WindowsTabs from "../layouts/WindowsTabs"
 import DoorsTabs from "../layouts/DoorsTabs/doors-tabs.component"
+import ProductsHome from "../layouts/ProductsHome"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -155,6 +156,16 @@ const Layouts = () => {
         }
       }
       doorsSlider: file(relativePath: { eq: "doorsSlider.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      product1: file(relativePath: { eq: "product1.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      product2: file(relativePath: { eq: "product2.png" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -1323,6 +1334,27 @@ const Layouts = () => {
             },
           },
         ]}
+      />
+      <LayoutTitle>ProductsHome</LayoutTitle>
+      <ProductsHome
+        leftContentProducts={{
+          image: staticQuery.product1,
+          title: "Frameless Shower Doors",
+          content: "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
+          button: {
+            title: "See More",
+            url: "/"
+          }
+        }}
+        rightContentProducts={{
+          image: staticQuery.product1,
+          title: "Frameless Shower Doors",
+          content: "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
+          button: {
+            title: "See More",
+            url: "/"
+          }
+        }}
       />
     </Layout>
   )
