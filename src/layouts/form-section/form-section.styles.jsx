@@ -18,6 +18,10 @@ export const LeftGrid = styled(Grid)`
 
 export const LeftWrapper = styled.div`
   max-width: 561px;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    margin-right: 2em;
+  }
+  
   h2 {
     font-style: normal;
     font-weight: bold;

@@ -17,11 +17,21 @@ export const Wrapper = styled(SectionWrapper)`
     width: 114px;
     height: 4px;
     border-radius: unset !important;
+    background-color: #1593CD;
   }
 
   .gatsby-image-wrapper img {
     object-fit: contain !important;
   }
+  .MuiTabs-scroller .MuiTabs-flexContainer button {
+    border-bottom: 7px solid #EAF1F6;
+  }
+  .MuiTabs-indicator {
+    background-color: #0D5C80;
+    height: 7px !important;
+  }
+  
+  
 `
 
 export const TopGrid = styled(Grid)`
@@ -38,10 +48,7 @@ export const CustomTabs = styled(Tabs)`
   .MuiTabs-scrollButtons {
     display: none;
   }
-
-  .MuiTabs-indicator {
-    height: 4px;
-  }
+  
 
   .MuiTabs-scroller {
     .MuiTabs-flexContainer {
