@@ -52,9 +52,11 @@ export const TextWrapper = styled.div`
 `
 
 export const Button = styled(CustomButton)`
-  background-color: ${({ theme }) => theme.palette.text.primary};
-  color: ${({ theme }) => theme.palette.text.secondary};
-  text-transform: capitalize;
+  background: #F89928;
+  box-shadow: 0 24px 44px rgba(12, 54, 88, 0.11);
+  border-radius: 4px;
+  color: white;
+  max-width: 307px;
 `
 
 export const LogoImage = styled(CustomImage)`

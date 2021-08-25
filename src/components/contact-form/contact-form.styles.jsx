@@ -25,7 +25,9 @@ export const FormWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin: auto;
   }
-  
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #879FB3;
+  }
   
 `
 export const Field = styled(TextField)`

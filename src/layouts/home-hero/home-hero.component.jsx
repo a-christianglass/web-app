@@ -29,7 +29,9 @@ const HomeHero = ({ imageHome, title, subtitle, button }) => {
               </Hidden>
               {subtitle && <h2>{parse(subtitle)}</h2>}
               {subtitle && <h1>{parse(title)}</h1>}
-              {/*{button && <S.Button href={button?.url}>{button?.title}</S.Button>}*/}
+              <Hidden mdUp>
+                <S.Button href="/contact">Schedule an Appointment</S.Button>
+              </Hidden>
             </S.TextWrapper>
           </Grid>
           <Hidden mdDown>
