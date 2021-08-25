@@ -1,6 +1,6 @@
 import React from "react"
 import * as S from "./contact-info.styles"
-import { Grid } from "@material-ui/core"
+import { Container, Grid } from "@material-ui/core"
 import PhoneIcon from "../../assets/icons/phone-blue.svg"
 import MailIcon from "../../assets/icons/blue-mail.svg"
 import LocationIcon from "../../assets/icons/location-blue.svg"
@@ -9,6 +9,9 @@ import parse from "html-react-parser"
 const ContactInfo = ({}) => {
   return (
     <S.Wrapper>
+      <Container>
+        <h2>Get in Touch</h2>
+      </Container>
       <Grid container>
         <S.ItemGrid item xs={12} md={4}>
           <S.ContentWrapper>

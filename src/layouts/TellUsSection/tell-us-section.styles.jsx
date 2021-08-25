@@ -58,6 +58,11 @@ export const FormWrapper = styled.div`
     color: #0d5c80;
     padding-bottom: 2em;
   }
+
+  .MuiRadio-colorSecondary.Mui-checked {
+    color: #879FB3;
+
+  }
 `
 
 export const Field = styled(TextField)`

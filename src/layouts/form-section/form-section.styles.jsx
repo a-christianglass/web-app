@@ -54,5 +54,14 @@ export const NumberWrapper = styled.div`
 `
 
 export const RightGrid = styled(Grid)`
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    padding-left: 3em;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    text-align: center;
+    margin: auto;
+  }
+  
 
 `

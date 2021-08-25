@@ -21,6 +21,12 @@ export const FormWrapper = styled.div`
     color: #0d5c80;
     margin-bottom: 1em;
   }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    margin: auto;
+  }
+  
+  
 `
 export const Field = styled(TextField)`
   input {
