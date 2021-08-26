@@ -4,6 +4,7 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 0;
+  background-color: white;
 `
 export const Title = styled.h2`
   font-style: normal;
