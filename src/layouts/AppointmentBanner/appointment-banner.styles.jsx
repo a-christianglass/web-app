@@ -45,16 +45,20 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   padding: 4em 1em;
 
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em;
-    flex-direction: column;
-    text-align: center;
-  }
-
   h2 {
     font-weight: 700;
     max-width: 710px;
     font-size: 2rem;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    h2 {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      margin-bottom: 1em;
+    }
   }
 `
 
@@ -62,4 +66,5 @@ export const Button = styled(CustomButton)`
   padding: 0.5em 1em;
   background-color: ${({ theme }) => theme.palette.tertiary.main};
   text-transform: capitalize;
+  font-size: 1rem;
 `
