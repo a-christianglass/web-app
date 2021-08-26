@@ -22,7 +22,7 @@ background-color: #f0f5f7;
   }
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 400px;
     height: 100%;
@@ -30,7 +30,11 @@ background-color: #f0f5f7;
     right: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(270deg, #FFFFFF 11.36%, rgba(255, 255, 255, 0) 59.47%);
+    background: linear-gradient(
+      270deg,
+      #ffffff 11.36%,
+      rgba(255, 255, 255, 0) 59.47%
+    );
   }
 
   .arrows > div:nth-child(1) {
@@ -66,6 +70,9 @@ export const TextWrapper = styled.div`
 `
 export const LeftGrid = styled(Grid)`
   padding: 2em;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 2em 0;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,6 +145,6 @@ export const Button = styled(CustomButton)`
   text-transform: capitalize;
 `
 
-export const RightGrid  = styled(Grid)`
-  clip-path: inset( -100vw -100vw -100vw 0 );
+export const RightGrid = styled(Grid)`
+  clip-path: inset(-100vw -100vw -100vw 0);
 `
