@@ -17,7 +17,7 @@ export const BgImage = styled(CustomBgImage)`
   height: 100%;
   padding: 4em;
   ${({ theme }) => theme.breakpoints.down("md")} {
-    padding: 4em 2em;
+    padding: 4em 16px;
   }
   display: flex;
   justify-content: center;
