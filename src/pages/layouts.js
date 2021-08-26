@@ -36,6 +36,7 @@ import GalleryGrid from "../layouts/GalleryGrid"
 import WindowsTabs from "../layouts/WindowsTabs"
 import DoorsTabs from "../layouts/DoorsTabs/doors-tabs.component"
 import ProductsHome from "../layouts/ProductsHome"
+import PartnersGrid from "../layouts/PartnersGrid/partners-grid.component"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -1341,21 +1342,71 @@ const Layouts = () => {
         leftContentProducts={{
           image: staticQuery.product1,
           title: "Frameless Shower Doors",
-          content: "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
+          content:
+            "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
           button: {
             title: "See More",
-            url: "/"
-          }
+            url: "/",
+          },
         }}
         rightContentProducts={{
           image: staticQuery.product1,
           title: "Frameless Shower Doors",
-          content: "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
+          content:
+            "A-Christian Glass specializes in custom frameless shower doors. If you are building a new home, renovating an existing bathroom, or simply replacing a shower door, we have the knowledge, skills, and experience to make your dream shower a reality.",
           button: {
             title: "See More",
-            url: "/"
-          }
+            url: "/",
+          },
         }}
+      />
+      <LayoutTitle>PartnersLogos</LayoutTitle>
+      <PartnersGrid
+        partnersTitle="Partnering with the Best"
+        partnersLogos={[
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+
+          {
+            image: { sourceUrl: staticQuery.logo },
+          },
+        ]}
       />
     </Layout>
   )

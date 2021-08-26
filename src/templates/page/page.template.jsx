@@ -145,6 +145,9 @@ export const query = graphql`
           ... on WpPage_Pagebuilder_Layouts_ProductsHome {
             ...ProductsHome
           }
+          ... on WpPage_Pagebuilder_Layouts_PartnersGrid {
+            ...PartnersGrid
+          }
         }
         pageConfiguration {
           hideFooter

@@ -32,6 +32,7 @@ import WindowsTabs from "./layouts/WindowsTabs"
 import DoorsTabs from "./layouts/DoorsTabs/doors-tabs.component"
 import DistributorSection from "./layouts/DistributorSection"
 import ProductsHome from "./layouts/ProductsHome"
+import PartnersGrid from "./layouts/PartnersGrid/"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -103,5 +104,7 @@ export const getPageLayout = layout => {
       return <DistributorSection {...layout} />
     case "ProductsHome":
       return <ProductsHome {...layout} />
+    case "PartnersGrid":
+      return <PartnersGrid {...layout} />
   }
 }
