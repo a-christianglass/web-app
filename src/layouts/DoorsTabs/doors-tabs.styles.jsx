@@ -10,28 +10,26 @@ export const Wrapper = styled(SectionWrapper)`
   background-color: #f5f8fa;
 
   .Mui-selected {
-    color: ${({ theme }) => theme.palette.primary.main};
+    color: #0d5c80;
   }
 
   .swiper-pagination-bullet {
     width: 114px;
     height: 4px;
     border-radius: unset !important;
-    background-color: #1593CD;
+    background-color: #1593cd;
   }
 
   .gatsby-image-wrapper img {
     object-fit: contain !important;
   }
   .MuiTabs-scroller .MuiTabs-flexContainer button {
-    border-bottom: 7px solid #EAF1F6;
+    border-bottom: 7px solid #eaf1f6;
   }
   .MuiTabs-indicator {
-    background-color: #0D5C80;
+    background-color: #0d5c80;
     height: 7px !important;
   }
-  
-  
 `
 
 export const TopGrid = styled(Grid)`
@@ -48,7 +46,6 @@ export const CustomTabs = styled(Tabs)`
   .MuiTabs-scrollButtons {
     display: none;
   }
-  
 
   .MuiTabs-scroller {
     .MuiTabs-flexContainer {
@@ -67,10 +64,10 @@ export const CustomTabs = styled(Tabs)`
   }
 `
 export const CustomTab = styled(Tab)`
-  color: #0d5c80;
-  opacity: 1;
-  text-transform: capitalize;
-  font-size: 1.2rem;
+  color: rgba(13, 46, 77, 0.75);
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600;
   min-width: 296px;
 

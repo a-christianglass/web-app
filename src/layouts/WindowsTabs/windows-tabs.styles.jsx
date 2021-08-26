@@ -9,7 +9,7 @@ export const Wrapper = styled(SectionWrapper)`
   padding: 2em 0 5em 0;
   background-color: #f5f8fa;
   .Mui-selected {
-    color: ${({ theme }) => theme.palette.primary.main};
+    color: #0d5c80;
   }
 `
 
@@ -49,19 +49,18 @@ export const CustomTabs = styled(Tabs)`
   }
 
   .MuiTabs-scroller .MuiTabs-flexContainer button {
-    border-bottom: 7px solid #EAF1F6;
+    border-bottom: 7px solid #eaf1f6;
   }
   .MuiTabs-indicator {
-    background-color: #0D5C80;
+    background-color: #0d5c80;
     height: 7px !important;
   }
-  
 `
 export const CustomTab = styled(Tab)`
-  color: #0d5c80;
-  opacity: 1;
-  text-transform: capitalize;
-  font-size: 1.2rem;
+  color: rgba(13, 46, 77, 0.75);
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600;
   min-width: 296px;
 
