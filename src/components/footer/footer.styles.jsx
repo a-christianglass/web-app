@@ -286,7 +286,7 @@ export const MobileTextWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  padding: 2em;
+  padding: 2em 16px;
   h2 {
     color: rgba(29, 56, 69, 0.75);
     text-transform: uppercase;
@@ -299,7 +299,7 @@ export const MobileTextWrapper = styled.div`
 export const MobileContentWrapper = styled.div`
   background-color: #ffffff;
   margin-top: -3px;
-  padding: 0 2em 2em;
+  padding: 0 16px 2em;
 
   h3 {
     font-weight: bold;
