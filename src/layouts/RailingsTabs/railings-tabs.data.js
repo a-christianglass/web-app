@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   fragment RailingsTabs on WpPage_Pagebuilder_Layouts_RailingsTabs {
-    descriptionRaillings
     fieldGroupName
     tabsRaillings {
       tab {
@@ -12,6 +11,7 @@ export const query = graphql`
             title
           }
         }
+        description
         title
       }
     }

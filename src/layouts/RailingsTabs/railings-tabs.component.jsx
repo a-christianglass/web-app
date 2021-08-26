@@ -17,9 +17,7 @@ const RailingsTabs = ({ title, descriptionRaillings, tabsRaillings }) => {
           <Grid item xs={12} md={6}>
             <S.TitleWrapper>{title && <h1>{title}</h1>}</S.TitleWrapper>
           </Grid>
-          <Grid item xs={12} md={6}>
-            {descriptionRaillings && <S.RightText>{parse(descriptionRaillings)}</S.RightText>}
-          </Grid>
+          <Grid item xs={12} md={6} />
         </S.TopGrid>
         <S.CustomTabs
           value={value}
@@ -34,6 +32,12 @@ const RailingsTabs = ({ title, descriptionRaillings, tabsRaillings }) => {
         {tabsRaillings.map((tab, index) => (
           <S.CustomTabPanel hidden={value !== index}>
             <Grid container>
+              <S.TabContentWrapper>
+                <S.TabTitle>{parse(tab.tab.title)}</S.TabTitle>
+                {tab.tab.description && (
+                  <S.RightText>{parse(tab.tab.description)}</S.RightText>
+                )}
+              </S.TabContentWrapper>
               {tab.tab.features.map((feature, index) => (
                 <Grid item xs={12} md={6}>
                   <S.ContentWrapper>

@@ -48,15 +48,20 @@ export const CustomTabs = styled(Tabs)`
     }
   }
   .MuiTabs-scroller .MuiTabs-flexContainer button {
-    border-bottom: 7px solid #EAF1F6;
+    border-bottom: 7px solid #eaf1f6;
   }
   .MuiTabs-indicator {
-    background-color: #0D5C80;
+    background-color: #0d5c80;
     height: 7px !important;
   }
-  
-  
 `
+export const TabTitle = styled.h2`
+  font-weight: bold;
+  font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+  line-height: 47px;
+  color: #0d5c80;
+`
+
 export const CustomTab = styled(Tab)`
   color: #0d5c80;
   opacity: 1;
@@ -181,4 +186,8 @@ export const FeatureText = styled(Typography)`
   font-size: 1rem;
   line-height: 26px;
   color: rgba(29, 56, 69, 0.75);
+`
+
+export const TabContentWrapper = styled.div`
+  max-width: 750px;
 `
