@@ -10,29 +10,34 @@ const LogosGrid = ({ logos, title, featuredLogos }) => {
     <S.Wrapper>
       <Container>
         <S.Title>{title}</S.Title>
-        <IconSlider
-          autoHeight={false}
-          slidesToShow={2}
-          spacingBetween={30}
-          slidesPerColumn={2}
-          loop={false}
-          breakpoints={{
-            600: {
-              slidesPerView: 2,
-              slidesPerColumn: 2,
-            },
-            1200: {
-              slidesPerView: 4,
-              slidesPerColumn: 2,
-            },
-          }}
-        >
-          {featuredLogos.map(({ featuredImage }, index) => (
-            <SwiperSlide key={`featured-icon-slide-${index}`}>
-              {featuredImage && <S.CustomLogo img={featuredImage.sourceUrl} />}
-            </SwiperSlide>
-          ))}
-        </IconSlider>
+        {featuredLogos && (
+          <IconSlider
+            autoHeight={false}
+            slidesToShow={2}
+            spacingBetween={30}
+            slidesPerColumn={2}
+            loop={false}
+            breakpoints={{
+              600: {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+              },
+              1200: {
+                slidesPerView: 4,
+                slidesPerColumn: 2,
+              },
+            }}
+          >
+            {featuredLogos.map(({ featuredImage }, index) => (
+              <SwiperSlide key={`featured-icon-slide-${index}`}>
+                {featuredImage && (
+                  <S.CustomLogo img={featuredImage.sourceUrl} />
+                )}
+              </SwiperSlide>
+            ))}
+          </IconSlider>
+        )}
+
         <IconSlider
           autoHeight={false}
           slidesToShow={2}
