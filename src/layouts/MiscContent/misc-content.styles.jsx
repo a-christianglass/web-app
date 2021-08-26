@@ -7,6 +7,7 @@ export const Wrapper = styled(Container)`
   }
   padding: 4em 10em;
   margin-left: unset;
+  background-color: #ffffff;
 `
 
 export const ContactWrapper = styled.div`
