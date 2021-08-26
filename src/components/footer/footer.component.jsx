@@ -55,7 +55,9 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                           satisfied with your new impact resistant windows and
                           doors.
                         </p>
-                        <S.Button href="/">Schedule an Appointment</S.Button>
+                        <S.Button href="/contact/">
+                          Schedule an Appointment
+                        </S.Button>
                       </S.ContentWrapper>
                     </S.ContentGrid>
                   </Grid>
@@ -81,6 +83,9 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                       fit. We are meticulous to ensure you are 100% satisfied
                       with your new impact resistant windows and doors.
                     </p>
+                    <S.Button href="/contact/">
+                      Schedule an Appointment
+                    </S.Button>
                   </S.MobileContentWrapper>
                 </Grid>
               </Grid>
