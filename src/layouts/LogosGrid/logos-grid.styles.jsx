@@ -23,7 +23,7 @@ export const Wrapper = styled(SectionWrapper)`
 `
 
 export const CustomLogo = styled(CustomImage)`
-  width: 160px;
+  max-width: 160px;
   height: 90px;
   object-fit: contain;
   margin: auto;
