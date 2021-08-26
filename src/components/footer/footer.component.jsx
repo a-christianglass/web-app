@@ -15,7 +15,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import Container from "@material-ui/core/Container"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import theme from "../../theme"
-import PhoneIcon from "../../assets/icons/phone.svg"
 
 const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
   const isXS = useMediaQuery(theme.breakpoints.down("xs"))
@@ -141,7 +140,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                     info@a-christianglass.com
                   </a>
                 </S.MailWrapper>
-                <h3>FollowUs</h3>
+                <h3>Follow Us</h3>
                 <S.IconWrapper>
                   <a href="#yt" target="_blank">
                     <YouTubeIcon />
