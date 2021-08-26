@@ -255,4 +255,5 @@ export const DoorTab = styled(Tab)`
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600;
+  padding-bottom: 1.5em;
 `
