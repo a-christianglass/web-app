@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import * as S from "./doors-tabs.styles"
 import Container from "@material-ui/core/Container"
-import { Grid } from "@material-ui/core"
+import { Grid, Tab, Tabs } from "@material-ui/core"
 import parse from "html-react-parser"
 import DoorTabSlider from "../../components/doors-tab-slider/door-tab-slider.component"
 
@@ -27,16 +27,18 @@ const DoorsTabs = ({ titleDoors, descriptionDoors, tabsDoors }) => {
             )}
           </Grid>
         </S.TopGrid>
-        <S.CustomTabs
+        <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
           variant="scrollable"
+          scrollButtons="on"
+          centered
         >
           {tabsDoors.map(tab => (
-            <S.CustomTab label={parse(tab.tab.title)} />
+            <S.DoorTab label={parse(tab.tab.title)} />
           ))}
-        </S.CustomTabs>
+        </Tabs>
         {tabsDoors.map((tab, index) => {
           if (value === index) {
             return (

@@ -13,6 +13,10 @@ export const Wrapper = styled(SectionWrapper)`
     color: #0d5c80;
   }
 
+  .MuiTabs-scrollButtons {
+    color: rgba(13, 46, 77, 0.75);
+  }
+
   .swiper-pagination-bullet {
     width: 114px;
     height: 4px;
@@ -238,4 +242,12 @@ export const SliderGrid = styled(Grid)`
   ${({ theme }) => theme.breakpoints.up("md")} {
     padding: 3em;
   }
+`
+
+export const DoorTab = styled(Tab)`
+  color: rgba(13, 46, 77, 0.75);
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  font-weight: 600;
 `
