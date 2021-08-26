@@ -55,7 +55,7 @@ export const SingleWrapper = styled(Container)`
   }
   span {
     color: #0d5c80;
-   
+
     /* identical to box height, or 26px */
 
     letter-spacing: 0.005em;
@@ -94,6 +94,9 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  span {
+    border-bottom: 4px solid transparent;
+  }
 
   &.active {
     span {
@@ -136,7 +139,7 @@ export const ItemDescGrid = styled(Grid)`
   }
 
   ul {
-    padding-inline-start: 34px
+    padding-inline-start: 34px;
   }
 
   li {
