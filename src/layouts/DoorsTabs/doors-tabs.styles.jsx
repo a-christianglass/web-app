@@ -92,6 +92,7 @@ export const CustomTabPanel = styled.div`
   -moz-animation: fadeIn ease 1s;
   -o-animation: fadeIn ease 1s;
   -ms-animation: fadeIn ease 1s;
+  padding: 2em 0;
 
   @keyframes fadeIn {
     0% {
