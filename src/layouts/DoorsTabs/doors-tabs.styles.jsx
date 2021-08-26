@@ -22,6 +22,9 @@ export const Wrapper = styled(SectionWrapper)`
     height: 4px;
     border-radius: unset !important;
     background-color: #1593cd;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      max-width: 60px;
+    }
   }
 
   .gatsby-image-wrapper img {
