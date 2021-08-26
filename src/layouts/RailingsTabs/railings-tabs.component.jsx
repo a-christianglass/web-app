@@ -3,7 +3,7 @@ import * as S from "./railings-tabs.styles"
 import { Grid } from "@material-ui/core"
 import parse from "html-react-parser"
 import Container from "@material-ui/core/Container"
-const RailingsTabs = ({ title, descriptionRaillings, tabsRaillings }) => {
+const RailingsTabs = ({ title, tabsRaillings }) => {
   const [value, setValue] = useState(0)
   const handleChange = (event, newValue) => {
     setValue(newValue)
