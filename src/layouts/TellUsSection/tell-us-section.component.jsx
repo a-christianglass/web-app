@@ -48,7 +48,7 @@ const TellUsSection = ({}) => {
             </Grid>
             <Grid xs={12}>
               <S.ProfessionWrapper>
-                <span>I am a...</span>
+                <span>I am a/an...</span>
                 <Grid container>
                   <RadioGroup
                     row
