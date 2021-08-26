@@ -48,24 +48,33 @@ export const TextWrapper = styled.div`
     text-transform: uppercase;
     color: rgba(13, 46, 77, 0.75);
     letter-spacing: 0.06em;
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
     line-height: 17px;
-    font-size: 14px;
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(12)};
+    }
     opacity: 0.74;
     margin-bottom: 1em;
   }
   h2 {
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     line-height: 47px;
     color: #0d5c80;
     margin-bottom: 0.5em;
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
   h4 {
-    font-size: 16px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
     line-height: 26px;
     color: rgba(29, 56, 69, 0.75);
     font-style: normal;
     font-weight: 500;
     margin-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
   }
 `
 export const LeftGrid = styled(Grid)`
