@@ -23,15 +23,19 @@ export const Wrapper = styled(SectionWrapper)`
    `};
 `
 export const Image = styled(CustomImage)`
-  padding: 4em 0;
+  padding: 2em 0;
 `
 export const ServiceWrapper = styled.div`
   h2 {
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     line-height: 47px;
     color: #0d5c80;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
@@ -82,6 +86,10 @@ export const ContentText = styled(Typography)`
   line-height: 23px;
   color: rgba(29, 56, 69, 0.75);
   margin-bottom: 2em;
+  
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  }
 
   strong {
     font-weight: bold;
