@@ -4,11 +4,9 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import { Typography } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 2em;
+  padding: 4em 0;
   background-color: white;
   .swiper-container {
-    padding-bottom: 2em;
-    padding-top: 2em;
   }
 
   .left {
@@ -28,7 +26,7 @@ export const CustomLogo = styled(CustomImage)`
   width: 160px;
   height: 90px;
   object-fit: contain;
-
+  margin: auto;
   img {
     width: 100%;
     height: 100%;

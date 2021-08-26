@@ -295,6 +295,12 @@ const Layouts = () => {
       <LayoutTitle>LogosGrid</LayoutTitle>
       <LogosGrid
         title="Partnering with the Best"
+        featuredLogos={[
+          { featuredImage: { sourceUrl: staticQuery.logo } },
+          { featuredImage: { sourceUrl: staticQuery.logo } },
+          { featuredImage: { sourceUrl: staticQuery.logo } },
+          { featuredImage: { sourceUrl: staticQuery.logo } },
+        ]}
         logos={[
           {
             image: { sourceUrl: staticQuery.logo },

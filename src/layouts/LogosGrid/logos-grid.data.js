@@ -16,5 +16,17 @@ export const query = graphql`
         }
       }
     }
+    featuredLogos {
+      featuredImage {
+        altText
+        sourceUrl
+        title
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+          }
+        }
+      }
+    }
   }
 `
