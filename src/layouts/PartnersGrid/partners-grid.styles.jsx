@@ -5,6 +5,9 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 0;
   background-color: white;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 0;
+  }
 `
 export const Title = styled.h2`
   font-style: normal;
@@ -14,6 +17,9 @@ export const Title = styled.h2`
   color: #0d5c80;
   text-align: center;
   margin-bottom: 1em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(28)};
+  }
 `
 
 export const CustomLogo = styled(CustomImage)`
