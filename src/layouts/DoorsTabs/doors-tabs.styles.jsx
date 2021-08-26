@@ -116,7 +116,7 @@ export const LeftWrapper = styled.div`
   h2 {
     font-style: normal;
     font-weight: bold;
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     line-height: 47px;
     color: #0d5c80;
     margin-bottom: 0.5em;
@@ -156,6 +156,10 @@ export const TitleWrapper = styled.div`
     line-height: 47px;
     letter-spacing: 0.02em;
     color: #0d5c80;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
