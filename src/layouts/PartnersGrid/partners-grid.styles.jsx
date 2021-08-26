@@ -29,8 +29,11 @@ export const CustomLogo = styled(CustomImage)`
   filter: grayscale(75%);
   opacity: 0.75;
   margin: auto;
-
   :hover {
+    filter: unset;
+    opacity: 1;
+  }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
     filter: unset;
     opacity: 1;
   }
