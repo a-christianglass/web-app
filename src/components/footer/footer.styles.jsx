@@ -5,6 +5,7 @@ import Rectangle from "../../assets/icons/Rectangle.svg"
 import CustomBgImage from "../custom-bg-image/custom-bg-image.component"
 import CustomButton from "../custom-button/custom-button.component"
 import CustomLink from "../custom-link/custom-link.component"
+import Container from "@material-ui/core/Container"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
@@ -207,6 +208,13 @@ export const BannerWrapper = styled.div`
   );
    `};
 `
+
+export const BannerContainer = styled(Container)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-left: unset;
+    padding-right: unset;
+  }
+`
 export const BgImageWrapper = styled.div`
   box-shadow: 0px 44px 62px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
@@ -266,4 +274,43 @@ export const LinkItem = styled(CustomLink)`
   line-height: 29px;
   color: white;
   text-decoration: none;
+`
+
+export const MobileBgImage = styled(CustomBgImage)`
+  width: 100%;
+  height: 388px;
+`
+export const MobileTextWrapper = styled.div`
+  max-width: 238px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 2em;
+  h2 {
+    color: rgba(29, 56, 69, 0.75);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    line-height: 23px;
+    text-align: center;
+  }
+`
+export const MobileContentWrapper = styled.div`
+  background-color: #ffffff;
+  margin-top: -3px;
+  padding: 0 2em 2em;
+
+  h3 {
+    font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 29px;
+    color: #0d5c80;
+  }
+
+  p {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    line-height: 21px;
+    color: rgba(29, 56, 69, 0.75);
+  }
 `

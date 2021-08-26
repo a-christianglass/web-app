@@ -13,12 +13,20 @@ import parse from "html-react-parser"
 import { Grid } from "@material-ui/core"
 import { graphql, useStaticQuery } from "gatsby"
 import Container from "@material-ui/core/Container"
-import theme from "../../theme";
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import theme from "../../theme"
+import PhoneIcon from "../../assets/icons/phone.svg"
 
 const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
+  const isSM = useMediaQuery(theme.breakpoints.down("sm"))
   const staticQuery = useStaticQuery(graphql`
     query {
       footerBg: file(relativePath: { eq: "footerBg.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      footerMobile: file(relativePath: { eq: "footer-mobile.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
@@ -30,28 +38,54 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
     <S.Wrapper>
       {!hideFooterBanner && (
         <S.BannerWrapper whiteFooterBanner={whiteFooterBanner}>
-          <Container>
-            <S.BgImageWrapper>
-              <S.BgImage img={staticQuery.footerBg}>
-                <Grid container>
-                  <Grid item xs={12} md={6} />
-                  <S.ContentGrid item xs={12} md={6}>
-                    <S.ContentWrapper>
+          {!isSM ? (
+            <S.BannerContainer>
+              <S.BgImageWrapper>
+                <S.BgImage img={staticQuery.footerBg}>
+                  <Grid container>
+                    <Grid item xs={12} md={6} />
+                    <S.ContentGrid item xs={12} md={6}>
+                      <S.ContentWrapper>
+                        <h2>A-Christian Glass</h2>
+                        <h3>Experience Matters</h3>
+                        <p>
+                          Our experienced installation team takes precise
+                          measurements so your new windows and doors are a
+                          perfect fit. We are meticulous to ensure you are 100%
+                          satisfied with your new impact resistant windows and
+                          doors.
+                        </p>
+                        <S.Button href="/">Schedule an Appointment</S.Button>
+                      </S.ContentWrapper>
+                    </S.ContentGrid>
+                  </Grid>
+                </S.BgImage>
+              </S.BgImageWrapper>
+            </S.BannerContainer>
+          ) : (
+            <S.BannerContainer>
+              <Grid container direction="column">
+                <Grid item>
+                  <S.MobileBgImage img={staticQuery.footerMobile}>
+                    <S.MobileTextWrapper>
                       <h2>A-Christian Glass</h2>
-                      <h3>Experience Matters</h3>
-                      <p>
-                        Our experienced installation team takes precise
-                        measurements so your new windows and doors are a perfect
-                        fit. We are meticulous to ensure you are 100% satisfied
-                        with your new impact resistant windows and doors.
-                      </p>
-                      <S.Button href="/">Schedule an Appointment</S.Button>
-                    </S.ContentWrapper>
-                  </S.ContentGrid>
+                    </S.MobileTextWrapper>
+                  </S.MobileBgImage>
                 </Grid>
-              </S.BgImage>
-            </S.BgImageWrapper>
-          </Container>
+                <Grid item>
+                  <S.MobileContentWrapper>
+                    <h3>Experience Matters</h3>
+                    <p>
+                      Our experienced installation team takes precise
+                      measurements so your new windows and doors are a perfect
+                      fit. We are meticulous to ensure you are 100% satisfied
+                      with your new impact resistant windows and doors.
+                    </p>
+                  </S.MobileContentWrapper>
+                </Grid>
+              </Grid>
+            </S.BannerContainer>
+          )}
         </S.BannerWrapper>
       )}
       <Container>
@@ -125,7 +159,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                 </S.IconWrapper>
               </S.RightGrid>
             </S.BottomGrid>
-            <S.LastGrid container >
+            <S.LastGrid container>
               <S.BBBGrid xs={12} md={6}>
                 <img
                   src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/BBB-seal-footer.png"
