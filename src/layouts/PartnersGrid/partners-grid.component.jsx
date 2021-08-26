@@ -8,7 +8,7 @@ const PartnersGrid = ({ partnersTitle, partnersLogos }) => {
     <S.Wrapper>
       <Container>
         {partnersTitle && <S.Title>{partnersTitle}</S.Title>}
-        <Grid container>
+        <Grid container spacing={30}>
           {partnersLogos &&
             partnersLogos.map(({ image }, index) => (
               <Grid item xs={6} md={2}>

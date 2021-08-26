@@ -22,6 +22,7 @@ export const CustomLogo = styled(CustomImage)`
   object-fit: contain;
   filter: grayscale(75%);
   opacity: 0.75;
+  margin: auto;
 
   :hover {
     filter: unset;
