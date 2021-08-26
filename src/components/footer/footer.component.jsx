@@ -18,7 +18,7 @@ import theme from "../../theme"
 import PhoneIcon from "../../assets/icons/phone.svg"
 
 const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
-  const isSM = useMediaQuery(theme.breakpoints.down("sm"))
+  const isXS = useMediaQuery(theme.breakpoints.down("xs"))
   const staticQuery = useStaticQuery(graphql`
     query {
       footerBg: file(relativePath: { eq: "footerBg.png" }) {
@@ -38,7 +38,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
     <S.Wrapper>
       {!hideFooterBanner && (
         <S.BannerWrapper whiteFooterBanner={whiteFooterBanner}>
-          {!isSM ? (
+          {!isXS ? (
             <S.BannerContainer>
               <S.BgImageWrapper>
                 <S.BgImage img={staticQuery.footerBg}>

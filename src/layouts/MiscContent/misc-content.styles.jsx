@@ -5,13 +5,20 @@ export const Wrapper = styled(Container)`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
   }
+  padding: 4em 10em;
   margin-left: unset;
-  padding: 6em 10em;
 `
-export const ContentWrapper = styled.div``
+
+export const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    justify-content: center;
+  }
+`
 
 export const TextWrapper = styled.div`
-  max-width: 745px;
   h2 {
     font-style: normal;
     font-weight: bold;
