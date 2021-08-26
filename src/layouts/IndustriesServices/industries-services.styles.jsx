@@ -26,10 +26,6 @@ export const Image = styled(CustomImage)`
   padding: 4em 0;
 `
 export const ServiceWrapper = styled.div`
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em;
-  }
-
   h2 {
     font-style: normal;
     font-weight: bold;
