@@ -73,7 +73,8 @@ const ContactForm = () => {
         </S.CustomMenuItem>
         <S.CustomMenuItem value="doors">Doors</S.CustomMenuItem>
         <S.CustomMenuItem value="windows">Windows</S.CustomMenuItem>
-        <S.CustomMenuItem value="railway">Railway</S.CustomMenuItem>
+        <S.CustomMenuItem value="railway">Railings</S.CustomMenuItem>
+        <S.CustomMenuItem value="railway">Showers</S.CustomMenuItem>
       </S.CustomSelect>
       <S.TextBlock
         id="outlined-multiline-static"
