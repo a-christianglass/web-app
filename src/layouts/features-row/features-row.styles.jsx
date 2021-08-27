@@ -27,8 +27,9 @@ export const RightGrid = styled(Grid)`
   justify-content: center;
   align-items: center;
   padding: 2em;
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em 16px;
+    padding: 2em 16px 0;
   }
 `
 
