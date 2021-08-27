@@ -6,6 +6,9 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 2em;
   background-color: #f0f5f7;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 0;
+  }
 `
 
 export const LeftGrid = styled(Grid)`

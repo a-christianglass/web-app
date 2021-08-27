@@ -6,6 +6,9 @@ export const Wrapper = styled(SectionWrapper)`
   padding-top: 4em;
   padding-bottom: 0;
   background-color: white;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-top: 2em;
+  }
 `
 export const LeftGrid = styled(Grid)`
   display: flex;
@@ -18,6 +21,9 @@ export const LeftGrid = styled(Grid)`
     font-weight: bold;
     line-height: 47px;
     margin-bottom: 1rem;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
   }
 `
 
@@ -32,6 +38,9 @@ export const ContentText = styled(Typography)`
   line-height: 26px;
   font-style: normal;
   font-weight: normal;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  }
 `
 
 export const LeftTextWrapper = styled.div`
