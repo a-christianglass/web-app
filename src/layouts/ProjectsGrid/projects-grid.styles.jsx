@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from "@material-ui/core"
 import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 5em 2em;
+  //padding: 5em 2em;
   ${({ bgColor }) =>
     bgColor === "white"
       ? `
@@ -17,12 +17,15 @@ export const Wrapper = styled(SectionWrapper)`
    `};
 `
 export const TopGrid = styled(Grid)`
-  margin-bottom: 5em;
+  margin-bottom: 1em;
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    margin-bottom: 3em;
+  } ;
 `
 export const LeftGrid = styled(Grid)`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  //justify-content: center;
+  //align-items: center;
   h2 {
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     color: #0d5c80;
@@ -60,9 +63,9 @@ export const BottomGrid = styled(Grid)`
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
+  //margin: auto;
   background-color: white;
-  max-width: 400px;
+  //max-width: 400px;
   border: 0.5px solid rgba(188, 197, 204, 0.2);
   border-radius: 5px;
   margin-bottom: 2em;
