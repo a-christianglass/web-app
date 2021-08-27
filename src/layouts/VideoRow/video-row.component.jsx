@@ -17,7 +17,7 @@ const VideoRow = ({ logo, title, contentVideoRow, videoBg, youtubeId }) => {
             <S.LeftWrapper>
               {title && <h2>{parse(title)}</h2>}
               {contentVideoRow && (
-                <Typography>{parse(contentVideoRow)}</Typography>
+                <S.Content>{parse(contentVideoRow)}</S.Content>
               )}
             </S.LeftWrapper>
           </S.LeftGrid>
