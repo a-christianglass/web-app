@@ -8,7 +8,8 @@ export const Wrapper = styled(SectionWrapper)`
   padding: 0;
 `
 export const ContentWrapper = styled.div`
-  padding: 4em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 `
 export const LeftGrid = styled(Grid)`
   display: flex;
@@ -54,9 +55,6 @@ export const NumberWrapper = styled.div`
 `
 
 export const RightGrid = styled(Grid)`
-  ${({ theme }) => theme.breakpoints.up("md")} {
-    padding-left: 3em;
-  }
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     text-align: center;
