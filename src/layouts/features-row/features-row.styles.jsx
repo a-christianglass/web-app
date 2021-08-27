@@ -27,6 +27,9 @@ export const RightGrid = styled(Grid)`
   justify-content: center;
   align-items: center;
   padding: 2em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 16px;
+  }
 `
 
 export const ContentWrapper = styled.div`
@@ -34,10 +37,13 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   max-width: 477px;
   h2 {
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     color: #0d5c80;
     font-weight: bold;
     margin-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
 `
 export const FeatureWrapper = styled.div`
@@ -63,5 +69,19 @@ export const ContentText = styled(Typography)`
     height: 32px;
     background: url(${CircleCheckIcon}) no-repeat center center;
     background-size: cover;
+  }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    margin-left: 36px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      top: 4px;
+      width: 28px;
+      height: 28px;
+      background: url(${CircleCheckIcon}) no-repeat center center;
+      background-size: cover;
+    }
   }
 `
