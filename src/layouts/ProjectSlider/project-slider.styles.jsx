@@ -21,7 +21,7 @@ background-color: #f0f5f7;
     overflow: unset;
   }
 
-  ${({ theme }) => theme.breakpoints.up("md")} {
+  ${({ theme }) => theme.breakpoints.up("lg")} {
     &:before {
       content: "";
       position: absolute;
