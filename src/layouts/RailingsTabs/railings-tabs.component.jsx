@@ -32,7 +32,9 @@ const RailingsTabs = ({ title, tabsRaillings }) => {
         {tabsRaillings.map((tab, index) => (
           <S.CustomTabPanel hidden={value !== index}>
             <S.TabContentWrapper>
-              <S.TabTitle>{parse(tab.tab.subtitle)}</S.TabTitle>
+              {tab.tab.subtitle && (
+                <S.TabTitle>{parse(tab.tab.subtitle)}</S.TabTitle>
+              )}
               {tab.tab.description && (
                 <S.RightText>{parse(tab.tab.description)}</S.RightText>
               )}
