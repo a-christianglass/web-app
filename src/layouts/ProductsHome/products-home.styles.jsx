@@ -27,7 +27,9 @@ export const TextWrapper = styled.div`
 
   p {
     padding-bottom: 2em;
-    min-height: 178px;
+    ${({ theme }) => theme.breakpoints.up("md")} {
+      min-height: 178px;
+    }
   }
 `
 

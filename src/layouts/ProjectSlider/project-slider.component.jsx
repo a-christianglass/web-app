@@ -51,7 +51,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
               <SwiperSlide key={`project-slide-${index}`}>
                 <S.CardWrapper>
                   {link && (
-                    <CustomLink to={link.url}>
+                    // <CustomLink to={link.url}>
                       <S.Card>
                         <CustomImage img={image} />
                         <S.LinkWrapper>
@@ -63,7 +63,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
                           </S.ArrowWrapper>
                         </S.LinkWrapper>
                       </S.Card>
-                    </CustomLink>
+                    // </CustomLink>
                   )}
                 </S.CardWrapper>
               </SwiperSlide>
