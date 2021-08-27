@@ -70,23 +70,6 @@ export const CustomTabs = styled(Tabs)`
     }
   }
 `
-export const CustomTab = styled(Tab)`
-  color: rgba(13, 46, 77, 0.75);
-  opacity: 0.75;
-  text-transform: uppercase;
-  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
-  font-weight: 600;
-  min-width: 296px;
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    min-width: 220px;
-    font-size: 0.875rem;
-  }
-
-  ${({ theme }) => theme.breakpoints.down("xs")} {
-    min-width: 160px;
-  }
-`
 
 export const CustomTabPanel = styled.div`
   color: white;
