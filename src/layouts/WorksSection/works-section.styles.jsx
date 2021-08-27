@@ -9,10 +9,7 @@ export const Wrapper = styled(SectionWrapper)`
 `
 export const BgImageWrapper = styled(CustomBgImage)``
 export const WorksWrapper = styled.div`
-  padding: 6em 10em;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em;
-  }
+  padding: 2em 0;
 `
 
 export const TopGrid = styled(Grid)`
@@ -29,6 +26,11 @@ export const LeftWrapper = styled.div`
     font-weight: bold;
     line-height: 47px;
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+      margin-bottom: 0.5em;
+    }
   }
 `
 
