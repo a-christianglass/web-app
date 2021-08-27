@@ -13,6 +13,7 @@ export const query = graphql`
         }
         description
         title
+        subtitle
       }
     }
     title
