@@ -4,7 +4,7 @@ import { Grid, Typography } from "@material-ui/core"
 import CircleCheckIcon from "../../images/check-circle.svg"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 4em 2em;
+  padding: 4em 16px;
   background-color: #f0f5f7;
 `
 export const TopGrid = styled(Grid)`
@@ -37,6 +37,9 @@ export const ContentText = styled(Typography)`
   font-style: normal;
   color: rgba(29, 56, 69, 0.75);
   font-size: 1rem;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    text-align: left;
+  }
 `
 export const TopTextWrapper = styled.div`
   max-width: 750px;
@@ -53,6 +56,10 @@ export const LeftTextWrapper = styled.div`
     font-weight: bold;
     line-height: 47px;
     padding-bottom: 1.5em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
