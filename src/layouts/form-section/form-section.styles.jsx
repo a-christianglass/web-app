@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import { Grid, MenuItem, Select, TextField } from "@material-ui/core"
-import CustomButton from "../../components/custom-button/custom-button.component"
-import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 0;
@@ -22,13 +20,22 @@ export const LeftWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.up("md")} {
     margin-right: 2em;
   }
-  
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+
   h2 {
     font-style: normal;
     font-weight: bold;
     font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     line-height: 47px;
     color: #fafafa;
+
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
@@ -55,11 +62,8 @@ export const NumberWrapper = styled.div`
 `
 
 export const RightGrid = styled(Grid)`
-
   ${({ theme }) => theme.breakpoints.down("sm")} {
     text-align: center;
     margin: auto;
   }
-  
-
 `
