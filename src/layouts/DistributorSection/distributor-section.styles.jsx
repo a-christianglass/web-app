@@ -25,6 +25,7 @@ export const LeftGrid = styled(Grid)`
 export const ImageWrapper = styled(CustomImage)`
   width: 100%;
   max-width: 352px;
+  margin-bottom: 2em;
 `
 
 export const RightGrid = styled(Grid)`
@@ -47,6 +48,10 @@ export const TextWrapper = styled.div`
 
   h3 {
     margin-bottom: 1rem;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
