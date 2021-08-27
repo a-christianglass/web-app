@@ -142,22 +142,22 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                 </S.MailWrapper>
                 <h3>Follow Us</h3>
                 <S.IconWrapper>
-                  <a href="#yt" target="_blank">
+                  <a href="https://www.youtube.com/channel/UCaXWZG2ALK-pLT3szvr3LNA" target="_blank">
                     <YouTubeIcon />
-                  </a>{" "}
-                  <a href="#fb" target="_blank">
+                  </a>
+                  <a href="https://www.facebook.com/achristianglassdelray/" target="_blank">
                     <FacebookIcon />
                   </a>
-                  <a href="#ins" target="_blank">
+                  <a href="https://www.instagram.com/achristianglass/" target="_blank">
                     <InstagramIcon />
                   </a>
-                  <a href="#yelp" target="_blank">
+                  <a href="https://www.yelp.com/biz/a-christian-glass-delray-beach-3" target="_blank">
                     <YelpIcon />
                   </a>
-                  <a href="#pint" target="_blank">
+                  <a href="https://www.pinterest.com/achristianglass/" target="_blank">
                     <PinterestIcon />
                   </a>
-                  <a href="#lind" target="_blank">
+                  <a href="https://www.linkedin.com/company/a-christian-glass-mirror-company/" target="_blank">
                     <LinkedInIcon />
                   </a>
                 </S.IconWrapper>
