@@ -25,6 +25,9 @@ export const LeftWrapper = styled.div`
     font-style: normal;
     font-weight: bold;
     margin-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
 `
 
@@ -33,6 +36,9 @@ export const LeftContentText = styled(Typography)`
   color: rgba(29, 56, 69, 0.75);
   font-style: normal;
   font-weight: normal;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  }
 `
 
 export const RightGrid = styled(Grid)`
@@ -52,6 +58,9 @@ export const RightContentText = styled(Typography)`
     font-size: ${({ theme }) => theme.typography.pxToRem(18)};
     line-height: 29px;
     color: #0d5c80;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    }
   }
 `
 
