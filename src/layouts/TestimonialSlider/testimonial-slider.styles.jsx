@@ -7,23 +7,23 @@ export const Wrapper = styled(SectionWrapper)`
   //padding: 0;
   background-color: #f0f5f7;
   position: relative;
-   ${({ theme }) => theme.breakpoints.up('md')} {
-     &:before {
-       content: "";
-       position: absolute;
-       width: 337px;
-       height: 295px;
-       top: 70px;
-       right: 0;
-       z-index: 1;
-       pointer-events: none;
-       background: linear-gradient(
-               270deg,
-               #ffffff 11.36%,
-               rgba(255, 255, 255, 0) 59.47%
-       );
-     }
-   };
+  ${({ theme }) => theme.breakpoints.up("lg")} {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 337px;
+      height: 295px;
+      top: 70px;
+      right: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        270deg,
+        #ffffff 11.36%,
+        rgba(255, 255, 255, 0) 59.47%
+      );
+    }
+  }
 
   .swiper-container {
     width: 100%;

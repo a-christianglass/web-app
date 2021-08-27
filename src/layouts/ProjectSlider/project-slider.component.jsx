@@ -3,15 +3,19 @@ import * as S from "./project-slider.styles"
 import { Grid } from "@material-ui/core"
 import CustomSlider from "../../components/custom-slider/custom-slider.component"
 import { SwiperSlide } from "swiper/react"
-import CustomImage from "../../components/custom-image/custom-image.component"
-import { CustomLink } from "../../components/custom-link/custom-link.styles"
-import Arrow from "../../assets/icons/arrow.svg"
+import ProjectCard from "../../components/project-card/project-card.component"
 
 const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
   return (
     <S.Wrapper bgColor={color} contained>
       <Grid container>
-        <S.LeftGrid item xs={12} md={7} alignItems={"center"} justifyContent={"center"}>
+        <S.LeftGrid
+          item
+          xs={12}
+          md={7}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
           <S.TextWrapper>
             {leftContentProjectSlider.title && (
               <h3>{leftContentProjectSlider.title}</h3>
@@ -49,23 +53,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
           >
             {projects.map(({ image, link }, index) => (
               <SwiperSlide key={`project-slide-${index}`}>
-                <S.CardWrapper>
-                  {link && (
-                    // <CustomLink to={link.url}>
-                      <S.Card>
-                        <CustomImage img={image} />
-                        <S.LinkWrapper>
-                          <S.TitleWrapper>
-                            <span>{link.title}</span>
-                          </S.TitleWrapper>
-                          <S.ArrowWrapper>
-                            <Arrow />
-                          </S.ArrowWrapper>
-                        </S.LinkWrapper>
-                      </S.Card>
-                    // </CustomLink>
-                  )}
-                </S.CardWrapper>
+                <ProjectCard image={image} link={link} />
               </SwiperSlide>
             ))}
           </CustomSlider>

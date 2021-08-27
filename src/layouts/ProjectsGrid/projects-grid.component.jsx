@@ -2,10 +2,8 @@ import React from "react"
 import * as S from "./projects-grid.styles"
 import { Grid, useTheme } from "@material-ui/core"
 import parse from "html-react-parser"
-import { CustomLink } from "../../components/custom-link/custom-link.styles"
-import CustomImage from "../../components/custom-image/custom-image.component"
-import Arrow from "../../assets/icons/arrow.svg"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
+import ProjectCard from "../../components/project-card/project-card.component"
 
 const ProjectsGrid = ({ title, content, projects, color }) => {
   const theme = useTheme()
@@ -23,7 +21,7 @@ const ProjectsGrid = ({ title, content, projects, color }) => {
         </S.RightGrid>
       </S.TopGrid>
       <Grid container spacing={isMD ? 5 : 2}>
-        {projects.map(({ image, link }, index) => (
+        {projects.map((props, index) => (
           <S.BottomGrid
             item
             xs={12}
@@ -31,23 +29,7 @@ const ProjectsGrid = ({ title, content, projects, color }) => {
             md={4}
             key={`project-card-${index}`}
           >
-            <S.CardContainer>
-              {link && (
-                <CustomLink to={link.url}>
-                  <S.Card>
-                    <CustomImage img={image} />
-                    <S.LinkWrapper>
-                      <S.TitleWrapper>
-                        <span>{link.title}</span>
-                      </S.TitleWrapper>
-                      <S.ArrowWrapper>
-                        <Arrow />
-                      </S.ArrowWrapper>
-                    </S.LinkWrapper>
-                  </S.Card>
-                </CustomLink>
-              )}
-            </S.CardContainer>
+            <ProjectCard {...props} />
           </S.BottomGrid>
         ))}
       </Grid>
