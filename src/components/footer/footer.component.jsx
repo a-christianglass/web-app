@@ -127,7 +127,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
               </S.LeftGrid>
 
               <S.RightGrid item xs={12} md={6}>
-                <a href="tel:+5612783385">Call Us: (561) 278-3385</a>
+                <a href="tel:+15612783385">Call Us: (561) 278-3385</a>
                 <S.LocationWrapper>
                   <LocationIcon />
                   <p>
