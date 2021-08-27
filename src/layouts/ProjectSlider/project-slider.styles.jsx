@@ -6,11 +6,11 @@ import CustomButton from "../../components/custom-button/custom-button.component
 
 export const Wrapper = styled(SectionWrapper)`
   ${({ bgColor }) =>
-          bgColor === "white"
-                  ? `
+    bgColor === "white"
+      ? `
   background-color: white;
    `
-                  : `
+      : `
 background-color: #f0f5f7;
    `};
 
@@ -31,9 +31,11 @@ background-color: #f0f5f7;
       right: 0;
       z-index: 1;
       pointer-events: none;
-      background: linear-gradient(270deg,
-      #ffffff 11.36%,
-      rgba(255, 255, 255, 0) 59.47%);
+      background: linear-gradient(
+        270deg,
+        #ffffff 11.36%,
+        rgba(255, 255, 255, 0) 59.47%
+      );
     }
   }
 
@@ -96,21 +98,6 @@ export const LeftGrid = styled(Grid)`
   align-items: center;
 `
 
-export const CardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  //max-width: 400px;
-  border: 0.5px solid rgba(188, 197, 204, 0.2);
-  border-radius: 5px;
-`
-export const Card = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px;
-  filter: drop-shadow(0px 8px 12px rgba(8, 44, 73, 0.04));
-`
-
 export const ImageWrapper = styled.div`
   padding: 0;
   max-width: 382px;
@@ -121,12 +108,6 @@ export const Image = styled(CustomImage)`
   width: 100%;
   height: 100%;
   object-fit: contain !important;
-`
-
-export const LinkWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
 `
 
 export const TitleWrapper = styled.div`
@@ -140,22 +121,6 @@ export const TitleWrapper = styled.div`
     font-size: 1rem;
     font-style: normal;
     font-weight: bold;
-  }
-`
-export const ArrowWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10%;
-  border-bottom-right-radius: 4px;
-  background-color: ${({ theme }) => theme.palette.primary.main};
-
-  padding: 1em;
-
-  svg {
-    width: 32px;
-    height: 32px;
-    object-fit: contain !important;
   }
 `
 export const Button = styled(CustomButton)`
