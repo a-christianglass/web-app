@@ -22,7 +22,7 @@ export const LeftGrid = styled(Grid)`
     line-height: 47px;
     margin-bottom: 1rem;
     ${({ theme }) => theme.breakpoints.down("sm")} {
-      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
     }
   }
 `
