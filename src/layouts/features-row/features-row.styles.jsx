@@ -5,7 +5,7 @@ import CircleCheckIcon from "../../images/check-circle.svg"
 import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 2em 0;
+  padding-top: 2em;
   background-color: white;
 `
 export const LeftGrid = styled(Grid)`
@@ -13,7 +13,6 @@ export const LeftGrid = styled(Grid)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
 `
 
 export const Image = styled(CustomImage)`
@@ -26,10 +25,9 @@ export const RightGrid = styled(Grid)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em 16px 0;
+    padding: 2em 0;
   }
 `
 
