@@ -14,7 +14,6 @@ const CommonHeroBanner = ({ imageCommonHero, title, content }) => {
           </S.TextWrapper>
         </Container>
       </S.TopWrapper>
-
       {imageCommonHero && <S.BottomWrapper img={imageCommonHero} />}
     </S.Wrapper>
   )
