@@ -8,9 +8,14 @@ export const Wrapper = styled(SectionWrapper)`
 export const Title = styled.h2`
   padding: 2em 0 2em 2em;
   font-weight: bold;
-  font-size: 36px;
+  font-size: ${({ theme }) => theme.typography.pxToRem(36)};
   line-height: 47px;
   color: #0d5c80;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    padding: 0 0 1em;
+  }
 `
 export const BottomGrid = styled(Grid)`
   margin: auto;
