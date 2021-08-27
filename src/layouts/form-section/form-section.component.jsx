@@ -31,7 +31,7 @@ const FormSection = ({ contentFormSection, callText, number }) => {
                     {contentFormSection && <h2>{parse(contentFormSection)}</h2>}
                     <S.NumberWrapper>
                       {callText && <span>{callText}</span>}
-                      {number && <a href="/">{number}</a>}
+                      {number && <a href="tel:5612783385">{number}</a>}
                     </S.NumberWrapper>
                   </S.LeftWrapper>
                 </S.LeftGrid>

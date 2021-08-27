@@ -58,7 +58,7 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
                   info@a-christianglass.com
                 </S.EmailWrapper>
               </S.TopItem>
-              <S.TopItem href="tel:+5612783385">
+              <S.TopItem href="tel:5612783385">
                 <S.PhoneWrapper>
                   <PhoneIcon />
                   (561) 278-3385
@@ -104,7 +104,11 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
                 <div style={{ display: "flex" }}>
                   <S.ButtonWrapper>
                     <S.Link url="/contact">
-                      <S.Button isdark={isDark} className="navButtom" isHomePage={isHomePage}>
+                      <S.Button
+                        isdark={isDark}
+                        className="navButtom"
+                        isHomePage={isHomePage}
+                      >
                         {parse("Schedule an <br>Appointment")}
                       </S.Button>
                     </S.Link>

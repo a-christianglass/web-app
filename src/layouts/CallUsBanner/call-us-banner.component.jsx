@@ -28,7 +28,7 @@ const CallUsBanner = ({
                 <S.ContentWrapper textAlign={morePadding}>
                   {title && <h2>{title}</h2>}
                   {number && (
-                    <a href="tel:+5612783385">
+                    <a href="tel:5612783385">
                       <S.NumberWrapper>
                         <PhoneIcon />
                         <span>{number}</span>
@@ -53,7 +53,7 @@ const CallUsBanner = ({
           <Grid item>
             <S.MobileContentWrapper>
               {number && (
-                <a href="tel:+5612783385">
+                <a href="tel:5612783385">
                   <S.NumberWrapper>
                     <PhoneIcon />
                     <span>{number}</span>
