@@ -13,8 +13,12 @@ import HeaderMobile from "./header-mobile/header-mobile.component"
 import Fade from "@material-ui/core/Fade"
 import CloseIcon from "@material-ui/icons/Close"
 import MenuIcon from "@material-ui/icons/Menu"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import theme from "../../theme"
 
 const Header = ({ isTransparent, isWhite, isHomePage }) => {
+  const isXS = useMediaQuery(theme.breakpoints.down("xs"))
+
   const [threshold, setTreshold] = useState(100)
   const [isActiveMenu, setIsActiveMenu] = useState(false)
 
@@ -71,7 +75,14 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
           <Container>
             <S.MainNavContainer>
               <S.MainItem url="/" className="logo">
-                <img src={logoUrl} alt="logo" />
+                <img
+                  src={
+                    isXS
+                      ? "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White-1.png"
+                      : logoUrl
+                  }
+                  alt="logo"
+                />
               </S.MainItem>
               <S.InnerMainContainer>
                 <Hidden smDown>
