@@ -181,6 +181,10 @@ export const ContentWrapper = styled.div`
 export const TabSubtitle = styled.h3`
   text-transform: capitalize;
   padding: 1em 0;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 29px;
+  }
 `
 
 export const TabText = styled(Typography)``
