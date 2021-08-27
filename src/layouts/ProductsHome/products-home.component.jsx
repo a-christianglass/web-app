@@ -2,10 +2,9 @@ import React from "react"
 import * as S from "./products-home.styles"
 import { Container, Grid, Typography } from "@material-ui/core"
 import CustomButton from "../../components/custom-button/custom-button.component"
+import CustomLink from "../../components/custom-link/custom-link.component"
 
 const ProductsHome = ({ leftContentProducts, rightContentProducts }) => {
-
-
   return (
     <S.Wrapper>
       <Grid container>
@@ -15,12 +14,13 @@ const ProductsHome = ({ leftContentProducts, rightContentProducts }) => {
             <S.TextWrapper>
               <h3>{leftContentProducts.title}</h3>
               <Typography>{leftContentProducts.content}</Typography>
-              {leftContentProducts.button &&
-                leftContentProducts.button.title && (
+              {leftContentProducts.button && leftContentProducts.button.title && (
+                <CustomLink url={leftContentProducts.button.url}>
                   <CustomButton>
                     {leftContentProducts.button.title}
                   </CustomButton>
-                )}
+                </CustomLink>
+              )}
             </S.TextWrapper>
           </Container>
         </Grid>
@@ -32,9 +32,11 @@ const ProductsHome = ({ leftContentProducts, rightContentProducts }) => {
               <Typography>{rightContentProducts.content}</Typography>
               {rightContentProducts.button &&
                 rightContentProducts.button.title && (
-                  <CustomButton>
-                    {rightContentProducts.button.title}
-                  </CustomButton>
+                  <CustomLink url={rightContentProducts.button.url}>
+                    <CustomButton>
+                      {rightContentProducts.button.title}
+                    </CustomButton>
+                  </CustomLink>
                 )}
             </S.TextWrapper>
           </Container>
