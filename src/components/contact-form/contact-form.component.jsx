@@ -83,7 +83,7 @@ const ContactForm = () => {
         variant="outlined"
       />
       <S.Button name="submit" fullWidth type="submit">
-        SCHEDULE AN APPOINTMENT
+        Schedule an Appointment
       </S.Button>
       {/*</FormControl>*/}
     </S.FormWrapper>
