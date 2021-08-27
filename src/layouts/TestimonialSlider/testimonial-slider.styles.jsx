@@ -86,6 +86,7 @@ export const CardWrapper = styled.div`
   flex-direction: column;
   background-color: white;
   padding: 3em;
+  min-height: 222px;
   max-width: 550px;
   border: 0.5px solid rgba(188, 197, 204, 0.2);
   border-radius: 5px;
