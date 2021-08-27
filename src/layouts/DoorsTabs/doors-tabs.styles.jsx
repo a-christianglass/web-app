@@ -22,6 +22,9 @@ export const Wrapper = styled(SectionWrapper)`
     height: 4px;
     border-radius: unset !important;
     background-color: #1593cd;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      max-width: 60px;
+    }
   }
 
   .gatsby-image-wrapper img {
@@ -255,4 +258,5 @@ export const DoorTab = styled(Tab)`
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600;
+  padding-bottom: 1.5em;
 `
