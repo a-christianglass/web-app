@@ -119,8 +119,10 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                   </S.ColumnGrid>
                   <S.ColumnGrid xs={4}>
                     <span>About</span>
-                    <S.LinkItem href="/">News</S.LinkItem>
-                    <S.LinkItem href="/">Projects</S.LinkItem>
+                    <S.LinkItem href="/faq/">FAQ</S.LinkItem>
+                    <S.LinkItem href="/about/projects-and-gallery/">
+                      Projects
+                    </S.LinkItem>
                   </S.ColumnGrid>
                 </Grid>
               </S.LeftGrid>
