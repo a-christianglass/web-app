@@ -87,15 +87,12 @@ export const TextWrapper = styled.div`
   }
 `
 export const LeftGrid = styled(Grid)`
-  padding: 2em;
-
-  ${({ theme }) => theme.breakpoints.down("md")} {
-    padding: 2em 0;
-  }
-
   display: flex;
   justify-content: center;
   align-items: center;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 2em 0;
+  }
 `
 
 export const ImageWrapper = styled.div`

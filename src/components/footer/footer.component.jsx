@@ -3,7 +3,6 @@ import React from "react"
 import * as S from "./footer.styles"
 import FacebookIcon from "../../assets/icons/facebook.svg"
 import InstagramIcon from "../../assets/icons/instagram.svg"
-import LinkedInIcon from "../../assets/icons/linkedin.svg"
 import PinterestIcon from "../../assets/icons/pinterest.svg"
 import YouTubeIcon from "../../assets/icons/youtube.svg"
 import MailIcon from "../../assets/icons/mail.svg"
@@ -142,23 +141,35 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                 </S.MailWrapper>
                 <h3>Follow Us</h3>
                 <S.IconWrapper>
-                  <a href="https://www.youtube.com/channel/UCaXWZG2ALK-pLT3szvr3LNA" target="_blank">
+                  <a
+                    href="https://www.youtube.com/channel/UCaXWZG2ALK-pLT3szvr3LNA"
+                    target="_blank"
+                  >
                     <YouTubeIcon />
                   </a>
-                  <a href="https://www.facebook.com/achristianglassdelray/" target="_blank">
+                  <a
+                    href="https://www.facebook.com/achristianglassdelray/"
+                    target="_blank"
+                  >
                     <FacebookIcon />
                   </a>
-                  <a href="https://www.instagram.com/achristianglass/" target="_blank">
+                  <a
+                    href="https://www.instagram.com/achristianglass/"
+                    target="_blank"
+                  >
                     <InstagramIcon />
                   </a>
-                  <a href="https://www.yelp.com/biz/a-christian-glass-delray-beach-3" target="_blank">
+                  <a
+                    href="https://www.yelp.com/biz/a-christian-glass-delray-beach-3"
+                    target="_blank"
+                  >
                     <YelpIcon />
                   </a>
-                  <a href="https://www.pinterest.com/achristianglass/" target="_blank">
+                  <a
+                    href="https://www.pinterest.com/achristianglass/"
+                    target="_blank"
+                  >
                     <PinterestIcon />
-                  </a>
-                  <a href="https://www.linkedin.com/company/a-christian-glass-mirror-company/" target="_blank">
-                    <LinkedInIcon />
                   </a>
                 </S.IconWrapper>
               </S.RightGrid>
