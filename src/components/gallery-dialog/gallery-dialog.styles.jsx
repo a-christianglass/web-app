@@ -4,6 +4,15 @@ import CustomImage from "../custom-image/custom-image.component"
 
 export const Wrapper = styled.div`
   background-color: #000000;
+  .thumbSwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .thumbSwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 `
 export const ContentWrapper = styled.div`
   h2 {
