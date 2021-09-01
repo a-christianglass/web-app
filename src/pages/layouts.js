@@ -37,6 +37,7 @@ import WindowsTabs from "../layouts/WindowsTabs"
 import DoorsTabs from "../layouts/DoorsTabs/doors-tabs.component"
 import ProductsHome from "../layouts/ProductsHome"
 import PartnersGrid from "../layouts/PartnersGrid/partners-grid.component"
+import DialogGrid from "../layouts/DialogGrid"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -1411,6 +1412,41 @@ const Layouts = () => {
 
           {
             image: { sourceUrl: staticQuery.logo },
+          },
+        ]}
+      />
+      <LayoutTitle>DialogGrid</LayoutTitle>
+      <DialogGrid
+        title={"Custom Houses"}
+        projects={[
+          {
+            image: staticQuery.home,
+            projectTitle: "707 N Ocean",
+            projectInfo: {
+              title: "Home in Boca Raton",
+              description:
+                "A-Christian Glass worked with J.P. DiMisa on this 9,083 square foot new construction home nestled between the intracoastal waterway and the Grand Canal located in the Royal Palm Yacht and Country Club.",
+            },
+          },
+          {
+            image: staticQuery.home,
+            projectTitle: "708 N Ocean",
+          },
+          {
+            image: staticQuery.home,
+            projectTitle: "709 N Ocean",
+          },
+          {
+            image: staticQuery.home,
+            projectTitle: "710 N Ocean",
+          },
+          {
+            image: staticQuery.home,
+            projectTitle: "711 N Ocean",
+          },
+          {
+            image: staticQuery.home,
+            projectTitle: "712 N Ocean",
           },
         ]}
       />
