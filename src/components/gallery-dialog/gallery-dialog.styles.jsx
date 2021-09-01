@@ -40,3 +40,26 @@ export const GalleryImage = styled(CustomImage)`
   width: 100%;
   height: 100%;
 `
+export const CustomArrow = styled.div`
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  padding: 0;
+  &.left {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+`
+
+export const NavigationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
