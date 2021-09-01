@@ -4,6 +4,7 @@ import CustomImage from "../custom-image/custom-image.component"
 import Arrow from "../../assets/icons/arrow.svg"
 import Dialog from "@material-ui/core/Dialog"
 import GalleryDialog from "../gallery-dialog/gallery-dialog.component"
+import { DialogContent } from "@material-ui/core"
 const ModalCard = ({ image, projectTitle, projectInfo }) => {
   const [open, setOpen] = React.useState(false)
 

@@ -14,77 +14,66 @@ import Arrow from "../../assets/icons/white-arrow.svg"
 SwiperCore.use([Pagination, Navigation, Thumbs])
 
 const GalleryDialog = ({ title, description, galleryImages }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
-
   const [count, setCount] = useState(1)
+  const [active, setActive] = useState(false)
+
   const addCount = () => {
     count >= galleryImages.length ? setCount(1) : setCount(count + 1)
   }
   const restCount = () => {
     count <= 1 ? setCount(galleryImages.length) : setCount(count - 1)
   }
+
+  const [selectedImage, setSelectedImage] = useState(
+    galleryImages[0].galleryImage
+  )
+
+  const changeSelectedImage = index => {
+    setSelectedImage(galleryImages[index].galleryImage)
+    setCount(index + 1)
+  }
+
   return (
     <S.Wrapper>
-      <Container>
-        <Grid container>
-          <Grid item xs={12} md={4}>
-            <S.ContentWrapper>
+      <Grid container>
+        <Grid item xs={12} md={4}>
+          <S.ContentWrapper>
+            <S.TextWrapper>
               {title && <h2>{title}</h2>}
               {description && <p>{description}</p>}
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                loop={true}
-                slidesPerView={4}
-                watchSlidesProgress={true}
-                className="thumbSwiper"
-              >
+              <Grid container>
                 {galleryImages.map(({ galleryImage }, index) => (
-                  <SwiperSlide>
-                    <S.ImageWrapper>
-                      <CustomImage img={galleryImage} />
-                    </S.ImageWrapper>
-                  </SwiperSlide>
+                  <Grid
+                    item
+                    xs={3}
+                    md={3}
+                    key={`featured-gallery-${index}`}
+                    onClick={() => changeSelectedImage(index)}
+                  >
+                    <S.PreviewImage img={galleryImage} />
+                  </Grid>
                 ))}
-              </Swiper>
-              <S.NavigationWrapper>
-                <S.CustomArrow
-                  ref={navigationPrevRef}
-                  className="left"
-                  onClick={restCount}
-                >
-                  <Arrow />
-                </S.CustomArrow>
-                <span>
-                  {count}/{galleryImages.length}
-                </span>
-                <S.CustomArrow ref={navigationNextRef} onClick={addCount}>
-                  <Arrow />
-                </S.CustomArrow>
-              </S.NavigationWrapper>
-            </S.ContentWrapper>
-          </Grid>
-          <Grid item xs={12} md={8}>
-            <Swiper
-              thumbs={{ swiper: thumbsSwiper }}
-              loop={true}
-              navigation={{
-                prevEl: navigationPrevRef.current,
-                nextEl: navigationNextRef.current,
-              }}
-            >
-              {galleryImages.map(({ galleryImage }, index) => (
-                <SwiperSlide>
-                  <S.ImageWrapper>
-                    <CustomImage img={galleryImage} />
-                  </S.ImageWrapper>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Grid>
+              </Grid>
+            </S.TextWrapper>
+            <S.NavigationWrapper>
+              <S.CustomArrow className="left" onClick={restCount}>
+                <Arrow />
+              </S.CustomArrow>
+              <span>
+                {count}/{galleryImages.length}
+              </span>
+              <S.CustomArrow onClick={addCount}>
+                <Arrow />
+              </S.CustomArrow>
+            </S.NavigationWrapper>
+          </S.ContentWrapper>
         </Grid>
-      </Container>
+        <Grid item xs={12} md={8}>
+          <S.ImageWrapper>
+            <CustomImage img={selectedImage} />
+          </S.ImageWrapper>
+        </Grid>
+      </Grid>
     </S.Wrapper>
   )
 }

@@ -4,17 +4,25 @@ import CustomImage from "../custom-image/custom-image.component"
 
 export const Wrapper = styled.div`
   background-color: #000000;
-  .thumbSwiper .swiper-slide {
-    width: 25%;
-    height: 100%;
+  padding: 4em 0 4em 4em;
+
+  .inactive {
     opacity: 0.4;
   }
 
-  .thumbSwiper .swiper-slide-thumb-active {
+  .active {
     opacity: 1;
   }
 `
 export const ContentWrapper = styled.div`
+  padding-right: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`
+
+export const TextWrapper = styled.div`
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -32,6 +40,7 @@ export const ContentWrapper = styled.div`
 `
 
 export const ImageWrapper = styled.div`
+  transition: all 0.3s ease;
   max-width: 874px;
   max-height: 576px;
 `
@@ -43,6 +52,7 @@ export const GalleryImage = styled(CustomImage)`
 export const CustomArrow = styled.div`
   width: 32px;
   height: 32px;
+  margin: 0 3em;
   background-color: transparent;
   cursor: pointer;
   svg {
@@ -62,4 +72,10 @@ export const NavigationWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const PreviewImage = styled(CustomImage)`
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 `
