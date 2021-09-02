@@ -5,7 +5,7 @@ import Arrow from "../../assets/icons/arrow.svg"
 import Dialog from "@material-ui/core/Dialog"
 import GalleryDialog from "../gallery-dialog/gallery-dialog.component"
 import { DialogContent } from "@material-ui/core"
-const ModalCard = ({ image, projectTitle, projectInfo }) => {
+const ModalCard = ({ projectImage, projectTitle, projectInfo }) => {
   const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {
@@ -18,7 +18,7 @@ const ModalCard = ({ image, projectTitle, projectInfo }) => {
   return (
     <S.CardContainer onClick={handleClickOpen}>
       <S.Card>
-        <CustomImage img={image} />
+        <CustomImage img={projectImage} />
         <S.LinkWrapper>
           <S.TitleWrapper>
             <span>{projectTitle}</span>

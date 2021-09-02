@@ -151,6 +151,9 @@ export const query = graphql`
           ... on WpPage_Pagebuilder_Layouts_ChoicesQuote {
             ...ChoicesQuote
           }
+          ... on WpPage_Pagebuilder_Layouts_DialogGrid {
+            ...DialogGrid
+          }
         }
         pageConfiguration {
           hideFooter
