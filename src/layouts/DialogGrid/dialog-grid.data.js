@@ -10,14 +10,12 @@ export const query = graphql`
         description
         galleryImages {
           galleryImage {
-            galleryImage {
-              altText
-              sourceUrl
-              title
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-                }
+            altText
+            sourceUrl
+            title
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, quality: 100)
               }
             }
           }
