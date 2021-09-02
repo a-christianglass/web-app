@@ -1,37 +1,66 @@
 import React from "react"
 import * as S from "./service-card.styles"
-import CustomButton from "../custom-button/custom-button.component"
-import { navigate } from "gatsby"
-import Building from "../../assets/icons/building.svg"
-import Home from "../../assets/icons/home.svg"
-import Link from "gatsby-link"
-import { CustomLink } from "../custom-link/custom-link.styles"
+import { graphql, navigate, useStaticQuery } from "gatsby"
+import WhiteBuildingIcon from "../../assets/icons/buildingWhite.svg"
+import BlueBuildingIcon from "../../assets/icons/buildingBlue.svg"
+import WhiteHomeIcon from "../../assets/icons/homeWhite.svg"
+import BlueHomeIcon from "../../assets/icons/homeBlue.svg"
+import { ArrowForward } from "@material-ui/icons"
+import CustomLink from "../custom-link/custom-link.component"
 
-const ServiceCard = ({
-  centerTitle,
-  centerContent,
-  rightTitle,
-  rightContent,
-  whiteCard,
-  blueCard,
-}) => {
+const ServiceCard = ({ title, content, link, isResidentialCard }) => {
+  const staticQuery = useStaticQuery(graphql`
+    query {
+      blueCard: file(relativePath: { eq: "serviceCardBlue.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+      whiteCard: file(relativePath: { eq: "serviceCardWhite.png" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
+    }
+  `)
+
   return (
     <S.Wrapper>
-      <S.ResidentialWrapper className="residentialWrapper" tag="div" img={whiteCard}>
+      <S.WhiteWrapper
+        className="whiteWrapper"
+        tag="div"
+        img={staticQuery.whiteCard}
+      >
         <S.InnerWrapper>
-          <Home />
-          <S.Title>{centerTitle}</S.Title>
-          <S.ShortDesc>{centerContent}</S.ShortDesc>
+          {isResidentialCard ? <BlueHomeIcon /> : <BlueBuildingIcon />}
+          <S.Title>{title}</S.Title>
+          <S.ShortDesc>{content}</S.ShortDesc>
+          <S.CardLink>
+            <CustomLink className="darkLink" url={link.url}>
+              {link.title}
+            </CustomLink>
+            <ArrowForward style={{ color: "#0D5C80" }} className="arrow" />
+          </S.CardLink>
         </S.InnerWrapper>
-      </S.ResidentialWrapper>
+      </S.WhiteWrapper>
 
-      <S.CommercialWrapper className="commercialWrapper" tag="div" img={blueCard}>
+      <S.BlueWrapper
+        className="blueWrapper"
+        tag="div"
+        img={staticQuery.blueCard}
+      >
         <S.InnerWrapper>
-          <Building />
-          <S.Title>{rightTitle}</S.Title>
-          <S.ShortDesc>{rightContent}</S.ShortDesc>
+          {isResidentialCard ? <WhiteHomeIcon /> : <WhiteBuildingIcon />}
+          <S.Title>{title}</S.Title>
+          <S.ShortDesc>{content}</S.ShortDesc>
+          <S.CardLink>
+            <CustomLink className="lightLink" url={link.url}>
+              {link.title}
+            </CustomLink>
+            <ArrowForward style={{ color: "#ffffff" }} className="arrow" />
+          </S.CardLink>
         </S.InnerWrapper>
-      </S.CommercialWrapper>
+      </S.BlueWrapper>
     </S.Wrapper>
   )
 }

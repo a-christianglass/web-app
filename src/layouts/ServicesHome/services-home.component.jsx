@@ -12,7 +12,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import ServiceCard from "../../components/service-card/service-card.component"
 
-
 const ServicesHome = ({
   leftTag,
   leftTitle,
@@ -26,30 +25,18 @@ const ServicesHome = ({
   rightContent,
   rightLink,
 }) => {
-  const staticQuery = useStaticQuery(graphql`
-    query {
-      blueCard: file(relativePath: { eq: "serviceCardBlue.png" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-        }
-      }
-      whiteCard: file(relativePath: { eq: "serviceCardWhite.png" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-        }
-      }
-    }
-  `)
+  const centerCard = {
+    title: centerTitle,
+    content: centerContent,
+    link: centerLink,
+    isResidentialCard: true,
+  }
 
-  const card = {
-   centerTitle,
-   centerContent,
-   centerLink,
-   rightTitle,
-   rightContent,
-   rightLink,
-   whiteCard: staticQuery.whiteCard,
-   blueCard: staticQuery.blueCard
+  const rightCard = {
+    title: rightTitle,
+    content: rightContent,
+    link: rightLink,
+    isResidentialCard: false,
   }
   return (
     <S.Wrapper>
@@ -66,12 +53,11 @@ const ServicesHome = ({
               )}
             </S.LeftContentWrapper>
           </S.LeftGrid>
-          <Grid
-            item
-            xs={12}
-            md={8}
-          >
-          <ServiceCard {...card}/>
+          <Grid item xs={12} md={4}>
+            <ServiceCard {...centerCard} />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <ServiceCard {...rightCard} />
           </Grid>
         </Grid>
       </S.CustomContainer>
