@@ -4,7 +4,13 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 import { Typography } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding: 8em 0 12.5em;
+  ${({ haveMorePadding }) =>
+    haveMorePadding
+      ? `  padding: 8em 0 12.5em;
+    `
+      : `  padding: 4em 0; 
+`}
+
   background-color: white;
 
   .swiper-container {
