@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import CustomButton from "../../components/custom-button/custom-button.component"
+import { Container } from "@material-ui/core"
 
 export const Wrapper = styled(SectionWrapper)`
   ${({ bgColor }) =>
@@ -32,8 +33,13 @@ export const Wrapper = styled(SectionWrapper)`
     #ffffff 100%
   );
     `)}
-
-  padding: 0 10em;
+  ${({ haveTopPadding }) =>
+    haveTopPadding
+      ? `padding-top: 5.25em;
+    `
+      : `  padding-top: 0;
+`}
+  padding-bottom: 0;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 0;
   }

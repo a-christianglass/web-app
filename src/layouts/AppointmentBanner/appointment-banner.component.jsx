@@ -4,8 +4,9 @@ import Grid from "@material-ui/core/Grid"
 import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
+import Container from "@material-ui/core/Container"
 
-const AppointmentBanner = ({ color, content, button }) => {
+const AppointmentBanner = ({ color, content, button, haveTopPadding }) => {
   const staticQuery = useStaticQuery(graphql`
     query {
       banner: file(relativePath: { eq: "banner.png" }) {
@@ -16,15 +17,19 @@ const AppointmentBanner = ({ color, content, button }) => {
     }
   `)
   return (
-    <S.Wrapper bgColor={color}>
-      <Grid xs={12}>
-        <CustomBgImage img={staticQuery.banner}>
-          <S.ContentWrapper>
-            {content && <h2>{parse(content)}</h2>}
-            {button && <S.Button href={button?.url}>{button?.title}</S.Button>}
-          </S.ContentWrapper>
-        </CustomBgImage>
-      </Grid>
+    <S.Wrapper bgColor={color} haveTopPadding={haveTopPadding}>
+      <Container>
+        <Grid xs={12}>
+          <CustomBgImage img={staticQuery.banner}>
+            <S.ContentWrapper>
+              {content && <h2>{parse(content)}</h2>}
+              {button && (
+                <S.Button href={button?.url}>{button?.title}</S.Button>
+              )}
+            </S.ContentWrapper>
+          </CustomBgImage>
+        </Grid>
+      </Container>
     </S.Wrapper>
   )
 }
