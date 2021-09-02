@@ -247,4 +247,6 @@ export const DoorTab = styled(Tab)`
   font-size: ${({ theme }) => theme.typography.pxToRem(14)};
   font-weight: 600;
   padding-bottom: 1.5em;
+  line-height: 1.3;
+  letter-spacing: 1px;
 `
