@@ -1426,7 +1426,7 @@ const Layouts = () => {
         title={"Custom Houses"}
         projects={[
           {
-            image: staticQuery.home,
+            projectImage: staticQuery.home,
             projectTitle: "707 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",
@@ -1461,7 +1461,7 @@ const Layouts = () => {
             },
           },
           {
-            image: staticQuery.home,
+            projectImage: staticQuery.home,
             projectTitle: "708 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",
@@ -1496,7 +1496,7 @@ const Layouts = () => {
             },
           },
           {
-            image: staticQuery.home,
+            projectImage: staticQuery.home,
             projectTitle: "709 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",
@@ -1531,7 +1531,7 @@ const Layouts = () => {
             },
           },
           {
-            image: staticQuery.home,
+            projectImage: staticQuery.home,
             projectTitle: "710 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",
@@ -1566,7 +1566,7 @@ const Layouts = () => {
             },
           },
           {
-            image: staticQuery.home,
+            projectImage: staticQuery.home,
             projectTitle: "711 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",
@@ -1601,7 +1601,7 @@ const Layouts = () => {
             },
           },
           {
-            image: staticQuery.home,
+            projectImage: staticQuery.home,
             projectTitle: "712 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",
