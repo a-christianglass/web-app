@@ -9,7 +9,10 @@ export const Wrapper = styled(SectionWrapper)`
 `
 export const BgImageWrapper = styled(CustomBgImage)``
 export const WorksWrapper = styled.div`
-  padding: 2em 0;
+  padding: 6em 0;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 0;
+  }
 `
 
 export const TopGrid = styled(Grid)`
