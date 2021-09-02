@@ -12,6 +12,7 @@ export const Wrapper = styled(SectionWrapper)`
   h2 {
     font-style: normal;
     font-weight: bold;
+    text-align: center;
     font-size: 54px;
     line-height: 120%;
     letter-spacing: 0.01em;
