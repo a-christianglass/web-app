@@ -4,9 +4,7 @@ import { Box } from "@material-ui/core"
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  //margin: auto;
   background-color: white;
-  //max-width: 400px;
   border: 0.5px solid rgba(188, 197, 204, 0.2);
   border-radius: 5px;
   margin-bottom: 2em;

@@ -1,41 +1,26 @@
 import React, { useRef, useState } from "react"
 import * as S from "./gallery-dialog.styles"
 import Grid from "@material-ui/core/Grid"
-import Container from "@material-ui/core/Container"
-import CloseIcon from "@material-ui/icons/Close"
-import "swiper/swiper.min.css"
-import "swiper/swiper-bundle.css"
-import "swiper/swiper-bundle.min.css"
-import "swiper/components/pagination/pagination.min.css"
-import SwiperCore, { Navigation, Pagination, Thumbs } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
 import CustomImage from "../custom-image/custom-image.component"
 import Arrow from "../../assets/icons/white-arrow.svg"
-SwiperCore.use([Pagination, Navigation, Thumbs])
 
 const GalleryDialog = ({ title, description, galleryImages }) => {
   const [count, setCount] = useState(1)
-  const [active, setActive] = useState(false)
+
+  const [selectedImage, setSelectedImage] = useState(0)
+
+  const changeSelectedImage = index => {
+    setSelectedImage(index)
+    setCount(index + 1)
+  }
 
   const addCount = () => {
     count >= galleryImages.length ? setCount(1) : setCount(count + 1)
+    setSelectedImage(count - 1)
   }
   const restCount = () => {
     count <= 1 ? setCount(galleryImages.length) : setCount(count - 1)
-  }
-
-  const [selectedImage, setSelectedImage] = useState(
-    galleryImages[0].galleryImage
-  )
-
-  const changeSelectedImage = index => {
-    setSelectedImage(galleryImages[index].galleryImage)
-    setCount(index)
-  }
-
-  const setImage = imageCount => {
-    setSelectedImage(galleryImages[imageCount].galleryImage)
-    setCount(imageCount)
+    setSelectedImage(count - 1)
   }
 
   return (
@@ -46,28 +31,34 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
             <S.TextWrapper>
               {title && <h2>{title}</h2>}
               {description && <p>{description}</p>}
-              <Grid container>
-                {galleryImages.map(({ galleryImage }, index) => (
-                  <Grid
-                    item
-                    xs={3}
-                    md={3}
-                    key={`featured-gallery-${index}`}
-                    onClick={() => changeSelectedImage(index)}
-                  >
-                    <S.PreviewImage img={galleryImage} />
-                  </Grid>
-                ))}
-              </Grid>
+              <div style={{ height: "100%" }}>
+                <Grid container>
+                  {galleryImages.map(({ galleryImage }, index) => (
+                    <Grid
+                      item
+                      xs={3}
+                      md={3}
+                      key={`featured-gallery-${index}`}
+                      onClick={() => changeSelectedImage(index)}
+                    >
+                      <S.PreviewImage
+                        arPaddingPercentage={100}
+                        className={selectedImage === index ? "active" : ""}
+                        img={galleryImage}
+                      />
+                    </Grid>
+                  ))}
+                </Grid>
+              </div>
             </S.TextWrapper>
             <S.NavigationWrapper>
-              <S.CustomArrow className="left" onClick={() => setImage(count)}>
+              <S.CustomArrow className="left" onClick={restCount}>
                 <Arrow />
               </S.CustomArrow>
               <span>
                 {count}/{galleryImages.length}
               </span>
-              <S.CustomArrow onClick={() => setImage(count)}>
+              <S.CustomArrow onClick={addCount}>
                 <Arrow />
               </S.CustomArrow>
             </S.NavigationWrapper>
@@ -75,7 +66,7 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
         </Grid>
         <Grid item xs={12} md={8}>
           <S.ImageWrapper>
-            <CustomImage img={selectedImage} />
+            <CustomImage img={galleryImages[selectedImage].galleryImage} />
           </S.ImageWrapper>
         </Grid>
       </Grid>

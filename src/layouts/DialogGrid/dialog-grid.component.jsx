@@ -20,7 +20,7 @@ const DialogGrid = ({ title, content, projects, color }) => {
           </S.RightTextWrapper>
         </S.RightGrid>
       </S.TopGrid>
-      <Grid container spacing={isMD ? 5 : 2}>
+      <Grid container spacing={isMD ? 5 : 4}>
         {projects.map((props, index) => (
           <S.BottomGrid item xs={6} sm={6} md={4} key={`project-card-${index}`}>
             <ModalCard {...props} />

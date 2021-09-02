@@ -1,18 +1,10 @@
 import styled from "styled-components"
-import { Container } from "@material-ui/core"
 import CustomImage from "../custom-image/custom-image.component"
 
 export const Wrapper = styled.div`
   background-color: #000000;
   padding: 4em 0 4em 4em;
-
-  .inactive {
-    opacity: 0.4;
-  }
-
-  .active {
-    opacity: 1;
-  }
+  height: calc(100vh - 64px);
 `
 export const ContentWrapper = styled.div`
   padding-right: 4em;
@@ -78,4 +70,8 @@ export const PreviewImage = styled(CustomImage)`
   cursor: pointer;
   width: 100%;
   height: 100%;
+  opacity: 0.4;
+  &.active {
+    opacity: 1;
+  }
 `
