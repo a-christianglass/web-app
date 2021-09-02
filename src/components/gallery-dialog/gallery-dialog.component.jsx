@@ -30,7 +30,12 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
 
   const changeSelectedImage = index => {
     setSelectedImage(galleryImages[index].galleryImage)
-    setCount(index + 1)
+    setCount(index)
+  }
+
+  const setImage = imageCount => {
+    setSelectedImage(galleryImages[imageCount].galleryImage)
+    setCount(imageCount)
   }
 
   return (
@@ -56,13 +61,13 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
               </Grid>
             </S.TextWrapper>
             <S.NavigationWrapper>
-              <S.CustomArrow className="left" onClick={restCount}>
+              <S.CustomArrow className="left" onClick={() => setImage(count)}>
                 <Arrow />
               </S.CustomArrow>
               <span>
                 {count}/{galleryImages.length}
               </span>
-              <S.CustomArrow onClick={addCount}>
+              <S.CustomArrow onClick={() => setImage(count)}>
                 <Arrow />
               </S.CustomArrow>
             </S.NavigationWrapper>

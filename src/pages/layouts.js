@@ -38,6 +38,7 @@ import DoorsTabs from "../layouts/DoorsTabs/doors-tabs.component"
 import ProductsHome from "../layouts/ProductsHome"
 import PartnersGrid from "../layouts/PartnersGrid/partners-grid.component"
 import DialogGrid from "../layouts/DialogGrid"
+import ChoicesQuote from "../layouts/ChoicesQuote"
 
 const Layouts = () => {
   const staticQuery = useStaticQuery(graphql`
@@ -1635,6 +1636,14 @@ const Layouts = () => {
             },
           },
         ]}
+      />
+      <LayoutTitle>ChoicesQuote</LayoutTitle>
+      <ChoicesQuote
+        choicesTitle="We Provide Choices for Every Style and Budget"
+        choicesContent="A-Christian Glass in Delray Beach knows that not all windows are created equal, and today there are more options than ever. Purchasing the right glass is an important decision since there are a variety of composition levels for windows. Educating customers is an important company initiative."
+        choicesQuote="It's great to know that a $400 electric bill can be cut in half by upgrading your windows. They're a definite money-saver, and they also reduce outside noise."
+        quoteAuthor="Mary C."
+        quoteLocation="Boca Raton, FL."
       />
     </Layout>
   )
