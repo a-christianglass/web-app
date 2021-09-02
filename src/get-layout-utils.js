@@ -34,6 +34,7 @@ import DistributorSection from "./layouts/DistributorSection"
 import ProductsHome from "./layouts/ProductsHome"
 import PartnersGrid from "./layouts/PartnersGrid/"
 import ChoicesQuote from "./layouts/ChoicesQuote"
+import DialogGrid from "./layouts/DialogGrid"
 
 export const getPageLayout = layout => {
   const layoutName = layout?.fieldGroupName?.split("_").pop().trim()
@@ -109,5 +110,7 @@ export const getPageLayout = layout => {
       return <PartnersGrid {...layout} />
     case "ChoicesQuote":
       return <ChoicesQuote {...layout} />
+    case "DialogGrid":
+      return <DialogGrid {...layout} />
   }
 }
