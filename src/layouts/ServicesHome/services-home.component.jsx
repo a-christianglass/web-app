@@ -54,10 +54,18 @@ const ServicesHome = ({
             </S.LeftContentWrapper>
           </S.LeftGrid>
           <Grid item xs={12} md={4}>
-            <ServiceCard {...centerCard} />
+            {centerLink.url && (
+              <CustomLink url={centerLink.url}>
+                <ServiceCard {...centerCard} />
+              </CustomLink>
+            )}
           </Grid>
           <Grid item xs={12} md={4}>
-            <ServiceCard {...rightCard} />
+            {centerLink.url && (
+              <CustomLink url={rightLink.url}>
+                <ServiceCard {...rightCard} />
+              </CustomLink>
+            )}
           </Grid>
         </Grid>
       </S.CustomContainer>

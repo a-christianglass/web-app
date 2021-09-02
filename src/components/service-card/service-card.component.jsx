@@ -33,14 +33,16 @@ const ServiceCard = ({ title, content, link, isResidentialCard }) => {
       >
         <S.InnerWrapper>
           {isResidentialCard ? <BlueHomeIcon /> : <BlueBuildingIcon />}
-          <S.Title>{title}</S.Title>
-          <S.ShortDesc>{content}</S.ShortDesc>
-          <S.CardLink>
-            <CustomLink className="darkLink" url={link.url}>
-              {link.title}
-            </CustomLink>
-            <ArrowForward style={{ color: "#0D5C80" }} className="arrow" />
-          </S.CardLink>
+          {title && <S.Title>{title}</S.Title>}
+          {content && <S.ShortDesc>{content}</S.ShortDesc>}
+          {link.url && (
+            <S.CardLink>
+              <CustomLink className="darkLink" url={link.url}>
+                {link.title}
+              </CustomLink>
+              <ArrowForward style={{ color: "#0D5C80" }} className="arrow" />
+            </S.CardLink>
+          )}
         </S.InnerWrapper>
       </S.WhiteWrapper>
 
@@ -51,14 +53,16 @@ const ServiceCard = ({ title, content, link, isResidentialCard }) => {
       >
         <S.InnerWrapper>
           {isResidentialCard ? <WhiteHomeIcon /> : <WhiteBuildingIcon />}
-          <S.Title>{title}</S.Title>
-          <S.ShortDesc>{content}</S.ShortDesc>
-          <S.CardLink>
-            <CustomLink className="lightLink" url={link.url}>
-              {link.title}
-            </CustomLink>
-            <ArrowForward style={{ color: "#ffffff" }} className="arrow" />
-          </S.CardLink>
+          {title && <S.Title>{title}</S.Title>}
+          {content && <S.ShortDesc>{content}</S.ShortDesc>}
+          {link.url && (
+            <S.CardLink>
+              <CustomLink className="lightLink" url={link.url}>
+                {link.title}
+              </CustomLink>
+              <ArrowForward style={{ color: "#ffffff" }} className="arrow" />
+            </S.CardLink>
+          )}
         </S.InnerWrapper>
       </S.BlueWrapper>
     </S.Wrapper>
