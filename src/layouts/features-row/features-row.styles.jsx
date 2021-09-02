@@ -5,9 +5,24 @@ import CircleCheckIcon from "../../images/check-circle.svg"
 import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
-  padding-top: 2em;
+  padding-top: 4em;
+  padding-bottom: 4em;
   background-color: white;
 `
+
+export const Title = styled.h2`
+  text-align: center;
+  margin-bottom: 3.5em;
+  font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+  color: #0d5c80;
+  font-weight: bold;
+  margin-bottom: 1em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    margin-bottom: 1em;
+  }
+`
+
 export const LeftGrid = styled(Grid)`
   width: 100%;
   display: flex;
@@ -35,15 +50,6 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 477px;
-  h2 {
-    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
-    color: #0d5c80;
-    font-weight: bold;
-    margin-bottom: 1em;
-    ${({ theme }) => theme.breakpoints.down("sm")} {
-      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
-    }
-  }
 `
 export const FeatureWrapper = styled.div`
   display: flex;

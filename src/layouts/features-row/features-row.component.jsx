@@ -12,15 +12,13 @@ const FeaturesRow = ({
   return (
     <S.Wrapper>
       <Container>
+        {contentFeaturesRow.title && <S.Title>{parse(contentFeaturesRow.title)}</S.Title>}
         <Grid container direction={reverseFeatures && "row-reverse"}>
           <S.LeftGrid item xs={12} md={6}>
             <S.Image img={imageFeaturesRow} />
           </S.LeftGrid>
           <S.RightGrid item xs={12} md={6}>
             <S.ContentWrapper>
-              {contentFeaturesRow.title && (
-                <h2>{parse(contentFeaturesRow.title)}</h2>
-              )}
               {contentFeaturesRow.features &&
                 contentFeaturesRow.features.map(({ feature }, index) => (
                   <S.FeatureWrapper key={`feature-${index}`}>
