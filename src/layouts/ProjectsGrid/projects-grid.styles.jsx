@@ -49,10 +49,6 @@ export const ContentText = styled(Typography)`
   font-weight: normal;
 `
 
-export const LeftTextWrapper = styled.div`
-  max-width: 350px;
-`
-
 export const RightTextWrapper = styled.div`
   max-width: 517px;
 `
