@@ -8,29 +8,29 @@ const ReasonsSection = ({ title, descriptionReasons, reasons }) => {
     <S.Wrapper>
       <Container>
         <S.TopTextWrapper>
-          <S.LeftTextWrapper>{title && <h2>{title}</h2>}</S.LeftTextWrapper>
-          {descriptionReasons && (
-            <S.ContentText>{parse(descriptionReasons)}</S.ContentText>
-          )}
+          <Grid container>
+            <Grid item xs={12} md={6}>
+              <S.LeftTextWrapper>{title && <h2>{title}</h2>}</S.LeftTextWrapper>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              {descriptionReasons && (
+                <S.ContentText>{parse(descriptionReasons)}</S.ContentText>
+              )}
+            </Grid>
+          </Grid>
         </S.TopTextWrapper>
+        <Grid container alignItems="flex-start">
+          {reasons &&
+            reasons.map(({ title, content }, index) => (
+              <S.ReasonGrid item xs={12} md={4} key={`feature-${index}`}>
+                <S.ReasonWrapper>
+                  {title && <S.ReasonTitle>{title}</S.ReasonTitle>}
+                  {content && <S.ReasonContent>{content}</S.ReasonContent>}
+                </S.ReasonWrapper>
+              </S.ReasonGrid>
+            ))}
+        </Grid>
       </Container>
-      <Grid container>
-        {reasons &&
-          reasons.map(({ title, content }, index) => (
-            <S.ReasonGrid
-              item
-              xs={12}
-              md={6}
-              key={`feature-${index}`}
-              shouldCenter={index % 2 === 0}
-            >
-              <S.ReasonWrapper>
-                {title && <S.ReasonTitle>{title}</S.ReasonTitle>}
-                {content && <S.ReasonContent>{content}</S.ReasonContent>}
-              </S.ReasonWrapper>
-            </S.ReasonGrid>
-          ))}
-      </Grid>
     </S.Wrapper>
   )
 }
