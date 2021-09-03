@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import * as S from "./gallery-dialog.styles"
 import Grid from "@material-ui/core/Grid"
-import CustomImage from "../custom-image/custom-image.component"
 import Arrow from "../../assets/icons/white-arrow.svg"
 import parse from "html-react-parser"
 import { Typography } from "@material-ui/core"
@@ -53,18 +52,19 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
                 </Grid>
               </div>
             </S.TextWrapper>
-
-            <S.NavigationWrapper>
-              <S.CustomArrow className="left" onClick={restCount}>
-                <Arrow />
-              </S.CustomArrow>
-              <span>
-                {count}/{galleryImages.length}
-              </span>
-              <S.CustomArrow onClick={addCount}>
-                <Arrow />
-              </S.CustomArrow>
-            </S.NavigationWrapper>
+            {galleryImages.length > 1 && (
+              <S.NavigationWrapper>
+                <S.CustomArrow className="left" onClick={restCount}>
+                  <Arrow />
+                </S.CustomArrow>
+                <span>
+                  {count}/{galleryImages.length}
+                </span>
+                <S.CustomArrow onClick={addCount}>
+                  <Arrow />
+                </S.CustomArrow>
+              </S.NavigationWrapper>
+            )}
           </S.ContentWrapper>
         </Grid>
         <S.ImageGrid item xs={12} md={8}>
