@@ -66,11 +66,9 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
             </S.NavigationWrapper>
           </S.ContentWrapper>
         </Grid>
-        <Grid item xs={12} md={8}>
-          <S.ImageWrapper>
-            <CustomImage img={galleryImages[selectedImage].galleryImage} />
-          </S.ImageWrapper>
-        </Grid>
+        <S.ImageGrid item xs={12} md={8}>
+          <S.GalleryImage img={galleryImages[selectedImage].galleryImage} />
+        </S.ImageGrid>
       </Grid>
     </S.Wrapper>
   )

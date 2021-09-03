@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import CustomImage from "../custom-image/custom-image.component"
+import { Grid } from "@material-ui/core"
 
 export const Wrapper = styled.div`
   background-color: #000000;
@@ -31,15 +32,12 @@ export const TextWrapper = styled.div`
   }
 `
 
-export const ImageWrapper = styled.div`
-  transition: all 0.3s ease;
-  max-width: 874px;
-  max-height: 576px;
-`
-
 export const GalleryImage = styled(CustomImage)`
   width: 100%;
   height: 100%;
+  img {
+    object-fit: cover !important;
+  }
 `
 export const CustomArrow = styled.div`
   width: 32px;
@@ -74,4 +72,8 @@ export const PreviewImage = styled(CustomImage)`
   &.active {
     opacity: 1;
   }
+`
+
+export const ImageGrid = styled(Grid)`
+  max-height: 546px;
 `
