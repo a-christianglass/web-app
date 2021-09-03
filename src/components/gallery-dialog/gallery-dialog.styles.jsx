@@ -22,7 +22,7 @@ export const TextWrapper = styled.div`
     font-size: 24px;
     line-height: 29px;
     color: #ffffff;
-    width: 1150px;
+    //width: 1150px;
     margin-bottom: 1em;
   }
   p {
