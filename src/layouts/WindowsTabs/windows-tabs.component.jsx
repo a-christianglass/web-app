@@ -1,15 +1,19 @@
 import React, { useState } from "react"
 import * as S from "./windows-tabs.styles"
 import Container from "@material-ui/core/Container"
-import { Grid } from "@material-ui/core"
+import { Grid, Tabs } from "@material-ui/core"
 import parse from "html-react-parser"
 import CustomImage from "../../components/custom-image/custom-image.component"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
+import theme from "../../theme"
 
 const WindowsTabs = ({ titleWindows, descriptionWindows, tabsWindows }) => {
   const [value, setValue] = useState(0)
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
+  const isSm = useMediaQuery(theme.breakpoints.down("sm"))
+
   if (!tabsWindows) return null
   return (
     <S.Wrapper>
@@ -26,16 +30,18 @@ const WindowsTabs = ({ titleWindows, descriptionWindows, tabsWindows }) => {
             )}
           </Grid>
         </S.TopGrid>
-        <S.CustomTabs
+        <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
-          variant="scrollable"
+          variant={isSm ? "scrollable" : "fullWidth"}
+          scrollButtons="on"
+          centered
         >
           {tabsWindows.map(tab => (
-            <S.CustomTab label={tab.tab.title} />
+            <S.DoorTab label={parse(tab.tab.title)} />
           ))}
-        </S.CustomTabs>
+        </Tabs>
         {tabsWindows.map((tab, index) => (
           <S.CustomTabPanel hidden={value !== index}>
             <Grid container>

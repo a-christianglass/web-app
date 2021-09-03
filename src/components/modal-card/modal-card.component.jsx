@@ -1,8 +1,6 @@
 import React from "react"
 import * as S from "./modal-card.styles"
-import CustomImage from "../custom-image/custom-image.component"
 import Arrow from "../../assets/icons/arrow.svg"
-import Dialog from "@material-ui/core/Dialog"
 import GalleryDialog from "../gallery-dialog/gallery-dialog.component"
 import { DialogContent, Modal } from "@material-ui/core"
 import CloseIcon from "../../assets/icons/close.svg"
