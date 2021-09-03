@@ -52,18 +52,19 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
                 </Grid>
               </div>
             </S.TextWrapper>
-
-            <S.NavigationWrapper>
-              <S.CustomArrow className="left" onClick={restCount}>
-                <Arrow />
-              </S.CustomArrow>
-              <span>
-                {count}/{galleryImages.length}
-              </span>
-              <S.CustomArrow onClick={addCount}>
-                <Arrow />
-              </S.CustomArrow>
-            </S.NavigationWrapper>
+            {galleryImages.length > 1 && (
+              <S.NavigationWrapper>
+                <S.CustomArrow className="left" onClick={restCount}>
+                  <Arrow />
+                </S.CustomArrow>
+                <span>
+                  {count}/{galleryImages.length}
+                </span>
+                <S.CustomArrow onClick={addCount}>
+                  <Arrow />
+                </S.CustomArrow>
+              </S.NavigationWrapper>
+            )}
           </S.ContentWrapper>
         </Grid>
         <S.ImageGrid item xs={12} md={8}>
