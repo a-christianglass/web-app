@@ -53,6 +53,7 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
                 </Grid>
               </div>
             </S.TextWrapper>
+
             <S.NavigationWrapper>
               <S.CustomArrow className="left" onClick={restCount}>
                 <Arrow />

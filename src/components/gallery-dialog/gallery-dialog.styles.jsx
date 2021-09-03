@@ -22,6 +22,8 @@ export const TextWrapper = styled.div`
     font-size: 24px;
     line-height: 29px;
     color: #ffffff;
+    width: 1150px;
+    margin-bottom: 1em;
   }
   p {
     font-style: normal;
@@ -29,6 +31,7 @@ export const TextWrapper = styled.div`
     font-size: 14px;
     line-height: 22px;
     color: #ffffff;
+    margin-bottom: 1em;
   }
 `
 
@@ -75,5 +78,7 @@ export const PreviewImage = styled(CustomImage)`
 `
 
 export const ImageGrid = styled(Grid)`
+  export const ImageGrid = styled(Grid)\`
+export const ImageGrid = styled(Grid)\` export const ImageGrid = styled(Grid)\`
   max-height: 543px;
 `
