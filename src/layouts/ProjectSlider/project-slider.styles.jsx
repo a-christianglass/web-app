@@ -46,7 +46,9 @@ background-color: #f0f5f7;
 
 export const TextWrapper = styled.div`
   max-width: 452px;
-
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    padding: 2em;
+  }
   h3 {
     text-transform: uppercase;
     color: rgba(13, 46, 77, 0.75);

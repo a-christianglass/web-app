@@ -12,7 +12,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
         <S.LeftGrid
           item
           xs={12}
-          md={7}
+          md={4}
           alignItems={"center"}
           justifyContent={"center"}
         >
@@ -36,7 +36,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
             )}
           </S.TextWrapper>
         </S.LeftGrid>
-        <S.RightGrid item xs={12} md={5}>
+        <S.RightGrid item xs={12} md={8}>
           <CustomSlider
             onlyRight={false}
             autoHeight={false}
@@ -47,7 +47,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
                 slidesPerView: 1,
               },
               1200: {
-                slidesPerView: 1,
+                slidesPerView: 2,
               },
             }}
           >
