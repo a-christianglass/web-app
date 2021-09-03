@@ -12,7 +12,7 @@ const ProjectsGrid = ({ title, content, projects, color }) => {
     <S.Wrapper contained bgColor={color}>
       <S.TopGrid container>
         <S.LeftGrid item xs={12} md={6}>
-         {title && <h2>{title}</h2>}
+          {title && <h2>{title}</h2>}
         </S.LeftGrid>
         <S.RightGrid item xs={12} md={6}>
           <S.RightTextWrapper>
@@ -22,7 +22,13 @@ const ProjectsGrid = ({ title, content, projects, color }) => {
       </S.TopGrid>
       <Grid container spacing={isMD ? 5 : 2}>
         {projects.map((props, index) => (
-          <S.BottomGrid item xs={6} sm={6} md={4} key={`project-card-${index}`}>
+          <S.BottomGrid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={`project-card-${index}`}
+          >
             <ProjectCard {...props} />
           </S.BottomGrid>
         ))}

@@ -11,9 +11,6 @@ export const CardContainer = styled.div`
   margin-bottom: 2em;
   cursor: pointer;
   height: 486px;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    height: 243px;
-  } ;
 `
 export const Card = styled(Box)`
   display: flex;
@@ -60,7 +57,4 @@ export const ArrowWrapper = styled.div`
 
 export const CardImage = styled(CustomImage)`
   height: 424px;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    height: 212px;
-  } ;
 `
