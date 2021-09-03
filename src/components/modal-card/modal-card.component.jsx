@@ -18,7 +18,7 @@ const ModalCard = ({ projectImage, projectTitle, projectInfo }) => {
   return (
     <S.CardContainer onClick={projectInfo.galleryImages && handleClickOpen}>
       <S.Card>
-        {projectImage && <CustomImage img={projectImage} />}
+        {projectImage && <S.CardImage img={projectImage} />}
         {projectTitle && (
           <S.LinkWrapper>
             <S.TitleWrapper>

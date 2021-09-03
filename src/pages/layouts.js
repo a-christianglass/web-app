@@ -178,6 +178,11 @@ const Layouts = () => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      exampleCard: file(relativePath: { eq: "exampleCard.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
 
@@ -1426,7 +1431,7 @@ const Layouts = () => {
         title={"Custom Houses"}
         projects={[
           {
-            projectImage: staticQuery.home,
+            projectImage: staticQuery.exampleCard,
             projectTitle: "707 N Ocean",
             projectInfo: {
               title: "Home in Boca Raton",

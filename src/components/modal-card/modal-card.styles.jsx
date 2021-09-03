@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Box } from "@material-ui/core"
+import CustomImage from "../custom-image/custom-image.component"
 
 export const CardContainer = styled.div`
   display: flex;
@@ -9,6 +10,7 @@ export const CardContainer = styled.div`
   border-radius: 5px;
   margin-bottom: 2em;
   cursor: pointer;
+  height: 486px;
 `
 export const Card = styled(Box)`
   display: flex;
@@ -50,4 +52,8 @@ export const ArrowWrapper = styled.div`
     height: 32px;
     object-fit: contain !important;
   }
+`
+
+export const CardImage = styled(CustomImage)`
+  height: 424px;
 `
