@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   background-color: #000000;
   padding: 4em 0 4em 4em;
   //height: calc(100vh - 64px);
+  width: 1140px;
 `
 export const ContentWrapper = styled.div`
   padding-right: 4em;
