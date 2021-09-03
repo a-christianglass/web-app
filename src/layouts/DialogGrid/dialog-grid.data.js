@@ -5,6 +5,7 @@ export const query = graphql`
     fieldGroupName
     title
     projects {
+      projectTitle
       projectInfo {
         title
         description

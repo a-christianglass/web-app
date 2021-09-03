@@ -3,6 +3,8 @@ import * as S from "./gallery-dialog.styles"
 import Grid from "@material-ui/core/Grid"
 import CustomImage from "../custom-image/custom-image.component"
 import Arrow from "../../assets/icons/white-arrow.svg"
+import parse from "html-react-parser"
+import { Typography } from "@material-ui/core"
 
 const GalleryDialog = ({ title, description, galleryImages }) => {
   const [count, setCount] = useState(1)
@@ -30,7 +32,7 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
           <S.ContentWrapper>
             <S.TextWrapper>
               {title && <h2>{title}</h2>}
-              {description && <p>{description}</p>}
+              {description && <Typography>{parse(description)}</Typography>}
               <div style={{ height: "100%" }}>
                 <Grid container>
                   {galleryImages.map(({ galleryImage }, index) => (
