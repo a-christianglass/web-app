@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Box } from "@material-ui/core"
+import CustomImage from "../custom-image/custom-image.component"
 
 export const CardContainer = styled.div`
   display: flex;
@@ -10,6 +11,10 @@ export const CardContainer = styled.div`
   border: 0.5px solid rgba(188, 197, 204, 0.2);
   border-radius: 5px;
   margin-bottom: 2em;
+  height: 486px;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    height: 243px;
+  } ;
 `
 export const Card = styled(Box)`
   display: flex;
@@ -28,6 +33,7 @@ export const TitleWrapper = styled.div`
   align-items: center;
   width: 90%;
   padding: 0.5em 2em;
+  background-color: white;
   span {
     color: #0d5c80;
     font-size: 1rem;
@@ -51,4 +57,11 @@ export const ArrowWrapper = styled.div`
     height: 32px;
     object-fit: contain !important;
   }
+`
+
+export const CardImage = styled(CustomImage)`
+  height: 424px;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    height: 212px;
+  } ;
 `
