@@ -12,7 +12,7 @@ const DialogGrid = ({ title, content, projects, color }) => {
     <S.Wrapper contained bgColor={color}>
       <S.TopGrid container>
         <S.LeftGrid item xs={12} md={6}>
-          <S.LeftTextWrapper>{title && <h2>{title}</h2>}</S.LeftTextWrapper>
+          {title && <h2>{title}</h2>}
         </S.LeftGrid>
         <S.RightGrid item xs={12} md={6}>
           <S.RightTextWrapper>
