@@ -4,6 +4,7 @@ import { Grid } from "@material-ui/core"
 import CustomSlider from "../../components/custom-slider/custom-slider.component"
 import { SwiperSlide } from "swiper/react"
 import ProjectCard from "../../components/project-card/project-card.component"
+import CustomLink from "../../components/custom-link/custom-link.component"
 
 const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
   return (
@@ -53,7 +54,9 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
           >
             {projects.map(({ image, link }, index) => (
               <SwiperSlide key={`project-slide-${index}`}>
-                <ProjectCard image={image} link={link} />
+                <CustomLink url={"/about/projects-and-gallery/"}>
+                  <ProjectCard image={image} link={link} />
+                </CustomLink>
               </SwiperSlide>
             ))}
           </CustomSlider>
