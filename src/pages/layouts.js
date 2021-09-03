@@ -1467,32 +1467,6 @@ const Layouts = () => {
               title: "Home in Boca Raton",
               description:
                 "A-Christian Glass worked with J.P. DiMisa on this 9,083 square foot new construction home nestled between the intracoastal waterway and the Grand Canal located in the Royal Palm Yacht and Country Club.",
-              galleryImages: [
-                {
-                  galleryImage: staticQuery.gallery,
-                },
-                {
-                  galleryImage: staticQuery.product1,
-                },
-                {
-                  galleryImage: staticQuery.gallery,
-                },
-                {
-                  galleryImage: staticQuery.product1,
-                },
-                {
-                  galleryImage: staticQuery.gallery,
-                },
-                {
-                  galleryImage: staticQuery.product1,
-                },
-                {
-                  galleryImage: staticQuery.gallery,
-                },
-                {
-                  galleryImage: staticQuery.product1,
-                },
-              ],
             },
           },
           {
