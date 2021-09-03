@@ -11,6 +11,9 @@ export const CardContainer = styled.div`
   margin-bottom: 2em;
   cursor: pointer;
   height: 486px;
+  :hover {
+    box-shadow: 0px 41px 60px rgba(8, 44, 73, 0.25);
+  }
 `
 export const Card = styled(Box)`
   display: flex;
