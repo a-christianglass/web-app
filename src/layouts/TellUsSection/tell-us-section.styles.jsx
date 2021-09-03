@@ -1,10 +1,11 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import {
+  Box, CircularProgress,
   FormControl,
   FormControlLabel,
   Radio,
-  TextField,
+  TextField
 } from "@material-ui/core"
 import CustomButton from "../../components/custom-button/custom-button.component"
 
@@ -20,9 +21,14 @@ export const Wrapper = styled(SectionWrapper)`
     line-height: 26px;
     color: rgba(29, 56, 69, 0.75);
   }
+
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #879FB3;
+  }
+  
 `
 
-export const FormContainer = styled(FormControl)`
+export const FormContainer = styled.div`
   width: 100%;
 `
 
@@ -129,4 +135,40 @@ export const Button = styled(CustomButton)`
   line-height: 17px;
   color: #1e150a;
   padding: 1em 0;
+`
+
+export const FormSpinner = styled(Box)`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  //background-color: rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+`
+
+export const CustomSpinner = styled(CircularProgress)`
+  color: ${({ theme }) =>
+  theme.palette ? theme.palette.primary.main : `black`};
+  width: 60px !important;
+  height: 60px !important;
+`
+
+export const SuccessMessage = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `

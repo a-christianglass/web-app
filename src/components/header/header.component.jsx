@@ -22,7 +22,7 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
   const [threshold, setTreshold] = useState(100)
   const [isActiveMenu, setIsActiveMenu] = useState(false)
 
-  console.log("isHomePage", isHomePage)
+
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
     threshold,
