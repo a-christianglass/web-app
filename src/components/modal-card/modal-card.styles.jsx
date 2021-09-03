@@ -19,7 +19,7 @@ export const CardContainer = styled.div`
 export const Card = styled(Box)`
   display: flex;
   flex-direction: column;
-  border-radius: 4px;
+  border-radius: 5px;
   filter: drop-shadow(0px 8px 12px rgba(8, 44, 73, 0.04));
 `
 

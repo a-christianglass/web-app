@@ -77,5 +77,6 @@ export const PreviewImage = styled(CustomImage)`
 `
 
 export const ImageGrid = styled(Grid)`
-  max-height: 510px;
+  max-height: 530px;
+  width: 1150px;
 `
