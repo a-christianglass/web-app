@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { Box } from "@material-ui/core"
 import CustomImage from "../custom-image/custom-image.component"
+import Dialog from "@material-ui/core/Dialog"
 
 export const CardContainer = styled.div`
   display: flex;
@@ -60,4 +61,22 @@ export const ArrowWrapper = styled.div`
 
 export const CardImage = styled(CustomImage)`
   height: 424px;
+`
+
+export const CustomDialog = styled(Dialog)`
+  .MuiDialog-paper {
+    padding: 2em 0;
+    background-color: #181919;
+  }
+  .MuiDialogContent-root {
+    ${({ theme }) => theme.breakpoints.up("sm")} {
+      padding-right: 0;
+    }
+  }
+`
+
+export const IconWrapper = styled.div`
+  padding: 0.5em 0;
+  cursor: pointer;
+  margin-left: 24px;
 `

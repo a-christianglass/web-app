@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 import * as S from "./gallery-dialog.styles"
 import Grid from "@material-ui/core/Grid"
-import CustomImage from "../custom-image/custom-image.component"
 import Arrow from "../../assets/icons/white-arrow.svg"
 import parse from "html-react-parser"
 import { Typography } from "@material-ui/core"

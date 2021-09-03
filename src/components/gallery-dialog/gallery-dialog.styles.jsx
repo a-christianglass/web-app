@@ -3,10 +3,8 @@ import CustomImage from "../custom-image/custom-image.component"
 import { Grid } from "@material-ui/core"
 
 export const Wrapper = styled.div`
-  background-color: #000000;
-  padding: 4em 0 4em 4em;
+  background-color: #181919;
   //height: calc(100vh - 64px);
-  width: 1140px;
 `
 export const ContentWrapper = styled.div`
   padding-right: 4em;
@@ -79,7 +77,5 @@ export const PreviewImage = styled(CustomImage)`
 `
 
 export const ImageGrid = styled(Grid)`
-  export const ImageGrid = styled(Grid)\`
-export const ImageGrid = styled(Grid)\` export const ImageGrid = styled(Grid)\`
-  max-height: 543px;
+  max-height: 510px;
 `
