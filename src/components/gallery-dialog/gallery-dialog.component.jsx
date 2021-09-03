@@ -16,11 +16,14 @@ const GalleryDialog = ({ title, description, galleryImages }) => {
   }
 
   const addCount = () => {
-    count >= galleryImages.length ? setCount(1) : setCount(count + 1)
+    count < galleryImages.length ? setCount(count + 1) : setCount(1)
+    console.log(count, galleryImages.length)
     setSelectedImage(count - 1)
   }
   const restCount = () => {
-    count <= 1 ? setCount(galleryImages.length) : setCount(count - 1)
+    count > galleryImages.length
+      ? setCount(count - 1)
+      : setCount(galleryImages.length)
     setSelectedImage(count - 1)
   }
 
