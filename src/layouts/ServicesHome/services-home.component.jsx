@@ -1,15 +1,8 @@
 import React, { useState } from "react"
 import * as S from "./services-home.styles"
 import parse from "html-react-parser"
-import Container from "@material-ui/core/Container"
 import Grid from "@material-ui/core/Grid"
-import { Typography } from "@material-ui/core"
-import Building from "../../assets/icons/building.svg"
-import Home from "../../assets/icons/home.svg"
 import CustomLink from "../../components/custom-link/custom-link.component"
-import { ArrowForward } from "@material-ui/icons"
-import { graphql, useStaticQuery } from "gatsby"
-import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 import ServiceCard from "../../components/service-card/service-card.component"
 
 const ServicesHome = ({

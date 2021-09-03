@@ -54,4 +54,7 @@ export const Title = styled.h2`
   margin-bottom: 0;
   text-align: center;
   color: ${({ theme }) => theme.palette.primary.dark};
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+  }
 `

@@ -70,6 +70,7 @@ export const TextWrapper = styled.div`
 
     ${({ theme }) => theme.breakpoints.down("md")} {
       font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
     }
   }
 
@@ -77,6 +78,17 @@ export const TextWrapper = styled.div`
     font-size: ${({ theme }) => theme.typography.pxToRem(16)};
     line-height: 26px;
     color: rgba(29, 56, 69, 0.75);
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 1em;
+
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
+  }
+  p {
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    line-height: 26px;
     font-style: normal;
     font-weight: 500;
     margin-bottom: 1em;

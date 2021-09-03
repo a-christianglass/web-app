@@ -23,6 +23,9 @@ export const LeftGrid = styled(Grid)`
 export const LeftContentWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em;
+    h3 {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
 `
 export const TagText = styled.p`
