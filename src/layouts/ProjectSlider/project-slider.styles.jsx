@@ -33,8 +33,8 @@ background-color: #f0f5f7;
       pointer-events: none;
       background: linear-gradient(
         270deg,
-        #ffffff 11.36%,
-        rgba(255, 255, 255, 0) 59.47%
+        #ffffff 2.36%,
+        rgba(255, 255, 255, 0) 35.47%
       );
     }
   }
