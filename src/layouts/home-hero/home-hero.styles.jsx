@@ -26,6 +26,8 @@ export const TextWrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin: 0;
+    padding-top: 23em;
+    padding-bottom: 3em;
   }
 
   h2 {
@@ -36,6 +38,9 @@ export const TextWrapper = styled.div`
     letter-spacing: 0.01em;
     color: #fafafa;
     margin-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
   }
 
   h1 {
@@ -48,7 +53,7 @@ export const TextWrapper = styled.div`
     margin-bottom: 0.5em;
 
     ${({ theme }) => theme.breakpoints.down("sm")} {
-      font-size: 2rem;
+      font-size: ${({ theme }) => theme.typography.pxToRem(28)};
     }
   }
 `
@@ -59,6 +64,10 @@ export const Button = styled(CustomButton)`
   border-radius: 4px;
   color: white;
   max-width: 307px;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    text-transform: none;
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+  }
 `
 
 export const LogoImage = styled(CustomImage)`
@@ -66,3 +75,5 @@ export const LogoImage = styled(CustomImage)`
   height: auto;
   padding-bottom: 3em;
 `
+
+export const MobileContentWrapper = styled(CustomBgImage)``
