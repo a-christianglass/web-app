@@ -90,3 +90,16 @@ export const ContentText = styled(Typography)`
     }
   }
 `
+
+export const Subtitle = styled.h2`
+  text-align: left;
+  margin-bottom: 3.5em;
+  font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+  color: #0d5c80;
+  font-weight: bold;
+  margin-bottom: 1em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    margin-bottom: 1em;
+  }
+`

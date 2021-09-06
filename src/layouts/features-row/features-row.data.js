@@ -10,6 +10,7 @@ export const query = graphql`
       }
       fieldGroupName
       title
+      subtitle
     }
     imageFeaturesRow {
       altText
