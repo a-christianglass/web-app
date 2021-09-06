@@ -6,6 +6,8 @@ import headerItems from "./header.json"
 import MegaMenu from "./mega-menu/mega-menu.component"
 import MailIcon from "../../assets/icons/blue-mail.svg"
 import PhoneIcon from "../../assets/icons/phone-blue.svg"
+import WhitePhoneIcon from "../../assets/icons/phone.svg"
+import WhiteMailIcon from "../../assets/icons/mail.svg"
 import parse from "html-react-parser"
 import { graphql, useStaticQuery } from "gatsby"
 import CustomLink from "../custom-link/custom-link.component"
@@ -21,7 +23,6 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
 
   const [threshold, setTreshold] = useState(100)
   const [isActiveMenu, setIsActiveMenu] = useState(false)
-
 
   const scrollTrigger = useScrollTrigger({
     disableHysteresis: true,
@@ -58,13 +59,13 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
             <S.InnerTopContainer>
               <S.TopItem href="mailto:info@a-christianglass.com">
                 <S.EmailWrapper>
-                  <MailIcon />
+                  {isXS ? <WhiteMailIcon /> : <MailIcon />}
                   info@a-christianglass.com
                 </S.EmailWrapper>
               </S.TopItem>
               <S.TopItem href="tel:5612783385">
                 <S.PhoneWrapper>
-                  <PhoneIcon />
+                  {isXS ? <WhitePhoneIcon /> : <PhoneIcon />}
                   (561) 278-3385
                 </S.PhoneWrapper>
               </S.TopItem>

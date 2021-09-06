@@ -15,22 +15,22 @@ export const MainNav = styled.div`
 
   ${({ theme }) => theme.breakpoints.up("md")} {
     ${({ theme, isdark }) =>
-            isdark
-                    ? `
+      isdark
+        ? `
     background-color: ${theme.palette.primary.main};
    `
-                    : `
+        : `
     background-color: transparent;
    `};
 
     ${({ isWhite }) =>
-            isWhite &&
-            `
+      isWhite &&
+      `
     background-color: #FAFAFA;
    `};
   }
-  
-  background-color: #1593CD;
+
+  background-color: #1593cd;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     min-height: 61px;
@@ -40,6 +40,9 @@ export const MainNav = styled.div`
 export const TopNav = styled.div`
   padding: 0.5em;
   background-color: ${({ theme }) => theme.palette.text.primary};
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    background-color: ${({ theme }) => theme.palette.tertiary.main};
+  }
 `
 
 export const TopItem = styled.a`
@@ -63,7 +66,8 @@ export const EmailWrapper = styled.div`
     margin-right: 0.5em;
   }
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    display: none;
+    font-size: ${({ theme }) => theme.typography.pxToRem(12)};
+    color: white;
   }
 `
 
@@ -72,6 +76,15 @@ export const PhoneWrapper = styled.div`
   align-items: center;
   svg {
     margin-right: 0.5em;
+  }
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(12)};
+    color: white;
+    svg {
+      margin-right: 0.5em;
+      width: 24px;
+      height: 24px;
+    }
   }
 `
 
@@ -206,18 +219,16 @@ export const Button = styled(CustomButton)`
   padding-top: 0.1em;
   padding-bottom: 0.1em;
   ${({ theme, isHomePage, isdark }) =>
-          isHomePage && !isdark
-                  ? `
+    isHomePage && !isdark
+      ? `
     background-color: transparent;
     border: 1px solid white;
     color: white
    `
-                  : `
+      : `
    background-color: #F89928;
     color: #1e150a;
    `};
-  
-  
 `
 
 export const ButtonWrapper = styled.div`
