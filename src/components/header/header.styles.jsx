@@ -68,6 +68,11 @@ export const EmailWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     font-size: ${({ theme }) => theme.typography.pxToRem(12)};
     color: white;
+    font-weight: 700;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 `
 
@@ -80,8 +85,8 @@ export const PhoneWrapper = styled.div`
   ${({ theme }) => theme.breakpoints.down("sm")} {
     font-size: ${({ theme }) => theme.typography.pxToRem(12)};
     color: white;
+    font-weight: 700;
     svg {
-      margin-right: 0.5em;
       width: 24px;
       height: 24px;
     }
