@@ -123,6 +123,13 @@ export const InnerMainContainer = styled.div`
 `
 
 export const MainItem = styled(CustomLink)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    ${({ isHomePage }) =>
+      isHomePage &&
+      `
+      padding: 0;
+   `}
+}
   ${({ theme, isWhite }) =>
     isWhite
       ? `
@@ -144,6 +151,15 @@ export const MainItem = styled(CustomLink)`
     display: block;
     padding: 0.5em 0;
   }
+
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    ${({ isHomePage }) =>
+      isHomePage &&
+      `
+    img {
+      display: none;
+    }
+   `}
 
   &.logo {
     padding: 0;
@@ -167,7 +183,8 @@ export const MainItem = styled(CustomLink)`
   }
 
   &.active:not(.logo):not(.contact) {
-    box-shadow: inset 0px -2px 0 0 ${({ theme }) => theme.palette.secondary.main};
+    box-shadow: inset 0px -2px 0 0 ${({ theme }) =>
+      theme.palette.secondary.main};
   }
 
   &:hover:not(.logo):not(.contact) {

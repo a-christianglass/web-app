@@ -6,8 +6,6 @@ import headerItems from "./header.json"
 import MegaMenu from "./mega-menu/mega-menu.component"
 import MailIcon from "../../assets/icons/blue-mail.svg"
 import PhoneIcon from "../../assets/icons/phone-blue.svg"
-import WhitePhoneIcon from "../../assets/icons/phone.svg"
-import WhiteMailIcon from "../../assets/icons/mail.svg"
 import parse from "html-react-parser"
 import { graphql, useStaticQuery } from "gatsby"
 import CustomLink from "../custom-link/custom-link.component"
@@ -59,13 +57,13 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
             <S.InnerTopContainer>
               <S.TopItem href="mailto:info@a-christianglass.com">
                 <S.EmailWrapper>
-                  {isXS ? <WhiteMailIcon /> : <MailIcon />}
+                  <MailIcon />
                   info@a-christianglass.com
                 </S.EmailWrapper>
               </S.TopItem>
               <S.TopItem href="tel:5612783385">
                 <S.PhoneWrapper>
-                  {isXS ? <WhitePhoneIcon /> : <PhoneIcon />}
+                  <PhoneIcon />
                   (561) 278-3385
                 </S.PhoneWrapper>
               </S.TopItem>
@@ -75,7 +73,7 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
         <S.MainNav isdark={isDark} isWhite={isWhite}>
           <Container>
             <S.MainNavContainer>
-              <S.MainItem url="/" className="logo">
+              <S.MainItem isHomePage={isHomePage} url="/" className="logo">
                 <img
                   src={
                     isXS

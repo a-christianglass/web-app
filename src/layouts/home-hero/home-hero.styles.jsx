@@ -12,14 +12,16 @@ export const HeroWrapper = styled(CustomBgImage)`
   padding: 0;
   background-color: ${({ theme }) => theme.palette.primary.main} !important;
 `
-export const ContentWrapper = styled.div``
+export const ContentWrapper = styled.div`
+  padding-top: 7em;
+  padding-bottom: 4em;
+`
 
 export const ImageWrapper = styled(CustomBgImage)`
   // ${sectionHeight};
 `
 
 export const TextWrapper = styled.div`
-  padding: 18em 0;
   max-width: 550px;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -32,7 +34,7 @@ export const TextWrapper = styled.div`
     font-size: 24px;
     line-height: 120.5%;
     letter-spacing: 0.01em;
-    color: #FAFAFA;
+    color: #fafafa;
     margin-bottom: 1em;
   }
 
@@ -42,7 +44,7 @@ export const TextWrapper = styled.div`
     font-size: 54px;
     line-height: 120%;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 0.5em;
 
     ${({ theme }) => theme.breakpoints.down("sm")} {
@@ -52,7 +54,7 @@ export const TextWrapper = styled.div`
 `
 
 export const Button = styled(CustomButton)`
-  background: #F89928;
+  background: #f89928;
   box-shadow: 0 24px 44px rgba(12, 54, 88, 0.11);
   border-radius: 4px;
   color: white;
@@ -60,7 +62,7 @@ export const Button = styled(CustomButton)`
 `
 
 export const LogoImage = styled(CustomImage)`
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
   padding-bottom: 3em;
 `
