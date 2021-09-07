@@ -17,7 +17,7 @@ export const LeftGrid = styled(Grid)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4em 0;
+  padding: 4em 1em;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 2em 16px;
   }
