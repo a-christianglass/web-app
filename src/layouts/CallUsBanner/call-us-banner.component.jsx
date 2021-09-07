@@ -16,10 +16,10 @@ const CallUsBanner = ({
 }) => {
   // No content == more padding in TextWrapper and text align: left on Content Wrapper
   const morePadding = content === undefined
-  const isMD = useMediaQuery(theme.breakpoints.down("md"))
+  const isXS = useMediaQuery(theme.breakpoints.down("xs"))
   return (
     <S.Wrapper>
-      {!isMD ? (
+      {!isXS ? (
         <CustomBgImage img={imageCallBanner}>
           <Grid container>
             <Grid item xs={12} md={6} />

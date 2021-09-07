@@ -4,11 +4,7 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 import CustomImage from "../../components/custom-image/custom-image.component"
 import Container from "@material-ui/core/Container"
 
-export const Wrapper = styled(SectionWrapper)`
-  ${({ theme }) => theme.breakpoints.up("md")} {
-    padding: 2em 0;
-  }
-`
+export const Wrapper = styled(SectionWrapper)``
 
 export const CustomContainer = styled(Container)`
   ${({ theme }) => theme.breakpoints.down("sm")} {
