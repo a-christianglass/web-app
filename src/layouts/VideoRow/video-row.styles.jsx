@@ -43,9 +43,6 @@ export const Content = styled(Typography)`
   font-style: normal;
   font-weight: normal;
   color: rgba(29, 56, 69, 0.75);
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
-  }
 `
 
 export const Logo = styled(CustomImage)`

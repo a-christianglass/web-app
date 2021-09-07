@@ -310,7 +310,7 @@ export const MobileContentWrapper = styled.div`
   }
 
   p {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
     line-height: 21px;
     color: rgba(29, 56, 69, 0.75);
   }

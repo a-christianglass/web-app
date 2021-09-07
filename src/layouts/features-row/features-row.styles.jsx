@@ -76,7 +76,6 @@ export const ContentText = styled(Typography)`
     background-size: cover;
   }
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
     margin-left: 36px;
     &:before {
       content: "";

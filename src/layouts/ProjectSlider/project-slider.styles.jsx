@@ -94,10 +94,6 @@ export const TextWrapper = styled.div`
     font-style: normal;
     font-weight: 500;
     margin-bottom: 1em;
-
-    ${({ theme }) => theme.breakpoints.down("md")} {
-      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
-    }
   }
 `
 export const LeftGrid = styled(Grid)`

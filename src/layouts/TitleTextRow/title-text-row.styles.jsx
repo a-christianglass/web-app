@@ -38,9 +38,6 @@ export const ContentText = styled(Typography)`
   line-height: 26px;
   font-style: normal;
   font-weight: normal;
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
-  }
 `
 
 export const LeftTextWrapper = styled.div`
