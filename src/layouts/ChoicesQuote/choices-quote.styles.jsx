@@ -24,6 +24,10 @@ export const LeftWrapper = styled.div`
     line-height: 47px;
     color: #0d5c80;
     margin-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 
