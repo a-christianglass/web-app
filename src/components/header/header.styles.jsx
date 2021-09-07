@@ -80,6 +80,9 @@ export const EmailWrapper = styled.div`
       height: 24px;
     }
   }
+  @media (max-width: 375px) {
+    display: none;
+  }
 `
 
 export const PhoneWrapper = styled.div`
@@ -94,7 +97,6 @@ export const PhoneWrapper = styled.div`
     font-size: ${({ theme }) => theme.typography.pxToRem(12)};
     color: white;
     font-weight: 700;
-
     svg {
       width: 24px;
       height: 24px;
