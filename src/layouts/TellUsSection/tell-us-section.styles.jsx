@@ -1,19 +1,17 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import {
-  Box, CircularProgress,
+  Box,
+  CircularProgress,
   FormControl,
   FormControlLabel,
   Radio,
-  TextField
+  TextField,
 } from "@material-ui/core"
 import CustomButton from "../../components/custom-button/custom-button.component"
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 5em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .MuiFormControlLabel-label {
     font-style: normal;
     font-weight: 500;
@@ -23,9 +21,8 @@ export const Wrapper = styled(SectionWrapper)`
   }
 
   .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-    border: 1px solid #879FB3;
+    border: 1px solid #879fb3;
   }
-  
 `
 
 export const FormContainer = styled.div`
@@ -47,13 +44,10 @@ export const FieldWrapper = styled.div`
   }
 `
 export const FormWrapper = styled.div`
-  display: flex;
   max-width: 796px;
   width: 100%;
-  padding: 2em 4em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -63,11 +57,14 @@ export const FormWrapper = styled.div`
     letter-spacing: 0.02em;
     color: #0d5c80;
     padding-bottom: 2em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 
   .MuiRadio-colorSecondary.Mui-checked {
-    color: #879FB3;
-
+    color: #879fb3;
   }
 `
 
@@ -155,7 +152,7 @@ export const FormSpinner = styled(Box)`
 
 export const CustomSpinner = styled(CircularProgress)`
   color: ${({ theme }) =>
-  theme.palette ? theme.palette.primary.main : `black`};
+    theme.palette ? theme.palette.primary.main : `black`};
   width: 60px !important;
   height: 60px !important;
 `
