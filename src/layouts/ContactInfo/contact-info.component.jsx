@@ -38,7 +38,7 @@ const ContactInfo = ({}) => {
       </Grid>
       <S.MapGrid>
         <S.Map
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8254.212148221166!2d-80.09799233199197!3d26.450528418210812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8e2affcc12915%3A0xc512f6171fb2101c!2sA-Christian%20Glass!5e0!3m2!1ses!2sec!4v1629131901721!5m2!1ses!2sec"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3572.2123475675508!2d-80.09418408448316!3d26.448883283329447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8e2affcc12915%3A0xc512f6171fb2101c!2sA-Christian%20Glass!5e0!3m2!1sen!2sus!4v1631138366667!5m2!1sen!2sus"
           width="100%"
           height="100%"
           allowFullScreen
