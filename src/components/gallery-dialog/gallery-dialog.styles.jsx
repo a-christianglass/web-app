@@ -12,9 +12,15 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-right: 0;
+  }
 `
 
 export const TextWrapper = styled.div`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-bottom: 0.5em;
+  }
   h2 {
     font-style: normal;
     font-weight: bold;
