@@ -14,40 +14,26 @@ export default function HTML(props) {
         <script
           async=""
           src="https://www.clarity.ms/eus2/s/0.6.22/clarity.js"
-        ></script>
-        <script
-          async=""
-          src="https://s.pinimg.com/ct/lib/main.89cd5bf4.js"
-        ></script>
+        />
         <script
           type="text/javascript"
           async=""
           src="https://www.googleadservices.com/pagead/conversion_async.js"
-        ></script>
+        />
+        <script async="" src="https://s.pinimg.com/ct/lib/main.89cd5bf4.js" />
         <script
           type="text/javascript"
           async=""
           src="https://www.googletagmanager.com/gtag/js?id=AW-825588581&amp;l=dataLayer&amp;cx=c"
-        ></script>
-        <script
-          type="text/javascript"
-          async=""
-          src="https://snap.licdn.com/li.lms-analytics/insight.min.js"
-        ></script>
-        <script async="" src="https://s.pinimg.com/ct/core.js"></script>
-        <script async="" src="https://www.clarity.ms/tag/54q1erdpu0"></script>
+        />
         <script
           src="https://connect.facebook.net/signals/config/1427692210755283?v=2.9.45&amp;r=stable"
           async=""
-        ></script>
-        <script
-          async=""
-          src="https://connect.facebook.net/en_US/fbevents.js"
-        ></script>
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-T8HJ6C2M3P"
-        ></script>
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
@@ -113,6 +99,11 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1427692210755283&ev=PageView&noscript=1" alt=""/>`,
+          }}
+        />
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -120,6 +111,57 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(e){if(!window.pintrk){window.pintrk = function () {
+              window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+                n=window.pintrk;n.queue=[],n.version="3.0";var
+                t=document.createElement("script");t.async=!0,t.src=e;var
+                r=document.getElementsByTagName("script")[0];
+                r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+              pintrk('load', '2613264786567', {em: '<user_email_address>'});
+              pintrk('page');
+              `,
+          }}
+        />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none;" alt="" src="https://ct.pinterest.com/v3/?event=init&tid=2613264786567&pd[em]=<hashed_email_address>&noscript=1" />`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            _linkedin_partner_id = "1478002";
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+          `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function(){var s = document.getElementsByTagName("script")[0];
+                var b = document.createElement("script");
+                b.type = "text/javascript";b.async = true;
+                b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+                s.parentNode.insertBefore(b, s);})();
+                `,
+          }}
+        />
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=1478002&fmt=gif" /> `,
+          }}
+        />
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async=""
+          defer=""
+          src="//js.hs-scripts.com/19617179.js"
+        />
       </body>
     </html>
   )
