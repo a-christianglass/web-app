@@ -4,7 +4,7 @@ import Layout from "../../components/layout"
 import Container from "@material-ui/core/Container"
 
 const ThankYouPage = () => (
-  <Layout seo={{ title: "Thank You" }}>
+  <Layout seo={{ title: "Thank You" }} isWhite={true}>
     <Container
       style={{ textAlign: "center", paddingTop: "10em", paddingBottom: "10em" }}
     >
