@@ -22,7 +22,6 @@ module.exports = {
   },
   plugins: [
     // `gatsby-plugin-preact`,
-    `gatsby-plugin-sitemap`,
     `gatsby-plugin-gatsby-cloud`,
     // Make sure this plugin is first in the array of plugins
     // {
@@ -117,7 +116,7 @@ module.exports = {
         url: `${process.env.WORDPRESS_URL}/graphql`,
       },
     },
-
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
