@@ -18,6 +18,9 @@ export const Wrapper = styled(SectionWrapper)`
     letter-spacing: 0.01em;
     color: #0d5c80;
     padding-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(36)};
+    }
   }
 `
 
@@ -32,6 +35,9 @@ export const ContentWrapper = styled.div`
     font-size: ${({ theme }) => theme.typography.pxToRem(24)};
     line-height: 29px;
     color: #0d5c80;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    }
   }
 
   svg {
@@ -60,6 +66,9 @@ export const LocationWrapper = styled.div`
     line-height: 35px;
     color: #0d5c80;
     margin-right: 0.5em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    }
   }
 `
 
@@ -95,6 +104,6 @@ export const Map = styled.iframe`
   padding: 0 4em 0 6.5em;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding: 2em;
+    padding: 0;
   }
 `
