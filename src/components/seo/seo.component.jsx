@@ -37,7 +37,7 @@ function SEO({ data, meta }) {
   const schemaOrgJSONLD = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    url: "https://DOMAIN-NAME.com",
+    url: "https://www.a-christianglass.com",
     name: title,
     description: opengraphDescription,
   }
