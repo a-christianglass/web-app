@@ -39,6 +39,9 @@ export const Wrapper = styled(SectionWrapper)`
 
 export const TextWrapper = styled.div`
   max-width: 452px;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    max-width: unset;
+  }
   h3 {
     text-transform: uppercase;
     color: rgba(13, 46, 77, 0.75);

@@ -50,6 +50,9 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
               1200: {
                 slidesPerView: 2,
               },
+              1024: {
+                slidesPerView: 2,
+              },
             }}
           >
             {projects.map(({ image, link }, index) => (

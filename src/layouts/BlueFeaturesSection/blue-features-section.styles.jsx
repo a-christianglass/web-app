@@ -82,6 +82,7 @@ export const ContentText = styled(Typography)`
   line-height: 26px;
   font-weight: 500;
   ${({ theme }) => theme.breakpoints.down("md")} {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    margin-left: 0;
+    padding-top: 0.5em;
   }
 `

@@ -9,6 +9,7 @@ import Container from "@material-ui/core/Container"
 
 const BlueFeaturesSection = ({ imageFeatures, mobileImage, title, cards }) => {
   const isXS = useMediaQuery(theme.breakpoints.down("xs"))
+  const isMD = useMediaQuery(theme.breakpoints.between("sm", "md"))
   const staticQuery = useStaticQuery(graphql`
     query {
       blueBg: file(relativePath: { eq: "blue-big.png" }) {
@@ -22,7 +23,7 @@ const BlueFeaturesSection = ({ imageFeatures, mobileImage, title, cards }) => {
     <S.Wrapper>
       <Grid container>
         <Grid item xs={12} md={4}>
-          <S.Image img={isXS ? mobileImage : imageFeatures} />
+          <S.Image img={isXS || isMD ? mobileImage : imageFeatures} />
         </Grid>
         <S.RightGrid item xs={12} md={8}>
           <S.BgImage img={staticQuery.blueBg}>

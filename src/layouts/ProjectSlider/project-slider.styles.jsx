@@ -46,6 +46,9 @@ background-color: #f0f5f7;
 
 export const TextWrapper = styled.div`
   max-width: 452px;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    max-width: unset;
+  }
   ${({ theme }) => theme.breakpoints.up("sm")} {
     padding: 2em;
   }
