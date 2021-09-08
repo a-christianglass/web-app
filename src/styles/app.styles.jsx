@@ -239,6 +239,6 @@ export const AppContainer = styled.main`
     padding-top: 39px;
    `};
   }
-  padding-top: 100px;
+  padding-top: 99px;
   background-color: #f8fdff;
 `
