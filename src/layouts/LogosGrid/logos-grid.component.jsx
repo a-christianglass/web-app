@@ -4,12 +4,12 @@ import Container from "@material-ui/core/Container"
 import IconSlider from "../../components/icon-grid/icon-grid.component"
 import { SwiperSlide } from "swiper/react"
 
-const LogosGrid = ({ logos, title, featuredLogos }) => {
+const LogosGrid = ({ logos, title, featuredLogos, haveMorePadding }) => {
   if (!logos) return null
   return (
-    <S.Wrapper>
+    <S.Wrapper haveMorePadding={haveMorePadding}>
       <Container>
-        <S.Title>{title}</S.Title>
+        {title && <S.Title>{title}</S.Title>}
         {featuredLogos && (
           <IconSlider
             autoHeight={false}

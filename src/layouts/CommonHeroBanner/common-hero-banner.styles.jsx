@@ -40,7 +40,7 @@ export const TopWrapper = styled.div`
 
   h2 {
     font-size: 2.25rem;
-    max-width: 750px;
+    max-width: 1000px;
 
     ${({ theme }) => theme.breakpoints.down("xs")} {
       font-size: 1.25rem;

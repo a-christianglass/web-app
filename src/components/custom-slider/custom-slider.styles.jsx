@@ -31,7 +31,7 @@ export const CustomArrow = styled.div`
     ${({ onlyRight }) =>
       !onlyRight
         ? `
-    right: -150px;
+    right: -50px;
   `
         : `right: -0.5em;
       `}

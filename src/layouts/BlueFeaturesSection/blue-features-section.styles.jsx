@@ -10,6 +10,7 @@ export const Wrapper = styled(SectionWrapper)`
 
 export const Image = styled(CustomImage)`
   width: 100%;
+  height: 100%;
 `
 
 export const BgImage = styled(CustomBgImage)`
@@ -27,9 +28,7 @@ export const Card = styled(Grid)`
   margin-bottom: 2em;
 `
 
-export const CardContent = styled.div`
-  max-width: 400px;
-`
+export const CardContent = styled.div``
 
 export const RightWrapper = styled.div`
   h2 {
@@ -49,9 +48,8 @@ export const RightWrapper = styled.div`
 export const RightGrid = styled(Grid)`
   margin-left: -1px;
 `
-export const ContentWrapper = styled.div`
-  max-width: 400px;
-`
+export const ContentWrapper = styled.div``
+
 export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -84,6 +82,7 @@ export const ContentText = styled(Typography)`
   line-height: 26px;
   font-weight: 500;
   ${({ theme }) => theme.breakpoints.down("md")} {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    margin-left: 0;
+    padding-top: 0.5em;
   }
 `

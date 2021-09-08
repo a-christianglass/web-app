@@ -31,13 +31,15 @@ const RailingsTabs = ({ title, tabsRaillings }) => {
         </S.CustomTabs>
         {tabsRaillings.map((tab, index) => (
           <S.CustomTabPanel hidden={value !== index}>
+            <S.TabContentWrapper>
+              {tab.tab.subtitle && (
+                <S.TabTitle>{parse(tab.tab.subtitle)}</S.TabTitle>
+              )}
+              {tab.tab.description && (
+                <S.RightText>{parse(tab.tab.description)}</S.RightText>
+              )}
+            </S.TabContentWrapper>
             <Grid container>
-              <S.TabContentWrapper>
-                <S.TabTitle>{parse(tab.tab.title)}</S.TabTitle>
-                {tab.tab.description && (
-                  <S.RightText>{parse(tab.tab.description)}</S.RightText>
-                )}
-              </S.TabContentWrapper>
               {tab.tab.features.map((feature, index) => (
                 <Grid item xs={12} md={6}>
                   <S.ContentWrapper>

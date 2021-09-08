@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
 import {
+  Box,
+  CircularProgress,
   FormControl,
   FormControlLabel,
   Radio,
@@ -10,9 +12,6 @@ import CustomButton from "../../components/custom-button/custom-button.component
 
 export const Wrapper = styled(SectionWrapper)`
   padding: 5em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   .MuiFormControlLabel-label {
     font-style: normal;
     font-weight: 500;
@@ -20,9 +19,13 @@ export const Wrapper = styled(SectionWrapper)`
     line-height: 26px;
     color: rgba(29, 56, 69, 0.75);
   }
+
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border: 1px solid #879fb3;
+  }
 `
 
-export const FormContainer = styled(FormControl)`
+export const FormContainer = styled.div`
   width: 100%;
 `
 
@@ -41,13 +44,10 @@ export const FieldWrapper = styled.div`
   }
 `
 export const FormWrapper = styled.div`
-  display: flex;
   max-width: 796px;
   width: 100%;
-  padding: 2em 4em;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
+
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -57,11 +57,14 @@ export const FormWrapper = styled.div`
     letter-spacing: 0.02em;
     color: #0d5c80;
     padding-bottom: 2em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 
   .MuiRadio-colorSecondary.Mui-checked {
-    color: #879FB3;
-
+    color: #879fb3;
   }
 `
 
@@ -129,4 +132,40 @@ export const Button = styled(CustomButton)`
   line-height: 17px;
   color: #1e150a;
   padding: 1em 0;
+`
+
+export const FormSpinner = styled(Box)`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  //background-color: rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+`
+
+export const CustomSpinner = styled(CircularProgress)`
+  color: ${({ theme }) =>
+    theme.palette ? theme.palette.primary.main : `black`};
+  width: 60px !important;
+  height: 60px !important;
+`
+
+export const SuccessMessage = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `

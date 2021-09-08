@@ -72,8 +72,8 @@ export const NumberWrapper = styled.div`
     font-style: normal;
     font-size: 2rem;
     color: ${({ theme }) => theme.palette.text.primary};
-    ${({ theme }) => theme.breakpoints.down("md")} {
-      font-size: ${({ theme }) => theme.typography.pxToRem(26)};
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
     }
   }
 `

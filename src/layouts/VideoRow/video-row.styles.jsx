@@ -7,6 +7,9 @@ import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.comp
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 0;
   background-color: white;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 0;
+  }
 `
 
 export const LeftGrid = styled(Grid)`
@@ -14,7 +17,10 @@ export const LeftGrid = styled(Grid)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
+  padding: 4em 1em;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 16px;
+  }
 `
 
 export const LeftWrapper = styled.div`
@@ -23,10 +29,13 @@ export const LeftWrapper = styled.div`
   max-width: 526px;
   h2 {
     color: #0d5c80;
-    font-size: 36px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(36)};
     font-style: normal;
     font-weight: bold;
     margin: 0.5em 0;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
 `
 export const Content = styled(Typography)`
@@ -43,6 +52,10 @@ export const Logo = styled(CustomImage)`
 
 export const VideoGrid = styled(Grid)`
   cursor: pointer;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
 `
 
 export const VideoImage = styled(CustomBgImage)`
@@ -51,6 +64,10 @@ export const VideoImage = styled(CustomBgImage)`
   justify-content: center;
   width: 100%;
   height: 100%;
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    height: 170px;
+  }
 
   svg {
     width: 64px;

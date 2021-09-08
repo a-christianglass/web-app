@@ -33,8 +33,8 @@ background-color: #f0f5f7;
       pointer-events: none;
       background: linear-gradient(
         270deg,
-        #ffffff 11.36%,
-        rgba(255, 255, 255, 0) 59.47%
+        #ffffff 2.36%,
+        rgba(255, 255, 255, 0) 35.47%
       );
     }
   }
@@ -46,7 +46,12 @@ background-color: #f0f5f7;
 
 export const TextWrapper = styled.div`
   max-width: 452px;
-
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    max-width: unset;
+  }
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    padding: 2em;
+  }
   h3 {
     text-transform: uppercase;
     color: rgba(13, 46, 77, 0.75);
@@ -70,6 +75,7 @@ export const TextWrapper = styled.div`
 
     ${({ theme }) => theme.breakpoints.down("md")} {
       font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
     }
   }
 
@@ -85,17 +91,21 @@ export const TextWrapper = styled.div`
       font-size: ${({ theme }) => theme.typography.pxToRem(14)};
     }
   }
+  p {
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    line-height: 26px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 1em;
+  }
 `
 export const LeftGrid = styled(Grid)`
-  padding: 2em;
-
-  ${({ theme }) => theme.breakpoints.down("md")} {
-    padding: 2em 0;
-  }
-
   display: flex;
   justify-content: center;
   align-items: center;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 2em 0;
+  }
 `
 
 export const ImageWrapper = styled.div`

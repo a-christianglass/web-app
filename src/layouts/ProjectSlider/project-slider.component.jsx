@@ -4,6 +4,7 @@ import { Grid } from "@material-ui/core"
 import CustomSlider from "../../components/custom-slider/custom-slider.component"
 import { SwiperSlide } from "swiper/react"
 import ProjectCard from "../../components/project-card/project-card.component"
+import CustomLink from "../../components/custom-link/custom-link.component"
 
 const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
   return (
@@ -12,7 +13,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
         <S.LeftGrid
           item
           xs={12}
-          md={7}
+          md={4}
           alignItems={"center"}
           justifyContent={"center"}
         >
@@ -36,7 +37,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
             )}
           </S.TextWrapper>
         </S.LeftGrid>
-        <S.RightGrid item xs={12} md={5}>
+        <S.RightGrid item xs={12} md={8}>
           <CustomSlider
             onlyRight={false}
             autoHeight={false}
@@ -47,13 +48,18 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
                 slidesPerView: 1,
               },
               1200: {
-                slidesPerView: 1,
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 2,
               },
             }}
           >
             {projects.map(({ image, link }, index) => (
               <SwiperSlide key={`project-slide-${index}`}>
-                <ProjectCard image={image} link={link} />
+                <CustomLink url={"/about/projects-and-gallery/"}>
+                  <ProjectCard image={image} link={link} />
+                </CustomLink>
               </SwiperSlide>
             ))}
           </CustomSlider>

@@ -10,54 +10,9 @@ export const Wrapper = styled(SectionWrapper)`
   .Mui-selected {
     color: #0d5c80;
   }
-`
-export const CustomTabs = styled(Tabs)`
-  mix-blend-mode: normal;
-  margin-bottom: 2em;
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    margin-bottom: 1em;
-  }
-
-  .MuiTabs-scrollButtons {
-    display: none;
-  }
-
   .MuiTabs-indicator {
-    height: 4px;
-  }
-
-  .MuiTabs-scroller {
-    .MuiTabs-flexContainer {
-      padding: 0.75em 0;
-
-      button {
-        padding-bottom: 1.5em;
-        font-size: 14px;
-        border-bottom: 7px solid #f0f5f7;
-      }
-    }
-
-    .MuiTabs-indicator {
-      bottom: 11px;
-    }
-  }
-`
-export const CustomTab = styled(Tab)`
-  color: rgba(13, 46, 77, 0.75);
-  opacity: 0.75;
-  text-transform: uppercase;
-  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
-  font-weight: 600;
-  min-width: 296px;
-
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    min-width: 220px;
-    font-size: 0.875rem;
-  }
-
-  ${({ theme }) => theme.breakpoints.down("xs")} {
-    min-width: 160px;
+    background-color: #0d5c80;
+    height: 7px !important;
   }
 `
 
@@ -161,10 +116,20 @@ export const Title = styled.h1`
   margin-bottom: 1em;
   color: #0d5c80;
   ${({ theme }) => theme.breakpoints.down("sm")} {
-    font-size: ${({ theme }) => theme.typography.pxToRem(32)};
-    line-height: 46px;
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 29px;
   }
   ${({ theme }) => theme.breakpoints.down("xs")} {
     text-align: left;
   }
+`
+
+export const FaqTab = styled(Tab)`
+  color: rgba(13, 46, 77, 0.75);
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  font-weight: 600;
+  padding-bottom: 1.5em;
+  border-bottom: 6.5px solid #eaf1f6;
 `

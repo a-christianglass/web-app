@@ -4,6 +4,7 @@ import { Grid, Typography } from "@material-ui/core"
 import CustomImage from "../../components/custom-image/custom-image.component"
 
 export const Wrapper = styled(SectionWrapper)`
+  padding: 10em 0;
   ${({ bgColor }) =>
     bgColor === "white"
       ? `
@@ -14,6 +15,9 @@ export const Wrapper = styled(SectionWrapper)`
           background-color:  #f0f5f7;
 
    `};
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 0;
+  }
 `
 
 export const LeftGrid = styled(Grid)`
@@ -25,6 +29,7 @@ export const LeftGrid = styled(Grid)`
 export const ImageWrapper = styled(CustomImage)`
   width: 100%;
   max-width: 352px;
+  margin-bottom: 2em;
 `
 
 export const RightGrid = styled(Grid)`
@@ -47,6 +52,10 @@ export const TextWrapper = styled.div`
 
   h3 {
     margin-bottom: 1rem;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+      line-height: 29px;
+    }
   }
 `
 

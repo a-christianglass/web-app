@@ -55,7 +55,7 @@ export const CustomArrow = styled.div`
     left: 3.5em;
   }
   &.right {
-    ${({ onlyRight }) =>
+    ${({ onlyRight, theme }) =>
       !onlyRight
         ? `
     right: 3.5em;
@@ -63,7 +63,12 @@ export const CustomArrow = styled.div`
         : `right: -0.5em;
       `}
   }
-  @media (max-width: 1340px) {
-    display: none;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    &.left {
+      left: 0.5em;
+    }
+    &.right {
+      right: 0.5em;
+    }
   }
 `

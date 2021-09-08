@@ -231,14 +231,14 @@ export const AppContainer = styled.main`
   //padding-top: ${({ theme }) => theme.navHeight}px;
   ${({ theme }) => theme.breakpoints.up("md")} {
     ${({ theme, isTransparent }) =>
-            isTransparent
-                    ? `
+      isTransparent
+        ? `
     padding-top: ${theme.navHeight}px;
    `
-                    : `
+        : `
     padding-top: 39px;
    `};
   }
-  padding-top: 110px;
+  padding-top: 99px;
   background-color: #f8fdff;
 `

@@ -6,6 +6,9 @@ import CustomImage from "../../components/custom-image/custom-image.component"
 export const Wrapper = styled(SectionWrapper)`
   padding: 4em 2em;
   background-color: #f0f5f7;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 2em 0;
+  }
 `
 
 export const LeftGrid = styled(Grid)`
@@ -25,6 +28,9 @@ export const LeftWrapper = styled.div`
     font-style: normal;
     font-weight: bold;
     margin-bottom: 1em;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    }
   }
 `
 
@@ -33,6 +39,9 @@ export const LeftContentText = styled(Typography)`
   color: rgba(29, 56, 69, 0.75);
   font-style: normal;
   font-weight: normal;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  }
 `
 
 export const RightGrid = styled(Grid)`
@@ -52,6 +61,9 @@ export const RightContentText = styled(Typography)`
     font-size: ${({ theme }) => theme.typography.pxToRem(18)};
     line-height: 29px;
     color: #0d5c80;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(16)};
+    }
   }
 `
 

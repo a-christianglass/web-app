@@ -16,7 +16,8 @@ export const Wrapper = styled(SectionWrapper)`
   );
 `
 export const FooterWrapper = styled.div`
-  padding: 6em 5em;
+  padding: 6em 5em 32px;
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     padding: 1em;
   }
@@ -149,7 +150,7 @@ export const IconWrapper = styled.div`
   }
 `
 export const LastGrid = styled(Grid)`
-  padding: 2em 0;
+  padding: 2em 0 0;
   ${({ theme }) => theme.breakpoints.down("sm")} {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
@@ -309,7 +310,7 @@ export const MobileContentWrapper = styled.div`
   }
 
   p {
-    font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    font-size: ${({ theme }) => theme.typography.pxToRem(16)};
     line-height: 21px;
     color: rgba(29, 56, 69, 0.75);
   }

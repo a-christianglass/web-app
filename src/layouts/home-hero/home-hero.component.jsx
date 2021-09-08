@@ -15,32 +15,61 @@ const HomeHero = ({ imageHome, title, subtitle, button }) => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
+      mobileHomeHero: file(relativePath: { eq: "mobileHomeHero.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+        }
+      }
     }
   `)
 
   return (
     <S.HeroWrapper img={imageHome}>
       <Container>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12} md={7}>
-            <S.TextWrapper>
+        <Hidden xsDown>
+          <S.ContentWrapper>
+            <Grid container spacing={3} alignItems="center">
+              <Grid item xs={12} md={7}>
+                <S.TextWrapper>
+                  <Hidden mdDown>
+                    <S.LogoImage img={staticQuery.logo} />
+                  </Hidden>
+                  {subtitle && <h2>{parse(subtitle)}</h2>}
+                  {subtitle && <h1>{parse(title)}</h1>}
+                  <Hidden mdUp>
+                    <S.Button href="/contact">Schedule an Appointment</S.Button>
+                  </Hidden>
+                </S.TextWrapper>
+              </Grid>
               <Hidden mdDown>
-                <S.LogoImage img={staticQuery.logo} />
+                <Grid
+                  style={{ textAlign: "-webkit-right" }}
+                  item
+                  xs={12}
+                  md={5}
+                >
+                  <ContactForm />
+                </Grid>
               </Hidden>
-              {subtitle && <h2>{parse(subtitle)}</h2>}
-              {subtitle && <h1>{parse(title)}</h1>}
-              <Hidden mdUp>
-                <S.Button href="/contact">Schedule an Appointment</S.Button>
-              </Hidden>
-            </S.TextWrapper>
-          </Grid>
-          <Hidden mdDown>
-            <Grid style={{ textAlign: "-webkit-right" }} item xs={12} md={5}>
-              <ContactForm />
             </Grid>
-          </Hidden>
-        </Grid>
+          </S.ContentWrapper>
+        </Hidden>
       </Container>
+      <Hidden smUp>
+        <S.MobileContentWrapper img={staticQuery.mobileHomeHero}>
+          <Container>
+            <Grid item xs={12}>
+              <S.TextWrapper>
+                {subtitle && <h2>{parse(subtitle)}</h2>}
+                {subtitle && <h1>{parse(title)}</h1>}
+                <Hidden mdUp>
+                  <S.Button href="/contact">Schedule an Appointment</S.Button>
+                </Hidden>
+              </S.TextWrapper>
+            </Grid>
+          </Container>
+        </S.MobileContentWrapper>
+      </Hidden>
     </S.HeroWrapper>
   )
 }

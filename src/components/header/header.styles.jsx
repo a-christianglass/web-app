@@ -15,22 +15,22 @@ export const MainNav = styled.div`
 
   ${({ theme }) => theme.breakpoints.up("md")} {
     ${({ theme, isdark }) =>
-            isdark
-                    ? `
+      isdark
+        ? `
     background-color: ${theme.palette.primary.main};
    `
-                    : `
+        : `
     background-color: transparent;
    `};
 
     ${({ isWhite }) =>
-            isWhite &&
-            `
+      isWhite &&
+      `
     background-color: #FAFAFA;
    `};
   }
-  
-  background-color: #1593CD;
+
+  background-color: #1593cd;
 
   ${({ theme }) => theme.breakpoints.down("sm")} {
     min-height: 61px;
@@ -40,6 +40,10 @@ export const MainNav = styled.div`
 export const TopNav = styled.div`
   padding: 0.5em;
   background-color: ${({ theme }) => theme.palette.text.primary};
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    background-color: ${({ theme }) => theme.palette.tertiary.main};
+  }
 `
 
 export const TopItem = styled.a`
@@ -48,9 +52,11 @@ export const TopItem = styled.a`
   font-size: ${({ theme }) => theme.typography.pxToRem(16)};
   font-weight: 500;
   text-decoration: none;
+
   &:not(:last-child) {
     margin-right: 1em;
   }
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin-left: 0;
   }
@@ -59,10 +65,22 @@ export const TopItem = styled.a`
 export const EmailWrapper = styled.div`
   display: flex;
   align-items: center;
+
   svg {
     margin-right: 0.5em;
   }
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(12)};
+    color: white;
+    font-weight: 700;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  @media (max-width: 375px) {
     display: none;
   }
 `
@@ -70,8 +88,19 @@ export const EmailWrapper = styled.div`
 export const PhoneWrapper = styled.div`
   display: flex;
   align-items: center;
+
   svg {
     margin-right: 0.5em;
+  }
+
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(12)};
+    color: white;
+    font-weight: 700;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 `
 
@@ -79,6 +108,7 @@ export const InnerTopContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     justify-content: center;
   }
@@ -99,12 +129,17 @@ export const InnerMainContainer = styled.div`
   ${({ theme }) => theme.breakpoints.up("lg")} {
     margin-left: -2em;
   }
+
   ${({ theme }) => theme.breakpoints.down("sm")} {
     margin-right: unset;
   }
 `
 
 export const MainItem = styled(CustomLink)`
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    padding: 0;
+  }
+
   ${({ theme, isWhite }) =>
     isWhite
       ? `
@@ -127,48 +162,60 @@ export const MainItem = styled(CustomLink)`
     padding: 0.5em 0;
   }
 
-  &.logo {
-    padding: 0;
-  }
+  ${({ theme }) => theme.breakpoints.up("sm")} {
+    ${({ isHomePage }) =>
+      isHomePage &&
+      `
+    img {
+      display: none;
+    }
+   `}
+    &.logo {
+      padding: 0;
+    }
 
-  &.contact {
-    display: flex;
-    align-items: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    span {
-      margin-left: 1em;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      background-color: ${({ theme }) => theme.palette.tertiary.main};
+    &.contact {
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-  }
+      padding-top: 1em;
+      padding-bottom: 1em;
 
-  &.active:not(.logo):not(.contact) {
-    box-shadow: inset 0px -2px 0 0 ${({ theme }) => theme.palette.secondary.main};
-  }
+      span {
+        margin-left: 1em;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: ${({ theme }) => theme.palette.tertiary.main};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
 
-  &:hover:not(.logo):not(.contact) {
-    .arrow {
-      transform: rotate(225deg);
-      top: 1px;
+    &.active:not(.logo):not(.contact) {
+      box-shadow: inset 0px -2px 0 0 ${({ theme }) =>
+        theme.palette.secondary.main};
     }
-    > div {
-      display: block;
-    }
-    ${({ theme, removeTopLine }) =>
-      removeTopLine
-        ? `
+
+    &:hover:not(.logo):not(.contact) {
+      .arrow {
+        transform: rotate(225deg);
+        top: 1px;
+      }
+
+      > div {
+        display: block;
+      }
+
+      ${({ theme, removeTopLine }) =>
+        removeTopLine
+          ? `
     box-shadow: none;
    `
-        : `
+          : `
    box-shadow: inset 0px -2px 0 0 ${theme.palette.secondary.main};
    `};
-  }
+    }
 `
 
 export const Arrow = styled.span`
@@ -206,18 +253,16 @@ export const Button = styled(CustomButton)`
   padding-top: 0.1em;
   padding-bottom: 0.1em;
   ${({ theme, isHomePage, isdark }) =>
-          isHomePage && !isdark
-                  ? `
+    isHomePage && !isdark
+      ? `
     background-color: transparent;
     border: 1px solid white;
     color: white
    `
-                  : `
+      : `
    background-color: #F89928;
     color: #1e150a;
    `};
-  
-  
 `
 
 export const ButtonWrapper = styled.div`
@@ -236,6 +281,7 @@ export const NavWrapper = styled.div`
 export const MenuButton = styled(IconButton)`
   padding-right: 0;
   padding-left: 0;
+
   svg {
     fill: ${({ theme }) => theme.palette.text.primary};
   }

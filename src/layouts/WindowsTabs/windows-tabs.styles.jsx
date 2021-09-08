@@ -11,6 +11,17 @@ export const Wrapper = styled(SectionWrapper)`
   .Mui-selected {
     color: #0d5c80;
   }
+
+  .MuiTabs-scrollButtons {
+    color: rgba(13, 46, 77, 0.75);
+  }
+  .MuiTabs-scroller .MuiTabs-flexContainer button {
+    border-bottom: 7px solid #eaf1f6;
+  }
+  .MuiTabs-indicator {
+    background-color: #0d5c80;
+    height: 7px !important;
+  }
 `
 
 export const TopGrid = styled(Grid)`
@@ -75,6 +86,7 @@ export const CustomTab = styled(Tab)`
 `
 
 export const CustomTabPanel = styled.div`
+  padding: 2em 0;
   color: white;
   animation: fadeIn ease 1s;
   -webkit-animation: fadeIn ease 1s;
@@ -181,6 +193,10 @@ export const ContentWrapper = styled.div`
 export const TabSubtitle = styled.h3`
   text-transform: capitalize;
   padding: 1em 0;
+  ${({ theme }) => theme.breakpoints.down("sm")} {
+    font-size: ${({ theme }) => theme.typography.pxToRem(24)};
+    line-height: 29px;
+  }
 `
 
 export const TabText = styled(Typography)``
@@ -219,4 +235,15 @@ export const FeatureWrapper = styled.div`
   p {
     margin-left: 30px;
   }
+`
+
+export const DoorTab = styled(Tab)`
+  color: rgba(13, 46, 77, 0.75);
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+  font-weight: 600;
+  padding-bottom: 1.5em;
+  line-height: 1.3;
+  letter-spacing: 1px;
 `

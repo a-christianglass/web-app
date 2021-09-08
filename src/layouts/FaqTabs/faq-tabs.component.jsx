@@ -5,6 +5,7 @@ import { ChevronRight, ExpandLess } from "@material-ui/icons"
 import AccordionSummary from "@material-ui/core/AccordionSummary"
 import AccordionDetails from "@material-ui/core/AccordionDetails"
 import parse from "html-react-parser"
+import { Tabs } from "@material-ui/core"
 
 const FaqTabs = ({ faqTitle, faqTabs }) => {
   //Hook for tabs
@@ -25,16 +26,17 @@ const FaqTabs = ({ faqTitle, faqTabs }) => {
       <Container>
         {faqTitle && <S.Title>{faqTitle}</S.Title>}
 
-        <S.CustomTabs
+        <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
-          variant="scrollable"
+          variant="fullWidth"
+          centered
         >
           {faqTabs.map(tab => (
-            <S.CustomTab label={tab.tab.title} />
+            <S.FaqTab label={tab.tab.title} />
           ))}
-        </S.CustomTabs>
+        </Tabs>
         {faqTabs.map((faqObj, index) => (
           <S.CustomTabPanel hidden={value !== index}>
             {faqObj.tab.faqs.map((faq, index) => (

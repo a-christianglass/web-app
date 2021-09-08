@@ -39,6 +39,9 @@ export const Wrapper = styled(SectionWrapper)`
 
 export const TextWrapper = styled.div`
   max-width: 452px;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    max-width: unset;
+  }
   h3 {
     text-transform: uppercase;
     color: rgba(13, 46, 77, 0.75);
@@ -83,18 +86,30 @@ export const LeftGrid = styled(Grid)`
 
 export const CardWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  padding: 3em;
-  min-height: 222px;
-  max-width: 550px;
+  //padding: 3em;
+  //min-height: 222px;
+  height: 295px;
+  width: 100%;
   border: 0.5px solid rgba(188, 197, 204, 0.2);
   border-radius: 5px;
+`
+
+export const ContentWrapper = styled.div`
+  max-width: 500px;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    padding: 1em;
+  }
   p {
     padding: 0;
     margin-bottom: 1em;
     font-weight: 500;
     color: #0d2e4d;
+    ${({ theme }) => theme.breakpoints.down("sm")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
   }
   h4 {
     color: #00447b;
@@ -102,6 +117,9 @@ export const CardWrapper = styled.div`
     font-weight: bold;
     font-style: normal;
     padding: 0;
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
   }
   h5 {
     color: rgba(13, 46, 77, 0.75);
@@ -111,6 +129,9 @@ export const CardWrapper = styled.div`
     opacity: 0.75;
     padding: 0;
     margin: 0.2em 0 0 0;
+    ${({ theme }) => theme.breakpoints.down("md")} {
+      font-size: ${({ theme }) => theme.typography.pxToRem(14)};
+    }
   }
 `
 
