@@ -6,6 +6,7 @@ import MailIcon from "../../assets/icons/mailForm.svg"
 import PhoneIcon from "../../assets/icons/phoneForm.svg"
 import { useForm, Controller } from "react-hook-form"
 import { contactFormApi } from "../../apis/apis"
+import { navigate } from "gatsby-link"
 
 const ContactForm = () => {
   const [products, setProducts] = useState("")
@@ -140,9 +141,7 @@ const ContactForm = () => {
             </S.Button>
           </>
         ) : (
-          <S.SuccessMessage>
-            <Typography>{successMessage}</Typography>
-          </S.SuccessMessage>
+          <>{navigate("/quote/thanks")}</>
         )}
       </form>
     </S.FormWrapper>

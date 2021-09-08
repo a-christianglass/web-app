@@ -17,6 +17,7 @@ import PersonIcon from "../../assets/icons/person.svg"
 import LocationIcon from "../../assets/icons/locationForm.svg"
 import { contactFormApi } from "../../apis/apis"
 import Container from "@material-ui/core/Container"
+import { navigate } from "gatsby-link"
 
 const TellUsSection = ({}) => {
   const { register, handleSubmit, errors, control } = useForm({
@@ -521,9 +522,7 @@ const TellUsSection = ({}) => {
                 </S.FormContainer>
               </>
             ) : (
-              <S.SuccessMessage>
-                <Typography>{successMessage}</Typography>
-              </S.SuccessMessage>
+              <>{navigate("/quote/thanks")}</>
             )}
           </form>
         </S.FormWrapper>
