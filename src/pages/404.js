@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Container from "@material-ui/core/Container"
 
 const NotFoundPage = () => (
-  <Layout seo={{ title: "404: Not Found" }}>
+  <Layout seo={{ title: "404: Not Found" }} isWhite={true}>
     <Container
       style={{ textAlign: "center", paddingTop: "10em", paddingBottom: "10em" }}
     >
