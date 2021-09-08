@@ -16,7 +16,7 @@ const ContactInfo = ({}) => {
         <S.ItemGrid item xs={12} md={4}>
           <S.ContentWrapper>
             <PhoneIcon />
-            <a href="tel:+5612783385">(561) 278-3385</a>
+            <a href="tel:+15612783385">(561) 278-3385</a>
           </S.ContentWrapper>
         </S.ItemGrid>
         <S.ItemGrid item xs={12} md={4}>
