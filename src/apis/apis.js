@@ -9,10 +9,10 @@ export const IPIFY_API = axios.create({
 })
 
 export const gravityFormsApi = axios.create({
-  baseURL: `https://admin.domain.com/gravityformsapi/
+  baseURL: `https://admin.a-christianglass.com/gravityformsapi/
 `,
 })
 
-export const contactFormApi =  axios.create({
-  baseURL: `https://admin-a-christianglass.weareshellshock.com/wp-json/contact-form-7/v1/contact-forms`
-});
+export const contactFormApi = axios.create({
+  baseURL: `https://admin.a-christianglass.com/wp-json/contact-form-7/v1/contact-forms`,
+})
