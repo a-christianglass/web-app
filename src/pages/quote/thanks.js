@@ -4,9 +4,9 @@ import Layout from "../../components/layout"
 import Container from "@material-ui/core/Container"
 
 const ThankYouPage = () => (
-  <Layout seo={{ title: "Thank You" }} isWhite={true}>
+  <Layout seo={{ title: "Thank You" }} isWhite={true} hideFooterBanner={true}>
     <Container
-      style={{ textAlign: "center", paddingTop: "10em", paddingBottom: "10em" }}
+      style={{ textAlign: "center", paddingTop: "20em", paddingBottom: "20em" }}
     >
       <h1 style={{ color: "#1284B8" }}>
         Thank you for contacting A-Christian Glass
