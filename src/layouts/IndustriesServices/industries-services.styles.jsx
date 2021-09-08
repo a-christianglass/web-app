@@ -65,6 +65,9 @@ export const Button = styled(CustomButton)`
 
 export const ContentWrapper = styled.div`
   max-width: 427px;
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    max-width: unset;
+  }
 
   h3 {
     font-style: normal;
