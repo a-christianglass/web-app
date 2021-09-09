@@ -6,7 +6,7 @@ const ProjectCard = ({ image, link }) => {
   return (
     <S.CardContainer>
       <S.Card>
-        <S.CardImage img={image?.sourceUrl} alt={link?.title} />
+        <S.CardImage img={image} />
         <S.LinkWrapper>
           <S.TitleWrapper>
             <span>{link.title}</span>

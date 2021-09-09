@@ -25,8 +25,15 @@ export const Wrapper = styled(SectionWrapper)`
     }
   }
 
-  .swiper {
+  .slick-list {
     overflow: unset;
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+
+  .slick-slide {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   .arrows > div:nth-child(1) {

@@ -2,6 +2,7 @@ import React, { useRef } from "react"
 import * as S from "./gallery-slider.styles"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import { useTheme } from "@material-ui/core"
+import { Navigation } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import CustomImage from "../../components/custom-image/custom-image.component"
 import ArrowBack from "../../assets/icons/ArrowBack.svg"
@@ -19,6 +20,7 @@ const GallerySlider = ({ images, bgColor, noPadding }) => {
         <ArrowBack />
       </S.CustomArrow>
       <Swiper
+        modules={[Navigation]}
         slidesPerView="auto"
         loop={true}
         centeredSlides={true}

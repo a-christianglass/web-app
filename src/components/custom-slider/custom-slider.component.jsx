@@ -1,10 +1,8 @@
 import React, { useRef } from "react"
 import * as S from "./custom-slider.styles"
-import "swiper/css"
-import "swiper/css/bundle"
-import "swiper/css/pagination"
-import { Navigation, Pagination, Virtual } from "swiper"
-import { Swiper } from "swiper/react"
+import Slider from "react-slick"
+import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+import "../../../node_modules/slick-carousel/slick/slick.css"
 import ArrowBack from "../../assets/icons/ArrowBack.svg"
 import ArrowForward from "../../assets/icons/ArrowForward.svg"
 
@@ -16,39 +14,40 @@ const CustomSlider = ({
   slidesPerColumn,
   autoHeight = true,
   spacingBetween = 20,
-  pagination = true,
+  pagination = false,
   slidesPerGroup,
 }) => {
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
+  let slider = useRef(null)
+  const next = () => {
+    slider.slickNext()
+  }
+
+  const previous = () => {
+    slider.slickPrev()
+  }
+
   return (
     <S.Container className={`custom-slider ${noArrows ? "" : "arrows"}`}>
-      <S.CustomArrow ref={navigationPrevRef} className="left">
+      <S.CustomArrow onClick={previous} className="left">
         <ArrowBack />
       </S.CustomArrow>
 
-      <Swiper
+      <Slider
+        ref={c => (slider = c)}
         autoHeight={autoHeight}
-        // slidesPerColumnFill="row"
-        modules={[Navigation, Pagination]}
-        // virtual
+        dots={pagination}
+        slidesToScroll={slidesToShow}
+        slidesToShow={slidesToShow}
         spaceBetween={spacingBetween}
         slidesPerView={slidesToShow}
         grabCursor={true}
-        breakpoints={breakpoints}
-        // slidesPerColumn={slidesPerColumn}
-        loop={true}
-        // virtual={true}
-        navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
-        pagination={pagination}
+        infinite={true}
+        responsive={breakpoints}
       >
         {children}
-      </Swiper>
+      </Slider>
 
-      <S.CustomArrow ref={navigationNextRef} className="right">
+      <S.CustomArrow onClick={next} className="right">
         <ArrowForward />
       </S.CustomArrow>
     </S.Container>

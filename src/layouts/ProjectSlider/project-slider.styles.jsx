@@ -14,11 +14,15 @@ export const Wrapper = styled(SectionWrapper)`
 background-color: #f0f5f7;
    `};
 
-  .swiper {
-    //width: 100%;
-    //height: 100%;
-    //padding: 7em 0;
+  .slick-list {
     overflow: unset;
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+
+  .slick-slide {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   ${({ theme }) => theme.breakpoints.up("lg")} {

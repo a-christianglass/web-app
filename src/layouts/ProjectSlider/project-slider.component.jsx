@@ -42,21 +42,26 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
             onlyRight={false}
             autoHeight={false}
             spacingBetween={30}
+            slidesToShow={2}
             loop={true}
-            breakpoints={{
-              600: {
-                slidesPerView: 1,
+            breakpoints={[
+              {
+                breakpoint: 1200,
+                settings: {
+                  slidesToShow: 2,
+                },
               },
-              1200: {
-                slidesPerView: 2,
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  dots: true,
+                },
               },
-              1024: {
-                slidesPerView: 2,
-              },
-            }}
+            ]}
           >
             {projects.map((project, index) => (
-              <SwiperSlide key={`project-slide-${index}`} virtualIndex={index}>
+              <SwiperSlide key={`project-slide-${index}`}>
                 <CustomLink
                   url={"/about/projects-and-gallery/"}
                   style={{ display: "block" }}
