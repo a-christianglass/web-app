@@ -29,18 +29,14 @@ const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
               onlyRight={false}
               autoHeight={false}
               spacingBetween={40}
+              slidesPerView={1}
               // loop={true}
-              breakpoints={{
-                600: {
-                  slidesPerView: 1,
-                },
-                1200: {
-                  slidesPerView: 1,
-                },
-              }}
             >
               {slides.map(({ review, author, location }, index) => (
-                <SwiperSlide key={`testimonial-slide-${index}`}>
+                <SwiperSlide
+                  key={`testimonial-slide-${index}`}
+                  virtualIndex={index}
+                >
                   <S.CardWrapper>
                     <S.ContentWrapper>
                       {review && <p>{parse(review)}</p>}

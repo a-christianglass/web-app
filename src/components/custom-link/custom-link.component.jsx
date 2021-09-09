@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import * as S from "./custom-link.styles"
 
 const CustomLink = props => {
-  const { target, children, className, url } = props
+  const { target, children, className, url, ...otherProps } = props
   // Tailor the following test to your environment.
   // This example assumes that any internal link (intended for Gatsby)
   // will start with exactly one slash, and that anything else is external.
@@ -14,7 +14,12 @@ const CustomLink = props => {
   if (internal) {
     if (file) {
       return (
-        <S.CustomRegularLink href={url} className={className} target={target}>
+        <S.CustomRegularLink
+          href={url}
+          className={className}
+          target={target}
+          {...otherProps}
+        >
           {children}
         </S.CustomRegularLink>
       )
@@ -25,6 +30,7 @@ const CustomLink = props => {
         partiallyActive={true}
         activeClassName="active"
         className={className}
+        {...otherProps}
       >
         {children}
       </S.CustomLink>
