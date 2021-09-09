@@ -1,12 +1,10 @@
 import React, { useRef } from "react"
 import * as S from "./icon-grid.styles"
-import "swiper/swiper.min.css"
-import "swiper/swiper-bundle.css"
-import "swiper/swiper-bundle.min.css"
-import "swiper/components/pagination/pagination.min.css"
-import SwiperCore, { Navigation, Pagination } from "swiper"
+import "swiper/css"
+import "swiper/css/bundle"
+import "swiper/css/pagination"
+import { Navigation, Pagination } from "swiper"
 import { Swiper } from "swiper/react"
-SwiperCore.use([Pagination, Navigation])
 
 const IconSlider = ({
   noArrows,
@@ -24,6 +22,7 @@ const IconSlider = ({
     <S.Container className={noArrows ? "" : "arrows"}>
       <Swiper
         autoHeight={autoHeight}
+        modules={[Pagination, Navigation]}
         slidesPerColumnFill="row"
         slidesPerGroup={slidesToShow}
         spaceBetween={spacingBetween}

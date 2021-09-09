@@ -3,23 +3,22 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import * as S from "./door-tab-slider.styles"
 
 // Import Swiper styles
-import "swiper/swiper.min.css"
-import "swiper/components/pagination/pagination.min.css"
-import SwiperCore, { Pagination } from "swiper/core"
+import "swiper/css"
+import "swiper/css/bundle"
+import "swiper/css/pagination"
+import { Navigation, Pagination, Virtual } from "swiper"
 import CustomImage from "../custom-image/custom-image.component"
-
-// install Swiper modules
-SwiperCore.use([Pagination])
 
 const DoorTabSlider = ({ images }) => {
   if (!images) return null
   return (
     <S.CustomSwiper
+      modules={[Navigation, Pagination, Virtual]}
       pagination={{
-        el: '.my-swiper-pagination',
+        el: ".my-swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + ([index]) + '</span>';
+          return '<span class="' + className + '">' + [index] + "</span>"
         },
       }}
       slidesPerView="1"
@@ -31,7 +30,7 @@ const DoorTabSlider = ({ images }) => {
           {image && <CustomImage img={image} />}
         </SwiperSlide>
       ))}
-      <div className="my-swiper-pagination"/>
+      <div className="my-swiper-pagination" />
     </S.CustomSwiper>
   )
 }

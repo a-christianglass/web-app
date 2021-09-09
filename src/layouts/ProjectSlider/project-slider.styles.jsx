@@ -14,9 +14,9 @@ export const Wrapper = styled(SectionWrapper)`
 background-color: #f0f5f7;
    `};
 
-  .swiper-container {
-    width: 100%;
-    height: 100%;
+  .swiper {
+    //width: 100%;
+    //height: 100%;
     //padding: 7em 0;
     overflow: unset;
   }

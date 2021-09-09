@@ -1,14 +1,12 @@
 import React, { useRef } from "react"
 import * as S from "./custom-slider.styles"
-import "swiper/swiper.min.css"
-import "swiper/swiper-bundle.css"
-import "swiper/swiper-bundle.min.css"
-import "swiper/components/pagination/pagination.min.css"
-import SwiperCore, { Navigation, Pagination, Virtual } from "swiper"
+import "swiper/css"
+import "swiper/css/bundle"
+import "swiper/css/pagination"
+import { Navigation, Pagination } from "swiper"
 import { Swiper } from "swiper/react"
 import ArrowBack from "../../assets/icons/ArrowBack.svg"
 import ArrowForward from "../../assets/icons/ArrowForward.svg"
-SwiperCore.use([Pagination, Navigation, Virtual])
 
 const CustomSlider = ({
   noArrows,
@@ -32,6 +30,7 @@ const CustomSlider = ({
       <Swiper
         autoHeight={autoHeight}
         // slidesPerColumnFill="row"
+        modules={[Navigation, Pagination]}
         spaceBetween={spacingBetween}
         slidesPerView={slidesToShow}
         grabCursor={true}
