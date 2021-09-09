@@ -1,5 +1,5 @@
 import React from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
+import { SwiperSlide } from "swiper/react"
 import * as S from "./door-tab-slider.styles"
 
 // Import Swiper styles
