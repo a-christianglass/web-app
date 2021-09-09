@@ -32,14 +32,13 @@ const CustomSlider = ({
       <Swiper
         autoHeight={autoHeight}
         // slidesPerColumnFill="row"
-        slidesPerGroup={5}
         spaceBetween={spacingBetween}
         slidesPerView={slidesToShow}
         grabCursor={true}
         breakpoints={breakpoints}
-        slidesPerColumn={slidesPerColumn}
+        // slidesPerColumn={slidesPerColumn}
         loop={true}
-        virtual={true}
+        // virtual={true}
         navigation={{
           prevEl: navigationPrevRef.current,
           nextEl: navigationNextRef.current,
