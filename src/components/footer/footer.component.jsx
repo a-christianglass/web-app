@@ -97,7 +97,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
             <Grid xs={12} md={12} justifyContent="center" alignItems="center">
               <S.LogoWrapper>
                 <img
-                  src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White.png"
+                  src="https://admin.a-christianglass.com/wp-content/uploads/2021/08/logo-White.png"
                   alt="ACG logo"
                 />
               </S.LogoWrapper>
@@ -110,7 +110,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
                     <S.LinkItem url="/windows/">Windows</S.LinkItem>
                     <S.LinkItem url="/doors/">Doors</S.LinkItem>
                     <S.LinkItem url="/showers/">Showers</S.LinkItem>
-                    <S.LinkItem url="/railings">Railings</S.LinkItem>
+                    <S.LinkItem url="/railings/">Railings</S.LinkItem>
                   </S.ColumnGrid>
                   <S.ColumnGrid xs={4}>
                     <span>Industries</span>
@@ -179,7 +179,7 @@ const Footer = ({ className, hideFooterBanner, whiteFooterBanner }) => {
             <S.LastGrid container>
               <S.BBBGrid xs={12} md={6}>
                 <img
-                  src="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/BBB-seal-footer.png"
+                  src="https://admin.a-christianglass.com/wp-content/uploads/2021/08/BBB-seal-footer.png"
                   alt="BBC Logo"
                 />
               </S.BBBGrid>
