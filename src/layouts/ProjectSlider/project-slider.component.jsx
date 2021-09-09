@@ -55,7 +55,7 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
               },
             }}
           >
-            {projects.map(({ image, link }, index) => (
+            {[...projects, ...projects].map(({ image, link }, index) => (
               <SwiperSlide key={`project-slide-${index}`}>
                 <CustomLink
                   url={"/about/projects-and-gallery/"}
