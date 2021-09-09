@@ -5,6 +5,9 @@ import { SwiperSlide } from "swiper/react"
 
 export const Wrapper = styled(SectionWrapper)`
   //padding: 0;
+  .slick-dots {
+    bottom: -25px;
+  }
   background-color: #f0f5f7;
   position: relative;
   ${({ theme }) => theme.breakpoints.up("lg")} {

@@ -31,6 +31,25 @@ const TestimonialSlider = ({ leftContentTestimonialSlider, slides }) => {
               spacingBetween={40}
               slidesPerView={1}
               // loop={true}
+              breakpoints={[
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
+                  },
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                  },
+                },
+              ]}
             >
               {slides.map(({ review, author, location }, index) => (
                 <SwiperSlide

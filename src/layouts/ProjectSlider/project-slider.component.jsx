@@ -49,13 +49,17 @@ const ProjectSlider = ({ leftContentProjectSlider, projects, color }) => {
                 breakpoint: 1200,
                 settings: {
                   slidesToShow: 2,
+                  dots: true,
+                  arrows: false,
                 },
               },
               {
                 breakpoint: 600,
                 settings: {
                   slidesToShow: 1,
+                  slidesToScroll: 1,
                   dots: true,
+                  arrows: false,
                 },
               },
             ]}

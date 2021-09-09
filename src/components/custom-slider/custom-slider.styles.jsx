@@ -2,6 +2,9 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   position: relative;
+  .slick-dots {
+    bottom: -5px;
+  }
   .swiper-pagination {
     .swiper-pagination-bullet-active {
       background-color: ${({ theme }) => theme.palette.primary.main};
