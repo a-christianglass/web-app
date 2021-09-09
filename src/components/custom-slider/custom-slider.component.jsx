@@ -3,7 +3,7 @@ import * as S from "./custom-slider.styles"
 import "swiper/css"
 import "swiper/css/bundle"
 import "swiper/css/pagination"
-import { Navigation, Pagination } from "swiper"
+import { Navigation, Pagination, Virtual } from "swiper"
 import { Swiper } from "swiper/react"
 import ArrowBack from "../../assets/icons/ArrowBack.svg"
 import ArrowForward from "../../assets/icons/ArrowForward.svg"
@@ -31,6 +31,7 @@ const CustomSlider = ({
         autoHeight={autoHeight}
         // slidesPerColumnFill="row"
         modules={[Navigation, Pagination]}
+        // virtual
         spaceBetween={spacingBetween}
         slidesPerView={slidesToShow}
         grabCursor={true}

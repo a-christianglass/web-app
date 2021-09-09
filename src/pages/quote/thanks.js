@@ -1,31 +1,34 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import Layout from "../../components/layout"
 import Container from "@material-ui/core/Container"
-import { Helmet } from "react-helmet"
 
-const ThankYouPage = () => (
-  <Layout seo={{ title: "Thank You" }} isWhite={true} hideFooterBanner={true}>
-    <Helmet>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `fbq('track', 'Lead');`,
+const ThankYouPage = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.fbq != null) {
+        window.fbq("track", "Lead")
+      }
+      if (window.pintrk != null) {
+        window.pintrk("track", "lead")
+      }
+    }
+  }, [])
+  return (
+    <Layout seo={{ title: "Thank You" }} isWhite={true} hideFooterBanner={true}>
+      <Container
+        style={{
+          textAlign: "center",
+          paddingTop: "20em",
+          paddingBottom: "20em",
         }}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `pintrk('track', 'lead')`,
-        }}
-      />
-    </Helmet>
-    <Container
-      style={{ textAlign: "center", paddingTop: "20em", paddingBottom: "20em" }}
-    >
-      <h1 style={{ color: "#1284B8" }}>
-        Thank you for contacting A-Christian Glass
-      </h1>
-    </Container>
-  </Layout>
-)
+      >
+        <h1 style={{ color: "#1284B8" }}>
+          Thank you for contacting A-Christian Glass
+        </h1>
+      </Container>
+    </Layout>
+  )
+}
 
 export default ThankYouPage
