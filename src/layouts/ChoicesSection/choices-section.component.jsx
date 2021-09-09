@@ -24,7 +24,7 @@ const ChoicesSection = ({
             </S.ContentWrapper>
           )}
           <S.QuoteWrapper>
-            <S.QuoteImage img="https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/quotes.png" />
+            <S.QuoteImage img="https://admin.a-christianglass.com/wp-content/uploads/2021/08/quotes.png" />
           </S.QuoteWrapper>
           {rightContentChoicesSection && (
             <S.QuoteTextWrapper>

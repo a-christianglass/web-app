@@ -45,8 +45,8 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
   `)
 
   const logoUrl = isWhite
-    ? "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/blueLogo.png"
-    : "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White-1.png"
+    ? "https://admin.a-christianglass.com/wp-content/uploads/2021/08/blueLogo.png"
+    : "https://admin.a-christianglass.com/wp-content/uploads/2021/08/logo-White-1.png"
   return (
     <S.NavWrapper isTransparent={isTransparent}>
       <S.CustomAppBar
@@ -79,7 +79,7 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
                 <img
                   src={
                     isXS
-                      ? "https://admin-a-christianglass.weareshellshock.com/wp-content/uploads/2021/08/logo-White-1.png"
+                      ? "https://admin.a-christianglass.com/wp-content/uploads/2021/08/logo-White-1.png"
                       : logoUrl
                   }
                   alt="logo"
