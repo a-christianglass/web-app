@@ -58,4 +58,8 @@ export const ArrowWrapper = styled.div`
 
 export const CardImage = styled(CustomImage)`
   height: 424px;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 `
