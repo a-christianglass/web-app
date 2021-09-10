@@ -233,6 +233,10 @@ const Layouts = () => {
     },
   ]
   return (
+    <>
+     <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
     <Layout seo={{ title: "Layouts - ONLY FOR DEV" }}>
       <LayoutTitle>HomeHero</LayoutTitle>
       <HomeHero
@@ -1623,6 +1627,7 @@ const Layouts = () => {
         quoteLocation="Boca Raton, FL."
       />
     </Layout>
+   </>
   )
 }
 
