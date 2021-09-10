@@ -1,6 +1,13 @@
 import styled from "styled-components"
 import SectionWrapper from "../../components/section-wrapper/section-wrapper.component"
-import { Box, CircularProgress, Grid, MenuItem, Select, TextField } from "@material-ui/core"
+import {
+  Box,
+  CircularProgress,
+  Grid,
+  MenuItem,
+  Select,
+  TextField,
+} from "@material-ui/core"
 import CustomButton from "../../components/custom-button/custom-button.component"
 import CustomBgImage from "../../components/custom-bg-image/custom-bg-image.component"
 
@@ -26,9 +33,8 @@ export const FormWrapper = styled.div`
     margin: auto;
   }
   .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-    border: 1px solid #879FB3;
+    border: 1px solid #879fb3;
   }
-  
 `
 export const Field = styled(TextField)`
   input {
@@ -38,6 +44,14 @@ export const Field = styled(TextField)`
     letter-spacing: 0.005em;
     color: #879fb3;
     background-color: #f5f8fa;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s,
+      color 5000s ease-in-out 0s;
+    transition-delay: background-color 5000s, color 5000s;
   }
 
   .MuiInputBase-root {
@@ -128,7 +142,7 @@ export const FormSpinner = styled(Box)`
 
 export const CustomSpinner = styled(CircularProgress)`
   color: ${({ theme }) =>
-  theme.palette ? theme.palette.primary.main : `black`};
+    theme.palette ? theme.palette.primary.main : `black`};
   width: 60px !important;
   height: 60px !important;
 `

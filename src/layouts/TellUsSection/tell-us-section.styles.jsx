@@ -74,6 +74,14 @@ export const Field = styled(TextField)`
     width: 364px;
     color: #879fb3;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s,
+      color 5000s ease-in-out 0s;
+    transition-delay: background-color 5000s, color 5000s;
+  }
   margin-bottom: 1em;
 `
 
