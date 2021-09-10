@@ -31,9 +31,7 @@ const HomeHero = ({ imageHome, title, subtitle, button }) => {
             <Grid container spacing={3} alignItems="center">
               <Grid item xs={12} md={7}>
                 <S.TextWrapper>
-                  <Hidden mdDown>
-                    <S.LogoImage img={staticQuery.logo} />
-                  </Hidden>
+                  <S.LogoImage img={staticQuery.logo} />
                   {subtitle && <h2>{parse(subtitle)}</h2>}
                   {subtitle && <h1>{parse(title)}</h1>}
                   <Hidden mdUp>
