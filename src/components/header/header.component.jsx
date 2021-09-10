@@ -20,6 +20,7 @@ import theme from "../../theme"
 
 const Header = ({ isTransparent, isWhite, isHomePage }) => {
   const isXS = useMediaQuery(theme.breakpoints.down("xs"))
+  const isMD = useMediaQuery(theme.breakpoints.between("md", "lg"))
 
   const [threshold, setTreshold] = useState(100)
   const [isActiveMenu, setIsActiveMenu] = useState(false)
@@ -78,7 +79,7 @@ const Header = ({ isTransparent, isWhite, isHomePage }) => {
               <S.MainItem isHomePage={isHomePage} url="/" className="logo">
                 <img
                   src={
-                    isXS
+                    !isMD
                       ? "https://admin.a-christianglass.com/wp-content/uploads/2021/08/logo-White-1.png"
                       : logoUrl
                   }
