@@ -43,7 +43,7 @@ module.exports = {
             policy: [
               {
                 userAgent: "*",
-                disallow: ["/"],
+                allow: "/",
               },
             ],
           },
@@ -52,7 +52,6 @@ module.exports = {
               {
                 userAgent: "*",
                 allow: "/",
-                disallow: ["/layouts"],
               },
             ],
           },

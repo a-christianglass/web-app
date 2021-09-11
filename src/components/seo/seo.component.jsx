@@ -52,11 +52,13 @@ function SEO({ data, meta }) {
       {/* General tags */}
       {metaDesc && <meta name="description" content={metaDesc} />}
 
-      {metaRobotsNoindex && (
+      {process.env.GATSBY_ACTIVE_ENV === "production" && metaRobotsNoindex ? (
         <meta
           name="robots"
           content={`${metaRobotsNoindex}, ${metaRobotsNofollow}`}
         />
+      ) : (
+        <meta name="robots" content="noindex" />
       )}
 
       {canonical && <link rel="canonical" href={canonical} />}

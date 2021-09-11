@@ -15,7 +15,15 @@ const ThankYouPage = () => {
     }
   }, [])
   return (
-    <Layout seo={{ title: "Thank You" }} isWhite={true} hideFooterBanner={true}>
+    <Layout
+      seo={{
+        title: "Thank You",
+        metaRobotsNoindex: "noindex",
+        metaRobotsNofollow: "nofollow",
+      }}
+      isWhite={true}
+      hideFooterBanner={true}
+    >
       <Container
         style={{
           textAlign: "center",
