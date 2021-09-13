@@ -35,6 +35,10 @@ export default function HTML(props) {
           src="https://www.googletagmanager.com/gtag/js?id=G-T8HJ6C2M3P"
         />
         <script
+          type="text/javascript"
+          src="//cdn.callrail.com/companies/429344976/6d8efb9eef2e47bb3b64/12/swap.js"
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
                     function gtag(){window.dataLayer.push(arguments);}
