@@ -39,6 +39,7 @@ export default function HTML(props) {
             __html: `window.dataLayer = window.dataLayer || [];
                     function gtag(){window.dataLayer.push(arguments);}
                     gtag('js', new Date());
+                    gtag('config', 'UA-109759671-1');
                     gtag('config', 'G-T8HJ6C2M3P');
                     gtag("config", "AW-825588581")
                     `,
