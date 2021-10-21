@@ -101,7 +101,7 @@ export default function HTML(props) {
         />
         <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/825588581/?random=1631112054346&amp;cv=9&amp;fst=1631112054346&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1120&amp;u_w=1792&amp;u_ah=1029&amp;u_aw=1792&amp;u_cd=30&amp;u_his=2&amp;u_tz=-300&amp;u_java=false&amp;u_nplug=3&amp;u_nmime=4&amp;gtm=2oa910&amp;sendb=1&amp;ig=1&amp;data=event%3Dgtag.config&amp;frm=0&amp;url=https%3A%2F%2Fwww.a-christianglass.com%2F&amp;tiba=A-Christian%20Glass%20-%20Impact%20Resistant%20Windows%20and%20Doors&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
         <meta
-          http-equiv="origin-trial"
+          httpEquiv="origin-trial"
           content="A7jJ/K14TswrMYv7k08eMRw2LMhCoHtdZIlR4bsG9p1tHmBXAgq7ZMLdccBMn+RzwQkrXZM0RPFAPiVZJKofAQsAAACHeyJvcmlnaW4iOiJodHRwczovL3d3dy5waW50ZXJlc3QuY29tOjQ0MyIsImZlYXR1cmUiOiJDb252ZXJzaW9uTWVhc3VyZW1lbnQiLCJleHBpcnkiOjE2MzE2NjM5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"
         />
         <link
@@ -175,14 +175,16 @@ export default function HTML(props) {
           defer=""
           src="//js.hs-scripts.com/19617179.js"
         />
-        <noscript>
-          <iframe
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T9SDGX7"
             height="0"
             width="0"
             style="display:none;visibility:hidden"
-          />
-        </noscript>
+          />`,
+          }}
+        />
       </body>
     </html>
   )
